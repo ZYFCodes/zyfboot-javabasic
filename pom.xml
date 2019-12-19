@@ -26,7 +26,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
         <!--springboot web模块支持，自动帮我们引入了web模块开发需要的相关jar包-->
         <dependency>
@@ -43,7 +42,7 @@
 
 
     <build>
-        <finalName>zyfcloud-common</finalName>
+        <finalName>zyfboot-javabasic</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
