@@ -2,7 +2,7 @@ package org.zyf.javabasic.java8;
 
 /**
  * 描述：默认方法就是接口可以有实现方法，而且不需要实现类去实现其方法。我们只需在方法名前面加个 default 关键字即可实现默认方法。
- *
+ * <p>
  * 为什么要有这个特性？
  * 首先，之前的接口是个双刃剑，好处是面向抽象而不是面向具体编程，缺陷是，当需要修改接口时候，需要修改全部实现该接口的类，
  * 目前的 java 8 之前的集合框架没有 foreach 方法，通常能想到的解决办法是在JDK里给相关的接口添加新的方法及实现。然而，
@@ -12,4 +12,34 @@ package org.zyf.javabasic.java8;
  * @date 2019-11-26 18:11
  */
 public class DefaultMethod {
+
+    public static void main(String args[]) {
+        Vehicle vehicle = new Car();
+        vehicle.print();
+    }
+
+    interface Vehicle {
+        default void print() {
+            System.out.println("我是一辆车!");
+        }
+
+        static void blowHorn() {
+            System.out.println("按喇叭!!!");
+        }
+    }
+
+    interface FourWheeler {
+        default void print() {
+            System.out.println("我是一辆四轮车!");
+        }
+    }
+
+    static class Car implements Vehicle, FourWheeler {
+        @Override
+        public void print() {
+            Vehicle.super.print();
+            FourWheeler.super.print();
+            Vehicle.blowHorn();
+        }
+    }
 }
