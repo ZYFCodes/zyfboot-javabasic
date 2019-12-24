@@ -9,7 +9,7 @@ import org.zyf.javabasic.ZYFApplication;
 import java.awt.*;
 
 /**
- * 描述：不可变集合：静态集合不可修改
+ * 描述：不可变集合---静态集合不可修改
  *
  * @author yanfengzhang
  * @date 2019-12-19 20:58
