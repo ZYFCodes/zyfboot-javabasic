@@ -31,10 +31,6 @@ public class Stream {
         Map<String, String> map0 = list.stream().collect(
                 Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> oldVal));
         System.out.println(map0.getClass());
-        //System.out.println(map0.toString());
-        //Map<String, String> map1 = list.stream().collect(
-        //        Collectors.toMap(GroupBrandCateBO::getVersion, GroupBrandCateBO::getGroupCode));
-        //System.out.println(map1.toString());
 
         Map<String, String> map00 = list.stream().collect(
                 Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> currVal));
