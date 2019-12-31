@@ -13,7 +13,6 @@ import java.util.concurrent.Executors;
  */
 public class FuturesTest {
 
-
     public static void main(String[] args) {
         ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(10));
         ListenableFuture explosion = service.submit(new Callable() {
