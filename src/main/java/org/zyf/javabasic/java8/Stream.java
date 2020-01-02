@@ -26,16 +26,16 @@ public class Stream {
                 )
         );
         Map<String, String> map = list.stream().collect(
-                Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> oldVal, LinkedHashMap::new));
+                Collectors.toMap(GroupBrandCateBO::getVersion, GroupBrandCateBO::getGroupCode, (oldVal, currVal) -> oldVal, LinkedHashMap::new));
         System.out.println(map.getClass());
         Map<String, String> map0 = list.stream().collect(
-                Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> oldVal));
+                Collectors.toMap(GroupBrandCateBO::getVersion, GroupBrandCateBO::getGroupCode, (oldVal, currVal) -> oldVal));
         System.out.println(map0.getClass());
 
         Map<String, String> map00 = list.stream().collect(
-                Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> currVal));
+                Collectors.toMap(GroupBrandCateBO::getVersion, GroupBrandCateBO::getGroupCode, (oldVal, currVal) -> currVal));
         Map<String, String> map01 = list.stream().collect(
-                Collectors.toMap(item -> item.getVersion(), item -> item.getGroupCode(), (oldVal, currVal) -> oldVal + currVal));
+                Collectors.toMap(GroupBrandCateBO::getVersion, GroupBrandCateBO::getGroupCode, (oldVal, currVal) -> oldVal + currVal));
         System.out.println(map00.toString());
         System.out.println(map01.toString());
     }
