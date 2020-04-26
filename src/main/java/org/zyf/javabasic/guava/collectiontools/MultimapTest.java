@@ -23,17 +23,17 @@ public class MultimapTest {
     @Test
     public void testMultimap() {
         Multimap<Integer, String> multimap = HashMultimap.create();
-        //转换成Map<K, Collection<V>>格式 且对转换后的map做操作会影响原有的Multimap
+        /**转换成Map<K, Collection<V>>格式 且对转换后的map做操作会影响原有的Multimap*/
         multimap.asMap();
-        //添加键到单个值的映射
+        /**添加键到单个值的映射*/
         multimap.put(1, "a");
-        //添加多个值的映射
+        /**添加多个值的映射*/
         multimap.putAll(2, Lists.newArrayList("a", "b", "c", "d"));
-        //移除键到值的映射；如果有这样的键值并成功移除，返回true。
+        /**移除键到值的映射；如果有这样的键值并成功移除，返回true。*/
         multimap.remove(2, "b");
-        //移除一个key所有的映射值
+        /**移除一个key所有的映射值*/
         multimap.removeAll(1);
-        //替换原有的映射值集合
+        /**替换原有的映射值集合*/
         multimap.replaceValues(2, Lists.newArrayList("a", "b", "c", "d"));
 
         System.out.println(multimap);
