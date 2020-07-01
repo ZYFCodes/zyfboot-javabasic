@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zyf.javabasic.ZYFApplication;
 import org.zyf.javabasic.skills.deleteifelse.factory.UserPayServiceStrategyFactory;
-import org.zyf.javabasic.skills.deleteifelse.service.UserPayService;
 
 import java.math.BigDecimal;
 
@@ -21,23 +20,33 @@ import java.math.BigDecimal;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ZYFApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DeleteIfElseSkill {
-
     @Test
-    public void testDeleteIfElseSkill(){
-        User user=new User();
-        UserPayService strategy = UserPayServiceStrategyFactory.getByUserType("ParticularlyVip");
+    public void testDeleteIfElseSkill() {
+        User user1 = new User();
+        user1.setVipType("ParticularlyVip");
+        user1.setOrderPrice(new BigDecimal("100"));
 
-        user.setOrderPrice(new BigDecimal("50"));
-        BigDecimal payPrice1= strategy.quote(user.getOrderPrice());
-        System.out.println("用户为专属会员，并且订单金额为50，按会员优惠最后应支付："+payPrice1);
+        User user2 = new User();
+        user2.setVipType("SuperVip");
+        user2.setOrderPrice(new BigDecimal("100"));
 
-        user.setOrderPrice(new BigDecimal("20"));
-        BigDecimal payPrice2= strategy.quote(user.getOrderPrice());
-        System.out.println("用户为专属会员，并且订单金额为20，按会员优惠最后应支付："+payPrice2);
+        User user3 = new User();
+        user3.setVipType("Vip");
+        user3.setOrderPrice(new BigDecimal("100"));
+
+
+        BigDecimal payPrice1 = UserPayServiceStrategyFactory.getByUserType(user1.getVipType()).quote(user1.getOrderPrice());
+        System.out.println("用户为专属会员，并且订单金额为50，按会员优惠最后应支付：" + payPrice1);
+
+        BigDecimal payPrice2 = UserPayServiceStrategyFactory.getByUserType(user2.getVipType()).quote(user2.getOrderPrice());
+        System.out.println("用户为超级会员，并且订单金额为50，按会员优惠最后应支付：" + payPrice2);
+
+        BigDecimal payPrice3 = UserPayServiceStrategyFactory.getByUserType(user3.getVipType()).quote(user3.getOrderPrice());
+        System.out.println("用户为普通会员，并且订单金额为50，按会员优惠最后应支付：" + payPrice3);
     }
 
     @Data
-    private static class User{
+    private static class User {
         private String uid;
         private String vipType;
         private BigDecimal orderPrice;
