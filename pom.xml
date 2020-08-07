@@ -44,6 +44,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.70</version>
+        </dependency>
+
         <!--
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -51,6 +57,14 @@
             <version>3.2.2</version>
         </dependency>
         -->
+
+
+        <!--第三方日期处理神器:Joda-Time-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.9</version>
+        </dependency>
     </dependencies>
 
 
