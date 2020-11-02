@@ -22,32 +22,42 @@
     </properties>
 
     <dependencies>
-        <!--springboot程序测试依赖，如果是自动创建项目默认添加-->
+        <!-- springboot程序测试依赖，如果是自动创建项目默认添加 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-        <!--springboot web模块支持，自动帮我们引入了web模块开发需要的相关jar包-->
+        <!-- springboot web模块支持，自动帮我们引入了web模块开发需要的相关jar包 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- 引入对应的guava相关功能 -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>23.6.1-jre</version>
         </dependency>
-
+        <!-- 引入对应的lombok相关功能 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
+        <!-- 引入对应的fastjson相关功能： 但是在实际中最好别使用 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.70</version>
+        </dependency>
+        <!-- 引入对应的aop相关功能  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!-- 引入对应的commons-lang3相关功能  -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
 
         <!--
@@ -57,7 +67,6 @@
             <version>3.2.2</version>
         </dependency>
         -->
-
 
         <!--第三方日期处理神器:Joda-Time-->
         <dependency>
