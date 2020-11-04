@@ -3,7 +3,8 @@ package org.zyf.javabasic.aop.complex.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
-import org.zyf.javabasic.aop.complex.entity.ActivityDO;
+import org.zyf.javabasic.aop.complex.entity.ActivityDo;
+import org.zyf.javabasic.aop.complex.entity.dto.AutoRenewalActivityDto;
 import org.zyf.javabasic.aop.complex.factory.ActivityServiceStrategyFactory;
 import org.zyf.javabasic.aop.complex.service.ActivityService;
 
@@ -14,39 +15,62 @@ import org.zyf.javabasic.aop.complex.service.ActivityService;
  */
 @Component
 @Slf4j
-public class AutoRenewalActivityServiceImpl implements ActivityService<ActivityDO>, InitializingBean {
+public class AutoRenewalActivityServiceImpl implements ActivityService<AutoRenewalActivityDto>, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         ActivityServiceStrategyFactory.register("5", this);
     }
 
     @Override
-    public ActivityDO queryActivityDetail(Object[] args) {
-        return null;
+    public AutoRenewalActivityDto queryActivityDetail(Object[] args) {
+        /*按传入信息查当前数据库对应活动信息 只是测试*/
+        ActivityDo activityDo = new ActivityDo();
+        activityDo.setActivityName("数据库中的活动信息");
+
+        /*转换为对应活动信息*/
+        AutoRenewalActivityDto autoRenewalActivityDto = new AutoRenewalActivityDto();
+        autoRenewalActivityDto.setActivityType(5);
+        autoRenewalActivityDto.setActivityName("自动续费活动");
+
+        log.info("查询自动续费活动");
+
+        return autoRenewalActivityDto;
     }
 
     @Override
-    public ActivityDO createOrUpdateActivityDetail(Object[] args) {
-        return null;
+    public AutoRenewalActivityDto createOrUpdateActivityDetail(Object[] args) {
+        /*按传入信息更新或创建当前数据库对应活动信息 只是测试*/
+        ActivityDo activityDo = new ActivityDo();
+        activityDo.setActivityName("数据库中的活动信息");
+
+        /*转换为对应活动信息*/
+        AutoRenewalActivityDto autoRenewalActivityDto = new AutoRenewalActivityDto();
+        autoRenewalActivityDto.setActivityType(5);
+        autoRenewalActivityDto.setActivityName("自动续费活动");
+
+        log.info("创建或更新自动续费活动");
+
+        return autoRenewalActivityDto;
     }
 
     @Override
     public void deleteActivityDetail(Object[] args) {
-
+        log.info("删除自动续费活动");
     }
 
     @Override
     public boolean checkActivityInfo(Object[] args) {
+        log.info("校验自动续费活动信息是否有误");
         return false;
     }
 
     @Override
     public void onlineActivity(Object[] args) {
-
+        log.info("上线自动续费活动");
     }
 
     @Override
     public void offlineActivity(Object[] args) {
-
+        log.info("下线自动续费活动");
     }
 }

@@ -1,4 +1,4 @@
-package org.zyf.javabasic.aop.complex.entity;
+package org.zyf.javabasic.aop.complex.entity.dto;
 
 import lombok.Data;
 
@@ -6,11 +6,11 @@ import java.sql.Timestamp;
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2020/11/2  11:53
+ * @description 降价活动数据结构（只是样例）
+ * @date 2020/11/4  20:28
  */
 @Data
-public class ActivityDO {
+public class PriceCutActivityDto {
     /**
      * 活动主键
      */
