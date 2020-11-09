@@ -34,6 +34,7 @@ public class ActivityBizAspect {
 
     @Around("execute()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
+        log.info("AOP处理开始：");
         Signature signature = point.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;
         Method targetMethod = methodSignature.getMethod();
@@ -55,7 +56,7 @@ public class ActivityBizAspect {
     private Object handleActivityBizMethod(ProceedingJoinPoint point, ZYFActivityDealer zyfActivityDealer) throws Throwable {
         /*1.获取当前指定的活动类型：降价活动、限时活动、买赠活动、首购优惠活动、自动续费活动、折上优惠活动*/
         String activityType = zyfActivityDealer.activityType();
-        if (null==activityType) {
+        if (null == activityType) {
             throw new ActivityBizException("活动类型异常:获取活动类型activityType失败, 请检查指定是否正确!", ActivityBizConstants.ActivityBizCode.ANNO_EMPTY_BIZTYPE_ERR);
         }
 

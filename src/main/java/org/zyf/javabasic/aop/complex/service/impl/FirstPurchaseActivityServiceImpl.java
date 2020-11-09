@@ -3,6 +3,7 @@ package org.zyf.javabasic.aop.complex.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
+import org.zyf.javabasic.aop.complex.constants.ActivityBizConstants;
 import org.zyf.javabasic.aop.complex.entity.ActivityDo;
 import org.zyf.javabasic.aop.complex.entity.dto.FirstPurchaseActivityDto;
 import org.zyf.javabasic.aop.complex.factory.ActivityServiceStrategyFactory;
@@ -18,7 +19,7 @@ import org.zyf.javabasic.aop.complex.service.ActivityService;
 public class FirstPurchaseActivityServiceImpl implements ActivityService<FirstPurchaseActivityDto>, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
-        ActivityServiceStrategyFactory.register("4", this);
+        ActivityServiceStrategyFactory.register(ActivityBizConstants.ActivityBizType.FIRST_PURCHASE, this);
     }
 
     @Override

@@ -3,6 +3,7 @@ package org.zyf.javabasic.aop.complex.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
+import org.zyf.javabasic.aop.complex.constants.ActivityBizConstants;
 import org.zyf.javabasic.aop.complex.entity.ActivityDo;
 import org.zyf.javabasic.aop.complex.entity.dto.PriceCutActivityDto;
 import org.zyf.javabasic.aop.complex.factory.ActivityServiceStrategyFactory;
@@ -18,7 +19,7 @@ import org.zyf.javabasic.aop.complex.service.ActivityService;
 public class PriceCutActivityServiceImpl implements ActivityService<PriceCutActivityDto>, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
-        ActivityServiceStrategyFactory.register("1", this);
+        ActivityServiceStrategyFactory.register(ActivityBizConstants.ActivityBizType.PRICE_CUT, this);
     }
 
     @Override
