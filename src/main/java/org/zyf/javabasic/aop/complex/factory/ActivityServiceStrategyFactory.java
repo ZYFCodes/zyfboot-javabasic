@@ -1,7 +1,7 @@
 package org.zyf.javabasic.aop.complex.factory;
 
 import org.springframework.util.Assert;
-import org.zyf.javabasic.aop.complex.service.ActivityService;
+import org.zyf.javabasic.aop.complex.service.activity.ActivityService;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

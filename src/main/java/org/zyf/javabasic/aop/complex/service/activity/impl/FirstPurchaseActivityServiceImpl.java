@@ -1,4 +1,4 @@
-package org.zyf.javabasic.aop.complex.service.impl;
+package org.zyf.javabasic.aop.complex.service.activity.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
@@ -7,7 +7,7 @@ import org.zyf.javabasic.aop.complex.constants.ActivityBizConstants;
 import org.zyf.javabasic.aop.complex.entity.ActivityDo;
 import org.zyf.javabasic.aop.complex.entity.dto.FirstPurchaseActivityDto;
 import org.zyf.javabasic.aop.complex.factory.ActivityServiceStrategyFactory;
-import org.zyf.javabasic.aop.complex.service.ActivityService;
+import org.zyf.javabasic.aop.complex.service.activity.ActivityService;
 
 /**
  * @author yanfengzhang

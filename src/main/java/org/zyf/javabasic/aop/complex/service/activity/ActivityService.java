@@ -1,4 +1,4 @@
-package org.zyf.javabasic.aop.complex.service;
+package org.zyf.javabasic.aop.complex.service.activity;
 
 /**
  * 活动基本接口

@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 /**
  * @author yanfengzhang
  * @description 限时活动数据结构（只是样例）
- * @date 2020/11/4  20:27
+ * @date 2020/11/4  23:27
  */
 @Data
 public class LimitTimeActivityDto {

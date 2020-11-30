@@ -13,7 +13,7 @@ import org.zyf.javabasic.aop.complex.annotation.ZYFActivityDealer;
 import org.zyf.javabasic.aop.complex.constants.ActivityBizConstants;
 import org.zyf.javabasic.aop.complex.constants.ActivityBizMethod;
 import org.zyf.javabasic.aop.complex.factory.ActivityServiceStrategyFactory;
-import org.zyf.javabasic.aop.complex.service.ActivityService;
+import org.zyf.javabasic.aop.complex.service.activity.ActivityService;
 import org.zyf.javabasic.common.ActivityBizException;
 
 import java.lang.reflect.Method;
@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 /**
  * @author yanfengzhang
  * @description 活动业务对应的切面处理类
- * @date 2020/10/30  17:06
+ * @date 2020/10/30  23:06
  */
 @Component
 @Aspect
@@ -40,9 +40,11 @@ public class ActivityBizAspect {
         Method targetMethod = methodSignature.getMethod();
         ZYFActivityDealer zyfActivityDealer = targetMethod.getAnnotation(ZYFActivityDealer.class);
         if (null != zyfActivityDealer) {
+            log.info("活动业务切面生效！");
             /*业务上存在对应注解，则需要进入活动对应的业务处理*/
             return handleActivityBizMethod(point, zyfActivityDealer);
         }
+        log.info("AOP处理结束：");
         return point.proceed();
     }
 
@@ -54,9 +56,10 @@ public class ActivityBizAspect {
      * @description 处理对应的活动业务处理方法
      */
     private Object handleActivityBizMethod(ProceedingJoinPoint point, ZYFActivityDealer zyfActivityDealer) throws Throwable {
+        log.info("AOP操作：zyfActivityDealer={}",zyfActivityDealer);
         /*1.获取当前指定的活动类型：降价活动、限时活动、买赠活动、首购优惠活动、自动续费活动、折上优惠活动*/
         String activityType = zyfActivityDealer.activityType();
-        if (null == activityType) {
+        if (StringUtils.isBlank(activityType)) {
             throw new ActivityBizException("活动类型异常:获取活动类型activityType失败, 请检查指定是否正确!", ActivityBizConstants.ActivityBizCode.ANNO_EMPTY_BIZTYPE_ERR);
         }
 

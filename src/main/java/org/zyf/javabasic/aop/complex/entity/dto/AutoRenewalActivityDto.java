@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 /**
  * @author yanfengzhang
  * @description 自动续费活动数据结构（只是样例）
- * @date 2020/11/4  20:22
+ * @date 2020/11/4  23:22
  */
 @Data
 public class AutoRenewalActivityDto {

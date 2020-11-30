@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 /**
  * @author yanfengzhang
  * @description 折上优惠活动数据结构（只是样例）
- * @date 2020/11/4  20:25
+ * @date 2020/11/4  23:25
  */
 @Data
 public class DiscountActivityDto {
