@@ -2,6 +2,8 @@ package org.zyf.javabasic.test;
 
 import org.joda.time.DateTime;
 
+import java.text.SimpleDateFormat;
+
 /**
  * @author yanfengzhang
  * @className Date
@@ -11,7 +13,13 @@ import org.joda.time.DateTime;
 public class Date {
 
     public static void main(String[] args) {
-        int now = new Long(DateTime.now().getMillis() / 1000).intValue();
-        System.out.println(now);
+        int now1 = new Long(DateTime.now().getMillis() / 1000).intValue();
+        System.out.println(now1);
+
+        int flag = 1612166400;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String now2 = sdf.format(new java.util.Date());
+        String flagFormat = sdf.format(new java.util.Date((long)flag*1000));
+        System.out.println(now2.equals(flagFormat));
     }
 }

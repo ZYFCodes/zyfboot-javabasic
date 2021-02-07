@@ -7,7 +7,12 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.zyf.javabasic.common.User;
 
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ListTest {
 
@@ -52,5 +57,32 @@ public class ListTest {
         System.out.println(zyfList);
         System.out.println(zyfList1);
         System.out.println(zyfList2);
+
+
+        System.out.println("Lists.newArrayList(50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)");
+        List<Integer> instances = Lists.newArrayList(50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        Collections.sort(instances);
+        Collections.reverse(instances);
+        System.out.println(instances);
+
+        System.out.println(getRefuelPackages(22));
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sdf.format(new Date()));
+
+    }
+
+    private static Map<Integer,Integer> getRefuelPackages(int number){
+        List<Integer> instances = Lists.newArrayList(9,  7,  5, 3,  1);
+        Map<Integer,Integer> packages=new HashMap<>();
+        for (int i=0;i<instances.size() && number!=0 ;i++){
+            int divideNumber=number/instances.get(i);
+            int modNumber=number%instances.get(i);
+            if (divideNumber>0){
+                packages.put(instances.get(i),divideNumber);
+            }
+            number=modNumber;
+        }
+        return packages;
     }
 }
