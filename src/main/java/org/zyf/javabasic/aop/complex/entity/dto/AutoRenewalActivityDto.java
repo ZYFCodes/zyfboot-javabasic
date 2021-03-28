@@ -2,8 +2,6 @@ package org.zyf.javabasic.aop.complex.entity.dto;
 
 import lombok.Data;
 
-import java.sql.Timestamp;
-
 /**
  * @author yanfengzhang
  * @description 自动续费活动数据结构（只是样例）
@@ -34,11 +32,11 @@ public class AutoRenewalActivityDto {
     /**
      * 活动开始时间
      */
-    private Timestamp startTime;
+    private Integer startTime;
     /**
      * 活动结束时间
      */
-    private Timestamp endTime;
+    private Integer endTime;
     /**
      * 活动价格设定
      */

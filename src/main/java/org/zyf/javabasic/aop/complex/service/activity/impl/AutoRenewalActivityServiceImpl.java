@@ -74,4 +74,5 @@ public class AutoRenewalActivityServiceImpl implements ActivityService<AutoRenew
     public void offlineActivity(Object[] args) {
         log.info("下线自动续费活动");
     }
+
 }

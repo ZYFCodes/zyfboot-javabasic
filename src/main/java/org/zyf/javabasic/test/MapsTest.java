@@ -48,4 +48,5 @@ public class MapsTest {
         return rightsInfo;
     }
 
+
 }

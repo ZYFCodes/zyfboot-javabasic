@@ -1,10 +1,10 @@
 package org.zyf.javabasic.test;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Splitter;
 
 import java.util.List;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.JSON;
 
 /**
  * 描述：关于字符串的一些疑问测试
@@ -38,9 +38,17 @@ public class StringTest {
 
 
         System.out.println("=========================测试5");
-        String content="";
+        String content="{\"spec\":\"1\",\"appVersion\":\"11.0.402\",\"skuId\":\"617047\",\"channelTransToken\":\"157AB422FEF340E49948AC49BB37B6F6\",\"memberOrderType\":\"0\"}";
         JSONObject contentJSONObject = JSON.parseObject(content);
         String channelTransToken = contentJSONObject.getString("channelTransToken");
         System.out.println(channelTransToken);
+
+        System.out.println("=========================测试6");
+        String fileName = "/private/var/folders/ql/2t72c5tj20bf5xhhkhnygdcm0000gp/T/5-product-2021-02-01张彦峰测试使用-16160767366731820491789051783.txt";
+        String co = "tr '\\001' '\\|' <5-product-2021-02-01张彦峰测试使用-16160740795818929473083769814.txt> zyf.txt";
+        StringBuffer gggg=new StringBuffer();
+        gggg.append("tr '\\001' '\\|' ").append(fileName).append(" ").append("zyf.txt");
+        System.out.println(co);
+        System.out.println(gggg.toString());
     }
 }
