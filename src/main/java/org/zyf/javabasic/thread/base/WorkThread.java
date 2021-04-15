@@ -41,7 +41,6 @@ public class WorkThread {
                 workQueue.put(task);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                ;
             }
         }
     }

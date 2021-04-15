@@ -70,6 +70,16 @@ public class ListTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println(sdf.format(new Date()));
 
+        System.out.println("测试list addall");
+        List<Integer> list1= Lists.newArrayList();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        List<Integer> list2= Lists.newArrayList();
+        list2.add(4);
+        list2.addAll(list1);
+        System.out.println(list2);
+
     }
 
     private static Map<Integer,Integer> getRefuelPackages(int number){
