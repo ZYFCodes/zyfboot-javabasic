@@ -1,4 +1,4 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.generic.model;
 
 import lombok.Builder;
 import lombok.Data;

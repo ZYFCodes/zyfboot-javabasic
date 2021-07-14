@@ -1,4 +1,6 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.generic.basic.biz;
+
+import org.zyf.javabasic.generic.model.Movie;
 
 import java.util.List;
 

@@ -1,38 +1,37 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.generic.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
  * @author yanfengzhang
  * @description
- * @date 2021/1/28  23:02
+ * @date 2021/1/28  23:51
  */
+
 @Data
-public class Movie {
+@Builder
+public class TVSeries {
     /**
-     * 电影主键id
+     * 电视剧主键id
      */
     private Integer id;
     /**
-     * 电影名称
+     * 电视剧名称
      */
     private String name;
+    /**
+     * 电视剧集数
+     */
+    private Integer count;
     /**
      * 具体内容阐述
      */
     private String content;
     /**
-     * 电影时间
+     * 每集时间
      */
     private Integer time;
-    /**
-     * 电影类型
-     */
-    private Integer type;
-    /**
-     * 电影产地
-     */
-    private String product;
     /**
      * 上线时间
      */

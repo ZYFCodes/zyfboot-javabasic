@@ -1,4 +1,4 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.generic.contants;
 
 /**
  * @author yanfengzhang

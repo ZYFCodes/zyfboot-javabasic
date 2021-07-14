@@ -1,9 +1,14 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.generic.basic.biz;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
+import org.zyf.javabasic.generic.model.CheckBasicInfo;
+import org.zyf.javabasic.generic.enums.CheckBizType;
+import org.zyf.javabasic.common.utils.JSONUtil;
+import org.zyf.javabasic.generic.contants.BizContants;
+import org.zyf.javabasic.generic.model.TVSeries;
 
 import java.util.Collections;
 import java.util.LinkedList;

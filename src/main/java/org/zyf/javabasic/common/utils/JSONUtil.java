@@ -1,4 +1,4 @@
-package org.zyf.javabasic.generic;
+package org.zyf.javabasic.common.utils;
 
 import com.alibaba.fastjson.serializer.JSONSerializer;
 import com.alibaba.fastjson.serializer.SerializeWriter;
