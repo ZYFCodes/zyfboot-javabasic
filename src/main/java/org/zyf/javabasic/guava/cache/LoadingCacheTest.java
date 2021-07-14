@@ -33,6 +33,8 @@ public class LoadingCacheTest {
             .expireAfterWrite(10, TimeUnit.MINUTES)
             //设置缓存里的值两分钟刷新一次
             .refreshAfterWrite(2, TimeUnit.MINUTES)
+            // 设置缓存在写入10分钟后，通过CacheLoader的load方法进行刷新
+            .refreshAfterWrite(10, TimeUnit.SECONDS)
             //开启缓存的统计功能
             .recordStats()
             //构建缓存
