@@ -8,7 +8,6 @@ package org.zyf.javabasic.generic.basic.data;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
@@ -24,18 +23,32 @@ import java.util.Set;
 /**
  * 将Map切割成若干个Map
  *
- * @author jeb_lin
+ * @author zhangyanfeng
  * 6:57 PM 2020/2/8
  */
-@AllArgsConstructor
 @Data
 @Slf4j
 public class MapSplitList<K, V> {
 
     private Map<K, V> map;
+    private LinkedHashMap<K, V> chunkMap;
     private int limit;
 
-    public List<Map<K, V>> getList() {
+    public MapSplitList(Map<V, V> map, int limit) {
+        this.map= (Map<K, V>) map;
+        this.limit=limit;
+    }
+
+    public MapSplitList(LinkedHashMap<K, V> map, int limit) {
+        this.map= (LinkedHashMap<K, V>) map;
+        this.limit=limit;
+    }
+
+    /**
+     * 将HashMap切割成若干个HashMap
+     * @return
+     */
+    public List<Map<K, V>> getResultForMap() {
         List<Map<K, V>> list = Lists.newArrayList();
 
         try {
@@ -64,28 +77,21 @@ public class MapSplitList<K, V> {
 
     /**
      * 将map 拆分成多个map
-     *
-     * @param chunkMap 被拆的 map
-     * @param chunkNum 每段的大小
-     * @param <k>      map 的 key类 型
-     * @param <v>      map 的value 类型
-     * @return List
+     * @return
      */
-    public static <k, v> List<LinkedHashMap<k, v>> mapChunk(LinkedHashMap<k, v> chunkMap, int chunkNum) {
-        if (chunkMap == null || chunkNum <= 0) {
-            List<LinkedHashMap<k, v>> list = new ArrayList<>();
-            list.add(chunkMap);
-            return list;
+    public List<LinkedHashMap<K, V>> getResultForLinkedHashMap() {
+        if (MapUtils.isEmpty(chunkMap) || limit <= 0) {
+            return Lists.newArrayList();
         }
-        Set<k> keySet = chunkMap.keySet();
-        Iterator<k> iterator = keySet.iterator();
+        Set<K> keySet = chunkMap.keySet();
+        Iterator<K> iterator = keySet.iterator();
         int i = 1;
-        List<LinkedHashMap<k, v>> total = new ArrayList<>();
-        LinkedHashMap<k, v> tem = new LinkedHashMap<>();
+        List<LinkedHashMap<K, V>> total = new ArrayList<>();
+        LinkedHashMap<K, V> tem = new LinkedHashMap<>();
         while (iterator.hasNext()) {
-            k next = iterator.next();
+            K next = iterator.next();
             tem.put(next, chunkMap.get(next));
-            if (i == chunkNum) {
+            if (i == limit) {
                 total.add(tem);
                 tem = new LinkedHashMap<>();
                 i = 0;
@@ -111,18 +117,18 @@ public class MapSplitList<K, V> {
         chunkMap.put("4", "4");
 
         System.out.println("使用泛化对象处理");
-        System.out.println(new MapSplitList<String, String>(map, 1).getList());
-        System.out.println(new MapSplitList<String, String>(map, 2).getList());
-        System.out.println(new MapSplitList<String, String>(map, 3).getList());
-        System.out.println(new MapSplitList<String, String>(map, 4).getList());
-        System.out.println(new MapSplitList<String, String>(map, 5).getList());
+        System.out.println(new MapSplitList<String, String>(map, 1).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(map, 2).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(map, 3).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(map, 4).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(map, 5).getResultForMap());
 
         System.out.println("使用自定义函数处理");
-        System.out.println(mapChunk(chunkMap, 1));
-        System.out.println(mapChunk(chunkMap, 2));
-        System.out.println(mapChunk(chunkMap, 3));
-        System.out.println(mapChunk(chunkMap, 4));
-        System.out.println(mapChunk(chunkMap, 5));
+        System.out.println(new MapSplitList<String, String>(chunkMap, 1).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(chunkMap, 2).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(chunkMap, 3).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(chunkMap, 4).getResultForMap());
+        System.out.println(new MapSplitList<String, String>(chunkMap, 5).getResultForMap());
     }
 }
 
