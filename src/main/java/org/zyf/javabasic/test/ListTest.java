@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ListTest {
 
@@ -79,6 +80,17 @@ public class ListTest {
         list2.add(4);
         list2.addAll(list1);
         System.out.println(list2);
+
+        List<Long> wordIdListByRule = null;
+//        wordIdListByRule.add(1L);
+//        wordIdListByRule.add(2L);
+//        wordIdListByRule.add(3L);
+        // wordMapper过滤出符合条件的wordId
+        List<Long> wordIdsByWordMapper = Lists.newArrayList();
+        wordIdsByWordMapper.add(1L);
+        wordIdsByWordMapper.add(2L);
+        wordIdsByWordMapper.add(3L);
+        System.out.println(wordIdsByWordMapper.stream().filter(wordIdListByRule::contains).collect(Collectors.toList()));
 
     }
 

@@ -20,11 +20,10 @@ import java.util.stream.Collectors;
 public class TestWhileTrue {
 
     private static Map<Integer, Integer> recordAll = Maps.newHashMap();
+    private static String recordAllText = "/Users/yanfengzhang/Downloads/zyfurlTotal.txt";
+    private static String zyfurl = "/Users/yanfengzhang/Downloads/zyfurl.txt";
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        String zyfurl = "/Users/yanfengzhang/Downloads/zyfurl.txt";
-
-        String recordAllText = "/Users/yanfengzhang/Downloads/zyfurlTotal.txt";
         String zyfurls = FileUtils.readFileContent(zyfurl);
         List<String> urlList = Splitter.on(",").omitEmptyStrings().trimResults().splitToList(zyfurls);
         List<String> urlDistinctList = urlList.stream().distinct().collect(Collectors.toList());
@@ -43,7 +42,7 @@ public class TestWhileTrue {
 
             time++;
             System.out.println("本次随机访问结束！");
-            FileUtils.writeToFile("基本访问次数统计如下：" + recordAll, recordAllText);
+            FileUtils.writeToFile(recordAll.toString(), recordAllText);
             Thread.sleep(60000);
         }
 
@@ -53,6 +52,7 @@ public class TestWhileTrue {
         List<Integer> result = Lists.newArrayList();
 
         Map<Integer, Integer> record = Maps.newHashMap();
+        recordAll = beforeDeal();
         while (result.size() != num) {
             Random random = new Random();
             int randomNum = random.nextInt(max) % (max - min + 1) + min;
@@ -66,12 +66,18 @@ public class TestWhileTrue {
         return result;
     }
 
-    public static void beforeDeal(){
-        String beafore=FileUtils.readFileContent("/Users/yanfengzhang/Downloads/zyfurlTotal.txt");
-        String beafore1=beafore.substring(0,beafore.length()-1).replaceAll("\\{","");
-        String beafore2=beafore1.replaceAll("\\}","");
-        System.out.println(beafore2);
+    public static Map<Integer, Integer> beforeDeal() {
+        String fileContent = FileUtils.readFileContent(recordAllText);
+        String fileContentDeal = fileContent.substring(0, fileContent.length() - 1).replaceAll("\\{", "");
+        String fileContentDealFinal = fileContentDeal.replaceAll("\\}", "");
 
-        Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(beafore2);
+        Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(fileContentDealFinal);
+        Map<Integer, Integer> initMap = Maps.newHashMap();
+        for (String element : result.keySet()) {
+            int time = Integer.valueOf(result.get(element));
+            element = element.trim();
+            initMap.put(Integer.valueOf(element), time);
+        }
+        return initMap;
     }
 }

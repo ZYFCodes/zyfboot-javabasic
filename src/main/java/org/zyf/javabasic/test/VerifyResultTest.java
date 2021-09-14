@@ -84,11 +84,14 @@ public class VerifyResultTest {
         VerifyResult verifyResult=new VerifyResult();
         List<Deficient> deficientAndQualificationList1 = Lists.newArrayList();
         Deficient deficient1=new Deficient();
-        deficient1.setQualificationKey("1@2");
+        deficient1.setQualificationKey("1@3");
         Deficient deficient2=new Deficient();
         deficient2.setQualificationKey("2@3");
+        Deficient deficient3=new Deficient();
+        deficient3.setQualificationKey("3@2");
         deficientAndQualificationList1.add(deficient1);
         deficientAndQualificationList1.add(deficient2);
+        verifyResult.setDeficientAndQualificationList(deficientAndQualificationList1);
         verifyResult.setDeficientAndQualificationList(deficientAndQualificationList1);
         System.out.println(""+verifyResult);
         List<Deficient> refreshDeficientAndQualificationList;
@@ -101,5 +104,29 @@ public class VerifyResultTest {
         }
 
         System.out.println(""+verifyResult);
+
+        List<Deficient> deficientOrQualificationList = verifyResult.getDeficientAndQualificationList();
+        if (CollectionUtils.isNotEmpty(deficientOrQualificationList)) {
+            /*进行过滤：只保留非指定医疗器械资质的内容*/
+            for (Deficient deficient : deficientOrQualificationList) {
+                if (ShangouMerchantAdmissionUtils.isMedicalQuaKey(deficient.getQualificationKey())) {
+                    deficientOrQualificationList.remove(deficient);
+                }
+            }
+            verifyResult.setDeficientOrQualificationList(deficientOrQualificationList);
+        }
+
+        System.out.println(""+verifyResult);
+
+        List<String> list = Lists.newArrayList();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        for (int i = list.size()-1; i > -1; i--) {
+            list.remove(i);
+        }
+        System.out.println("-----------------"+list);
     }
+
 }
