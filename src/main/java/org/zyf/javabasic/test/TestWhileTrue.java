@@ -32,7 +32,7 @@ public class TestWhileTrue {
         int time = 1;
         while (true) {
             int randomUrlNum = total / 2;
-            List<Integer> randomIntList = getRandomInt(randomUrlNum, total, 0);
+            List<Integer> randomIntList = getRandomInt(4, 7, 0);
             System.out.println("第" + time + "次随机访问文章编号：" + randomIntList);
             System.out.println("对应随机访问" + randomUrlNum + "个网站如下");
             randomIntList.forEach(randomInt -> {
@@ -48,6 +48,14 @@ public class TestWhileTrue {
 
     }
 
+    /**
+     * 获取指定范围的指定返回个数的随机结果集合
+     *
+     * @param num 需要返回的总个数
+     * @param max 随机最大值
+     * @param min 随机最小值
+     * @return 需要返回的总个数集合
+     */
     public static List<Integer> getRandomInt(int num, int max, int min) {
         List<Integer> result = Lists.newArrayList();
 
