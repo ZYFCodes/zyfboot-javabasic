@@ -47,10 +47,10 @@ public class ActivityController {
 
     @GetMapping("/policies")
     @ApiOperation("查询策略")
-    public String getPolicies(@RequestParam(value = "activityId",defaultValue = "0")Integer activityId) {
+    public String getPolicies(@RequestParam(value = "activityId", defaultValue = "0") Integer activityId) {
         log.info("查询活动信息,activityId:{}", activityId);
-        LimitTimeActivityDto limitTimeActivityDto=verifyAopService.queryLimitTimeActivityDetail((long) 34);
-        log.info("limitTimeActivityDto=={}",limitTimeActivityDto);
+        LimitTimeActivityDto limitTimeActivityDto = verifyAopService.queryLimitTimeActivityDetail((long) 34);
+        log.info("limitTimeActivityDto=={}", limitTimeActivityDto);
         return "";
     }
 }

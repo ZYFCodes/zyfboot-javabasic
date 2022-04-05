@@ -19,7 +19,7 @@ public class Date {
         int flag = 1612166400;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String now2 = sdf.format(new java.util.Date());
-        String flagFormat = sdf.format(new java.util.Date((long)flag*1000));
+        String flagFormat = sdf.format(new java.util.Date((long) flag * 1000));
         System.out.println(now2.equals(flagFormat));
     }
 }

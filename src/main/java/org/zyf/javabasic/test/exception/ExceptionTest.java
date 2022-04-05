@@ -11,9 +11,9 @@ public class ExceptionTest {
 
     public static void main(String[] args) {
         System.out.println("测试开始！");
-        try{
+        try {
             throw new Exception();
-        }catch (ActivityBizException e){
+        } catch (ActivityBizException e) {
             System.out.println("ActivityBizException");
         } catch (Exception e) {
             e.printStackTrace();

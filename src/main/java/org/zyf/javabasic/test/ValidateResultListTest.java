@@ -17,9 +17,9 @@ public class ValidateResultListTest {
         ContainsSensitiveWordResult result = new ContainsSensitiveWordResult();
 
         List<ValidateResult> checkResults = Lists.newArrayList();
-        ValidateResult validateResult1=new ValidateResult("1","1",new WordDomain(),ValidateRule.BAOSHIJIE);
-        ValidateResult validateResult2=new ValidateResult("2","2",new WordDomain(),ValidateRule.BAOSHIJIE);
-        ValidateResult validateResult3=new ValidateResult("3","3",new WordDomain(),ValidateRule.BAOSHIJIE);
+        ValidateResult validateResult1 = new ValidateResult("1", "1", new WordDomain(), ValidateRule.BAOSHIJIE);
+        ValidateResult validateResult2 = new ValidateResult("2", "2", new WordDomain(), ValidateRule.BAOSHIJIE);
+        ValidateResult validateResult3 = new ValidateResult("3", "3", new WordDomain(), ValidateRule.BAOSHIJIE);
         checkResults.add(validateResult1);
         checkResults.add(validateResult2);
         checkResults.add(validateResult3);
@@ -159,9 +159,9 @@ public class ValidateResultListTest {
             this.code = code;
         }
 
-        public static ValidateRule getRule(String ruleName){
-            for(ValidateRule validateRule : ValidateRule.values()){
-                if(validateRule.name().equals(ruleName)) {
+        public static ValidateRule getRule(String ruleName) {
+            for (ValidateRule validateRule : ValidateRule.values()) {
+                if (validateRule.name().equals(ruleName)) {
                     return validateRule;
                 }
             }
@@ -170,19 +170,17 @@ public class ValidateResultListTest {
 
     }
 
-    public static class WordDomain{
+    public static class WordDomain {
 
     }
 
     @Data
-    public static class ContainsSensitiveWordResult{
+    public static class ContainsSensitiveWordResult {
         private boolean illegal;
         private String content;
         private Set<String> sensitiveWordSet = Sets.newHashSet();
         private Set<String> sensitiveWordInWhiteListSet = Sets.newHashSet();
     }
-
-
 
 
 }

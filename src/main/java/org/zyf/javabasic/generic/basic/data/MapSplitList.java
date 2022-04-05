@@ -35,17 +35,18 @@ public class MapSplitList<K, V> {
     private int limit;
 
     public MapSplitList(Map<V, V> map, int limit) {
-        this.map= (Map<K, V>) map;
-        this.limit=limit;
+        this.map = (Map<K, V>) map;
+        this.limit = limit;
     }
 
     public MapSplitList(LinkedHashMap<K, V> map, int limit) {
-        this.map= (LinkedHashMap<K, V>) map;
-        this.limit=limit;
+        this.map = (LinkedHashMap<K, V>) map;
+        this.limit = limit;
     }
 
     /**
      * 将HashMap切割成若干个HashMap
+     *
      * @return
      */
     public List<Map<K, V>> getResultForMap() {
@@ -77,6 +78,7 @@ public class MapSplitList<K, V> {
 
     /**
      * 将map 拆分成多个map
+     *
      * @return
      */
     public List<LinkedHashMap<K, V>> getResultForLinkedHashMap() {

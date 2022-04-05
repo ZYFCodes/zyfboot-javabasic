@@ -72,11 +72,11 @@ public class ListTest {
         System.out.println(sdf.format(new Date()));
 
         System.out.println("测试list addall");
-        List<Integer> list1= Lists.newArrayList();
+        List<Integer> list1 = Lists.newArrayList();
         list1.add(1);
         list1.add(2);
         list1.add(3);
-        List<Integer> list2= Lists.newArrayList();
+        List<Integer> list2 = Lists.newArrayList();
         list2.add(4);
         list2.addAll(list1);
         System.out.println(list2);
@@ -94,16 +94,16 @@ public class ListTest {
 
     }
 
-    private static Map<Integer,Integer> getRefuelPackages(int number){
-        List<Integer> instances = Lists.newArrayList(9,  7,  5, 3,  1);
-        Map<Integer,Integer> packages=new HashMap<>();
-        for (int i=0;i<instances.size() && number!=0 ;i++){
-            int divideNumber=number/instances.get(i);
-            int modNumber=number%instances.get(i);
-            if (divideNumber>0){
-                packages.put(instances.get(i),divideNumber);
+    private static Map<Integer, Integer> getRefuelPackages(int number) {
+        List<Integer> instances = Lists.newArrayList(9, 7, 5, 3, 1);
+        Map<Integer, Integer> packages = new HashMap<>();
+        for (int i = 0; i < instances.size() && number != 0; i++) {
+            int divideNumber = number / instances.get(i);
+            int modNumber = number % instances.get(i);
+            if (divideNumber > 0) {
+                packages.put(instances.get(i), divideNumber);
             }
-            number=modNumber;
+            number = modNumber;
         }
         return packages;
     }

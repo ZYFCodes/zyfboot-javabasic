@@ -30,9 +30,9 @@ public class LoadingCacheForAllDataTest {
                 }
             });
 
-    public void testGetCache(){
+    public void testGetCache() {
         for (int i = 0; i < 20; i++) {
-            String str= "oo";
+            String str = "oo";
             try {
                 System.out.println(cache.get(str));
                 Thread.sleep(1000);

@@ -7,19 +7,19 @@ package org.zyf.javabasic.test;
  */
 public class IntegerTest {
     public static void main(String[] args) {
-        Integer a=1;
-        Integer b=1;
+        Integer a = 1;
+        Integer b = 1;
 
         System.out.println(a.equals(b));
-        System.out.println(a==b);
+        System.out.println(a == b);
 
-        Integer c=1;
-        int d=1;
+        Integer c = 1;
+        int d = 1;
 
-        System.out.println(c==d);
+        System.out.println(c == d);
 
-        String s1=String.valueOf(d);
-        String s2=String.valueOf(c);
+        String s1 = String.valueOf(d);
+        String s2 = String.valueOf(c);
         System.out.println(s1.equals(s2));
     }
 }

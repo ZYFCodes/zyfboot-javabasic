@@ -32,13 +32,15 @@ public class Lambda {
         MathOperation subtraction = (a, b) -> a - b;
 
         // 大括号中的返回语句
-        MathOperation multiplication = (int a, int b) -> { return a * b; };
+        MathOperation multiplication = (int a, int b) -> {
+            return a * b;
+        };
 
         // 没有大括号及返回语句
-        MathOperation division = (int a, int b) -> a / b ;
+        MathOperation division = (int a, int b) -> a / b;
 
         // 访问外层局部变量
-        MathOperation getNewInt = ( a,  b) -> a / b + num;
+        MathOperation getNewInt = (a, b) -> a / b + num;
 
         // 不用括号
         GreetingService greetService1 = message -> System.out.println("Hello " + message);

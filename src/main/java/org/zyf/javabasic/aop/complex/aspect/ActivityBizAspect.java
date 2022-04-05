@@ -56,7 +56,7 @@ public class ActivityBizAspect {
      * @description 处理对应的活动业务处理方法
      */
     private Object handleActivityBizMethod(ProceedingJoinPoint point, ZYFActivityDealer zyfActivityDealer) throws Throwable {
-        log.info("AOP操作：zyfActivityDealer={}",zyfActivityDealer);
+        log.info("AOP操作：zyfActivityDealer={}", zyfActivityDealer);
         /*1.获取当前指定的活动类型：降价活动、限时活动、买赠活动、首购优惠活动、自动续费活动、折上优惠活动*/
         String activityType = zyfActivityDealer.activityType();
         if (StringUtils.isBlank(activityType)) {

@@ -28,11 +28,11 @@ public class TransformMultimapToMapTest {
 
     public static void main(String[] args) {
         Multimap<Long, Long> bgCategoryIdsByWmPoiTagIds = HashMultimap.create();
-        bgCategoryIdsByWmPoiTagIds.put(1L,1L);
-        bgCategoryIdsByWmPoiTagIds.put(1L,2L);
-        bgCategoryIdsByWmPoiTagIds.put(1L,2L);
-        bgCategoryIdsByWmPoiTagIds.put(1L,3L);
-        bgCategoryIdsByWmPoiTagIds.put(2L,1L);
+        bgCategoryIdsByWmPoiTagIds.put(1L, 1L);
+        bgCategoryIdsByWmPoiTagIds.put(1L, 2L);
+        bgCategoryIdsByWmPoiTagIds.put(1L, 2L);
+        bgCategoryIdsByWmPoiTagIds.put(1L, 3L);
+        bgCategoryIdsByWmPoiTagIds.put(2L, 1L);
 
         Map<Long, List<Long>> bgCategoryIdsMap = transformMultimapToMap(bgCategoryIdsByWmPoiTagIds);
         System.out.println(bgCategoryIdsByWmPoiTagIds);

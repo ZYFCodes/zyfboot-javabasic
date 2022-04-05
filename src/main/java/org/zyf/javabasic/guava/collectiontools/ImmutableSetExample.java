@@ -17,7 +17,9 @@ import java.awt.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ZYFApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ImmutableSetExample {
-    /**以set为例*/
+    /**
+     * 以set为例
+     */
     ImmutableSet<String> zyf1 = ImmutableSet.of("a", "b", "c");
     ImmutableSet<Integer> zyf2 = ImmutableSet.of(1, 2, 3);
     ImmutableSet<Integer> defensiveCopy = ImmutableSet.copyOf(zyf2);

@@ -6,7 +6,7 @@ package org.zyf.javabasic.test.interfaceandabstract;
  * @author yanfengzhang
  * @date 2020-04-17 18:58
  */
-public abstract class Travel implements Life{
+public abstract class Travel implements Life {
     @Override
     public String doSomething() {
         System.out.println("Travel====");

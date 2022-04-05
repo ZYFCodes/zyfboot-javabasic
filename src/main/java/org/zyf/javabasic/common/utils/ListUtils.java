@@ -41,21 +41,21 @@ public class ListUtils {
 
 
     public static void main(String[] args) {
-        List<String>  testList = Lists.newArrayList();
+        List<String> testList = Lists.newArrayList();
         for (int i = 0; i < 1045; i++) {
-            testList.add("asd\\x01dfff\\x01gfdd\\x01"+i);
+            testList.add("asd\\x01dfff\\x01gfdd\\x01" + i);
         }
 
-        StringBuilder testResult=new StringBuilder();
+        StringBuilder testResult = new StringBuilder();
         List<List<Object>> dealNumList = Lists.newArrayList();
         for (int i = 0; i < testList.size(); i++) {
             /*显示行号*/
-            List<Object> hiveQueryResult= Arrays.stream(testList.get(i).split("\\x01")).collect(Collectors.toList());
+            List<Object> hiveQueryResult = Arrays.stream(testList.get(i).split("\\x01")).collect(Collectors.toList());
             /*将数据放入到结果处理列表中*/
             dealNumList.add(hiveQueryResult);
-            if(dealNumList.size()>99){
+            if (dealNumList.size() > 99) {
                 List<List<List<Object>>> splitList = ListUtils.splitList(dealNumList, 20);
-                System.out.println("htfghjkhgbftgyhujhbg======"+splitList.size());
+                System.out.println("htfghjkhgbftgyhujhbg======" + splitList.size());
                 for (int j = 0; j < splitList.size(); j++) {
                     List<List<Object>> needSaveResult = splitList.get(j);
                     testResult.append(j).append(needSaveResult).append("\n");
@@ -64,13 +64,13 @@ public class ListUtils {
             }
         }
 
-        if(!CollectionUtils.isEmpty(dealNumList)){
+        if (!CollectionUtils.isEmpty(dealNumList)) {
             for (int j = 0; j < dealNumList.size(); j++) {
                 testResult.append(j).append(dealNumList).append("\n");
             }
             dealNumList.clear();
         }
-        System.out.println(dealNumList.size()+":"+dealNumList);
+        System.out.println(dealNumList.size() + ":" + dealNumList);
         System.out.println(testResult.toString());
     }
 }

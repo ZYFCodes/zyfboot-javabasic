@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.zyf.javabasic.skills.deleteifelse.factory.UserPayServiceStrategyFactory;
 import org.zyf.javabasic.skills.deleteifelse.service.UserPayService;
 
-import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
 
 /**
@@ -15,7 +14,7 @@ import java.math.BigDecimal;
  * @date 2019-12-31 18:13
  */
 @Service
-public class SuperVipPayServiceImpl implements UserPayService , InitializingBean {
+public class SuperVipPayServiceImpl implements UserPayService, InitializingBean {
     @Override
     public BigDecimal quote(BigDecimal orderPrice) {
         int payPrice = orderPrice.intValue();
@@ -24,6 +23,6 @@ public class SuperVipPayServiceImpl implements UserPayService , InitializingBean
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        UserPayServiceStrategyFactory.register("SuperVip",this);
+        UserPayServiceStrategyFactory.register("SuperVip", this);
     }
 }

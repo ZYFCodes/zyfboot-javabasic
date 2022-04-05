@@ -50,7 +50,7 @@ public class WmPoiTagTest {
 
         wmPoiTagAndTrees.add(wmPoiTagAndTree);
         wmPoiTagAndTrees.add(wmPoiTagAndTree1);
-        map.put(12L,wmPoiTagAndTrees);
+        map.put(12L, wmPoiTagAndTrees);
 
 
         Map<Long, WmPoiTag> resultMap = Maps.newHashMap();
@@ -130,7 +130,7 @@ public class WmPoiTagTest {
     }
 
     @Data
-    public static class WmPoiTagAndTree{
+    public static class WmPoiTagAndTree {
         public long id;
         public long poi_id;
         public long wm_poi_id;
@@ -145,7 +145,7 @@ public class WmPoiTagTest {
     }
 
     @Data
-    public static class WmPoiCateDic{
+    public static class WmPoiCateDic {
         public long id;
         public long poi_id;
         public long wm_poi_id;

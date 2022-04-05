@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.zyf.javabasic.skills.deleteifelse.factory.UserPayServiceStrategyFactory;
 import org.zyf.javabasic.skills.deleteifelse.service.UserPayService;
 
-import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
 
 /**

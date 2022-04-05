@@ -75,7 +75,7 @@ public class AutoRenewalActivityServiceImpl implements ActivityService<AutoRenew
         log.info("下线自动续费活动");
     }
 
-    public String test(){
+    public String test() {
         return "sss";
     }
 

@@ -1,7 +1,6 @@
 package org.zyf.javabasic.designpatterns.decorator.commoditypricestrategy.util;
 
 import lombok.Data;
-import org.zyf.javabasic.designpatterns.decorator.commoditypricestrategy.util.Merchandise;
 
 import java.math.BigDecimal;
 

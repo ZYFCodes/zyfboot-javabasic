@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class VerifyResultTest {
 
     @Data
-    public static class VerifyResult{
+    public static class VerifyResult {
         public long categoryId;
         public long wmPoiId;
         public State qualificationState;
@@ -28,7 +28,7 @@ public class VerifyResultTest {
         public List<Deficient> wmPoiTagDeficientList;
     }
 
-    public enum State{
+    public enum State {
         LEGAL(0),
         ILLEGAL(1),
         IN_GRACE_PERIOD(2);
@@ -44,7 +44,7 @@ public class VerifyResultTest {
         }
 
         public static State findByValue(int value) {
-            switch(value) {
+            switch (value) {
                 case 0:
                     return LEGAL;
                 case 1:
@@ -58,7 +58,7 @@ public class VerifyResultTest {
     }
 
     @Data
-    public static class Deficient{
+    public static class Deficient {
         public String message;
         public long wmPoiTagId;
         public String qualificationKey;
@@ -67,7 +67,7 @@ public class VerifyResultTest {
         public String quaItemName;
     }
 
-    public static class ShangouMerchantAdmissionUtils{
+    public static class ShangouMerchantAdmissionUtils {
         public static boolean isMedicalQuaKey(String qualificationKey) {
             String shangouMedicalQuaKeyStr = "1@3,2@3,3@2";
             if (StringUtils.isBlank(shangouMedicalQuaKeyStr)) {
@@ -81,29 +81,29 @@ public class VerifyResultTest {
     }
 
     public static void main(String[] args) {
-        VerifyResult verifyResult=new VerifyResult();
+        VerifyResult verifyResult = new VerifyResult();
         List<Deficient> deficientAndQualificationList1 = Lists.newArrayList();
-        Deficient deficient1=new Deficient();
+        Deficient deficient1 = new Deficient();
         deficient1.setQualificationKey("1@3");
-        Deficient deficient2=new Deficient();
+        Deficient deficient2 = new Deficient();
         deficient2.setQualificationKey("2@3");
-        Deficient deficient3=new Deficient();
+        Deficient deficient3 = new Deficient();
         deficient3.setQualificationKey("3@2");
         deficientAndQualificationList1.add(deficient1);
         deficientAndQualificationList1.add(deficient2);
         verifyResult.setDeficientAndQualificationList(deficientAndQualificationList1);
         verifyResult.setDeficientAndQualificationList(deficientAndQualificationList1);
-        System.out.println(""+verifyResult);
+        System.out.println("" + verifyResult);
         List<Deficient> refreshDeficientAndQualificationList;
-        List<Deficient> deficientAndQualificationList=verifyResult.getDeficientAndQualificationList();
-        if(CollectionUtils.isNotEmpty(deficientAndQualificationList)){
+        List<Deficient> deficientAndQualificationList = verifyResult.getDeficientAndQualificationList();
+        if (CollectionUtils.isNotEmpty(deficientAndQualificationList)) {
             /*进行过滤：只保留非指定医疗器械资质的内容*/
             refreshDeficientAndQualificationList = deficientAndQualificationList.stream()
                     .filter(deficient -> !ShangouMerchantAdmissionUtils.isMedicalQuaKey(deficient.getQualificationKey())).collect(Collectors.toList());
             verifyResult.setDeficientAndQualificationList(refreshDeficientAndQualificationList);
         }
 
-        System.out.println(""+verifyResult);
+        System.out.println("" + verifyResult);
 
         List<Deficient> deficientOrQualificationList = verifyResult.getDeficientAndQualificationList();
         if (CollectionUtils.isNotEmpty(deficientOrQualificationList)) {
@@ -116,17 +116,17 @@ public class VerifyResultTest {
             verifyResult.setDeficientOrQualificationList(deficientOrQualificationList);
         }
 
-        System.out.println(""+verifyResult);
+        System.out.println("" + verifyResult);
 
         List<String> list = Lists.newArrayList();
         list.add("1");
         list.add("2");
         list.add("3");
         list.add("4");
-        for (int i = list.size()-1; i > -1; i--) {
+        for (int i = list.size() - 1; i > -1; i--) {
             list.remove(i);
         }
-        System.out.println("-----------------"+list);
+        System.out.println("-----------------" + list);
     }
 
 }

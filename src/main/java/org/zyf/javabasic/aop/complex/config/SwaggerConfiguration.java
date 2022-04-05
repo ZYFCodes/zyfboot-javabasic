@@ -33,7 +33,7 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         List<VendorExtension> extensions = Lists.newArrayList();
-        Contact contact = new Contact("张彦峰","https://zyfcodes.blog.csdn.net","1273740896@qq.com");
+        Contact contact = new Contact("张彦峰", "https://zyfcodes.blog.csdn.net", "1273740896@qq.com");
         VendorExtension vendorExtension = new VendorExtension() {
             @Override
             public String getName() {

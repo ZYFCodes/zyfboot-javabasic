@@ -5,6 +5,7 @@ package org.zyf.javabasic.test;
  * @description
  * @date 2021/9/6  14:19
  */
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
@@ -50,12 +51,12 @@ public class MySpider {
             List<String> list = getMatcher(content, regex);
             urlSet.addAll(list);
             //判断是否到头
-            if (content.indexOf("空空如也") != -1){
+            if (content.indexOf("空空如也") != -1) {
                 break;
             }
         }
         //打印链接
-        for(String s : urlSet){
+        for (String s : urlSet) {
             getInputStream(s);
             System.out.println(s);
         }

@@ -14,10 +14,11 @@ import java.math.BigDecimal;
 public interface IBaseCount {
     /**
      * 功能描述：计算支付金额
-     * @author yanfengzhang
-     * @date 2020-04-19 14:40
+     *
      * @param orderDetail
      * @return BigDecimal
-    */
+     * @author yanfengzhang
+     * @date 2020-04-19 14:40
+     */
     BigDecimal countPayMoney(OrderDetail orderDetail);
 }

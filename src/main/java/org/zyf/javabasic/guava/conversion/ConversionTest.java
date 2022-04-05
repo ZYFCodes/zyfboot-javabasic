@@ -37,18 +37,18 @@ public class ConversionTest {
     }
 
     @Test
-    public void testStringToList(){
+    public void testStringToList() {
         String input = "apple,,banana,,,orange,null,";
         List<String> result1 = Splitter.on(",").trimResults().splitToList(input);
         List<String> result2 = Splitter.on(",").omitEmptyStrings().splitToList(input);
 
         System.out.println("原字符串内容为:" + input);
-        System.out.println("将其转换为对应的列表(保留为空的内容)内容为:"+result1);
-        System.out.println("将其转换为对应的列表(去除列表中的空内容)内容为:"+result2);
+        System.out.println("将其转换为对应的列表(保留为空的内容)内容为:" + result1);
+        System.out.println("将其转换为对应的列表(去除列表中的空内容)内容为:" + result2);
     }
 
     @Test
-    public void testMapToString(){
+    public void testMapToString() {
         Map<String, Integer> salary = Maps.newHashMap();
         salary.put("John", 1000);
         salary.put("Jane", 1500);
@@ -56,17 +56,17 @@ public class ConversionTest {
         /*Map转为字符串形式*/
         String result = Joiner.on(",").withKeyValueSeparator(" = ").join(salary);
 
-        System.out.println("原字典内容为:"+salary);
-        System.out.println("将其转换为字符串形式为:"+result);
+        System.out.println("原字典内容为:" + salary);
+        System.out.println("将其转换为字符串形式为:" + result);
     }
 
     @Test
-    public void testStringToMap(){
+    public void testStringToMap() {
         String input = "John=first,Adam=second";
         Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(input);
 
-        System.out.println("原字符串内容为:"+input);
-        System.out.println("将其转换为Map内容后为:"+result);
+        System.out.println("原字符串内容为:" + input);
+        System.out.println("将其转换为Map内容后为:" + result);
     }
 
     /**

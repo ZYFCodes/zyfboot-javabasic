@@ -24,12 +24,12 @@ public class TestLoading {
                     }
 
                 });
-        brandCache.put("java金融",555L);
-        Thread.sleep(1*1000);
+        brandCache.put("java金融", 555L);
+        Thread.sleep(1 * 1000);
         System.out.println(brandCache.getUnchecked("java金融"));
-        Thread.sleep(1*1000);
+        Thread.sleep(1 * 1000);
         System.out.println(brandCache.getUnchecked("java金融"));
-        Thread.sleep(1*1000);
+        Thread.sleep(1 * 1000);
         System.out.println(brandCache.getUnchecked("java金融"));
 
         Thread.sleep(1000);

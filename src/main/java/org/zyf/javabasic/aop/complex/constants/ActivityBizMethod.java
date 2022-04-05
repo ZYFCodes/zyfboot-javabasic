@@ -2,6 +2,7 @@ package org.zyf.javabasic.aop.complex.constants;
 
 /**
  * 活动相关业务方法
+ *
  * @author yanfengzhang
  */
 public enum ActivityBizMethod {

@@ -16,8 +16,8 @@ public class TestMaxStringInList {
     public static void main(String[] args) {
         List<ValidateResult> sensitiveWordList = Lists.newArrayList();
         for (int i = 0; i < 11; i++) {
-            ValidateResult validateResult=new ValidateResult();
-            validateResult.setSource("nihao"+i);
+            ValidateResult validateResult = new ValidateResult();
+            validateResult.setSource("nihao" + i);
             sensitiveWordList.add(validateResult);
         }
         System.out.println(sensitiveWordList);

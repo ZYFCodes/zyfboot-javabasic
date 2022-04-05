@@ -3,7 +3,6 @@ package org.zyf.javabasic.test;
 import com.google.common.collect.Lists;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

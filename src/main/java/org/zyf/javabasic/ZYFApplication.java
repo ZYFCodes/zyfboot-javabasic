@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @SpringBootApplication
 @ComponentScan(basePackages = {"org.zyf.javabasic"})
-@EnableAspectJAutoProxy(proxyTargetClass=true, exposeProxy = true)
+@EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @EnableSwagger2
 public class ZYFApplication {
     public static void main(String[] args) {

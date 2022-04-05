@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class GenericTest {
     public static void main(String[] args) {
-        BizConversion bizConversion=new BizConversion();
+        BizConversion bizConversion = new BizConversion();
         List<Movie> movies = bizConversion.getBizInfoInCheckOnline("tv_series", Movie.class);
         System.out.println(movies);
     }

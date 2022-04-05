@@ -106,8 +106,7 @@ public class FileUtils {
     /**
      * 删除文件，可以是文件或文件夹
      *
-     * @param fileName
-     *            要删除的文件名
+     * @param fileName 要删除的文件名
      * @return 删除成功返回true，否则返回false
      */
     public static boolean delete(String fileName) {
@@ -127,8 +126,7 @@ public class FileUtils {
     /**
      * 删除单个文件
      *
-     * @param fileName
-     *            要删除的文件的文件名
+     * @param fileName 要删除的文件的文件名
      * @return 单个文件删除成功返回true，否则返回false
      */
     public static boolean deleteFile(String fileName) {
@@ -148,8 +146,7 @@ public class FileUtils {
     /**
      * 删除目录及目录下的文件
      *
-     * @param dir
-     *            要删除的目录的文件路径
+     * @param dir 要删除的目录的文件路径
      * @return 目录删除成功返回true，否则返回false
      */
     public static boolean deleteDirectory(String dir) {
@@ -197,20 +194,19 @@ public class FileUtils {
     }
 
 
-
     public static void main(String[] args) throws IOException {
-       String adress="/Users/yanfengzhang/Downloads/zyfurl.txt";
+        String adress = "/Users/yanfengzhang/Downloads/zyfurl.txt";
         System.out.println(readFileContent(adress));
         System.out.println(getFileSize(adress));
 
         for (int i = 0; i < 10; i++) {
-            writeToFile(String.valueOf(i),"/Users/yanfengzhang/Downloads/zyfurlTemp.txt");
+            writeToFile(String.valueOf(i), "/Users/yanfengzhang/Downloads/zyfurlTemp.txt");
         }
 
 
-        String beafore=readFileContent("/Users/yanfengzhang/Downloads/zyfurlTotal.txt");
-        String beafore1=beafore.substring(0,beafore.length()-1).replaceAll("\\{","");
-        String beafore2=beafore1.replaceAll("\\}","");
+        String beafore = readFileContent("/Users/yanfengzhang/Downloads/zyfurlTotal.txt");
+        String beafore1 = beafore.substring(0, beafore.length() - 1).replaceAll("\\{", "");
+        String beafore2 = beafore1.replaceAll("\\}", "");
         System.out.println(beafore2);
 
         Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(beafore2);

@@ -1,6 +1,10 @@
 package org.zyf.javabasic.test.eventbus;
 
-import com.google.common.eventbus.*;
+import com.google.common.eventbus.AllowConcurrentEvents;
+import com.google.common.eventbus.AsyncEventBus;
+import com.google.common.eventbus.DeadEvent;
+import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.Subscribe;
 import lombok.Data;
 import org.junit.Test;
 
@@ -96,7 +100,7 @@ public class EventBusTest {
         eb.post(new EventA());
         eb.post(new EventX());
 
-        EventA a=new EventA();
+        EventA a = new EventA();
         a.setName("测试一下！");
         eb.post(a);
 

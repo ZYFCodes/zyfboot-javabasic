@@ -34,7 +34,7 @@ public class TestCache {
                     }
                 });
 
-        ConcurrentMap<String, List<String>> newO= mockRuleCache.asMap();
+        ConcurrentMap<String, List<String>> newO = mockRuleCache.asMap();
 
         System.out.println(mockRuleCache.get("e"));
         System.out.println(mockRuleCache.getUnchecked("r"));

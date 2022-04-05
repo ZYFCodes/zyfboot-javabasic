@@ -6,7 +6,7 @@ package org.zyf.javabasic.test.interfaceandabstract;
  * @author yanfengzhang
  * @date 2020-04-17 18:52
  */
-public abstract class Diet implements Life{
+public abstract class Diet implements Life {
     @Override
     public String doSomething() {
         System.out.println("Diet====");
