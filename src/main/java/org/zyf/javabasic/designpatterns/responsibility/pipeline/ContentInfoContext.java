@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class ContentInfoContext extends PipelineContext {
     /**
-     * 用户输入文本原稿
+     * 用户输入文本原稿(清洗中会不断被更新内容)
      */
     private String content;
     /**
@@ -36,6 +36,14 @@ public class ContentInfoContext extends PipelineContext {
      * 业务方接入来源
      */
     private Integer bizType;
+    /**
+     * 数据节点流转信号
+     */
+    private Boolean deliver;
+    /**
+     * 数据节点流转终止原因
+     */
+    private String reason;
 
     @Override
     public String getName() {

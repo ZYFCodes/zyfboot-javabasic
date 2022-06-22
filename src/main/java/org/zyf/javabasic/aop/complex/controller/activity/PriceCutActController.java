@@ -30,6 +30,6 @@ public class PriceCutActController {
     public String addOrUpdatePolicy(@RequestBody AutoRenewalActivityDto autoRenewalActivityDto) throws Exception {
         log.info("新增或者更新自动续费活动信息,autoRenewalActivityDto:{}", autoRenewalActivityDto);
         verifyAopService.queryLimitTimeActivityDetail((long) 34);
-        return "";
+        return "eeeee";
     }
 }

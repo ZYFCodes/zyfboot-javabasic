@@ -7,20 +7,25 @@ import java.util.List;
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2022/4/4  16:18
+ * @description 按配置条件实际生效的敏感词
+ * @date 2022/4/4  22:18
  */
 @Builder
 @Data
-public class SensitveResContext extends PipelineContext {
+public class SensitveEffectiveContext extends PipelineContext {
     /**
-     * 用户输入文本原稿
+     * 用户输入文本原稿（清洗内容后的结果）
      */
     private String content;
     /**
-     * 清洗内容后的结果
+     * 文本来源(门店、品牌、社区、网址)
      */
-    private String cleanContent;
+    private Integer source;
+    /**
+     * 文本来源ID信息
+     * 例如：来源为门店，此处为门店ID；来源为品牌，此处为品牌ID
+     */
+    private Integer sourceId;
     /**
      * 是否命中敏感词
      */

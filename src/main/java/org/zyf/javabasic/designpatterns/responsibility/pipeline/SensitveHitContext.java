@@ -3,22 +3,20 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author yanfengzhang
  * @description 敏感词命中情况基本信息
- * @date 2022/4/4  15:56
+ * @date 2022/4/4  22:56
  */
 @Builder
 @Data
 public class SensitveHitContext extends PipelineContext {
     /**
-     * 用户输入文本原稿
+     * 用户输入文本原稿（已经做过清洗工作）
      */
     private String content;
-    /**
-     * 清洗内容后的结果
-     */
-    private String cleanContent;
     /**
      * 文本归类（商品名称、商品描述、商家公告、商家名称、经营描述、代言信息等）
      */
@@ -41,7 +39,15 @@ public class SensitveHitContext extends PipelineContext {
      */
     private Integer bizType;
     /**
-     * 数据节点流转信号
+     * 是否命中敏感词
+     */
+    private Boolean isHit;
+    /**
+     * 命中的敏感词
+     */
+    private List<SensitiveWord> hitWords;
+    /**
+     * 数据节点流转信号  备注：此处暂定只要有敏感词的命中就直接暂停流转
      */
     private Boolean deliver;
     /**

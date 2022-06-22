@@ -133,6 +133,32 @@
             <artifactId>chinese-utils</artifactId>
             <version>1.0</version>
         </dependency>
+        <!-- 语言识别language-detect：https://github.com/KANLON/language-distinguish-->
+        <dependency>
+            <groupId>com.github.kanlon</groupId>
+            <artifactId>language-distinguish</artifactId>
+            <version>1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.tair</groupId>
+            <artifactId>tair3-client</artifactId>
+            <version>3.1.9.4-mt</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sankuai.octo</groupId>
+            <artifactId>mns-invoker</artifactId>
+            <version>1.9.21-RC</version>
+        </dependency>
     </dependencies>
 
 

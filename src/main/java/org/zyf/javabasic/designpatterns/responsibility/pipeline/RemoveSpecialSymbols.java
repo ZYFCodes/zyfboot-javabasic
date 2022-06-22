@@ -6,6 +6,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
@@ -39,15 +40,15 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
      * @return 处理结果（代进入敏感词词库校验）
      */
     @Override
-    public void handle(ContentInfoContext context, SensitveHitContext dealRes) {
+    public void handle(ContentInfoContext context, SensitveHitContext nextDeal) {
         /*前置节点处理异常，本节点不做处理*/
-        if (!dealRes.getDeliver()) {
+        if (!context.getDeliver()) {
             return;
         }
 
         try {
             String SPECIAL_SYMBOLS = "specialSymbols";
-            char[] valueChars = dealRes.getCleanContent().toCharArray();
+            char[] valueChars = context.getContent().toCharArray();
             Set<Integer> specialSymbols = specialSymbolsCache.get(SPECIAL_SYMBOLS);
             StringBuilder cleanContent = new StringBuilder();
             for (char valueChar : valueChars) {
@@ -60,11 +61,12 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
             }
 
             /*将清洗数据载入待校验实体中*/
-            dealRes.setDeliver(true);
-            dealRes.setCleanContent(cleanContent.toString());
+            context.setDeliver(true);
+            context.setContent(cleanContent.toString());
+            BeanUtils.copyProperties(context, nextDeal);
         } catch (Exception e) {
-            dealRes.setDeliver(false);
-            dealRes.setReason("数据清洗异常：排除特殊符号失败");
+            context.setDeliver(false);
+            context.setReason("数据清洗异常：排除特殊符号失败");
         }
     }
 
@@ -76,7 +78,7 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
     private static Set<Integer> getSpecialSymbols() {
         List<String> specialSymbolsRes = Lists.newArrayList();
         String speciSymbols = "'͏@¥^…&（）()、。 ；：|【】[]{}-—_%*$#！/\\<>《》，,.:“”\"』『•‘’'?？+=！!" +
-                "°❤❥웃유☮☏☢☠✔☑♚▲♪✈✞÷↑↓◆◇⊙■□△▽¿─│♥❣♂♀☿✉☣☤✘☒♛▼♫⌘☪≈←→◈◎☉★☆⊿※¡━\u2069┃♡ღツ☼☁❅✎©®™Σ✪✯☭➳卐√↖↗●◐Θ◤◥︻" +
+                "°❤❥웃유☮☏☢☠✔☑♚▲♪✈✞÷↑↓◆◇⊙■□△▽¿─│♥❣♂♀☿✉☣☤✘☒♛▼♫⌘☪≈←→◈◎☉★☆⊿※¡━┃♡ღツ☼☁❅✎©®™Σ✪✯☭➳卐√↖↗●◐Θ◤◥︻" +
                 "〖〗┄┆℃℉°✿ϟ☃☂✄¢€£∞✫★½✡×↙↘○◑⊕◣◢︼【】┅┇☽☾✚〓▂▃▄▅▆▇█▉▊▋▌▍▎▏↔↕☽☾の•▸◂▴▾┈┊①②③④⑤⑥⑦⑧⑨⑩" +
                 "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ㍿▓♨♛❖☪✙┉┋☹☺☻تヅツッシÜϡﭢ™℠℗©®♥❤❥❣❦❧♡۵웃유ღ♂♀☿☼☀☁☂☄☾☽❄☃☈⊙☉℃℉❅✺ϟ☇♤♧♡♢♠♣♥♦☜☞☚☛☟✽✾✿❁❃❋❀⚘☑✓✔" +
                 "√☐☒✗✘ㄨ✕✖✖⋆✢✣✤✥❋✦✧✩✰✪✫✬✭✮✯❂✡★✱✲✳✴✵✶✷✸✹✺✻✼❄❅❆❇❈❉❊†☨✞✝☥☦☓☩☯☧☬☸✡♁✙♆。，、＇：∶；?‘’“”〝〞ˆˇ﹕︰﹔﹖﹑•¨….¸;！" +
@@ -97,8 +99,8 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
                 "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫⅬⅭⅮↁↂↃↅↆↇↈ↉↊↋■□▢▣▤▥▦▧▨▩▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◈◉◊○◌◍◎●◐◑◒◓◔◕◖◗◘◙◚◛◜◝◞◟◠◡◢◣◤◥" +
                 "◦◧◨◩◪◫◬◭◮◯◰◱◲◳◴◵◶◷◸◹◺◿◻◼◽◾⏢⏥⌓⌔⌖⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₒₓₔₕₖₗₘₙₚₛₜ。，、＇：∶；?‘’“”〝〞ˆˇ﹕︰﹔﹖﹑•¨….¸;" +
                 "！´？！～—ˉ｜‖＂〃｀@﹫¡¿﹏﹋﹌︴々﹟#﹩$﹠&﹪%*﹡﹢﹦﹤‐￣¯―﹨ˆ˜﹍﹎+=<＿_-\\ˇ~﹉﹊（）〈〉‹›﹛﹜『』〖〗［］《》〔〕{}「」【】" +
-                "︵︷︿︹︽_﹁﹃︻︶︸﹀︺︾ˉ﹂﹄︼❝❞‐‑‒–―‖‗‘’‚‛“”„‟†‡•‣․‥…‧\u202A\u202B\u202C\u202D\u202E‰‱′″‴‵‶‷‸※‼‽‾‿⁀⁁⁂⁃⁄⁇⁈⁉⁊⁋⁌⁍⁎⁏" +
-                "⁐⁑⁒⁓⁔⁕⁖⁗⁘⁙⁚⁛⁜⁝⁞\u2060\u2061\u2062\u2063\u2064°′″＄￥〒￠￡％＠℃℉﹩﹪‰﹫㎡㎥³㎜㎟㎣㎝㎠㎤㍷㍸㍹㎞㎢㎦㏎㎚㎛㏕㎍㎎㎏㏄º○¤%$º¹²³" +
+                "︵︷︿︹︽_﹁﹃︻︶︸﹀︺︾ˉ﹂﹄︼❝❞‐‑‒–―‖‗‘’‚‛“”„‟†‡•‣․‥…‧‰‱′″‴‵‶‷‸※‼‽‾‿⁀⁁⁂⁃⁄⁇⁈⁉⁊⁋⁌⁍⁎⁏" +
+                "⁐⁑⁒⁓⁔⁕⁖⁗⁘⁙⁚⁛⁜⁝⁞°′″＄￥〒￠￡％＠℃℉﹩﹪‰﹫㎡㎥³㎜㎟㎣㎝㎠㎤㍷㍸㍹㎞㎢㎦㏎㎚㎛㏕㎍㎎㎏㏄º○¤%$º¹²³" +
                 "㍺㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋㎌㎐㎑㎒㎓㎔㎕㎖㎗㎘㎙㎧㎨㎩㎪㎫㎬㎭㎮㎯㎰㎱㎲㎳㎴㎵㎶㎷㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛㏜" +
                 "㏝㏞㏟㍱㍲㍳㍴㍵㍶€£Ұ₴$₰¢₤¥₳₲₪₵元₣₱฿¤₡₮₭₩ރ円₢₥₫₦ł﷼₠₧₯₨čर₹ƒ₸￠↑↓←→↖↗↘↙↔↕" +
                 "➻➼➽➸➳➺➻➴➵➶➷➹▶►▷◁◀◄«»➩➪➫➬➭➮➯➱⏎➲➾➔➘➙➚➛➜➝➞➟➠➡➢➣➤➥➦➧➨↚↛↜↝↞↟↠↠↡↢↣↤↤↥↦↧↨⇄⇅⇆⇇⇈⇉⇊⇋⇌⇍⇎⇏⇐⇑⇒⇓⇔⇖⇗⇘⇙⇜↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷↸↹☇☈↼↽↾↿⇀⇁⇂⇃" +
@@ -106,10 +108,10 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
                 "卍卐√×■◆●○◐◑✙☺☻❀⚘♔♕♖♗♘♙♚♛♜♝♞♟♧♡♂♀♠♣♥❤☜☞☎☏⊙◎☺☻☼▧▨♨◐◑↔↕▪▒◊◦▣▤▥▦▩◘◈◇♬♪♩♭♪の★☆→あぃ￡Ю〓§♤♥▶¤✲❈✿✲❈➹☀☂☁【】" +
                 "┱┲❣✚✪✣✤✥✦❉❥❦❧❃❂❁❀✄☪☣☢☠☭ღ▶▷◀◁☀☁☂☃☄★☆☇☈⊙☊☋☌☍ⓛⓞⓥⓔ╬『』∴☀♫♬♩♭♪☆∷﹌の★◎▶☺☻►◄▧▨♨◐◑↔↕↘▀▄█▌◦☼♪の☆→♧ぃ￡❤▒▬♦◊◦♠♣▣۰•❤•۰" +
                 "►◄▧▨♨◐◑↔↕▪▫☼♦⊙●○①⊕◎Θ⊙¤㊣★☆♀◆◇◣◢◥▲▼△▽⊿◤◥✐✡✓✔✕✖♂♀♥♡☜☞☎☏⊙◎☺☻►◄▧▨♨◐◑↔↕♥♡▪▫☼♦▀▄█▌▐░▒▬♦◊◘◙◦☼♠♣▣▤▥▦▩◘◙◈" +
-                "♫♬♪♩♭♪✄☪☣☢☠♯♩♪♫♬♭♮☎☏☪ºº₪¤큐«»™♂✿♥◕‿-｡｡◕‿◕｡āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüêɑ\uE7C7ńň\uE7C8ɡ" +
+                "♫♬♪♩♭♪✄☪☣☢☠♯♩♪♫♬♭♮☎☏☪ºº₪¤큐«»™♂✿♥◕‿-｡｡◕‿◕｡āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüêɑńňɡ" +
                 "ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ々〆のぁ〡〢〣〤〥〦〧〨〩─━│┃╌╍╎╏┄┅┆┇┈┉┊┋" +
                 "┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠┡┢┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊╋╪╫╬═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╳╔╗╝╚╬═╓╩┠┨┯┷┏┓┗┛┳" +
-                "⊥﹃﹄┌╮╭╯╰♚♛♝♞♜♟♔♕♗♘♖♟͏\u2069\u2060\u2061\u2062\u2063\u2064\u2067\u206C\u206B";
+                "⊥﹃﹄┌╮╭╯╰♚♛♝♞♜♟♔♕♗♘♖♟";
         if (StringUtils.isNotBlank(speciSymbols)) {
             for (int index = 0; index < speciSymbols.length(); index++) {
                 specialSymbolsRes.add(String.valueOf(speciSymbols.charAt(index)));

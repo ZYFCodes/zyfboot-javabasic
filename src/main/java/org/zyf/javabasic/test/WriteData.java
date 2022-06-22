@@ -6,6 +6,8 @@ package org.zyf.javabasic.test;
  * @date 2021/9/7  17:52
  */
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -33,5 +35,10 @@ public class WriteData {
                 // do something
             }
         }
+    }
+
+    public static void main(String[] args) {
+        String[] dd = {"x","n"};
+        System.out.println(StringUtils.containsAny("sssssssssiijjhgfghjnbvcxdfghnbvc", dd));
     }
 }

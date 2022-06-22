@@ -38,9 +38,9 @@ public class VerifyAopService {
     }
 
     @ZYFActivityDealer(activityType = ActivityBizConstants.ActivityBizType.PRICE_CUT, activityMethod = ActivityBizMethod.DELETE)
-    public void deletePriceCutActivityDetail(Long id) {
+    public boolean deletePriceCutActivityDetail(Long id) {
         log.info("deletePriceCutActivityDetail：若打印本日志，则说明对应增加或更新AOP未按切面进行或AOP失效，按照本方法的实际内容操作！");
-        return;
+        return true;
     }
 
     @ZYFActivityDealer(activityType = ActivityBizConstants.ActivityBizType.PRICE_CUT, activityMethod = ActivityBizMethod.ONLINE)

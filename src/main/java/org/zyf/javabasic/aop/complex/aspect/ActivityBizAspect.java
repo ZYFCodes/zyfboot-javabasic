@@ -1,11 +1,14 @@
 package org.zyf.javabasic.aop.complex.aspect;
 
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
@@ -32,11 +35,19 @@ public class ActivityBizAspect {
     public void execute() {
     }
 
+    @Before("execute()")
+    public void printLog(JoinPoint point){
+        System.out.println("的地方v官方大肆宣传"+point.getArgs());
+        log.info("hhhh{}",point.getArgs());
+    }
+
     @Around("execute()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         log.info("AOP处理开始：");
         Signature signature = point.getSignature();
+        log.info("signature={}", JSON.toJSONString(signature));
         MethodSignature methodSignature = (MethodSignature) signature;
+        log.info("methodSignature={}", JSON.toJSONString(methodSignature));
         Method targetMethod = methodSignature.getMethod();
         ZYFActivityDealer zyfActivityDealer = targetMethod.getAnnotation(ZYFActivityDealer.class);
         if (null != zyfActivityDealer) {

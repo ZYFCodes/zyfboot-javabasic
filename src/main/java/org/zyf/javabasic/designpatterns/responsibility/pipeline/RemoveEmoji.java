@@ -6,6 +6,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
@@ -39,15 +40,15 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, SensitveH
      * @return 处理结果（代进入敏感词词库校验）
      */
     @Override
-    public void handle(ContentInfoContext context, SensitveHitContext dealRes) {
+    public void handle(ContentInfoContext context, SensitveHitContext nextDeal) {
         /*前置节点处理异常，本节点不做处理*/
-        if (!dealRes.getDeliver()) {
+        if (!context.getDeliver()) {
             return;
         }
 
         try {
             String EMOJI = "emoji";
-            char[] valueChars = dealRes.getCleanContent().toCharArray();
+            char[] valueChars = context.getContent().toCharArray();
             Set<Integer> emojis = emojiCache.get(EMOJI);
             StringBuilder cleanContent = new StringBuilder();
             for (char valueChar : valueChars) {
@@ -60,11 +61,12 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, SensitveH
             }
 
             /*将清洗数据载入待校验实体中*/
-            dealRes.setDeliver(true);
-            dealRes.setCleanContent(cleanContent.toString());
+            context.setDeliver(true);
+            context.setContent(cleanContent.toString());
+            BeanUtils.copyProperties(context, nextDeal);
         } catch (Exception e) {
-            dealRes.setDeliver(false);
-            dealRes.setReason("数据清洗异常：排除特殊符号失败");
+            context.setDeliver(false);
+            context.setReason("数据清洗异常：排除特殊符号失败");
         }
     }
 

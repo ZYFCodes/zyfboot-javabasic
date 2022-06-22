@@ -2,6 +2,7 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -10,50 +11,63 @@ import java.util.List;
 /**
  * @author yanfengzhang
  * @description 敏感词校验：相关词库处理
- * @date 2022/4/5  16:31
+ * @date 2022/4/5  22:31
  */
 @Component
-public class SensitiveThesaurusValidator implements ContextHandler<SensitveHitContext, SensitveResContext> {
+public class SensitiveThesaurusValidator implements ContextHandler<SensitveHitContext, SensitveEffectiveContext> {
     /**
      * 敏感词分析处理：根据相关业务配置进行相关词库校验匹配
      *
-     * @param context 处理时的上下文数据
-     * @param dealRes 增加字段deliver为true则表示由下一个ContextHandler继续处理；为false则表示处理结束Content information
+     * @param context  处理时的上下文数据：增加字段deliver为true则表示由下一个ContextHandler继续处理；为false则表示处理结束Content information
+     * @param nextDeal 处理结果（代进入敏感词生效处理）
      */
     @Override
-    public void handle(SensitveHitContext context, SensitveResContext dealRes) {
-        Integer bizType = context.getBizType();
-        /*根据业务方接入来源获取对应的业务方词库校验要求*/
-        List<Integer> validatorModes = getBizSensitiveModes(bizType);
-        if (CollectionUtils.isEmpty(validatorModes)) {
-            /*没有配置则直接默认走企业词库校验*/
-            validatorModes.add(1);
+    public void handle(SensitveHitContext context, SensitveEffectiveContext nextDeal) {
+        /*前置节点处理异常，本节点不做处理（所以初始化传入的时候需要进行默认true，方便后期随时调整链路）*/
+        if (!context.getDeliver()) {
+            return;
         }
 
-        /*实际用策略处理，此处只为模拟*/
-        List<SensitiveWord> hitWords = Lists.newArrayList();
-        for (Integer validatorMode : validatorModes) {
-            if (validatorMode.equals(1)) {
-                /*企业词库校验*/
-                hitWords.addAll(companySensitive(context.getCleanContent()));
+        try {
+            Integer bizType = context.getBizType();
+            /*根据业务方接入来源获取对应的业务方词库校验要求*/
+            List<Integer> validatorModes = getBizSensitiveModes(bizType);
+            if (CollectionUtils.isEmpty(validatorModes)) {
+                /*没有配置则直接默认走企业词库校验*/
+                validatorModes.add(1);
             }
-            if (validatorMode.equals(2)) {
-                /*企业词库校验*/
-                hitWords.addAll(departmentSensitive(context.getCleanContent()));
-            }
-            if (validatorMode.equals(3)) {
-                /*企业词库校验*/
-                hitWords.addAll(otherSensitive(context.getCleanContent()));
-            }
-        }
 
-        if (CollectionUtils.isNotEmpty(hitWords)) {
-            dealRes.setDeliver(true);
-            dealRes.setHitWords(hitWords);
-            dealRes.setIsHit(true);
-        } else {
-            dealRes.setDeliver(false);
-            dealRes.setReason("敏感词校验结束：当前词库中没有命中敏感词");
+            /*实际用策略处理，此处只为模拟*/
+            List<SensitiveWord> hitWords = Lists.newArrayList();
+            for (Integer validatorMode : validatorModes) {
+                if (validatorMode.equals(1)) {
+                    /*企业词库校验*/
+                    hitWords.addAll(companySensitive(context.getContent()));
+                }
+                if (validatorMode.equals(2)) {
+                    /*企业词库校验*/
+                    hitWords.addAll(departmentSensitive(context.getContent()));
+                }
+                if (validatorMode.equals(3)) {
+                    /*企业词库校验*/
+                    hitWords.addAll(otherSensitive(context.getContent()));
+                }
+            }
+
+            /*如果命中敏感词，则显示命中，且终止链路传递*/
+            if (CollectionUtils.isNotEmpty(hitWords)) {
+                context.setIsHit(true);
+                context.setHitWords(hitWords);
+                context.setDeliver(false);
+                context.setReason("敏感词校验结束：已在相关词库处理中命中敏感词");
+            } else {
+                context.setDeliver(true);
+            }
+            BeanUtils.copyProperties(context, nextDeal);
+        } catch (Exception e) {
+            context.setDeliver(false);
+            context.setReason("敏感词校验结束：相关词库处理过程中发生异常");
+            BeanUtils.copyProperties(context, nextDeal);
         }
     }
 

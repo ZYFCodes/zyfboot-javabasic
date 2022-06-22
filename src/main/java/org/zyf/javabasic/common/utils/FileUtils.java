@@ -1,7 +1,5 @@
 package org.zyf.javabasic.common.utils;
 
-import com.google.common.base.Splitter;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,7 +8,8 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author yanfengzhang
@@ -73,6 +72,7 @@ public class FileUtils {
 
     public static void writeToFile(String data, String fileNamePath) {
         byte[] sourceByte = data.getBytes();
+        FileOutputStream outStream = null;
         if (null != sourceByte) {
             try {
                 //文件路径（路径+文件名）
@@ -84,14 +84,13 @@ public class FileUtils {
                     file.createNewFile();
                 }
                 //文件输出流将数据写入文件
-                FileOutputStream outStream = new FileOutputStream(file);
+                outStream = new FileOutputStream(file);
                 outStream.write(sourceByte);
                 outStream.close();
             } catch (Exception e) {
                 e.printStackTrace();
                 // do something
             } finally {
-                // do something
             }
         }
     }
@@ -193,23 +192,33 @@ public class FileUtils {
         }
     }
 
-
+    private static volatile Set<String> rpcInfos = new HashSet<>();
     public static void main(String[] args) throws IOException {
-        String adress = "/Users/yanfengzhang/Downloads/zyfurl.txt";
-        System.out.println(readFileContent(adress));
-        System.out.println(getFileSize(adress));
+//        String adress = "/Users/yanfengzhang/Downloads/zyfurl.txt";
+//        System.out.println(readFileContent(adress));
+//        System.out.println(getFileSize(adress));
+//
+//        for (int i = 0; i < 10; i++) {
+//            writeToFile(String.valueOf(i), "/Users/yanfengzhang/Downloads/zyf112222222222.txt");
+//        }
 
-        for (int i = 0; i < 10; i++) {
-            writeToFile(String.valueOf(i), "/Users/yanfengzhang/Downloads/zyfurlTemp.txt");
+//
+//        String beafore = readFileContent("/Users/yanfengzhang/Downloads/zyfurlTotal.txt");
+//        String beafore1 = beafore.substring(0, beafore.length() - 1).replaceAll("\\{", "");
+//        String beafore2 = beafore1.replaceAll("\\}", "");
+//        System.out.println(beafore2);
+//
+//        Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(beafore2);
+
+
+        for (int i = 0; i < 15; i++) {
+            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" +i+ ":" + "rpcInvocation.getMethod().getName()"+i);
+            writeToFile(rpcInfos.toString(), "/Users/yanfengzhang/Downloads/rpcInfo.txt");
         }
 
-
-        String beafore = readFileContent("/Users/yanfengzhang/Downloads/zyfurlTotal.txt");
-        String beafore1 = beafore.substring(0, beafore.length() - 1).replaceAll("\\{", "");
-        String beafore2 = beafore1.replaceAll("\\}", "");
-        System.out.println(beafore2);
-
-        Map<String, String> result = Splitter.on(",").withKeyValueSeparator("=").split(beafore2);
-
+        for (int i = 12; i < 17; i++) {
+            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" +i+ ":" + "rpcInvocation.getMethod().getName()"+i);
+            writeToFile(rpcInfos.toString(), "/Users/yanfengzhang/Downloads/rpcInfo.txt");
+        }
     }
 }
