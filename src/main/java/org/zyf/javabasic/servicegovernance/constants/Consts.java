@@ -29,18 +29,30 @@ public class Consts {
     public static final int fileConfigUpdateInterval = 2;
 
     /***** servicaCache const start *****/
-    /** 默认每30s强制拉取全量 **/
+    /**
+     * 默认每30s强制拉取全量
+     **/
     public static final int DEFAULT_FULL_PULLING_INTERVAL = 30 * 1000;
-    /** 每5秒更新一次缓存 **/
+    /**
+     * 每5秒更新一次缓存
+     **/
     public static final int defaultUpdateTime = 5;
-    /** ProtocolResponse 返回成功的 getErrcode() **/
+    /**
+     * ProtocolResponse 返回成功的 getErrcode()
+     **/
     public static final int PROTOCOL_RESPONSE_SUCCESS = 0;
-    /** ProtocolResponse 返回版本未改变 **/
+    /**
+     * ProtocolResponse 返回版本未改变
+     **/
     public static final int PROTOCOL_RESPONSE_NO_VERSION_UPDATE = 304;
-    /** 找不到节点 **/
+    /**
+     * 找不到节点
+     **/
     public static final int PROTOCOL_RESPONSE_NODE_NOT_FOUND = -101;
-    /** 默认版本号，拉取全量信息 **/
-    public static final  int DEFAULT_VERSION = -1;
+    /**
+     * 默认版本号，拉取全量信息
+     **/
+    public static final int DEFAULT_VERSION = -1;
     /***** servicaCache const end *****/
 
     public static final String PIGEON_ENV_FILE = "/data/webapps/appenv";

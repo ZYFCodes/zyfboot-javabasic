@@ -18,7 +18,7 @@ public class SwitchCommonConfig {
      * @return 执行打印的机器信息
      */
     public static List<String> getIpsForPrintLog() {
-        List<String> ipsForPrintLog= Lists.newArrayList();
+        List<String> ipsForPrintLog = Lists.newArrayList();
         return ipsForPrintLog;
     }
 
@@ -28,8 +28,17 @@ public class SwitchCommonConfig {
      * @return 执行打印的环境信息
      */
     public static List<HostEnv> getEnvsForPrintLog() {
-        List<HostEnv> ensForPrintLog= Lists.newArrayList();
+        List<HostEnv> ensForPrintLog = Lists.newArrayList();
         ensForPrintLog.add(HostEnv.TEST);
         return ensForPrintLog;
+    }
+
+    /**
+     * 是否统一开启打印日志
+     *
+     * @return true-开启
+     */
+    public static boolean openPrintLog() {
+        return true;
     }
 }

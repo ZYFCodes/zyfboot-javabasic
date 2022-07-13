@@ -85,8 +85,7 @@ public class ProcessAppenv {
     }
 
 
-
-    public static String loadAppenvFromFileWithEx(String key) throws Exception{
+    public static String loadAppenvFromFileWithEx(String key) throws Exception {
         if (appenvV2 == null) {
             synchronized (appenvV2Lock) {
                 if (appenvV2 == null) {
@@ -118,7 +117,7 @@ public class ProcessAppenv {
             }
         }
         String value = CommonUtil.trim(appenvV2.getProperty(key));
-        if ("".equals(value)){
+        if ("".equals(value)) {
             throw new MnsException("cell cannot be empty");
         }
         return value;

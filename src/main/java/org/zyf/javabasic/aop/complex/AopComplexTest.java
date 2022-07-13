@@ -24,7 +24,7 @@ public class AopComplexTest {
     private VerifyAopService verifyAopService;
 
     @Test
-    public void test1(){
+    public void test1() {
 //        System.out.println("verifyAopService.queryLimitTimeActivityDetail");
 //        verifyAopService.queryLimitTimeActivityDetail((long) 34);
 //
@@ -33,6 +33,6 @@ public class AopComplexTest {
 
         System.out.println("verifyAopService.addOrUpdatePriceCutActivityDetail");
         verifyAopService.deletePriceCutActivityDetail(null);
-        System.out.println("fff"+verifyAopService.deletePriceCutActivityDetail(null));
+        System.out.println("fff" + verifyAopService.deletePriceCutActivityDetail(null));
     }
 }

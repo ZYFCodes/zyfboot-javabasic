@@ -193,6 +193,7 @@ public class FileUtils {
     }
 
     private static volatile Set<String> rpcInfos = new HashSet<>();
+
     public static void main(String[] args) throws IOException {
 //        String adress = "/Users/yanfengzhang/Downloads/zyfurl.txt";
 //        System.out.println(readFileContent(adress));
@@ -212,12 +213,12 @@ public class FileUtils {
 
 
         for (int i = 0; i < 15; i++) {
-            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" +i+ ":" + "rpcInvocation.getMethod().getName()"+i);
+            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" + i + ":" + "rpcInvocation.getMethod().getName()" + i);
             writeToFile(rpcInfos.toString(), "/Users/yanfengzhang/Downloads/rpcInfo.txt");
         }
 
         for (int i = 12; i < 17; i++) {
-            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" +i+ ":" + "rpcInvocation.getMethod().getName()"+i);
+            rpcInfos.add("rpcInvocation.getServiceInterface().getName()" + i + ":" + "rpcInvocation.getMethod().getName()" + i);
             writeToFile(rpcInfos.toString(), "/Users/yanfengzhang/Downloads/rpcInfo.txt");
         }
     }

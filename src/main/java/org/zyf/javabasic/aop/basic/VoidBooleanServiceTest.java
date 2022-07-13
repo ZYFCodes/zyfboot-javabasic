@@ -23,7 +23,7 @@ public class VoidBooleanServiceTest {
     private VoidBooleanService voidBooleanService;
 
     @Test
-    public void test1(){
+    public void test1() {
         System.out.println(voidBooleanService.getBoolean());
         System.out.println(voidBooleanService.getBoolean2());
         voidBooleanService.getVoid();

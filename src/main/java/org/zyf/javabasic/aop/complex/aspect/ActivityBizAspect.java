@@ -36,9 +36,9 @@ public class ActivityBizAspect {
     }
 
     @Before("execute()")
-    public void printLog(JoinPoint point){
-        System.out.println("的地方v官方大肆宣传"+point.getArgs());
-        log.info("hhhh{}",point.getArgs());
+    public void printLog(JoinPoint point) {
+        System.out.println("的地方v官方大肆宣传" + point.getArgs());
+        log.info("hhhh{}", point.getArgs());
     }
 
     @Around("execute()")

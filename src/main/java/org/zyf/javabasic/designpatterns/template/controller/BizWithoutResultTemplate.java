@@ -1,7 +1,6 @@
 package org.zyf.javabasic.designpatterns.template.controller;
 
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
 
 /**
  * @author yanfengzhang
@@ -10,7 +9,7 @@ import org.slf4j.Logger;
  */
 public abstract class BizWithoutResultTemplate<Command extends BaseCommand> extends BizTemplate<Command, BaseResult> {
 
-    public BizWithoutResultTemplate(String methodName, Command command, Logger templateLogger) {
+    public BizWithoutResultTemplate(Command command) {
         super(command, new BaseResult());
     }
 

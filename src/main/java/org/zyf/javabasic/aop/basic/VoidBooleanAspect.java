@@ -44,28 +44,28 @@ public class VoidBooleanAspect {
         System.out.println("===================================================");
 
         //Object o = methodSignature.getMethod().getReturnType();
-        System.out.println("kkkkkkkkk"+JSON.toJSON(methodSignature.getMethod().getReturnType()));
+        System.out.println("kkkkkkkkk" + JSON.toJSON(methodSignature.getMethod().getReturnType()));
 
         //annotatedType.getType().getTypeName();
-       // System.out.println(result);
+        // System.out.println(result);
 
 
         /*将当前基本信息进行组装处理*/
         String className = methodSignature.getDeclaringTypeName();
         String methodName = targetMethod.getName();
-        String mockStoreInfo = className+":"+methodName;
+        String mockStoreInfo = className + ":" + methodName;
 
-        if(mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getBoolean")
-        ||mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getBoolean2")){
+        if (mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getBoolean")
+                || mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getBoolean2")) {
             return true;
         }
 
-        if(mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getVoid")){
+        if (mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getVoid")) {
             return true;
         }
 
-        if(mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getInt1")
-                ||mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getInt2")){
+        if (mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getInt1")
+                || mockStoreInfo.equals("org.zyf.javabasic.aop.basic.VoidBooleanService:getInt2")) {
             return 0;
         }
 

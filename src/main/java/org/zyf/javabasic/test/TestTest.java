@@ -23,7 +23,7 @@ public class TestTest {
         System.out.println(idPath);
 
 
-        Set<Integer> provinceIds= Sets.newHashSet();
+        Set<Integer> provinceIds = Sets.newHashSet();
         provinceIds.add(2);
         provinceIds.add(2);
         provinceIds.add(6);

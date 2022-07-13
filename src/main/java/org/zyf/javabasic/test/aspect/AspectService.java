@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AspectService {
 
-    public boolean getBoolean(){
+    public boolean getBoolean() {
         return false;
     }
 }

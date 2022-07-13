@@ -17,31 +17,26 @@ public class ListSubBrandResult extends BaseResult {
 
     private List<SubBrand> list = Lists.newArrayList();
 
-    public void convert(List<WmProductLibBrand> dataList){
-
-        if (CollectionUtils.isEmpty(dataList)){
+    public void convert(List<WmProductLibBrand> dataList) {
+        if (CollectionUtils.isEmpty(dataList)) {
             return;
         }
-
-        for (WmProductLibBrand brand : dataList){
-            list.add(new SubBrand(brand.getId(), brand.getZhName()+brand.getEnName()));
+        for (WmProductLibBrand brand : dataList) {
+            list.add(new SubBrand(brand.getId(), brand.getZhName() + brand.getEnName()));
         }
-
     }
 
-    public void convert2CruxBrand(List<CRUXStandardProductLibBrand> dataList){
+    public void convert2CruxBrand(List<CRUXStandardProductLibBrand> dataList) {
 
-        if (CollectionUtils.isEmpty(dataList)){
+        if (CollectionUtils.isEmpty(dataList)) {
             return;
         }
-
-        for (CRUXStandardProductLibBrand brand : dataList){
-            list.add(new SubBrand(brand.getId(), brand.getZhName()+brand.getEnName()));
+        for (CRUXStandardProductLibBrand brand : dataList) {
+            list.add(new SubBrand(brand.getId(), brand.getZhName() + brand.getEnName()));
         }
-
     }
 
-
+    @Data
     static class SubBrand {
         private int id;
         private String name;
@@ -51,22 +46,6 @@ public class ListSubBrandResult extends BaseResult {
 
         public SubBrand(int id, String name) {
             this.id = id;
-            this.name = name;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
             this.name = name;
         }
     }
@@ -80,7 +59,7 @@ public class ListSubBrandResult extends BaseResult {
     }
 
     @Data
-    static class WmProductLibBrand{
+    static class WmProductLibBrand {
         public int id;
         public int parentId;
         public String idPath;
@@ -99,7 +78,7 @@ public class ListSubBrandResult extends BaseResult {
     }
 
     @Data
-    static class CRUXStandardProductLibBrand{
+    static class CRUXStandardProductLibBrand {
         public int id;
         public int parentId;
         public String idPath;

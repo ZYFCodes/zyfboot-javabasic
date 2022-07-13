@@ -140,12 +140,12 @@ public class ProcessInfoUtil {
 
     /**
      * return  cell property from appenv file
+     *
      * @return string
-     * @throws Exception
-     * specifically:
-     * Throws FileNotFoundException when appenv file is not exist;
-     * Throws MnsException when cell is an empty string;
-     * Other cases throw Exception with message;
+     * @throws Exception specifically:
+     *                   Throws FileNotFoundException when appenv file is not exist;
+     *                   Throws MnsException when cell is an empty string;
+     *                   Other cases throw Exception with message;
      */
     public static String getCellWithEx() throws Exception {
         return ProcessAppenv.loadAppenvFromFileWithEx(ProcessAppenv.CELL_KEY);
@@ -449,6 +449,7 @@ public class ProcessInfoUtil {
         }
         IpUtil.addIdcChangeListener(listener);
     }
+
     public static void removeIdcListener(IIdcChangeListener listener) {
         if (null == listener) {
             LOG.warn("idcChangeListener can not be null");

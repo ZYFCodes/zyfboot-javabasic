@@ -14,14 +14,14 @@ import java.util.stream.Collectors;
  */
 public class TestWmSensitiveSpu {
     public static void main(String[] args) {
-        BatchContainsSensitiveWordSpuCommand command=new BatchContainsSensitiveWordSpuCommand();
-        List<WmSensitiveSpu> spus= Lists.newArrayList();
+        BatchContainsSensitiveWordSpuCommand command = new BatchContainsSensitiveWordSpuCommand();
+        List<WmSensitiveSpu> spus = Lists.newArrayList();
         for (int i = 0; i < 3; i++) {
-            WmSensitiveSpu wmSensitiveSpu=new WmSensitiveSpu();
-            List<WmSensitiveSku> skuList =Lists.newArrayList();
+            WmSensitiveSpu wmSensitiveSpu = new WmSensitiveSpu();
+            List<WmSensitiveSku> skuList = Lists.newArrayList();
             for (int j = 0; j < 10; j++) {
-                WmSensitiveSku wmSensitiveSku=new WmSensitiveSku();
-                wmSensitiveSku.setId(i+j);
+                WmSensitiveSku wmSensitiveSku = new WmSensitiveSku();
+                wmSensitiveSku.setId(i + j);
                 skuList.add(wmSensitiveSku);
             }
             wmSensitiveSpu.setSkuList(skuList);
@@ -42,17 +42,17 @@ public class TestWmSensitiveSpu {
     }
 
     @Data
-    static class BatchContainsSensitiveWordSpuCommand{
+    static class BatchContainsSensitiveWordSpuCommand {
         public List<WmSensitiveSpu> spus;
     }
 
     @Data
-    static class WmSensitiveSpu{
+    static class WmSensitiveSpu {
         public List<WmSensitiveSku> skuList;
     }
 
     @Data
-    static  class WmSensitiveSku{
+    static class WmSensitiveSku {
         public long id;
     }
 }

@@ -8,10 +8,6 @@ import java.io.Serializable;
  * @date 2022/4/24  21:13
  */
 public class BizResponse<T> implements Serializable {
-
-    /**
-     *
-     */
     private static final long serialVersionUID = 7649505881546361075L;
     protected int code;
     protected String msg = "";

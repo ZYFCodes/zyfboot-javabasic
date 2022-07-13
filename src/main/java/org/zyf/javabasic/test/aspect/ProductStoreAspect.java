@@ -43,7 +43,7 @@ public class ProductStoreAspect {
         String mockStoreInfo = className + ":" + methodName;
         System.out.println(mockStoreInfo);
 
-        List<String> test= Lists.newArrayList();
+        List<String> test = Lists.newArrayList();
         test.add("org.zyf.javabasic.test.aspect.AspectService:getBoolean");
         if (test.contains(mockStoreInfo)) {
             return new Object();

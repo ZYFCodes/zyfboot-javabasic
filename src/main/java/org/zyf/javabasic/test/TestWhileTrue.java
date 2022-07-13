@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 public class TestWhileTrue {
 
     private static Map<Integer, Integer> recordAll = Maps.newHashMap();
-    private static String recordAllText = "/Users/yanfengzhang/Downloads/zyfurlTotal.txt";
+    private static String recordAllText = "/Users/yanfengzhang/Downloads/测试的反反复复反反复复次.txt";
     private static String zyfurl = "/Users/yanfengzhang/Downloads/zyfurl.txt";
 
     public static void main(String[] args) throws InterruptedException, IOException {

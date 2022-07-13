@@ -38,7 +38,7 @@ public class WriteData {
     }
 
     public static void main(String[] args) {
-        String[] dd = {"x","n"};
+        String[] dd = {"x", "n"};
         System.out.println(StringUtils.containsAny("sssssssssiijjhgfghjnbvcxdfghnbvc", dd));
     }
 }

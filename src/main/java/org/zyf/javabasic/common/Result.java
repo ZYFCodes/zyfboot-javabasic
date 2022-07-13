@@ -89,7 +89,7 @@ public class Result<T> {
             if (obj == null) {
                 return false;
             } else if (obj instanceof Result.ResultCode) {
-                return ((Result.ResultCode)obj).errno() == this.code;
+                return ((Result.ResultCode) obj).errno() == this.code;
             } else {
                 return false;
             }
@@ -108,7 +108,7 @@ public class Result<T> {
                 code = -3998;
             }
 
-            Result.ResultCode rc = (Result.ResultCode)resultCodeMap.get(code);
+            Result.ResultCode rc = (Result.ResultCode) resultCodeMap.get(code);
             return rc == null ? UNKNOWN : rc;
         }
 

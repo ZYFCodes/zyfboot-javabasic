@@ -60,7 +60,7 @@ public class IpUtil {
     private static final ReentrantReadWriteLock idcMaplock = new ReentrantReadWriteLock();
     private static Set<Integer> maskSet = null;
     /**
-     *idc文件监听器
+     * idc文件监听器
      */
     private volatile static Set<IIdcChangeListener> idcChangeListeners = Collections.newSetFromMap(new ConcurrentHashMap<IIdcChangeListener, Boolean>());
     private static ExecutorService idcListenerExecutor = Executors.newFixedThreadPool(1, new ScheduleTaskFactory("MnsInvoker-Idc-Schedule"));
@@ -84,7 +84,7 @@ public class IpUtil {
                                     idcListenerExecutor.submit(new Runnable() {
                                         @Override
                                         public void run() {
-                                            for(IIdcChangeListener listener: idcChangeListeners) {
+                                            for (IIdcChangeListener listener : idcChangeListeners) {
                                                 try {
                                                     //listener.changed(oldIdcs, newIdcs);
                                                 } catch (Exception e) {
@@ -147,7 +147,7 @@ public class IpUtil {
             return true;
         } else {
             boolean isChanged = false;
-            for(IDC oldIDC: oldData) {
+            for (IDC oldIDC : oldData) {
                 if (!newData.contains(oldIDC)) {
                     LOG.info("idcDiff returns true, IDC is not the same one, old IDC: {}, new IDCList: {}",
                             oldIDC, newData);
@@ -207,8 +207,8 @@ public class IpUtil {
         for (IDC idc : idcs) {
             Idc idcXmlItem = new Idc();
             idcXmlItem.setRegion(idc.getRegion());
-            idcXmlItem  .setCenter(idc.getCenter());
-            idcXmlItem  .setIdc(idc.getIdc());
+            idcXmlItem.setCenter(idc.getCenter());
+            idcXmlItem.setIdc(idc.getIdc());
             idcXmlNew.add(idcXmlItem);
         }
         setIdcxml(idcXmlNew);
@@ -248,7 +248,7 @@ public class IpUtil {
             int ret = json.path("ret").intValue();
             if (200 != ret) {
                 JsonNode msgNode = json.path("msg");
-                LOG.warn("failed to get idc xml from remote, errCode: {}, errMsg: {} unknown error.", ret , (null != msgNode ? msgNode.textValue() : ""));
+                LOG.warn("failed to get idc xml from remote, errCode: {}, errMsg: {} unknown error.", ret, (null != msgNode ? msgNode.textValue() : ""));
                 return;
             }
             List<Map<String, String>> dataTemp = mapper.readValue(json.path("data").toString(), new TypeReference<List<Map<String, String>>>() {
@@ -275,7 +275,7 @@ public class IpUtil {
 
     static boolean initSGAgentIDCXml(String filePath, List<IDC> idcResult) {
         boolean ret = false;
-        for(int tries = 0 ;tries < 3; tries++) {
+        for (int tries = 0; tries < 3; tries++) {
             try {
                 // make sure that the cache is empty.
                 idcResult.clear();
@@ -423,7 +423,9 @@ public class IpUtil {
                 return resIdc;
             }
         }
-        resIdc.setIdc(UNKNOWN);resIdc.setRegion(UNKNOWN);resIdc.setCenter(UNKNOWN);
+        resIdc.setIdc(UNKNOWN);
+        resIdc.setRegion(UNKNOWN);
+        resIdc.setCenter(UNKNOWN);
         return resIdc;
     }
 
@@ -448,7 +450,8 @@ public class IpUtil {
     private static Idc getDefaultUnknownIdc() {
         Idc resIdc = new Idc();
         resIdc.setIdc(UNKNOWN);
-        resIdc.setRegion(UNKNOWN);resIdc.setCenter(UNKNOWN);
+        resIdc.setRegion(UNKNOWN);
+        resIdc.setCenter(UNKNOWN);
         return resIdc;
     }
 

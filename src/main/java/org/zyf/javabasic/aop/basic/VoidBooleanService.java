@@ -20,31 +20,31 @@ import java.util.concurrent.TimeoutException;
 @Service
 public class VoidBooleanService {
 
-    public boolean getBoolean(){
+    public boolean getBoolean() {
         return false;
     }
 
-    public Boolean getBoolean2(){
+    public Boolean getBoolean2() {
         return false;
     }
 
-    public void getVoid(){
+    public void getVoid() {
         return;
     }
 
-    public Integer getInt1(){
+    public Integer getInt1() {
         return 3;
     }
 
-    public int getInt2(){
+    public int getInt2() {
         return 4;
     }
 
-    public WordRegular getWordRegular(){
+    public WordRegular getWordRegular() {
         return WordRegular.builder().build();
     }
 
-    public  Future<Result<byte[]>> getFuturebyte(){
+    public Future<Result<byte[]>> getFuturebyte() {
         return new Future<Result<byte[]>>() {
             @Override
             public boolean cancel(boolean mayInterruptIfRunning) {
@@ -73,7 +73,7 @@ public class VoidBooleanService {
         };
     }
 
-    public Future<Result<Void>> getFuture(){
+    public Future<Result<Void>> getFuture() {
         return new Future<Result<Void>>() {
             @Override
             public boolean cancel(boolean mayInterruptIfRunning) {
@@ -101,7 +101,8 @@ public class VoidBooleanService {
             }
         };
     }
-    public Future<ResultMap<ByteArray, Result<Void>>> getFutureResultMapByteArrayResultVoid(){
+
+    public Future<ResultMap<ByteArray, Result<Void>>> getFutureResultMapByteArrayResultVoid() {
         return new Future<ResultMap<ByteArray, Result<Void>>>() {
             @Override
             public boolean cancel(boolean mayInterruptIfRunning) {
@@ -130,7 +131,7 @@ public class VoidBooleanService {
         };
     }
 
-    public Future<Result<Set<byte[]>>> getFutureResultSetbyte(){
+    public Future<Result<Set<byte[]>>> getFutureResultSetbyte() {
         return new Future<Result<Set<byte[]>>>() {
             @Override
             public boolean cancel(boolean mayInterruptIfRunning) {
@@ -159,11 +160,11 @@ public class VoidBooleanService {
         };
     }
 
-    public ResultMap<String, Result<Void>> getResultMapStringResultVoid(){
+    public ResultMap<String, Result<Void>> getResultMapStringResultVoid() {
         return new ResultMap<String, Result<Void>>();
     }
 
-    public ResultMap<ByteArray, Result<Map<ByteArray, Result<Void>>>> getResultMapByteArrayResultMapByteArrayResultVoid(){
+    public ResultMap<ByteArray, Result<Map<ByteArray, Result<Void>>>> getResultMapByteArrayResultMapByteArrayResultVoid() {
         return new ResultMap<ByteArray, Result<Map<ByteArray, Result<Void>>>>();
     }
 }
