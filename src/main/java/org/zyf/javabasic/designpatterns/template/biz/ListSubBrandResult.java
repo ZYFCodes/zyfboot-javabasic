@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.template.controller;
+package org.zyf.javabasic.designpatterns.template.biz;
 
 import com.google.common.collect.Lists;
 import lombok.Data;

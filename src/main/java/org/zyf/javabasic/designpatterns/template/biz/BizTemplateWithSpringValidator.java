@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.template.controller;
+package org.zyf.javabasic.designpatterns.template.biz;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -6,7 +6,7 @@ import org.springframework.validation.ObjectError;
 /**
  * @author yanfengzhang
  * @description 支持Spring Validator
- * @date 2022/4/24  21:22
+ * @date 2022/4/24  23:22
  */
 public abstract class BizTemplateWithSpringValidator<Command extends BaseCommand, Result extends BaseResult> extends BizTemplate<Command, Result> {
 

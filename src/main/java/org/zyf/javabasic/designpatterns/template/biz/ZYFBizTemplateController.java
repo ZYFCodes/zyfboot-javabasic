@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.template.controller;
+package org.zyf.javabasic.designpatterns.template.biz;
 
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @author yanfengzhang
  * @description
- * @date 2022/4/24  21:32
+ * @date 2022/4/24  23:32
  */
 @Controller
 @RequestMapping("/org/zyf")

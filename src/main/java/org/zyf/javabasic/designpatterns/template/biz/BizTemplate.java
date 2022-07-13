@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.template.controller;
+package org.zyf.javabasic.designpatterns.template.biz;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -10,8 +10,8 @@ import java.util.List;
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2022/4/24  21:10
+ * @description 基本的业务处理模版
+ * @date 2022/4/24  23:10
  */
 public abstract class BizTemplate<Command extends BaseCommand, Result extends BaseResult> {
     protected BizResponse<Result> response = BizResponse.success();
@@ -23,7 +23,6 @@ public abstract class BizTemplate<Command extends BaseCommand, Result extends Ba
      * 请求结果
      */
     protected Result result;
-
     /**
      * 方法名称，用于记录日志
      */
@@ -117,7 +116,6 @@ public abstract class BizTemplate<Command extends BaseCommand, Result extends Ba
                 }
             }
         }
-
         if (flag) {
             throw new ZYFServerException(ErrorCode.PARAMS_CHECK_FAILED.getCode(), String.format(ErrorCode.PARAMS_CHECK_FAILED.getMsg(), msg.toString()));
         }
@@ -133,7 +131,6 @@ public abstract class BizTemplate<Command extends BaseCommand, Result extends Ba
         if (!this.templateValidate()) {
             throw new IllegalArgumentException("the usage of WebControllerBizTemplate is illegal");
         }
-
         this.doBefore();
         this.doValidate(new StringBuilder(), false);
 
@@ -144,7 +141,6 @@ public abstract class BizTemplate<Command extends BaseCommand, Result extends Ba
             this.doException();
             throw e;
         }
-
         this.doAfter();
         response.setData(result);
 

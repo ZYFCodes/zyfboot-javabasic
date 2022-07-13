@@ -1,11 +1,11 @@
-package org.zyf.javabasic.designpatterns.template.controller;
+package org.zyf.javabasic.designpatterns.template.biz;
 
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author yanfengzhang
  * @description 没有返回参数的调用
- * @date 2022/4/24  21:24
+ * @date 2022/4/24  23:24
  */
 public abstract class BizWithoutResultTemplate<Command extends BaseCommand> extends BizTemplate<Command, BaseResult> {
 
