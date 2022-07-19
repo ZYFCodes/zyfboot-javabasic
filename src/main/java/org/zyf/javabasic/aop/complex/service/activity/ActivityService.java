@@ -27,7 +27,7 @@ public interface ActivityService<T> {
      *
      * @param args 被拦截方法的参数
      */
-    void deleteActivityDetail(Object[] args);
+    boolean deleteActivityDetail(Object[] args);
 
     /**
      * 检查活动详细信息
@@ -41,12 +41,12 @@ public interface ActivityService<T> {
      *
      * @param args 被拦截方法的参数
      */
-    void onlineActivity(Object[] args);
+    boolean onlineActivity(Object[] args);
 
     /**
      * 活动详细信息下线
      *
      * @param args 被拦截方法的参数
      */
-    void offlineActivity(Object[] args);
+    boolean offlineActivity(Object[] args);
 }

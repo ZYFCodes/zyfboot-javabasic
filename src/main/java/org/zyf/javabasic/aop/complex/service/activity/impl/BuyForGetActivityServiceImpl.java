@@ -55,7 +55,7 @@ public class BuyForGetActivityServiceImpl implements ActivityService<BuyForGetAc
     }
 
     @Override
-    public void deleteActivityDetail(Object[] args) {
+    public boolean deleteActivityDetail(Object[] args) {
         log.info("删除买赠活动");
     }
 
@@ -66,12 +66,12 @@ public class BuyForGetActivityServiceImpl implements ActivityService<BuyForGetAc
     }
 
     @Override
-    public void onlineActivity(Object[] args) {
+    public boolean onlineActivity(Object[] args) {
         log.info("上线买赠活动");
     }
 
     @Override
-    public void offlineActivity(Object[] args) {
+    public boolean offlineActivity(Object[] args) {
         log.info("下线买赠活动");
     }
 }

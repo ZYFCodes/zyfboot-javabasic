@@ -55,7 +55,7 @@ public class FirstPurchaseActivityServiceImpl implements ActivityService<FirstPu
     }
 
     @Override
-    public void deleteActivityDetail(Object[] args) {
+    public boolean deleteActivityDetail(Object[] args) {
         log.info("删除首购优惠活动");
     }
 
@@ -66,12 +66,12 @@ public class FirstPurchaseActivityServiceImpl implements ActivityService<FirstPu
     }
 
     @Override
-    public void onlineActivity(Object[] args) {
+    public boolean onlineActivity(Object[] args) {
         log.info("上线首购优惠活动");
     }
 
     @Override
-    public void offlineActivity(Object[] args) {
+    public boolean offlineActivity(Object[] args) {
         log.info("下线首购优惠活动");
     }
 }

@@ -55,7 +55,7 @@ public class PriceCutActivityServiceImpl implements ActivityService<PriceCutActi
     }
 
     @Override
-    public void deleteActivityDetail(Object[] args) {
+    public boolean deleteActivityDetail(Object[] args) {
         log.info("删除降价活动");
     }
 
@@ -66,12 +66,12 @@ public class PriceCutActivityServiceImpl implements ActivityService<PriceCutActi
     }
 
     @Override
-    public void onlineActivity(Object[] args) {
+    public boolean onlineActivity(Object[] args) {
         log.info("上线降价活动");
     }
 
     @Override
-    public void offlineActivity(Object[] args) {
+    public boolean offlineActivity(Object[] args) {
         log.info("下线降价活动");
     }
 }
