@@ -13,11 +13,11 @@
 //import com.zyf.dorado.rpc.meta.RpcResult;
 //import com.zyf.service.mobile.mtthrift.client.pool.MTThriftPoolConfig;
 //import com.zyf.service.mobile.mtthrift.proxy.ThriftClientProxy;
-//import com.sankuai.zyf.product.bsap.thrift.domain.common.ProductBsapThirftException;
-//import com.sankuai.zyf.product.bsap.thrift.domain.mock.MockRuleDto;
-//import com.sankuai.zyf.product.bsap.thrift.iface.MockRuleThriftService;
-//import com.sankuai.tsp.product.bsap.enums.MockRuleType;
-//import com.sankuai.tsp.product.bsap.mcc.BsapCommonSwitch;
+//import com.zyf.product.bsap.thrift.domain.common.ProductBsapThirftException;
+//import com.zyf.product.bsap.thrift.domain.mock.MockRuleDto;
+//import com.zyf.product.bsap.thrift.iface.MockRuleThriftService;
+//import com.zyf.tsp.product.bsap.enums.MockRuleType;
+//import com.zyf.tsp.product.bsap.mcc.BsapCommonSwitch;
 //import lombok.extern.log4j.Log4j2;
 //import org.apache.commons.collections.CollectionUtils;
 //import org.apache.commons.lang3.StringUtils;
@@ -33,7 +33,7 @@
 ///**
 // * @author yanfengzhang
 // * @description mock组件对指定接口按指定内容进行干预
-// * @date 2021/12/28  15:33
+// * @date 2021/12/28  23:33
 // */
 //@Log4j2
 //@Component
@@ -41,7 +41,7 @@
 //
 //    private static MockRuleThriftService.Iface mockRuleThriftService = null;
 //    private static final String MOCK_CLIENT_APPKEY = BsapCommonSwitch.getMockClientApp();
-//    private static final String MOCK_SERVER_APPKEY = "com.sankuai.product.bsap";
+//    private static final String MOCK_SERVER_APPKEY = "com.zyf.product.bsap";
 //    private static volatile Set<String> rpcInfos = new HashSet<>();
 //
 //    static {
@@ -155,7 +155,7 @@
 //        /*特定服务进行记录相关内容*/
 //        if (BsapCommonSwitch.getMockRpcInfo() && Environment.getAppName().equals(BsapCommonSwitch.getMockClientApp())) {
 //            rpcInfos.add(rpcInvocation.getServiceInterface().getName() + ":" + rpcInvocation.getMethod().getName());
-//            FileWriteUtils.writeToFile(rpcInfos.toString(), "/var/sankuai/rpcInfo.txt");
+//            FileWriteUtils.writeToFile(rpcInfos.toString(), "/var/zyf/rpcInfo.txt");
 //        }
 //
 //        /*2.无mock规则直接按原方式进行处理*/

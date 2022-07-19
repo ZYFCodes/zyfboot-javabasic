@@ -28,7 +28,7 @@ import java.lang.reflect.Method;
 @Slf4j
 public class ActivityBizAspect {
 
-    @Pointcut("@annotation(org.zyf.javabasic.aop.complex.annotation.ZYFActivityDealer)")
+    @Pointcut("@annotation(org.zyf.javabasic.aop.bizdeal.annotation.ZYFActivityDealer)")
     public void execute() {
     }
 
