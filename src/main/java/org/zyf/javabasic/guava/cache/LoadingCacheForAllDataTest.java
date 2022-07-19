@@ -3,7 +3,7 @@ package org.zyf.javabasic.guava.cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import org.zyf.javabasic.aop.complex.service.activity.impl.AutoRenewalActivityServiceImpl;
+import org.zyf.javabasic.aop.bizdeal.service.activity.impl.AutoRenewalActivityServiceImpl;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;

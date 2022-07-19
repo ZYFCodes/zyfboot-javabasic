@@ -2,8 +2,8 @@ package org.zyf.javabasic.generic.unifiedprocess.biz.activity;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.zyf.javabasic.aop.complex.constants.ActivityBizConstants;
-import org.zyf.javabasic.aop.complex.entity.dto.AutoRenewalActivityDto;
+import org.zyf.javabasic.aop.bizdeal.constants.ActivityBizConstants;
+import org.zyf.javabasic.aop.bizdeal.entity.dto.AutoRenewalActivityDto;
 import org.zyf.javabasic.generic.unifiedprocess.CheckResponse;
 import org.zyf.javabasic.generic.unifiedprocess.CheckStatusEnum;
 import org.zyf.javabasic.generic.unifiedprocess.UnifiedProcessCheckStrategy;

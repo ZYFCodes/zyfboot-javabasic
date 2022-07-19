@@ -11,7 +11,7 @@
 //import org.aspectj.lang.annotation.Pointcut;
 //import org.aspectj.lang.reflect.MethodSignature;
 //import org.springframework.stereotype.Component;
-//import org.zyf.javabasic.aop.complex.config.SwitchCommonConfig;
+//import org.zyf.javabasic.config.SwitchCommonConfig;
 //
 //import java.lang.reflect.Method;
 //import java.util.Map;
