@@ -1,4 +1,4 @@
-package org.zyf.javabasic.aop.basic.printlog;
+package org.zyf.javabasic.aop.printlog;
 
 import com.alibaba.fastjson.JSON;
 import com.sankuai.inf.octo.mns.model.HostEnv;
@@ -34,7 +34,7 @@ public class PrintLogInfoAspet {
     /**
      * 方法以 @PrintLogInfo 注解作为切面入口
      */
-    @Pointcut("@annotation(org.zyf.javabasic.aop.basic.printlog.PrintLogInfo)")
+    @Pointcut("@annotation(org.zyf.javabasic.aop.printlog.PrintLogInfo)")
     public void printBasicLog() {
 
     }

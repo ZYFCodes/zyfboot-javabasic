@@ -1,4 +1,4 @@
-package org.zyf.javabasic.aop.basic.printlog;
+package org.zyf.javabasic.aop.printlog;
 
 import lombok.Builder;
 import lombok.Data;
