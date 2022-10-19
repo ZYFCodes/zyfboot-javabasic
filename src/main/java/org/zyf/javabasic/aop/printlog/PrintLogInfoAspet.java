@@ -1,8 +1,6 @@
 package org.zyf.javabasic.aop.printlog;
 
 import com.alibaba.fastjson.JSON;
-import com.sankuai.inf.octo.mns.model.HostEnv;
-import com.sankuai.inf.octo.mns.util.ProcessInfoUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
@@ -15,6 +13,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 import org.zyf.javabasic.config.SwitchCommonConfig;
+import org.zyf.javabasic.servicegovernance.enums.HostEnv;
+import org.zyf.javabasic.servicegovernance.util.ProcessInfoUtil;
 
 import java.lang.reflect.Method;
 import java.util.Objects;
@@ -121,8 +121,6 @@ public class PrintLogInfoAspet {
         if (SwitchCommonConfig.getEnvsForPrintLog().contains(hostEnv)) {
             return true;
         }
-
         return false;
     }
-
 }

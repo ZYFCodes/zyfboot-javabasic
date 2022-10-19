@@ -27,7 +27,7 @@ public class OperationRedisAspect {
     }
 
     @AfterReturning(pointcut = "operationRedisSyncDeal(operationRedisSync)", argNames = "joinPoint, operationRedisSync")
-    public void removeQualificationPackageRelation(JoinPoint joinPoint, OperationRedisSync operationRedisSync) {
+    public void operationRedisSyncDealer(JoinPoint joinPoint, OperationRedisSync operationRedisSync) {
         /*1.如果要求指明的异步操作没有处理的话直接返回*/
         int dealInfoType = operationRedisSync.dealInfoType();
         int dealBizType = operationRedisSync.dealBizType();

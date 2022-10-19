@@ -6,11 +6,11 @@
 //import com.google.common.cache.CacheLoader;
 //import com.google.common.cache.LoadingCache;
 //import com.google.common.collect.Lists;
-//import com.zyf.dorado.common.RpcRole;
-//import com.zyf.dorado.rpc.handler.filter.Filter;
-//import com.zyf.dorado.rpc.handler.filter.FilterHandler;
-//import com.zyf.dorado.rpc.meta.RpcInvocation;
-//import com.zyf.dorado.rpc.meta.RpcResult;
+//import com.zyf.horse.common.RpcRole;
+//import com.zyf.horse.rpc.handler.filter.Filter;
+//import com.zyf.horse.rpc.handler.filter.FilterHandler;
+//import com.zyf.horse.rpc.meta.RpcInvocation;
+//import com.zyf.horse.rpc.meta.RpcResult;
 //import com.zyf.service.mobile.mtthrift.client.pool.MTThriftPoolConfig;
 //import com.zyf.service.mobile.mtthrift.proxy.ThriftClientProxy;
 //import com.zyf.product.bsap.thrift.domain.common.ProductBsapThirftException;

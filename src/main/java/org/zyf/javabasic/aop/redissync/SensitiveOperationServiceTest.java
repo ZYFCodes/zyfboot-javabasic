@@ -24,11 +24,11 @@ public class SensitiveOperationServiceTest {
 
     @Test
     public void testOperationRedisSync() {
-        log.info("=====测试新建敏感词异步同步redia=====");
+        log.info("=====测试新建敏感词异步同步redis=====");
         sensitiveOperationService.createSensitive(SensitiveWord.builder()
                 .sensitiveId(11L).sensitive("刘亦菲").kind(1).build(), "zhangyanfeng");
 
-        log.info("=====测试删除敏感词异步同步redia=====");
+        log.info("=====测试删除敏感词异步同步redis=====");
         sensitiveOperationService.deleteSensitive(11L, "zhangyanfeng");
     }
 }
