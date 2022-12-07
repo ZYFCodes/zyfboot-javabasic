@@ -32,6 +32,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        &lt;!&ndash; springboot Data Elasticsearch依赖 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>-->
+<!--        </dependency>-->
+        <!-- 引入对应的lombok相关功能 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <!-- 引入对应的guava相关功能 -->
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -43,11 +53,6 @@
             <groupId>com.github.rholder</groupId>
             <artifactId>guava-retrying</artifactId>
             <version>2.0.0</version>
-        </dependency>
-        <!-- 引入对应的lombok相关功能 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
         <!-- 引入对应的fastjson相关功能： 但是在实际中最好别使用 -->
         <dependency>
@@ -149,16 +154,40 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.taobao.tair</groupId>-->
+<!--            <artifactId>tair3-client</artifactId>-->
+<!--            <version>3.1.9.4-mt</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.sankuai.octo</groupId>-->
+<!--            <artifactId>mns-invoker</artifactId>-->
+<!--            <version>1.9.21-RC</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>com.taobao.tair</groupId>
-            <artifactId>tair3-client</artifactId>
-            <version>3.1.9.4-mt</version>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>pinyin</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+
+        <!--引入es-high-level-client相关依赖  start-->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>6.8.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>6.8.2</version>
         </dependency>
         <dependency>
-            <groupId>com.sankuai.octo</groupId>
-            <artifactId>mns-invoker</artifactId>
-            <version>1.9.21-RC</version>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>6.8.2</version>
         </dependency>
+        <!--引入es-high-level-client相关依赖  end-->
     </dependencies>
 
 

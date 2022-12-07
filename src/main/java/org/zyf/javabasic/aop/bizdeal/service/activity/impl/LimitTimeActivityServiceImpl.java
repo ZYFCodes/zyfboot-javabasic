@@ -33,7 +33,7 @@ public class LimitTimeActivityServiceImpl implements ActivityService<LimitTimeAc
         limitTimeActivityDto.setActivityType(2);
         limitTimeActivityDto.setActivityName("限时活动");
 
-        log.info("查询限时活动:{}",limitTimeActivityDto);
+        log.info("查询限时活动:{}", limitTimeActivityDto);
 
         return limitTimeActivityDto;
     }
@@ -49,7 +49,7 @@ public class LimitTimeActivityServiceImpl implements ActivityService<LimitTimeAc
         limitTimeActivityDto.setActivityType(2);
         limitTimeActivityDto.setActivityName("限时活动");
 
-        log.info("创建或更新限时活动:{}",limitTimeActivityDto);
+        log.info("创建或更新限时活动:{}", limitTimeActivityDto);
 
         return limitTimeActivityDto;
     }

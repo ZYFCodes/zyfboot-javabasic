@@ -33,7 +33,7 @@ public class BuyForGetActivityServiceImpl implements ActivityService<BuyForGetAc
         buyForGetActivityDto.setActivityType(3);
         buyForGetActivityDto.setActivityName("买赠活动");
 
-        log.info("查询买赠活动:{}",buyForGetActivityDto);
+        log.info("查询买赠活动:{}", buyForGetActivityDto);
 
         return buyForGetActivityDto;
     }
@@ -49,7 +49,7 @@ public class BuyForGetActivityServiceImpl implements ActivityService<BuyForGetAc
         buyForGetActivityDto.setActivityType(3);
         buyForGetActivityDto.setActivityName("买赠活动");
 
-        log.info("创建或更新买赠活动:{}",buyForGetActivityDto);
+        log.info("创建或更新买赠活动:{}", buyForGetActivityDto);
 
         return buyForGetActivityDto;
     }

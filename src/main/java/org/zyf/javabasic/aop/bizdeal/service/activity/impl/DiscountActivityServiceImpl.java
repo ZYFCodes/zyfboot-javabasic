@@ -33,7 +33,7 @@ public class DiscountActivityServiceImpl implements ActivityService<DiscountActi
         discountActivityDto.setActivityType(6);
         discountActivityDto.setActivityName("折上优惠活动");
 
-        log.info("查询折上优惠活动:{}",discountActivityDto);
+        log.info("查询折上优惠活动:{}", discountActivityDto);
 
         return discountActivityDto;
     }
@@ -49,7 +49,7 @@ public class DiscountActivityServiceImpl implements ActivityService<DiscountActi
         discountActivityDto.setActivityType(6);
         discountActivityDto.setActivityName("折上优惠活动");
 
-        log.info("创建或更新折上优惠活动:{}",discountActivityDto);
+        log.info("创建或更新折上优惠活动:{}", discountActivityDto);
 
         return discountActivityDto;
     }

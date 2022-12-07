@@ -29,9 +29,9 @@ public class PriceCutActivityServiceImpl implements ActivityService<PriceCutActi
         activityDo.setActivityName("数据库中的活动信息");
 
         /*转换为对应活动信息*/
-        PriceCutActivityDto priceCutActivityDto =PriceCutActivityDto.builder().activityType(1).activityName("降价活动").build();
+        PriceCutActivityDto priceCutActivityDto = PriceCutActivityDto.builder().activityType(1).activityName("降价活动").build();
 
-        log.info("查询降价活动:{}",priceCutActivityDto);
+        log.info("查询降价活动:{}", priceCutActivityDto);
 
         return priceCutActivityDto;
     }
@@ -45,7 +45,7 @@ public class PriceCutActivityServiceImpl implements ActivityService<PriceCutActi
         /*转换为对应活动信息*/
         PriceCutActivityDto priceCutActivityDto = PriceCutActivityDto.builder().activityType(1).activityName("降价活动").build();
 
-        log.info("创建或更新降价活动:{}",priceCutActivityDto);
+        log.info("创建或更新降价活动:{}", priceCutActivityDto);
 
         return priceCutActivityDto;
     }

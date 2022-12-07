@@ -33,7 +33,7 @@ public class AutoRenewalActivityServiceImpl implements ActivityService<AutoRenew
         autoRenewalActivityDto.setActivityType(5);
         autoRenewalActivityDto.setActivityName("自动续费活动");
 
-        log.info("查询自动续费活动:{}",autoRenewalActivityDto);
+        log.info("查询自动续费活动:{}", autoRenewalActivityDto);
 
         return autoRenewalActivityDto;
     }
@@ -49,7 +49,7 @@ public class AutoRenewalActivityServiceImpl implements ActivityService<AutoRenew
         autoRenewalActivityDto.setActivityType(5);
         autoRenewalActivityDto.setActivityName("自动续费活动");
 
-        log.info("创建或更新自动续费活动:{}",autoRenewalActivityDto);
+        log.info("创建或更新自动续费活动:{}", autoRenewalActivityDto);
 
         return autoRenewalActivityDto;
     }

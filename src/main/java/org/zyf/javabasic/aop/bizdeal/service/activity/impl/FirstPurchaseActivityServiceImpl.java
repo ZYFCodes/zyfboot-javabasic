@@ -33,7 +33,7 @@ public class FirstPurchaseActivityServiceImpl implements ActivityService<FirstPu
         firstPurchaseActivityDto.setActivityType(4);
         firstPurchaseActivityDto.setActivityName("首购优惠活动");
 
-        log.info("查询首购优惠活动:{}",firstPurchaseActivityDto);
+        log.info("查询首购优惠活动:{}", firstPurchaseActivityDto);
 
         return firstPurchaseActivityDto;
     }
@@ -49,7 +49,7 @@ public class FirstPurchaseActivityServiceImpl implements ActivityService<FirstPu
         firstPurchaseActivityDto.setActivityType(4);
         firstPurchaseActivityDto.setActivityName("首购优惠活动");
 
-        log.info("创建或更新首购优惠活动:{}",firstPurchaseActivityDto);
+        log.info("创建或更新首购优惠活动:{}", firstPurchaseActivityDto);
 
         return firstPurchaseActivityDto;
     }
