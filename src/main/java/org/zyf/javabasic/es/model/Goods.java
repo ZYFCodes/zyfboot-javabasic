@@ -1,6 +1,7 @@
 package org.zyf.javabasic.es.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.Date;
  * @description
  * @date 2022/12/7  17:19
  */
+@Data
 public class Goods {
     /**
      * 商品编号

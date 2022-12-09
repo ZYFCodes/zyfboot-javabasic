@@ -176,7 +176,6 @@
             <artifactId>elasticsearch</artifactId>
             <version>6.8.2</version>
         </dependency>
-
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>
@@ -188,6 +187,7 @@
             <version>6.8.2</version>
         </dependency>
         <!--引入es-high-level-client相关依赖  end-->
+
     </dependencies>
 
 

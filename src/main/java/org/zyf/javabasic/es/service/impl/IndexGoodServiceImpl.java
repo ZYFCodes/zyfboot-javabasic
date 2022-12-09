@@ -13,7 +13,7 @@ import org.elasticsearch.cluster.metadata.MappingMetaData;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.zyf.javabasic.es.service.IndexService;
+import org.zyf.javabasic.es.service.IndexGoodService;
 
 import java.util.Map;
 
@@ -23,7 +23,7 @@ import java.util.Map;
  * @date 2022/12/7  17:00
  */
 @Service
-public class IndexServiceImpl implements IndexService {
+public class IndexGoodServiceImpl implements IndexGoodService {
     @Autowired
     private RestHighLevelClient restHighLevelClient;
 
