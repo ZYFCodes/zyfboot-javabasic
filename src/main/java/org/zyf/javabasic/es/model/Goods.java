@@ -8,8 +8,8 @@ import java.util.Date;
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2022/12/7  17:19
+ * @description 商品数据模型 简化版
+ * @date 2022/12/7  23:19
  */
 @Data
 public class Goods {

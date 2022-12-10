@@ -1,4 +1,4 @@
-package org.zyf.javabasic.es;
+package org.zyf.javabasic.es.config;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -16,8 +16,8 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2022/12/7  16:34
+ * @description restHighLevelClient 客户端配置类
+ * @date 2022/12/7  23:34
  */
 
 @Slf4j

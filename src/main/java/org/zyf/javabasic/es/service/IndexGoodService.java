@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * @author yanfengzhang
  * @description 索引操作service
- * @date 2022/12/7  16:58
+ * @date 2022/12/7  23:01
  */
 public interface IndexGoodService {
 

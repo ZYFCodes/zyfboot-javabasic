@@ -1,4 +1,4 @@
-package org.zyf.javabasic.es;
+package org.zyf.javabasic.es.test;
 
 import com.google.common.collect.Lists;
 import lombok.extern.log4j.Log4j2;
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author yanfengzhang
  * @description
- * @date 2022/12/8  20:28
+ * @date 2022/12/8  23:28
  */
 @Log4j2
 @RunWith(SpringRunner.class)
@@ -26,6 +26,8 @@ public class QueryDataServiceTest {
     @Autowired
     private QueryDataService queryDataService;
 
+    private final String indexName = "goods";
+
     /**
      * 单字段精确查询
      */
@@ -33,7 +35,7 @@ public class QueryDataServiceTest {
     public void termQuery() {
         List<Goods> goodsList = null;
         try {
-            goodsList = queryDataService.termQuery("goods", "title", "华为", Goods.class);
+            goodsList = queryDataService.termQuery(indexName, "title", "华为", Goods.class);
         } catch (Exception e) {
             log.error("单字段精确查询失败，错误信息：", e);
         }
@@ -48,7 +50,7 @@ public class QueryDataServiceTest {
         List<Goods> goodsList = null;
         try {
             String[] args = {"华为", "OPPO", "TCL"};
-            goodsList = queryDataService.termsQuery("goods", "title", args, Goods.class);
+            goodsList = queryDataService.termsQuery(indexName, "title", args, Goods.class);
         } catch (Exception e) {
             log.error("单字段多内容精确查询失败，错误信息：", e);
         }
@@ -63,7 +65,7 @@ public class QueryDataServiceTest {
         List<Goods> goodsList = null;
         try {
             List<String> orderList = Lists.newArrayList("-price", "-saleNum");
-            goodsList = queryDataService.matchAllQuery("goods", Goods.class, 0, 3, orderList, "title", "华为");
+            goodsList = queryDataService.matchAllQuery(indexName, Goods.class, 0, 3, orderList, "title", "华为");
         } catch (Exception e) {
             log.error("匹配查询失败，错误信息：", e);
         }
@@ -77,7 +79,7 @@ public class QueryDataServiceTest {
     public void matchPhraseQuery() {
         List<Goods> goodsList = null;
         try {
-            goodsList = queryDataService.matchPhraseQuery("goods", Goods.class, "title", "华为");
+            goodsList = queryDataService.matchPhraseQuery(indexName, Goods.class, "title", "华为");
         } catch (Exception e) {
             log.error("词语匹配查询失败，错误信息：", e);
         }
@@ -92,7 +94,7 @@ public class QueryDataServiceTest {
         List<Goods> goodsList = null;
         try {
             String[] fields = {"title", "categoryName"};
-            goodsList = queryDataService.matchMultiQuery("goods", Goods.class, fields, "手机");
+            goodsList = queryDataService.matchMultiQuery(indexName, Goods.class, fields, "手机");
         } catch (Exception e) {
             log.error("内容在多字段中进行查询失败，错误信息：", e);
         }
@@ -108,7 +110,7 @@ public class QueryDataServiceTest {
     public void wildcardQuery() {
         List<Goods> goodsList = null;
         try {
-            goodsList = queryDataService.wildcardQuery("goods", Goods.class, "title", "*三");
+            goodsList = queryDataService.wildcardQuery(indexName, Goods.class, "title", "*三");
         } catch (Exception e) {
             log.error("通配符查询查询失败，错误信息：", e);
         }
@@ -124,7 +126,7 @@ public class QueryDataServiceTest {
     public void fuzzyQuery() {
         List<Goods> goodsList = null;
         try {
-            goodsList = queryDataService.fuzzyQuery("goods", Goods.class, "title", "三");
+            goodsList = queryDataService.fuzzyQuery(indexName, Goods.class, "title", "三");
         } catch (Exception e) {
             log.error("模糊查询失败，错误信息：", e);
         }
@@ -135,7 +137,7 @@ public class QueryDataServiceTest {
     public void boolQuery() {
         List<Goods> goodsList = null;
         try {
-            goodsList = queryDataService.boolQuery("goods", Goods.class);
+            goodsList = queryDataService.boolQuery(indexName, Goods.class);
         } catch (Exception e) {
             log.error("布尔查询失败，错误信息：", e);
         }
@@ -147,7 +149,7 @@ public class QueryDataServiceTest {
      */
     @Test
     public void metricQuery() {
-        queryDataService.metricQuery("goods");
+        queryDataService.metricQuery(indexName);
     }
 
     /**
@@ -155,7 +157,7 @@ public class QueryDataServiceTest {
      */
     @Test
     public void bucketQuery() {
-        queryDataService.bucketQuery("goods", "brandName", "brandNameName");
+        queryDataService.bucketQuery(indexName, "brandName", "brandNameName");
     }
 
     /**
@@ -163,7 +165,7 @@ public class QueryDataServiceTest {
      */
     @Test
     public void subBucketQuery() {
-        queryDataService.subBucketQuery("goods", "brandName", "brandNameName", "price", "avgPrice");
+        queryDataService.subBucketQuery(indexName, "brandName", "brandNameName", "price", "avgPrice");
     }
 
     /**
@@ -171,6 +173,6 @@ public class QueryDataServiceTest {
      */
     @Test
     public void subSubAgg() {
-        queryDataService.subSubAgg("goods");
+        queryDataService.subSubAgg(indexName);
     }
 }
