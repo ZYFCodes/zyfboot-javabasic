@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.responsibility.pipeline;
+package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model;
 
 public enum RegularTypeEnum {
     /**

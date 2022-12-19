@@ -1,20 +1,16 @@
-package org.zyf.javabasic.designpatterns.responsibility.pipeline;
+package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model;
 
 import lombok.Builder;
 import lombok.Data;
 
 /**
  * @author yanfengzhang
- * @description 用户输入的文本信息上下文
- * @date 2022/4/2  21:05
+ * @description 用户文本属性
+ * @date 2022/12/14  17:31
  */
-@Builder
 @Data
-public class ContentInfoContext extends PipelineContext {
-    /**
-     * 用户输入文本原稿(清洗中会不断被更新内容)
-     */
-    private String content;
+@Builder
+public class ContentAttr {
     /**
      * 文本归类（商品名称、商品描述、商家公告、商家名称、经营描述、代言信息等）
      */
@@ -34,19 +30,7 @@ public class ContentInfoContext extends PipelineContext {
     private Integer sourceId;
     /**
      * 业务方接入来源
+     * 外卖 闪购 医药 文娱 电商 打车 骑车 物流
      */
     private Integer bizType;
-    /**
-     * 数据节点流转信号
-     */
-    private Boolean deliver;
-    /**
-     * 数据节点流转终止原因
-     */
-    private String reason;
-
-    @Override
-    public String getName() {
-        return "模型实例(用户文本)构建上下文";
-    }
 }

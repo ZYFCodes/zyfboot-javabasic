@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.CodeSignature;
 import org.springframework.stereotype.Component;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.SensitiveWord;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 
 import java.util.Objects;
 

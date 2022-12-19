@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zyf.javabasic.ZYFApplication;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.SensitiveWord;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 
 /**
  * @author yanfengzhang

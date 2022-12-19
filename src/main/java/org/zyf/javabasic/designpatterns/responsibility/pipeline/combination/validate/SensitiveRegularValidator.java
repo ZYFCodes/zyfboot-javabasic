@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.responsibility.pipeline;
+package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.validate;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -6,10 +6,15 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.extern.log4j.Log4j2;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.Base64;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.RegularTypeEnum;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.WordRegular;
 
 import java.util.List;
 import java.util.Map;
@@ -27,7 +32,7 @@ import java.util.regex.Pattern;
  */
 @Component
 @Log4j2
-public class SensitiveRegularValidator implements ContextHandler<SensitveHitContext, SensitveEffectiveContext> {
+public class SensitiveRegularValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     private LoadingCache<String, Map<WordRegular, Pattern[]>> wordRegularCache = CacheBuilder.newBuilder()
             .refreshAfterWrite(10, TimeUnit.MINUTES)
@@ -42,38 +47,33 @@ public class SensitiveRegularValidator implements ContextHandler<SensitveHitCont
 
     /**
      * 敏感词分析处理：根据相关业务配置进行相关正则校验处理
-     *
-     * @param context  处理时的上下文数据：增加字段deliver为true则表示由下一个ContextHandler继续处理；为false则表示处理结束Content information
-     * @param nextDeal 处理结果（代进入敏感词生效处理）
+     * @param context 处理时的上下文数据
+     * @return 处理结果（代进入敏感词生效处理）
      */
     @Override
-    public void handle(SensitveHitContext context, SensitveEffectiveContext nextDeal) {
-        /*前置节点处理异常，本节点不做处理（所以初始化传入的时候需要进行默认true，方便后期随时调整链路）*/
-        if (!context.getDeliver()) {
-            return;
-        }
-
+    public SensitveHitContext handle(ContentCleanResContext context) {
+        List<SensitiveWord> hitWords = Lists.newArrayList();
         try {
             /*此处只为模拟*/
-            List<SensitiveWord> hitWords = getSensitiveRegularValidator(context.getContent());
+            hitWords.addAll(context.getHitWords());
+            hitWords.addAll(getSensitiveRegularValidator(context.getCleanContent()));
             /*如果命中敏感词，则显示命中，且终止链路传递*/
-            if (CollectionUtils.isNotEmpty(hitWords)) {
-                context.setIsHit(true);
-                context.setHitWords(hitWords);
-                context.setDeliver(false);
-                context.setReason("敏感词校验结束：已在正则校验处理中命中敏感词");
-            } else {
-                context.setDeliver(true);
-            }
-            BeanUtils.copyProperties(context, nextDeal);
+            return SensitveHitContext.builder()
+                    .content(context.getContent())
+                    .cleanContent(context.getCleanContent())
+                    .deliver(true)
+                    .hitWords(hitWords).build();
         } catch (Exception e) {
-            context.setDeliver(false);
-            context.setReason("敏感词校验结束：相关正则校验处理过程中发生异常");
-            BeanUtils.copyProperties(context, nextDeal);
+            /*此处只为模拟*/
+            hitWords.addAll(context.getHitWords());
+            /*如果命中敏感词，则显示命中，且终止链路传递*/
+            return SensitveHitContext.builder()
+                    .content(context.getContent())
+                    .cleanContent(context.getCleanContent())
+                    .deliver(true)
+                    .hitWords(hitWords).build();
         }
-
     }
-
 
     private Map<WordRegular, Pattern[]> getwordRegularCache() {
         /*从指定词正则库中拉取配置，在此处放本地缓存或redis，这里只进行模拟*/

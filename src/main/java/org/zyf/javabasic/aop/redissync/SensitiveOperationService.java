@@ -2,7 +2,7 @@ package org.zyf.javabasic.aop.redissync;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.SensitiveWord;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 
 /**
  * @author yanfengzhang

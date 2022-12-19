@@ -3,7 +3,7 @@ package org.zyf.javabasic.aop.basic;
 import javassist.bytecode.ByteArray;
 import org.springframework.stereotype.Service;
 import org.zyf.javabasic.common.Result;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.WordRegular;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.WordRegular;
 
 import java.util.Map;
 import java.util.Set;

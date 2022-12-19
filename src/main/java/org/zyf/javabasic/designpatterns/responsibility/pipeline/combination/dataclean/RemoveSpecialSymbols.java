@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.responsibility.pipeline;
+package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.dataclean;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -6,8 +6,11 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.BCConvert;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 
 import java.util.HashSet;
 import java.util.List;
@@ -20,10 +23,10 @@ import java.util.concurrent.TimeUnit;
  * @date 2022/4/5  14:25
  */
 @Component
-public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, SensitveHitContext> {
+public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
     private LoadingCache<String, Set<Integer>> specialSymbolsCache = CacheBuilder.newBuilder()
-            .refreshAfterWrite(10, TimeUnit.MINUTES)
+            .expireAfterWrite(10, TimeUnit.MINUTES)
             /*构建缓存*/
             .build(new CacheLoader<String, Set<Integer>>() {
                 /*初始化加载数据的缓存信息*/
@@ -40,17 +43,13 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
      * @return 处理结果（代进入敏感词词库校验）
      */
     @Override
-    public void handle(ContentInfoContext context, SensitveHitContext nextDeal) {
-        /*前置节点处理异常，本节点不做处理*/
-        if (!context.getDeliver()) {
-            return;
-        }
-
+    public ContentCleanResContext handle(ContentInfoContext context) {
         try {
             String SPECIAL_SYMBOLS = "specialSymbols";
-            char[] valueChars = context.getContent().toCharArray();
             Set<Integer> specialSymbols = specialSymbolsCache.get(SPECIAL_SYMBOLS);
             StringBuilder cleanContent = new StringBuilder();
+            /*其他链路中清洗后的词*/
+            char[] valueChars = context.getCleanContent().toCharArray();
             for (char valueChar : valueChars) {
                 int temp = BCConvert.charConvert(valueChar);
                 if (specialSymbols.contains(temp)) {
@@ -60,13 +59,25 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
                 cleanContent.append(valueChar);
             }
 
-            /*将清洗数据载入待校验实体中*/
-            context.setDeliver(true);
-            context.setContent(cleanContent.toString());
-            BeanUtils.copyProperties(context, nextDeal);
+            /*将本次清洗数据载入待继续清洗实体中*/
+            context.setCleanContent(cleanContent.toString());
+            /*设置处理结果*/
+            return ContentCleanResContext.builder()
+                    .isCleanDone(true)
+                    .content(context.getContent())
+                    .cleanContent(cleanContent.toString())
+                    .contentAttr(context.getContentAttr())
+                    .build();
         } catch (Exception e) {
-            context.setDeliver(false);
-            context.setReason("数据清洗异常：排除特殊符号失败");
+            /*设置处理结果*/
+            return ContentCleanResContext.builder()
+                    .isCleanDone(false)
+                    .content(context.getContent())
+                    /*记录下中间态数据*/
+                    .cleanContent(context.getCleanContent())
+                    .contentAttr(context.getContentAttr())
+                    .reason("数据清洗异常：排除特殊符号失败")
+                    .build();
         }
     }
 
@@ -146,6 +157,4 @@ public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, 
         }
         System.out.println(cleanContent.toString());
     }
-
-
 }

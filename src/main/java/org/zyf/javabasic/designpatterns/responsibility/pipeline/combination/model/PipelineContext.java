@@ -1,4 +1,4 @@
-package org.zyf.javabasic.designpatterns.responsibility.pipeline;
+package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +14,10 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class PipelineContext {
+    /**
+     * 模板名称
+     */
+    private String name;
     /**
      * 处理开始时间
      */

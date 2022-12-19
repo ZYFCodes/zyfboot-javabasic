@@ -2,6 +2,7 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline;
 
 import lombok.Builder;
 import lombok.Data;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 
 import java.util.List;
 

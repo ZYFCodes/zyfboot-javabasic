@@ -3,6 +3,7 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Component;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.PipelineContext;
 
 import javax.annotation.Resource;
 import java.util.List;
