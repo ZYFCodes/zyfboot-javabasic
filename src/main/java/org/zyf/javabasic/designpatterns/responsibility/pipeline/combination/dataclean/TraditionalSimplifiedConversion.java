@@ -5,8 +5,11 @@ import com.github.houbb.opencc4j.util.ZhTwConverterUtil;
 import com.luhuiguo.chinese.ChineseUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveClean;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
+
 
 /**
  * @author yanfengzhang
@@ -14,6 +17,7 @@ import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.mode
  * @date 2022/4/5  22:32
  */
 @Component
+@SensitiveClean(cleanCode = SensitiveCons.Clean.TRADITIONAL_TO_SIMPLE)
 public class TraditionalSimplifiedConversion implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
     /**
@@ -55,4 +59,6 @@ public class TraditionalSimplifiedConversion implements ContextHandler<ContentIn
                     .build();
         }
     }
+
+
 }

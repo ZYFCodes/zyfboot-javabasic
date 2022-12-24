@@ -4,10 +4,13 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Sets;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.BCConvert;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveClean;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 
@@ -20,15 +23,16 @@ import java.util.concurrent.TimeUnit;
  * @date 2022/4/5  15:36
  */
 @Component
+@SensitiveClean(cleanCode = SensitiveCons.Clean.REMOVE_EMOJI)
 public class RemoveEmoji implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
-    private LoadingCache<String, Set<String>> emojiCache = CacheBuilder.newBuilder()
+    private LoadingCache<String, Set<Integer>> emojiCache = CacheBuilder.newBuilder()
             .refreshAfterWrite(10, TimeUnit.MINUTES)
             /*构建缓存*/
-            .build(new CacheLoader<String, Set<String>>() {
+            .build(new CacheLoader<String, Set<Integer>>() {
                 /*初始化加载数据的缓存信息*/
                 @Override
-                public Set<String> load(String specialSymbols) throws Exception {
+                public Set<Integer> load(String specialSymbols) throws Exception {
                     return getEmojis();
                 }
             });
@@ -43,9 +47,10 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, ContentCl
     public ContentCleanResContext handle(ContentInfoContext context) {
         try {
             String EMOJI = "emoji";
-            char[] valueChars = context.getContent().toCharArray();
-            Set<String> emojis = emojiCache.get(EMOJI);
+            Set<Integer> emojis = emojiCache.get(EMOJI);
             StringBuilder cleanContent = new StringBuilder();
+            /*其他链路中清洗后的词*/
+            char[] valueChars = context.getCleanContent().toCharArray();
             for (char valueChar : valueChars) {
                 int temp = BCConvert.charConvert(valueChar);
                 if (emojis.contains(temp)) {
@@ -55,15 +60,26 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, ContentCl
                 cleanContent.append(valueChar);
             }
 
-//            /*将清洗数据载入待校验实体中*/
-//            context.setDeliver(true);
-//            context.setContent(cleanContent.toString());
-//            BeanUtils.copyProperties(context, nextDeal);
+            /*将本次清洗数据载入待继续清洗实体中*/
+            context.setCleanContent(cleanContent.toString());
+            /*设置处理结果*/
+            return ContentCleanResContext.builder()
+                    .isCleanDone(true)
+                    .content(context.getContent())
+                    .cleanContent(cleanContent.toString())
+                    .contentAttr(context.getContentAttr())
+                    .build();
         } catch (Exception e) {
-//            context.setDeliver(false);
-//            context.setReason("数据清洗异常：排除特殊符号失败");
+            /*设置处理结果*/
+            return ContentCleanResContext.builder()
+                    .isCleanDone(false)
+                    .content(context.getContent())
+                    /*记录下中间态数据*/
+                    .cleanContent(context.getCleanContent())
+                    .contentAttr(context.getContentAttr())
+                    .reason("数据清洗异常：去除相关emoji信息失败")
+                    .build();
         }
-        return null;
     }
 
     /**
@@ -71,8 +87,8 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, ContentCl
      *
      * @return 相关Emoji集合
      */
-    private static Set<String> getEmojis() {
-        String emojis = "\uD83D\uDC36,\uD83D\uDC15,\uD83D\uDC59,\uD83D\uDEAD,\uD83D\uDEAC,\uD83D\uDC8A,\uD83C\uDF47,\uD83C\uDF48," +
+    private static Set<Integer> getEmojis() {
+        String emojiStr = "\uD83D\uDC36,\uD83D\uDC15,\uD83D\uDC59,\uD83D\uDEAD,\uD83D\uDEAC,\uD83D\uDC8A,\uD83C\uDF47,\uD83C\uDF48," +
                 "\uD83C\uDF49,\uD83C\uDF4A,\uD83C\uDF4B,\uD83C\uDF4C,\uD83C\uDF4D,\uD83C\uDF4E,\uD83C\uDF4F,\uD83C\uDF50," +
                 "\uD83C\uDF51,\uD83C\uDF52,\uD83C\uDF53,\uD83E\uDD5D,\uD83C\uDF45,\uD83E\uDD65,\uD83E\uDD51,\uD83C\uDF46," +
                 "\uD83E\uDD54,\uD83E\uDD55,\uD83C\uDF3D,\uD83C\uDF36️,\uD83E\uDD52,\uD83E\uDD66,\uD83C\uDF44,\uD83E\uDD5C," +
@@ -201,20 +217,32 @@ public class RemoveEmoji implements ContextHandler<ContentInfoContext, ContentCl
                 "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F," +
                 "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73\uDB40\uDC7F," +
                 "\uD83C\uDFF4\uDB40\uDC75\uDB40\uDC73\uDB40\uDC74\uDB40\uDC78\uDB40\uDC7F\uDB40\uDC75\uDB40\uDC73\uDB40\uDC74\uDB40\uDC78\uDB40\uDC7F";
-        if (StringUtils.isBlank(emojis)) {
+        if (StringUtils.isBlank(emojiStr)) {
             return Sets.newHashSet();
         }
 
-        Set<String> emojiRes = Sets.newHashSet();
-        for (String emoji : emojis.split(",")) {
-            emojiRes.add(emoji);
+        Set<String> emojis = Sets.newHashSet();
+        for (String emoji : emojiStr.split(",")) {
+            emojis.add(emoji);
+        }
+        if (CollectionUtils.isEmpty(emojis)) {
+            return Sets.newHashSet();
+        }
+
+        char[] chs;
+        Set<Integer> emojiRes = Sets.newHashSet();
+        for (String curr : emojis) {
+            chs = curr.toCharArray();
+            for (char c : chs) {
+                emojiRes.add(BCConvert.charConvert(c));
+            }
         }
 
         return emojiRes;
     }
 
     public static void main(String[] args) {
-        Set<String> emojis = getEmojis();
+        Set<Integer> emojis = getEmojis();
         String content = "你♋♌♍♎好✴️，张⏳⌚⏰彦⚗️⚰️峰✌⛳！☕";
         char[] valueChars = content.toCharArray();
         StringBuilder cleanContent = new StringBuilder();

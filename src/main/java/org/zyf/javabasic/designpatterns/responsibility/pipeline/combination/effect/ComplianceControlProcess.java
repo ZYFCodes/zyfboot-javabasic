@@ -22,6 +22,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
 
     /**
      * 实际合规管控处理是否可以放行
+     *
      * @param context 处理时的上下文数据
      * @return 最终处理结果
      */
@@ -29,7 +30,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
     public SensitveEffectiveContext handle(SensitveHitContext context) {
         List<SensitiveWord> hitWords = context.getHitWords();
         /*如果未命中任何敏感词则直接返回*/
-        if(CollectionUtils.isEmpty(hitWords)){
+        if (CollectionUtils.isEmpty(hitWords)) {
             return SensitveEffectiveContext.builder()
                     /*没有任何词生效*/
                     .isHit(false)
@@ -43,7 +44,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在对应的合规管控处理策略,如果存在对放行的敏感词进行标志*/
         List<SensitiveWord> complianceControlSensitiveWord = getComplianceControlSensitiveWord(context.getHitWords());
-        if(CollectionUtils.isEmpty(complianceControlSensitiveWord)){
+        if (CollectionUtils.isEmpty(complianceControlSensitiveWord)) {
             /*没有需要放行的词，则当前词就是命中的，可直接返回*/
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/

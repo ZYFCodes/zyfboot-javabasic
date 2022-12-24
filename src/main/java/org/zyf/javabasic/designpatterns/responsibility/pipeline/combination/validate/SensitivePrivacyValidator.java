@@ -18,7 +18,8 @@ import java.util.List;
 public class SensitivePrivacyValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     /**
-     *  敏感词分析处理：手机号身份证号处理
+     * 敏感词分析处理：手机号身份证号处理
+     *
      * @param context 处理时的上下文数据
      * @return
      */

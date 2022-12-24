@@ -9,6 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.BCConvert;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveClean;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 
@@ -23,6 +25,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2022/4/5  14:25
  */
 @Component
+@SensitiveClean(cleanCode = SensitiveCons.Clean.REMOVE_SPECIAL_SYMBOLS)
 public class RemoveSpecialSymbols implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
     private LoadingCache<String, Set<Integer>> specialSymbolsCache = CacheBuilder.newBuilder()

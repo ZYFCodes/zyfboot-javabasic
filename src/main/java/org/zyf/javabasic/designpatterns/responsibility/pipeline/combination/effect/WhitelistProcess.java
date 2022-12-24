@@ -21,6 +21,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
 
     /**
      * 实际白名单处理是否可以放行
+     *
      * @param context 处理时的上下文数据
      * @return 最终处理结果
      */
@@ -28,7 +29,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
     public SensitveEffectiveContext handle(SensitveHitContext context) {
         List<SensitiveWord> hitWords = context.getHitWords();
         /*如果未命中任何敏感词则直接返回*/
-        if(CollectionUtils.isEmpty(hitWords)){
+        if (CollectionUtils.isEmpty(hitWords)) {
             return SensitveEffectiveContext.builder()
                     /*没有任何词生效*/
                     .isHit(false)
@@ -42,7 +43,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在加白的词,如果存在对放行的敏感词进行标志*/
         List<SensitiveWord> ignoreSensitiveWord = getIgnoreSensitiveByWhite(context.getHitWords());
-        if(CollectionUtils.isEmpty(ignoreSensitiveWord)){
+        if (CollectionUtils.isEmpty(ignoreSensitiveWord)) {
             /*没有需要放行的词，则当前词就是命中的，可直接返回*/
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/
@@ -95,9 +96,9 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
 
     }
 
-    private boolean ignoreByWhite(SensitiveWord sensitiveWord){
+    private boolean ignoreByWhite(SensitiveWord sensitiveWord) {
         /*1.根据敏感词配置内容获取对应敏感词实际白名单生效配置，此处做模拟*/
-        if(sensitiveWord.getSensitiveId()==1){
+        if (sensitiveWord.getSensitiveId() == 1) {
             return true;
         }
         return false;

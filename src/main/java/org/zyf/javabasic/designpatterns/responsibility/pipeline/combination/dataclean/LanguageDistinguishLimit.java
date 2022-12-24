@@ -4,6 +4,8 @@ import com.kanlon.entity.DetectMode;
 import com.kanlon.language.LanguageDistinguish;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveClean;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 
@@ -13,6 +15,7 @@ import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.mode
  * @date 2022/4/17  22:22
  */
 @Component
+@SensitiveClean(cleanCode = SensitiveCons.Clean.LANGUAGE_LIMIT)
 public class LanguageDistinguishLimit implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
     /**

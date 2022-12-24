@@ -21,6 +21,7 @@ public class SensitiveThesaurusValidator implements ContextHandler<ContentCleanR
 
     /**
      * 敏感词分析处理：根据相关业务配置进行相关词库校验匹配
+     *
      * @param context 处理时的上下文数据
      * @return 处理结果（代进入敏感词生效处理）
      */

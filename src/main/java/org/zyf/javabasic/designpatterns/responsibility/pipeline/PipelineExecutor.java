@@ -67,4 +67,18 @@ public class PipelineExecutor {
 
         return lastSuccess;
     }
+
+    /**
+     * 根据当前上下文获取对应管道处理流程
+     *
+     * @param context 上下文内容
+     * @return 管道处理流程
+     */
+    public List<Class<? extends ContextHandler<? extends PipelineContext, ?>>> getPipelineInfo(PipelineContext context) {
+        Objects.requireNonNull(context, "上下文数据不能为 null");
+        /*拿到数据类型*/
+        Class<? extends PipelineContext> dataType = context.getClass();
+        /*获取数据处理管道*/
+        return pipelineRouteMap.get(dataType);
+    }
 }

@@ -9,6 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.BCConvert;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveClean;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 
@@ -23,6 +25,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2022/4/17  22:20
  */
 @Component
+@SensitiveClean(cleanCode = SensitiveCons.Clean.EXCULDE_HIDDEN)
 public class ExcludeHiddenCharacters implements ContextHandler<ContentInfoContext, ContentCleanResContext> {
 
     private LoadingCache<String, Set<Integer>> hiddenCharactersCache = CacheBuilder.newBuilder()
@@ -49,7 +52,7 @@ public class ExcludeHiddenCharacters implements ContextHandler<ContentInfoContex
 
             Set<Integer> emojis = hiddenCharactersCache.get(HIDDEREN);
             /*其他链路中清洗后的词*/
-            char[] valueChars = context.getContent().toCharArray();
+            char[] valueChars = context.getCleanContent().toCharArray();
             StringBuilder cleanContent = new StringBuilder();
             for (char valueChar : valueChars) {
                 int temp = BCConvert.charConvert(valueChar);
@@ -60,8 +63,6 @@ public class ExcludeHiddenCharacters implements ContextHandler<ContentInfoContex
                 cleanContent.append(valueChar);
             }
 
-            /*将本次清洗数据载入待继续清洗实体中*/
-            context.setCleanContent(cleanContent.toString());
             /*设置处理结果*/
             return ContentCleanResContext.builder()
                     .isCleanDone(true)

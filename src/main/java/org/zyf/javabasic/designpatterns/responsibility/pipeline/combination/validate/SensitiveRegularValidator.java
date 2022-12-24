@@ -47,6 +47,7 @@ public class SensitiveRegularValidator implements ContextHandler<ContentCleanRes
 
     /**
      * 敏感词分析处理：根据相关业务配置进行相关正则校验处理
+     *
      * @param context 处理时的上下文数据
      * @return 处理结果（代进入敏感词生效处理）
      */

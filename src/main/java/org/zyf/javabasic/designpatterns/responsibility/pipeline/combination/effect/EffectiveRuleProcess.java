@@ -22,6 +22,7 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
 
     /**
      * 实际生效规则处理是否可以放行
+     *
      * @param context 处理时的上下文数据
      * @return
      */
@@ -29,7 +30,7 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
     public SensitveEffectiveContext handle(SensitveHitContext context) {
         List<SensitiveWord> hitWords = context.getHitWords();
         /*如果未命中任何敏感词则直接返回*/
-        if(CollectionUtils.isEmpty(hitWords)){
+        if (CollectionUtils.isEmpty(hitWords)) {
             return SensitveEffectiveContext.builder()
                     /*没有任何词生效*/
                     .isHit(false)
@@ -42,8 +43,8 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
         }
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在因规则而舍弃的,如果存在对放行的敏感词进行标志*/
-        List<SensitiveWord> ignoreSensitiveWord = getIgnoreSensitiveWord(context.getHitWords(),context.getContentAttr());
-        if(CollectionUtils.isEmpty(ignoreSensitiveWord)){
+        List<SensitiveWord> ignoreSensitiveWord = getIgnoreSensitiveWord(context.getHitWords(), context.getContentAttr());
+        if (CollectionUtils.isEmpty(ignoreSensitiveWord)) {
             /*没有需要放行的词，则当前词就是命中的，可直接返回*/
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/
@@ -92,13 +93,13 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
             return Lists.newArrayList();
         }
 
-        return hitWords.stream().filter(sensitiveWord -> ignoreByrule(sensitiveWord,contentAttr)).collect(Collectors.toList());
+        return hitWords.stream().filter(sensitiveWord -> ignoreByrule(sensitiveWord, contentAttr)).collect(Collectors.toList());
 
     }
 
-    private boolean ignoreByrule(SensitiveWord sensitiveWord,ContentAttr contentAttr){
+    private boolean ignoreByrule(SensitiveWord sensitiveWord, ContentAttr contentAttr) {
         /*1.根据敏感词配置内容获取对应敏感词实际生效配置，此处做模拟*/
-        if(contentAttr.getCityCode().equals("110010")){
+        if (contentAttr.getCityCode().equals("110010")) {
             /*改词只对该地区生效,不忽略*/
             return false;
         }
