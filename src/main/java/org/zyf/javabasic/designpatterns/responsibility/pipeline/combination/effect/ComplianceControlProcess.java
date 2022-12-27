@@ -4,6 +4,8 @@ import org.apache.commons.collections.CollectionUtils;
 import org.assertj.core.util.Lists;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveEffect;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveEffectiveContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
@@ -18,6 +20,7 @@ import java.util.stream.Collectors;
  * @date 2022/4/17  22:17
  */
 @Component
+@SensitiveEffect(effectCode = SensitiveCons.Effect.COMPLIANCE_CONTROL)
 public class ComplianceControlProcess implements ContextHandler<SensitveHitContext, SensitveEffectiveContext> {
 
     /**
@@ -36,10 +39,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
-                    .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .hitWords(Lists.newArrayList()).build();
         }
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在对应的合规管控处理策略,如果存在对放行的敏感词进行标志*/
@@ -52,9 +52,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(hitWords)
-                    .complianceIgnoreWords(Lists.newArrayList())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .complianceIgnoreWords(Lists.newArrayList()).build();
         }
 
         /*整合合规管控中放行的词*/
@@ -62,20 +60,17 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
         /*去除放行词后命中的词*/
         List<SensitiveWord> finalHitWords = hitWords.stream().filter(sensitiveWord -> !complianceIgnoreWordIds.contains(sensitiveWord.getSensitiveId())).collect(Collectors.toList());
         if (CollectionUtils.isEmpty(finalHitWords)) {
-            /*此时链路可能还会记继续，保持对应内容的传递*/
-            context.setHitWords(Lists.newArrayList());
-            context.setComplianceIgnoreWords(complianceControlSensitiveWord);
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(complianceControlSensitiveWord)
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .complianceIgnoreWords(complianceControlSensitiveWord).build();
         }
 
+        /*此时链路可能还会记继续，保持对应内容的传递*/
+        context.setHitWords(finalHitWords);
         /*返回当前命中的内容*/
         return SensitveEffectiveContext.builder()
                 /*已经有生效的词直接返回*/
@@ -83,9 +78,7 @@ public class ComplianceControlProcess implements ContextHandler<SensitveHitConte
                 .content(context.getContent())
                 .cleanContent(context.getCleanContent())
                 .hitWords(finalHitWords)
-                .complianceIgnoreWords(complianceControlSensitiveWord)
-                .whitedWords(context.getWhitedWords())
-                .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                .complianceIgnoreWords(complianceControlSensitiveWord).build();
     }
 
     private List<SensitiveWord> getComplianceControlSensitiveWord(List<SensitiveWord> hitWords) {

@@ -63,6 +63,8 @@ public class ExcludeHiddenCharacters implements ContextHandler<ContentInfoContex
                 cleanContent.append(valueChar);
             }
 
+            /*将本次清洗数据载入待继续清洗实体中*/
+            context.setCleanContent(cleanContent.toString());
             /*设置处理结果*/
             return ContentCleanResContext.builder()
                     .isCleanDone(true)

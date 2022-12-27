@@ -4,8 +4,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.util.List;
-
 /**
  * @author yanfengzhang
  * @description 用户文本清洗结果文本信息上下文
@@ -32,10 +30,6 @@ public class ContentCleanResContext extends PipelineContext {
      * 用户文本属性
      */
     private ContentAttr contentAttr;
-    /**
-     * 命中的敏感词
-     */
-    private List<SensitiveWord> hitWords;
     /**
      * 数据节点流转终止原因,只有isCleanDone为false生效
      */

@@ -3,6 +3,8 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.val
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.BizType;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentAttr;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
@@ -17,6 +19,7 @@ import java.util.List;
  * @date 2022/4/5  18:15
  */
 @Component
+@SensitiveValidate(validateCode = SensitiveCons.Validate.COMPLIANCE)
 public class SensitiveComplianceValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     /**
@@ -27,31 +30,20 @@ public class SensitiveComplianceValidator implements ContextHandler<ContentClean
      */
     @Override
     public SensitveHitContext handle(ContentCleanResContext context) {
-        List<SensitiveWord> hitWords = Lists.newArrayList();
-        try {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            hitWords.addAll(corporateCompliance(context));
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        } catch (Exception e) {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        }
+        /*如果命中敏感词，则显示命中，且终止链路传递*/
+        return SensitveHitContext.builder()
+                .content(context.getContent())
+                .cleanContent(context.getCleanContent())
+                .contentAttr(context.getContentAttr())
+                .hitWords(corporateCompliance(context)).build();
     }
 
     /**
      * 企业合规管控词库   实际应与企业对应词库进行匹配
+     * <p>
+     * 模拟几个合规词
+     * 1 假定政治人物类词汇：张彦峰
+     * 2 假定侵权类词汇：肯德基
      *
      * @param content 文本内容
      * @return 校验结果
@@ -64,10 +56,16 @@ public class SensitiveComplianceValidator implements ContextHandler<ContentClean
             return Lists.newArrayList();
         }
         List<SensitiveWord> sensitiveWords = Lists.newArrayList();
-        if (content.getCleanContent().contains("张彦峰企业词库")) {
+        if (content.getCleanContent().contains("张彦峰")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("张彦峰企业词库")
+                    .sensitive("张彦峰")
                     .sensitiveId(23L)
+                    .kind(4).build());
+        }
+        if (content.getCleanContent().contains("肯德基")) {
+            sensitiveWords.add(SensitiveWord.builder()
+                    .sensitive("肯德基")
+                    .sensitiveId(24L)
                     .kind(4).build());
         }
         return sensitiveWords;

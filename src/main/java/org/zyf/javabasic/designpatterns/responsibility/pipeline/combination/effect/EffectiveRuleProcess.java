@@ -4,6 +4,8 @@ import org.apache.commons.collections.CollectionUtils;
 import org.assertj.core.util.Lists;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveEffect;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentAttr;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveEffectiveContext;
@@ -18,6 +20,7 @@ import java.util.stream.Collectors;
  * @date 2022/4/17  22:14
  */
 @Component
+@SensitiveEffect(effectCode = SensitiveCons.Effect.RULE)
 public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, SensitveEffectiveContext> {
 
     /**
@@ -36,10 +39,7 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
-                    .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .hitWords(Lists.newArrayList()).build();
         }
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在因规则而舍弃的,如果存在对放行的敏感词进行标志*/
@@ -52,9 +52,7 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(hitWords)
-                    .complianceIgnoreWords(Lists.newArrayList())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .ruleIgnoreWords(Lists.newArrayList()).build();
         }
 
         /*整合敏感词配置规则放行的词*/
@@ -64,28 +62,24 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
         if (CollectionUtils.isEmpty(finalHitWords)) {
             /*此时链路可能还会记继续，保持对应内容的传递*/
             context.setHitWords(Lists.newArrayList());
-            context.setRuleIgnoreWords(ignoreSensitiveWord);
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                    .whitedWords(context.getWhitedWords())
                     .ruleIgnoreWords(ignoreSensitiveWord).build();
         }
 
+        /*此时链路可能还会记继续，保持对应内容的传递*/
+        context.setHitWords(finalHitWords);
         /*返回当前命中的内容*/
         return SensitveEffectiveContext.builder()
                 /*已经有生效的词直接返回*/
                 .isHit(true)
                 .content(context.getContent())
                 .cleanContent(context.getCleanContent())
-                .hitWords(finalHitWords)
-                .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                .whitedWords(context.getWhitedWords())
-                .ruleIgnoreWords(ignoreSensitiveWord).build();
+                .hitWords(finalHitWords).ruleIgnoreWords(ignoreSensitiveWord).build();
     }
 
     private List<SensitiveWord> getIgnoreSensitiveWord(List<SensitiveWord> hitWords, ContentAttr contentAttr) {
@@ -99,7 +93,7 @@ public class EffectiveRuleProcess implements ContextHandler<SensitveHitContext, 
 
     private boolean ignoreByrule(SensitiveWord sensitiveWord, ContentAttr contentAttr) {
         /*1.根据敏感词配置内容获取对应敏感词实际生效配置，此处做模拟*/
-        if (contentAttr.getCityCode().equals("110010")) {
+        if (contentAttr.getCityCode().equals(110010)) {
             /*改词只对该地区生效,不忽略*/
             return false;
         }

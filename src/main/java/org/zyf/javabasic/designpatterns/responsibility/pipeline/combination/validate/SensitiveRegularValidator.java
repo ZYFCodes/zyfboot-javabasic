@@ -10,6 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.Base64;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.RegularTypeEnum;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
@@ -32,6 +34,7 @@ import java.util.regex.Pattern;
  */
 @Component
 @Log4j2
+@SensitiveValidate(validateCode = SensitiveCons.Validate.REGULAR)
 public class SensitiveRegularValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     private LoadingCache<String, Map<WordRegular, Pattern[]>> wordRegularCache = CacheBuilder.newBuilder()
@@ -53,33 +56,17 @@ public class SensitiveRegularValidator implements ContextHandler<ContentCleanRes
      */
     @Override
     public SensitveHitContext handle(ContentCleanResContext context) {
-        List<SensitiveWord> hitWords = Lists.newArrayList();
-        try {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            hitWords.addAll(getSensitiveRegularValidator(context.getCleanContent()));
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        } catch (Exception e) {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        }
+        return SensitveHitContext.builder()
+                .content(context.getContent())
+                .cleanContent(context.getCleanContent())
+                .contentAttr(context.getContentAttr())
+                .hitWords(getSensitiveRegularValidator(context.getCleanContent())).build();
     }
 
     private Map<WordRegular, Pattern[]> getwordRegularCache() {
         /*从指定词正则库中拉取配置，在此处放本地缓存或redis，这里只进行模拟*/
         List<WordRegular> words = Lists.newArrayList();
-        words.add(WordRegular.builder().id(11L).type(RegularTypeEnum.AND_REGULAR.getCode()).words("与,正则").build());
+        words.add(WordRegular.builder().id(11L).type(RegularTypeEnum.AND_REGULAR.getCode()).words(constructWords()).build());
 
         Map<WordRegular, Pattern[]> wordRegularPattern = Maps.newHashMap();
         String[] wordstr;
@@ -108,7 +95,7 @@ public class SensitiveRegularValidator implements ContextHandler<ContentCleanRes
         return wordRegularPattern;
     }
 
-    private List<SensitiveWord> getSensitiveRegularValidator(String content) throws ExecutionException {
+    private List<SensitiveWord> getSensitiveRegularValidator(String content) {
         List<SensitiveWord> result = Lists.newArrayList();
         if (StringUtils.isEmpty(content)) {
             return result;
@@ -119,7 +106,12 @@ public class SensitiveRegularValidator implements ContextHandler<ContentCleanRes
         Matcher matcher1 = null;
         Matcher matcher2 = null;
 
-        Map<WordRegular, Pattern[]> getwordRegularCache = wordRegularCache.get("wordRegularInfo");
+        Map<WordRegular, Pattern[]> getwordRegularCache = null;
+        try {
+            getwordRegularCache = wordRegularCache.get("wordRegularInfo");
+        } catch (ExecutionException e) {
+            getwordRegularCache = Maps.newHashMap();
+        }
         for (Map.Entry<WordRegular, Pattern[]> e : getwordRegularCache.entrySet()) {
             switch (Objects.requireNonNull(RegularTypeEnum.getByCode(e.getKey().getType()))) {
                 case SIAMPLE_REGULAR:
@@ -152,5 +144,23 @@ public class SensitiveRegularValidator implements ContextHandler<ContentCleanRes
             }
         }
         return result;
+    }
+
+    private String constructWords() {
+        String[] wordArr = new String[]{"酒精", "南京"};
+        return StringUtils.join(constructWordsEncode(wordArr), ",");
+    }
+
+    private List<String> constructWordsEncode(String[] wordArray) {
+        /*其他存在存多词组合的内容，进行编码转存*/
+        List<String> wordsList = Lists.newArrayList();
+        for (String item : wordArray) {
+            try {
+                wordsList.add(new String(new org.apache.commons.codec.binary.Base64().encode(item.getBytes())));
+            } catch (Exception e) {
+                wordsList.add(item);
+            }
+        }
+        return wordsList;
     }
 }

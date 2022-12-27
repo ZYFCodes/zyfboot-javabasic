@@ -14,9 +14,9 @@ import java.util.List;
 @Data
 public class SensitveHitContext extends PipelineContext {
     /**
-     * 数据节点流转信号
+     * 是否存在敏感词命中
      */
-    private Boolean deliver;
+    private Boolean hasHit;
     /**
      * 用户输入文本原稿
      */
@@ -33,18 +33,6 @@ public class SensitveHitContext extends PipelineContext {
      * 命中的敏感词
      */
     private List<SensitiveWord> hitWords;
-    /**
-     * 命中的敏感词被加白
-     */
-    private List<SensitiveWord> whitedWords;
-    /**
-     * 命中的敏感词被合规放行
-     */
-    private List<SensitiveWord> complianceIgnoreWords;
-    /**
-     * 命中的敏感词中被对应规则放行
-     */
-    private List<SensitiveWord> ruleIgnoreWords;
 
     @Override
     public String getName() {

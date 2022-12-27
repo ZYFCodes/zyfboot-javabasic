@@ -3,6 +3,8 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.val
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
@@ -15,6 +17,7 @@ import java.util.List;
  * @date 2022/4/5  22:19
  */
 @Component
+@SensitiveValidate(validateCode = SensitiveCons.Validate.PRIVACY)
 public class SensitivePrivacyValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     /**
@@ -25,37 +28,21 @@ public class SensitivePrivacyValidator implements ContextHandler<ContentCleanRes
      */
     @Override
     public SensitveHitContext handle(ContentCleanResContext context) {
-        List<SensitiveWord> hitWords = Lists.newArrayList();
-        try {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            hitWords.addAll(getPrivacy(context.getCleanContent()));
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        } catch (Exception e) {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        }
+        return SensitveHitContext.builder()
+                .content(context.getContent())
+                .cleanContent(context.getCleanContent())
+                .contentAttr(context.getContentAttr())
+                .hitWords(getPrivacy(context.getCleanContent())).build();
     }
 
     private List<SensitiveWord> getPrivacy(String content) {
         /*模拟*/
         List<SensitiveWord> sensitiveWords = Lists.newArrayList();
-        if (content.contains("手机号身份证号处理")) {
+        if (content.contains("18252066688")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("手机号身份证号处理")
-                    .sensitiveId(23L)
-                    .kind(4).build());
+                    .sensitive("18252066688")
+                    .sensitiveId(453L)
+                    .kind(18).build());
         }
         return sensitiveWords;
     }

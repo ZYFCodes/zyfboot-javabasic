@@ -4,6 +4,8 @@ import org.apache.commons.collections.CollectionUtils;
 import org.assertj.core.util.Lists;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveEffect;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveEffectiveContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
  * @date 2022/4/17  22:20
  */
 @Component
+@SensitiveEffect(effectCode = SensitiveCons.Effect.WHITE)
 public class WhitelistProcess implements ContextHandler<SensitveHitContext, SensitveEffectiveContext> {
 
     /**
@@ -35,10 +38,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
-                    .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .hitWords(Lists.newArrayList()).build();
         }
 
         /*此处只为模拟,根据当前命中的敏感词信息查询是否存在加白的词,如果存在对放行的敏感词进行标志*/
@@ -51,9 +51,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(hitWords)
-                    .complianceIgnoreWords(Lists.newArrayList())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(context.getRuleIgnoreWords()).build();
+                    .whitedWords(Lists.newArrayList()).build();
         }
 
         /*整合敏感词配置规则放行的词*/
@@ -61,20 +59,17 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
         /*去除放行词后命中的词*/
         List<SensitiveWord> finalHitWords = hitWords.stream().filter(sensitiveWord -> !ignoreSensitiveWordIds.contains(sensitiveWord.getSensitiveId())).collect(Collectors.toList());
         if (CollectionUtils.isEmpty(finalHitWords)) {
-            /*此时链路可能还会记继续，保持对应内容的传递*/
-            context.setHitWords(Lists.newArrayList());
-            context.setRuleIgnoreWords(ignoreSensitiveWord);
             return SensitveEffectiveContext.builder()
                     /*已经有生效的词直接返回*/
                     .isHit(false)
                     .content(context.getContent())
                     .cleanContent(context.getCleanContent())
                     .hitWords(Lists.newArrayList())
-                    .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                    .whitedWords(context.getWhitedWords())
-                    .ruleIgnoreWords(ignoreSensitiveWord).build();
+                    .whitedWords(ignoreSensitiveWord).build();
         }
 
+        /*此时链路可能还会记继续，保持对应内容的传递*/
+        context.setHitWords(finalHitWords);
         /*返回当前命中的内容*/
         return SensitveEffectiveContext.builder()
                 /*已经有生效的词直接返回*/
@@ -82,9 +77,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
                 .content(context.getContent())
                 .cleanContent(context.getCleanContent())
                 .hitWords(finalHitWords)
-                .complianceIgnoreWords(context.getComplianceIgnoreWords())
-                .whitedWords(context.getWhitedWords())
-                .ruleIgnoreWords(ignoreSensitiveWord).build();
+                .whitedWords(ignoreSensitiveWord).build();
     }
 
     private List<SensitiveWord> getIgnoreSensitiveByWhite(List<SensitiveWord> hitWords) {
@@ -98,7 +91,7 @@ public class WhitelistProcess implements ContextHandler<SensitveHitContext, Sens
 
     private boolean ignoreByWhite(SensitiveWord sensitiveWord) {
         /*1.根据敏感词配置内容获取对应敏感词实际白名单生效配置，此处做模拟*/
-        if (sensitiveWord.getSensitiveId() == 1) {
+        if (sensitiveWord.getSensitiveId() == 36) {
             return true;
         }
         return false;

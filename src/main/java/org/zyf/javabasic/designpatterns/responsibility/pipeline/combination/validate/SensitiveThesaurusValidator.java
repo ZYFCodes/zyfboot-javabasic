@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
@@ -17,6 +19,7 @@ import java.util.List;
  * @date 2022/4/5  22:31
  */
 @Component
+@SensitiveValidate(validateCode = SensitiveCons.Validate.THESAURUS)
 public class SensitiveThesaurusValidator implements ContextHandler<ContentCleanResContext, SensitveHitContext> {
 
     /**
@@ -27,48 +30,35 @@ public class SensitiveThesaurusValidator implements ContextHandler<ContentCleanR
      */
     @Override
     public SensitveHitContext handle(ContentCleanResContext context) {
-        List<SensitiveWord> hitWords = Lists.newArrayList();
-        try {
-            Integer bizType = context.getContentAttr().getBizType();
-            /*根据业务方接入来源获取对应的业务方词库校验要求*/
-            List<Integer> validatorModes = getBizSensitiveModes(bizType);
-            if (CollectionUtils.isEmpty(validatorModes)) {
-                /*没有配置则直接默认走企业词库校验*/
-                validatorModes.add(1);
-            }
-
-            /*实际用策略处理，此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            for (Integer validatorMode : validatorModes) {
-                if (validatorMode.equals(1)) {
-                    /*企业词库校验*/
-                    hitWords.addAll(companySensitive(context.getContent()));
-                }
-                if (validatorMode.equals(2)) {
-                    /*企业词库校验*/
-                    hitWords.addAll(departmentSensitive(context.getContent()));
-                }
-                if (validatorMode.equals(3)) {
-                    /*企业词库校验*/
-                    hitWords.addAll(otherSensitive(context.getContent()));
-                }
-            }
-
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
-        } catch (Exception e) {
-            /*此处只为模拟*/
-            hitWords.addAll(context.getHitWords());
-            /*如果命中敏感词，则显示命中，且终止链路传递*/
-            return SensitveHitContext.builder()
-                    .content(context.getContent())
-                    .cleanContent(context.getCleanContent())
-                    .deliver(true)
-                    .hitWords(hitWords).build();
+        Integer bizType = context.getContentAttr().getBizType();
+        /*根据业务方接入来源获取对应的业务方词库校验要求*/
+        List<Integer> validatorModes = getBizSensitiveModes(bizType);
+        if (CollectionUtils.isEmpty(validatorModes)) {
+            /*没有配置则直接默认走企业词库校验*/
+            validatorModes.add(1);
         }
+
+        List<SensitiveWord> hitWords = Lists.newArrayList();
+        for (Integer validatorMode : validatorModes) {
+            if (validatorMode.equals(1)) {
+                /*企业词库校验*/
+                hitWords.addAll(companySensitive(context.getContent()));
+            }
+            if (validatorMode.equals(2)) {
+                /*企业词库校验*/
+                hitWords.addAll(departmentSensitive(context.getContent()));
+            }
+            if (validatorMode.equals(3)) {
+                /*企业词库校验*/
+                hitWords.addAll(otherSensitive(context.getContent()));
+            }
+        }
+
+        return SensitveHitContext.builder()
+                .content(context.getContent())
+                .cleanContent(context.getCleanContent())
+                .contentAttr(context.getContentAttr())
+                .hitWords(hitWords).build();
     }
 
     /**
@@ -91,15 +81,15 @@ public class SensitiveThesaurusValidator implements ContextHandler<ContentCleanR
      */
     private List<SensitiveWord> companySensitive(String content) {
         List<SensitiveWord> sensitiveWords = Lists.newArrayList();
-        if (content.contains("张彦峰")) {
+        if (content.contains("外卖")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("张彦峰")
+                    .sensitive("外卖")
                     .sensitiveId(1L)
                     .kind(1).build());
         }
-        if (content.contains("张峰峰")) {
+        if (content.contains("美团")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("张峰峰")
+                    .sensitive("美团")
                     .sensitiveId(86L)
                     .kind(1).build());
         }
@@ -114,15 +104,15 @@ public class SensitiveThesaurusValidator implements ContextHandler<ContentCleanR
      */
     private List<SensitiveWord> departmentSensitive(String content) {
         List<SensitiveWord> sensitiveWords = Lists.newArrayList();
-        if (content.contains("妓院")) {
+        if (content.contains("腾讯")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("妓院")
+                    .sensitive("腾讯")
                     .sensitiveId(23L)
                     .kind(2).build());
         }
-        if (content.contains("赌博")) {
+        if (content.contains("阿里")) {
             sensitiveWords.add(SensitiveWord.builder()
-                    .sensitive("赌博")
+                    .sensitive("阿里")
                     .sensitiveId(36L)
                     .kind(2).build());
         }
