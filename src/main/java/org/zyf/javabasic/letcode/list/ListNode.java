@@ -2,12 +2,17 @@ package org.zyf.javabasic.letcode.list;
 
 /**
  * @author yanfengzhang
- * @description
+ * @description 链表结构
  * @date 2022/8/2  20:49
  */
 public class ListNode {
-
+    /**
+     * 链表长度
+     */
     int size;
+    /**
+     * 链表头节点
+     */
     Node head;
 
     /**

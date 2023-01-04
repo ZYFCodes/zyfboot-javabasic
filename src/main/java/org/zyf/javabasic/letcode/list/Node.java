@@ -2,7 +2,7 @@ package org.zyf.javabasic.letcode.list;
 
 /**
  * @author yanfengzhang
- * @description
+ * @description 节点结构
  * @date 2022/10/17  21:18
  */
 public class Node {

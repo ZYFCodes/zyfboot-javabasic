@@ -49,7 +49,7 @@ public class SensitivePipelineExecutor {
             return sensitiveDealRes.toString();
         }
         /*4.整合最终的命中结果*/
-        SensitveEffectiveContext sensitveEffectiveContext = getSensitveHitRes(sensitveHitContext);
+        SensitveEffectiveContext sensitveEffectiveContext = getSensitveEffectiveRes(sensitveHitContext);
         if (sensitveEffectiveContext.getIsHit()) {
             sensitiveDealRes.append("命中相关敏感词：").append("【").append(sensitveEffectiveContext.getHitWords().stream().map(SensitiveWord::getSensitive).collect(Collectors.toList())).append("】");
             return sensitiveDealRes.toString();
@@ -124,7 +124,7 @@ public class SensitivePipelineExecutor {
      * @param sensitveHitContext 词库命中结果
      * @return 经过其他分析后最终命中结果
      */
-    public SensitveEffectiveContext getSensitveHitRes(SensitveHitContext sensitveHitContext) {
+    public SensitveEffectiveContext getSensitveEffectiveRes(SensitveHitContext sensitveHitContext) {
         /*【通用头处理器】处理*/
         commonHeadHandler.handle(sensitveHitContext);
 
@@ -162,5 +162,4 @@ public class SensitivePipelineExecutor {
         sensitveEffectiveContext.setRuleIgnoreWords(ruleIgnoreWords);
         return sensitveEffectiveContext;
     }
-
 }
