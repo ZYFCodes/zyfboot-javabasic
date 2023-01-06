@@ -2,6 +2,7 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.mod
 
 import lombok.Builder;
 import lombok.Data;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidateField;
 
 /**
  * @author yanfengzhang
@@ -14,7 +15,7 @@ public class ContentAttr {
     /**
      * 文本归类（商品名称、商品描述、商家公告、商家名称、经营描述、代言信息等）
      */
-    private Integer belong;
+    private SensitiveValidateField belong;
     /**
      * 文本城市编号
      */

@@ -1,8 +1,11 @@
 package org.zyf.javabasic.java8;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.MapUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,17 +15,24 @@ import org.zyf.javabasic.ZYFApplication;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.PipelineRouteConfig;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.SensitivePipelineExecutor;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidateField;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.BizType;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentAttr;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
+import org.zyf.javabasic.java8.product.SpuSensitiveDealCommand;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Random;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -80,8 +90,7 @@ public class CompletableFutureTest {
                     ContentInfoContext.builder()
                             .content("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
                             .cleanContent("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
-                            .contentAttr(ContentAttr.builder().build()).build());
-
+                            .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
             return contentCleanResContext.getCleanContent();
         }, threadPoolExecutor);
         log.info("异步任务获取用户文本清洗结果：【{}】", contentCleanTaskByDefine.get());
@@ -835,7 +844,7 @@ public class CompletableFutureTest {
                     ContentInfoContext.builder()
                             .content("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
                             .cleanContent("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
-                            .contentAttr(ContentAttr.builder().build()).build());
+                            .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
             return contentCleanResContext.getCleanContent();
         }, threadPoolExecutor).whenCompleteAsync((res, excption) -> {
             log.info("异步任务成功执行,结果是：{},异常是：", res, excption);
@@ -868,7 +877,7 @@ public class CompletableFutureTest {
                     ContentInfoContext.builder()
                             .content("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
                             .cleanContent("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
-                            .contentAttr(ContentAttr.builder().build()).build());
+                            .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
             return contentCleanResContext.getCleanContent();
         }, threadPoolExecutor).exceptionally(excption -> {
             /*可以感知异常，同时返回默认数据*/
@@ -903,7 +912,7 @@ public class CompletableFutureTest {
                     ContentInfoContext.builder()
                             .content("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
                             .cleanContent("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰")
-                            .contentAttr(ContentAttr.builder().build()).build());
+                            .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
             return contentCleanResContext.getCleanContent();
         }, threadPoolExecutor).handle((res, excption) -> {
             /*异步方法执行完的后续处理*/
@@ -915,6 +924,250 @@ public class CompletableFutureTest {
             return res + "(用于测试)";
         });
         log.info("异步任务获取用户文本【中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰】清洗结果:【{}】", future.get());
+    }
+
+    /**
+     * 多个方法组合使用
+     * <p>
+     * 测试组合敏感词处理逻辑
+     */
+    @Test
+    public void testSensitiveDeal() throws ExecutionException, InterruptedException {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(8,
+                16, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new ThreadFactory() {
+            private AtomicInteger threadCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "thread-processor-" + threadCount.getAndIncrement());
+            }
+        });
+
+        log.info("开始对用户文本【中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰,腾讯,南京酒精】进行敏感词分析");
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+                    return sensitivePipelineExecutor.getContentCleanRes(
+                            ContentInfoContext.builder()
+                                    .content("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰,腾讯,南京酒精")
+                                    .cleanContent("中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰,腾讯,南京酒精")
+                                    .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
+                }, threadPoolExecutor)
+                .thenComposeAsync(new Function<ContentCleanResContext, CompletionStage<SensitveHitContext>>() {
+                    @Override
+                    public CompletionStage<SensitveHitContext> apply(ContentCleanResContext contentCleanResInfo) {
+                        return CompletableFuture.supplyAsync(new Supplier<SensitveHitContext>() {
+                            @Override
+                            public SensitveHitContext get() {
+                                return sensitivePipelineExecutor.getSensitveHitRes(contentCleanResInfo);
+                            }
+                        });
+                    }
+                }, threadPoolExecutor)
+                .thenApplyAsync((sensitveHitContext) ->
+                        sensitivePipelineExecutor.getSensitveEffectiveRes(sensitveHitContext), threadPoolExecutor)
+                .handle((res, excption) -> {
+                    /*异步方法执行完的后续处理*/
+                    if (Objects.nonNull(excption)) {
+                        log.info("执行发生异常，返回默认数据，异常信息为：" + excption);
+                        return null;
+                    }
+                    log.info("异步任务成功执行,上一步的结果是：" + res);
+                    return res.getHitWords().toString();
+                });
+        log.info("异步任务获取用户文本【中國张彦峰㎵㎶㎷㎸㎹㎺外卖⏳⌚⏰,腾讯,南京酒精】命中敏感词为:【{}】", future.get());
+    }
+
+    /**
+     * 并发处理批量任务
+     * <p>
+     * 测试组合敏感词处理逻辑
+     */
+    @Test
+    public void testSensitiveBatchDeal() throws ExecutionException, InterruptedException {
+        /*定义单个商品处理任务*/
+        class SpuSentiveTask implements Callable<String> {
+            private final SpuSensitiveDealCommand command;
+
+            public SpuSentiveTask(SpuSensitiveDealCommand command) {
+                this.command = command;
+            }
+
+            @Override
+            public String call() throws Exception {
+                return containsSensitiveWordSpu(command);
+            }
+        }
+
+        /*模拟批量商品 假设前端传入十个商品，我们将十个商品并发执行*/
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(8,
+                16, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new ThreadFactory() {
+            private AtomicInteger threadCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "thread-processor-" + threadCount.getAndIncrement());
+            }
+        });
+        List<SpuSentiveTask> spuSentiveTasks = Lists.newArrayList();
+        for (int i = 0; i < 10; i++) {
+            spuSentiveTasks.add(new SpuSentiveTask(new SpuSensitiveDealCommand()));
+        }
+
+
+        List<Future<String>> spuSensitiveBatchRes = threadPoolExecutor.invokeAll(spuSentiveTasks);
+        threadPoolExecutor.shutdown();
+        if (CollectionUtils.isEmpty(spuSensitiveBatchRes)) {
+            log.info("本批次商品数据中不存在敏感词！");
+            return;
+        }
+
+        final int[] i = {0};
+        spuSensitiveBatchRes.forEach(spuSensitiveRes -> {
+            try {
+                log.info("商品编号{}对应敏感词校验情况如下：", i[0]);
+                log.info(spuSensitiveRes.get());
+                i[0]++;
+            } catch (Exception e) {
+                log.error("商品编号{}对应敏感词校验情况提取失败", i[0]);
+                i[0]++;
+            }
+        });
+    }
+
+    /**
+     * 模拟处理一个商品信息中的敏感词命中情况统计
+     */
+    private String containsSensitiveWordSpu(SpuSensitiveDealCommand spuSensitiveDealCommand) {
+        /*1.模拟从一个上传的商品信息中提炼商品内含的文本数据*/
+        List<ContentInfoContext> spuContentInfos = getContentInfosBySpu();
+        /*2.对商品各项数据进行校验检查*/
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(8,
+                16, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new ThreadFactory() {
+            private AtomicInteger threadCount = new AtomicInteger(1);
+
+            @Override
+            public Thread newThread(Runnable r) {
+                return new Thread(r, "thread-processor-" + threadCount.getAndIncrement());
+            }
+        });
+        int isHit = 1;
+        int exceptionHit = 2;
+        List<CompletableFuture<Map<Integer, String>>> spuSensitiveDealRes = spuContentInfos.stream().map(contentInfoContext -> {
+            return CompletableFuture.supplyAsync(() -> {
+                        return sensitivePipelineExecutor.getContentCleanRes(contentInfoContext);
+                    }, threadPoolExecutor)
+                    .thenComposeAsync(new Function<ContentCleanResContext, CompletionStage<SensitveHitContext>>() {
+                        @Override
+                        public CompletionStage<SensitveHitContext> apply(ContentCleanResContext contentCleanResInfo) {
+                            return CompletableFuture.supplyAsync(new Supplier<SensitveHitContext>() {
+                                @Override
+                                public SensitveHitContext get() {
+                                    return sensitivePipelineExecutor.getSensitveHitRes(contentCleanResInfo);
+                                }
+                            });
+                        }
+                    }, threadPoolExecutor)
+                    .thenApplyAsync((sensitveHitContext) ->
+                            sensitivePipelineExecutor.getSensitveEffectiveRes(sensitveHitContext), threadPoolExecutor)
+                    .handle((res, excption) -> {
+                        Map<Integer, String> hitdetail = Maps.newHashMap();
+                        StringBuilder hitInfoRes = new StringBuilder();
+                        hitInfoRes.append("【").append(contentInfoContext.getContentAttr().getBelong().getDesc()).append("】");
+                        /*异步方法执行完的后续处理*/
+                        if (Objects.nonNull(excption)) {
+                            log.info("执行发生异常，返回默认数据，异常信息为：" + excption);
+                            hitInfoRes.append("校验敏感词异常:").append(excption.getMessage());
+                            hitdetail.put(exceptionHit, hitInfoRes.toString());
+                            return hitdetail;
+                        }
+                        if (!res.getIsHit()) {
+                            return hitdetail;
+                        }
+                        log.info("异步任务成功执行,上一步的结果是：" + res);
+                        hitInfoRes.append("命中敏感词:").append(res.getHitWords().toString());
+                        hitdetail.put(isHit, hitInfoRes.toString());
+                        return hitdetail;
+                    });
+        }).collect(Collectors.toList());
+
+        /*3.等待所有并行线程完成，结束单词单词商品处理*/
+        CompletableFuture.allOf(spuSensitiveDealRes.toArray(new CompletableFuture[]{})).join();
+        threadPoolExecutor.shutdown();
+
+        /*4.整合单商品最终结果*/
+        List<String> validHits = Lists.newArrayList();
+        List<String> exceptionHits = Lists.newArrayList();
+        spuSensitiveDealRes.stream().forEach(hitInfo -> {
+            Map<Integer, String> hitdetail;
+            try {
+                hitdetail = hitInfo.get();
+            } catch (Exception e) {
+                return;
+            }
+            if (MapUtils.isEmpty(hitdetail)) {
+                return;
+            }
+            if (StringUtils.isNotBlank(hitdetail.get(isHit))) {
+                validHits.add(hitdetail.get(isHit));
+            }
+            if (StringUtils.isNotBlank(hitdetail.get(exceptionHit))) {
+                exceptionHits.add(hitdetail.get(exceptionHit));
+            }
+        });
+        /*4.1 如果没有命中敏感词以及异常情况直接返回*/
+        String spuName = spuContentInfos.stream().filter(contentInfoContext -> contentInfoContext.getContentAttr().getBelong() == SensitiveValidateField.NAME)
+                .findFirst().get().getContent();
+        StringBuilder hitInfoRes = new StringBuilder();
+        if (CollectionUtils.isEmpty(validHits) && CollectionUtils.isEmpty(exceptionHits)) {
+            hitInfoRes.append("商品【").append(spuName).append("】未命中敏感词");
+            return hitInfoRes.toString();
+        }
+        /*4.2 统计其中有效命中信息*/
+        if (CollectionUtils.isNotEmpty(validHits)) {
+            hitInfoRes.append("商品【").append(spuName).append("】敏感词命中情况统计：\n");
+            validHits.stream().forEach(hitInfo -> {
+                hitInfoRes.append(hitInfo).append("\n");
+            });
+        }
+        /*4.3 统计其中异常命中信息*/
+        if (CollectionUtils.isNotEmpty(exceptionHits)) {
+            hitInfoRes.append("商品【").append(spuName).append("】敏感词异常处理情况统计：\n");
+            exceptionHits.stream().forEach(hitInfo -> {
+                hitInfoRes.append(hitInfo).append("\n");
+            });
+        }
+        return hitInfoRes.toString();
+    }
+
+    /**
+     * 模拟从一个上传的商品信息中提炼商品内含的文本数据
+     *
+     * @return
+     */
+    private List<ContentInfoContext> getContentInfosBySpu() {
+        List<ContentInfoContext> contentInfoContexts = Lists.newArrayList();
+        List<String> spuInfoList = Lists.newArrayList("张彦峰", "肯德基", "外卖", "腾讯", "禁药", "酒精南京",
+                "18252066688", "饿了吗", "廉政勤政", "中国", "巴黎圣母院", "莫沫南路", "辉瑞P药", "捷倍安", "极速达", "老城一埚",
+                "星即送", "连花清温", "美乐滋", "山茱萸", "欧美齐", "长江鱼", "人气榜第一", "蟹礼券", "茶ta颜悦色", "可食用黄金",
+                "安培开席", "摇钱树", "特丁通", "草甘膦", "叫只鸡", "贱男消食片", "维信识别", "龙闩花甲", "鮑家糕点", "至尊至比萨",
+                "胖大哥肉蟹煲", "OBLIGI韩式炸鸡", "星芭芭", "欢乐柠檬", "水多活好", "胸胸烈火", "比基妮", "成人艺术", "仿真手枪", "机关枪");
+        for (int i = 0; i < 12; i++) {
+            String contentInfo = spuInfoList.get(getRandomNumberInRange(0, spuInfoList.size() - 1)) + spuInfoList.get(getRandomNumberInRange(0, spuInfoList.size() - 1))
+                    + spuInfoList.get(getRandomNumberInRange(0, spuInfoList.size() - 1));
+            contentInfoContexts.add(ContentInfoContext.builder()
+                    .content(contentInfo)
+                    .cleanContent(contentInfo)
+                    .contentAttr(ContentAttr.builder()
+                            .belong(SensitiveValidateField.getEnumById(i + 1))
+                            .bizType(BizType.E_COMMERCE.getType())
+                            .cityCode(110010).build()).build());
+        }
+        return contentInfoContexts;
+    }
+
+
+    private static int getRandomNumberInRange(int min, int max) {
+        Random r = new Random();
+        return r.ints(min, (max + 1)).limit(1).findFirst().getAsInt();
     }
 
 }
