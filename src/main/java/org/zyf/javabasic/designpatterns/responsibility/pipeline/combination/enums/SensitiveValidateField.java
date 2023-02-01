@@ -2,8 +2,8 @@ package org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enu
 
 /**
  * @author yanfengzhang
- * @description
- * @date 2023/1/4  21:00
+ * @description 校验商品敏感词信息归类
+ * @date 2023/1/4  23:00
  */
 public enum SensitiveValidateField {
     NAME(1, "商品名称"),
