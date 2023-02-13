@@ -5,12 +5,16 @@ import com.alibaba.fastjson.JSON;
 import org.springframework.util.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 import org.zyf.javabasic.common.Result;
+import org.zyf.javabasic.common.utils.HttpUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -22,38 +26,44 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class CSDNTest {
 
-    public static void main(String[] args) throws IOException {
-//        String url = "https://blog.csdn.net/community/home-api/v1/get-business-list?page=100&size=100&businessType=blog&orderby=&noMore=false&username=xiaofeng10330111";
-//
-//        Document document = Jsoup.connect(url)
-//                .userAgent("ozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36")
-//                .get();
-//
-//        Elements items = document.select("#article_list > div");
-//        System.out.println(items.size());
+    public static void main(String[] args) throws IOException, InterruptedException {
         String url = "https://blog.csdn.net/community/home-api/v1/get-business-list";
         String page = "page=";
         String sizeMore = "&size=20&businessType=blog&orderby=&noMore=false&username=xiaofeng10330111";
-        AtomicInteger start = new AtomicInteger(1);
-        for (int i = 1; i < 100; i++) {
-            String result = sendGET(url, page + i + sizeMore);
-            Result urlResult = JSON.parseObject(result, Result.class);
-            if (urlResult == null || urlResult.getCode() != 200) {
-                return;
-            }
 
-            List<Article> list = urlResult.getData().getList();
-            if (CollectionUtils.isEmpty(list)) {
-                break;
-            }
+        for (int time = 0; time < 1000; time++) {
+            Calendar cal1 = Calendar.getInstance();
+            Date date1 = cal1.getTime();
+            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1)+"执行反问全列表数据进行分析，当前次数："    +time);
+            AtomicInteger start = new AtomicInteger(1);
+            for (int i = 1; i < 200; i++) {
+                String result = sendGET(url, page + i + sizeMore);
+                Result urlResult = JSON.parseObject(result, Result.class);
+                if (urlResult == null || urlResult.getCode() != 200) {
+                    return;
+                }
 
-            list.forEach(article -> {
-                String urlDetail = article.getUrl();
-                System.out.println(start + ":" + urlDetail);
-                start.getAndIncrement();
-            });
+                List<Article> list = urlResult.getData().getList();
+                if (CollectionUtils.isEmpty(list)) {
+                    break;
+                }
+
+                list.forEach(article -> {
+                    if(article.getViewCount()>10000){
+                        return;
+                    }
+
+                    Calendar cal = Calendar.getInstance();
+                    Date date = cal.getTime();
+                    String urlDetail = article.getUrl();
+                    HttpUtils.sendPost(urlDetail, null);
+                    System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date) +
+                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
+                    start.getAndIncrement();
+                });
+                Thread.sleep(50000);
+            }
         }
-
     }
 
     public static String sendGET(String url, String param) {

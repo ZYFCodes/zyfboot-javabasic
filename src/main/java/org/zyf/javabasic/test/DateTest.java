@@ -6,11 +6,11 @@ import java.text.SimpleDateFormat;
 
 /**
  * @author yanfengzhang
- * @className Date
+ * @className DateTest
  * @description TODO
  * @date 2020/7/28 21:14
  */
-public class Date {
+public class DateTest {
 
     public static void main(String[] args) {
         int now1 = new Long(DateTime.now().getMillis() / 1000).intValue();

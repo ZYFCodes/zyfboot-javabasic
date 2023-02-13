@@ -13,6 +13,7 @@ public class Article {
     private Integer commentCount;
     private String description;
     private Integer diggCount;
+    private Integer viewCount;
     private String editUrl;
     private Boolean forcePlan;
     private String title;

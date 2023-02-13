@@ -3,6 +3,9 @@ package org.zyf.javabasic.test;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.util.Sets;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -30,5 +33,17 @@ public class TestTest {
         provinceIds.add(5);
         provinceIds.add(2);
         System.out.println(provinceIds);
+
+
+        System.out.println( System.currentTimeMillis() );
+
+        Calendar cal = Calendar.getInstance();
+        Date date = cal.getTime();
+        //  2016/05/05-01:01:34:364
+        System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date));
+
+        Calendar calendar = Calendar.getInstance();
+        long time = calendar.getTimeInMillis();
+        System.out.println(time);
     }
 }
