@@ -34,7 +34,7 @@ public class CSDNTest {
         for (int time = 0; time < 1000; time++) {
             Calendar cal1 = Calendar.getInstance();
             Date date1 = cal1.getTime();
-            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1)+"执行反问全列表数据进行分析，当前次数："    +time);
+            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1)+"执行访问全列表数据进行分析，当前次数："    +time);
             AtomicInteger start = new AtomicInteger(1);
             for (int i = 1; i < 200; i++) {
                 String result = sendGET(url, page + i + sizeMore);
@@ -57,11 +57,11 @@ public class CSDNTest {
                     Date date = cal.getTime();
                     String urlDetail = article.getUrl();
                     HttpUtils.sendPost(urlDetail, null);
-                    System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date) +
-                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
+//                    System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date) +
+//                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
                     start.getAndIncrement();
                 });
-                Thread.sleep(50000);
+                Thread.sleep(22000);
             }
         }
     }
