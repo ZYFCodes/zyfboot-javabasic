@@ -29,7 +29,7 @@ public class CSDNTest {
     public static void main(String[] args) throws IOException, InterruptedException {
         String url = "https://blog.csdn.net/community/home-api/v1/get-business-list";
         String page = "page=";
-        String sizeMore = "&size=20&businessType=blog&orderby=&noMore=false&username=xiaofeng10330111";
+        String sizeMore = "&size=50&businessType=blog&orderby=&noMore=false&username=xiaofeng10330111";
 
         for (int time = 0; time < 1000; time++) {
             Calendar cal1 = Calendar.getInstance();
@@ -47,7 +47,7 @@ public class CSDNTest {
                 if (CollectionUtils.isEmpty(list)) {
                     break;
                 }
-
+                System.out.println("访问文章总数为:"+list.size()+",其中访问数小于10000的有："+list.stream().filter(x->x.getViewCount()<=10000).count());
                 list.forEach(article -> {
                     if(article.getViewCount()>10000){
                         return;
