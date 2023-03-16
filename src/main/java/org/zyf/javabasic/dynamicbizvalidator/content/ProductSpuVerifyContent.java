@@ -96,11 +96,20 @@ public class ProductSpuVerifyContent {
     public static ProductSpuVerifyContent toProductSpuVerifyContent(ProductPoiSpu poiSpu, PoiProductValidatorDataHolder poiProductValidatorDataHolder, int indexOfBatch) {
         /*用于模拟*/
         ProductSpuVerifyContent productSpuVerifyContent = new ProductSpuVerifyContent();
-
+        productSpuVerifyContent.setName(poiSpu.getName());
         if (poiSpu.getHqSpuId() > 0 && StringUtils.isBlank(poiSpu.getName())) {
             /*总分模式下，商品名字是可以为空的，设置个任意不重复的值，防止非空校验*/
             productSpuVerifyContent.setName(poiSpu.getHqSpuId() + "_" + indexOfBatch);
         }
+
+        productSpuVerifyContent.setPicContent(poiSpu.getPicContent());
+        productSpuVerifyContent.setAttrSkuSize(23);
+        productSpuVerifyContent.setDescription(poiSpu.getDescription());
+        productSpuVerifyContent.setCategoryId(poiSpu.getCategoryId());
+        productSpuVerifyContent.setNameUniqueInTag(true);
+        productSpuVerifyContent.setSkuSize(poiSpu.getSkuList().size());
+        productSpuVerifyContent.setThirdPartyPrimaryId(poiSpu.getSourceFoodCode());
+        productSpuVerifyContent.setUnit(poiSpu.getUnit());
         productSpuVerifyContent.setPackageUseScene("热点商品售卖");
 
         return productSpuVerifyContent;

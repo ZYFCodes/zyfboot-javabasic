@@ -212,13 +212,13 @@ public class ProductSkuVerifyContent {
         processSkuPrice(productSkuVerifyContent, poiProductValidatorDataHolder.getSkuIdToSkuMap());
         /*组包商品关联单品的总数*/
         processPackageSkuSize(productSkuVerifyContent, sku);
-        // 组包商品店内唯一
+        /*组包商品店内唯一*/
         productSkuVerifyContent.setPackageUniqueInPoi(packageSkuUniqueInPoi(sku, spuIndex, poiProductValidatorDataHolder));
 
         ImmutablePair<Boolean, Boolean> legalPackagePriceAndStockPair = legalPackagePriceAndStock(sku, poiProductValidatorDataHolder);
-        // 组包价格设置的是否合法
+        /*组包价格设置的是否合法*/
         productSkuVerifyContent.setLegalPackagePrice(legalPackagePriceAndStockPair.getLeft());
-        // 组包库存设置的是否合法
+        /*组包库存设置的是否合法*/
         productSkuVerifyContent.setLegalPackageStock(legalPackagePriceAndStockPair.getRight());
 
         return productSkuVerifyContent;

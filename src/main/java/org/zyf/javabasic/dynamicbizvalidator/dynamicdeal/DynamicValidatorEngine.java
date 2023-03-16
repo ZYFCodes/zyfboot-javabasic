@@ -93,7 +93,7 @@ public class DynamicValidatorEngine {
 
         Field[] declaredFields = clazz.getDeclaredFields();
         for (Field field : declaredFields) {
-            Annotation[] declaredAnnotations = field.getDeclaredAnnotations();
+            Annotation[] declaredAnnotations = field.getAnnotations();
             if (ArrayUtils.isEmpty(declaredAnnotations)) {
                 continue;
             }
@@ -109,7 +109,6 @@ public class DynamicValidatorEngine {
                         }
                         setPropertyConstraint(propertyTarget, field.getName(), dynamicConfigMap, configContent);
                     }
-
                     break;
                 }
             }

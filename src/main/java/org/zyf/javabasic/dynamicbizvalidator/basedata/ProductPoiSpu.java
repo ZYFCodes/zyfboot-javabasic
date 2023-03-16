@@ -20,7 +20,7 @@ public class ProductPoiSpu {
     private long hqSpuId;
     private String name;
     private short isPackage;
-    private int categoryId;
+    private long categoryId;
     private int sequence;
     private String unit;
     private String picContent;

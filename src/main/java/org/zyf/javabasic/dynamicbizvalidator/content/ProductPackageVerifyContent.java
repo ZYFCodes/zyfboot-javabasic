@@ -25,7 +25,7 @@ import java.util.List;
 public class ProductPackageVerifyContent {
     @DynamicConfigGroup(config = {
             @DynamicConfig(configName = "package.sku.count.min", defaultConfigValue = "1", configType = DynamicConfigType.RANGE_MIN),
-            @DynamicConfig(configName = "package.sku.count.min", defaultConfigValue = "10000", configType = DynamicConfigType.RANGE_MAX),
+            @DynamicConfig(configName = "package.sku.count.max", defaultConfigValue = "10000", configType = DynamicConfigType.RANGE_MAX),
 
     })
     @VerifyKey("组包商品数量")
@@ -33,13 +33,13 @@ public class ProductPackageVerifyContent {
 
     @DynamicConfigGroup(config = {
             @DynamicConfig(configName = "package.sku.discount.min", defaultConfigValue = "0", configType = DynamicConfigType.RANGE_MIN),
-            @DynamicConfig(configName = "package.sku.discount.min", defaultConfigValue = "10", configType = DynamicConfigType.RANGE_MAX)
+            @DynamicConfig(configName = "package.sku.discount.max", defaultConfigValue = "10", configType = DynamicConfigType.RANGE_MAX)
     })
     @VerifyKey("组包商品的折扣")
     private double discount;
 
     @DynamicConfigGroup(config = {
-            @DynamicConfig(configName = "spu.name.uniqueInTag", defaultConfigValue = "true", configType = DynamicConfigType.IS_TRUE)
+            @DynamicConfig(configName = "package.name.uniqueInTag", defaultConfigValue = "true", configType = DynamicConfigType.IS_TRUE)
     })
     @VerifyMessage("组包内有商品不存在，不支持创建")
     private boolean existSku = true;
