@@ -207,7 +207,7 @@ public class ProductSkuVerifyContent {
         /*可售时间合法性校验*/
         productSkuVerifyContent.setLegalShippingTimeX(ProductStaticValidator.shippingTimeXCheck(sku.getShippingTime()));
         /*图片合法性校验*/
-        productSkuVerifyContent.setLegalPicUrl(PicUrlLegalCheckUtil.checkLegaPicUrl(productSkuVerifyContent.getPicture()));
+        productSkuVerifyContent.setLegalPicUrl(PicUrlLegalCheckUtil.checkLegaPicUrl(sku.getPicture()));
         /*验证价格*/
         processSkuPrice(productSkuVerifyContent, poiProductValidatorDataHolder.getSkuIdToSkuMap());
         /*组包商品关联单品的总数*/

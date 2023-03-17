@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zyf.javabasic.ZYFApplication;
+import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiPackageSkuRel;
 import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiSku;
 import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiSpu;
 import org.zyf.javabasic.dynamicbizvalidator.dynamicdeal.DynamicValidatorEngine;
@@ -33,7 +34,7 @@ public class BizDynamicValidatorTest {
     private PoiProductDynamicValidatorService poiProductDynamicValidatorService;
 
     @Before
-    public void init(){
+    public void init() {
         /*假设闪购商超B端上单业务编码的业务标识为sdq1234rewsddsf,实际上这个应该是用户在配置侧填写完成实际触发到对应的应用方*/
         String bizInfo = "sdq1234rewsddsf";
         JSONObject configContent = new JSONObject();
@@ -100,19 +101,64 @@ public class BizDynamicValidatorTest {
         try {
             long poiId = 11L;
             String currentBizKey = "sdq1234rewsddsf";
+            List<ProductPoiPackageSkuRel> poiPackageSkuRelList = Lists.newArrayList(ProductPoiPackageSkuRel.builder()
+                            .poiId(poiId)
+                            .poiPackageSkuId(11L)
+                            .poiPackageSkuId(1L)
+                            .poiPackageSpuId(23L)
+                            .pricingRule("{\"count\":567,\"discount\":23.0,\"isMaster\":1,\"sequence\":34,\"skuPrice\":2345.0,\"spuId\":23}").build(),
+                    ProductPoiPackageSkuRel.builder()
+                            .poiId(poiId)
+                            .poiPackageSkuId(12L)
+                            .poiPackageSkuId(2L)
+                            .poiPackageSpuId(23L)
+                            .pricingRule("{\"count\":578,\"discount\":56.0,\"isMaster\":2,\"sequence\":38,\"skuPrice\":2565.0,\"spuId\":23}").build());
+
             List<ProductPoiSku> skuList = Lists.newArrayList(ProductPoiSku.builder()
-                    .poiId(poiId)
-                    .name("层层围珠玑，团团锦绣簇。")
-                    .upcCode("rfgfrds87ytghjkjnbvfghjn")
-                    .description("营销活动日志流量增长")
-                    .picture("https://zyfcodes.blog.csdn.vip.net/?type=blog")
-                     .build(),
-                     ProductPoiSku.builder()
-                    .poiId(poiId)
-                    .name("桃花一簇开无主，可爱深红爱浅红？")
-                    .upcCode("pokmnbvghjmnbv098u7ytghj")
-                    .description("标签管理系统业务能力全景梳理")
-                    .picture("https://zyfcodes.blog.csdn.net/article/details/105148032?spm=1001.2014.3001.5502").build());
+                            .poiId(poiId)
+                            .poiSpuId(23L)
+                            .name("层层围珠玑，团团锦绣簇。")
+                            .upcCode("rfgfrds87ytghjkjnbvfghjn")
+                            .description("营销活动日志流量增长")
+                            .shippingTime("[[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"]]")
+                            .picture("https://zyfcodes.blog.csdn.vip.net/?type=blog")
+                            .boxNum(5000)
+                            .boxPrice(300)
+                            .groupPrice(1000)
+                            .limitStock(0)
+                            .minOrderCount(0)
+                            .oriPrice(7200)
+                            .price(4500)
+                            .sourceFoodCode("KJHBVFTYU89876TREDCVGHU")
+                            .locatorCode("0OKJUYTFGBN")
+                            .poiStandardId(45L)
+                            .spec("QWERTYUIOP")
+                            .weight(345)
+                            .weightUnit("KG")
+                            .poiPackageSkuRelList(poiPackageSkuRelList)
+                            .build(),
+                    ProductPoiSku.builder()
+                            .poiId(poiId)
+                            .poiSpuId(23L)
+                            .name("桃花一簇开无主，可爱深红爱浅红？")
+                            .upcCode("pokmnbvghjmnbv098u7ytghj")
+                            .description("标签管理系统业务能力全景梳理")
+                            .shippingTime("[[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"],[\"00:00-23:59\"]]")
+                            .picture("https://zyfcodes.blog.csdn.net/article/details/105148032?spm=1001.2014.3001.5502")
+                            .boxNum(5000)
+                            .boxPrice(400)
+                            .groupPrice(1200)
+                            .limitStock(34)
+                            .minOrderCount(0)
+                            .oriPrice(7300)
+                            .price(4700)
+                            .sourceFoodCode("KJHBV654TREDCVGHU")
+                            .locatorCode("0OKJUdfvcxBN")
+                            .poiStandardId(45L)
+                            .spec("QWERefrdIOP")
+                            .weight(347)
+                            .weightUnit("KG")
+                            .poiPackageSkuRelList(poiPackageSkuRelList).build());
 
             ProductPoiSpu productPoiSpu = ProductPoiSpu.builder()
                     .id(23L)
@@ -124,6 +170,7 @@ public class BizDynamicValidatorTest {
                     .sourceFoodCode("43erijhgf")
                     .picContent("张彦峰相关相册分类").build();
             List<ProductPoiSpu> poiSpuList = Lists.newArrayList(productPoiSpu);
+            log.info("poiSpuList={}", JSON.toJSONString(poiSpuList));
             VerifyResultDetail<ProductPoiSpu> getVerifyResultDetail = poiProductDynamicValidatorService.spuVerify(poiId, currentBizKey, poiSpuList);
             log.info("门店商品校验结果：{}", JSON.toJSONString(getVerifyResultDetail.aggregation()));
         } catch (Exception e) {

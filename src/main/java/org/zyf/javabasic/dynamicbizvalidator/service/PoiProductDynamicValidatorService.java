@@ -85,7 +85,6 @@ public class PoiProductDynamicValidatorService {
     public VerifyResultDetail<ProductPoiSku> skuVerify(long poiId, String currentBizKey, List<ProductPoiSku> poiSkuList, PoiProductValidatorDataHolder poiProductValidatorDataHolder, boolean isPackage) {
         /*转成校验模型*/
         List<ProductSkuVerifyContent> productSkuVerifyContents = ProductSkuVerifyContent.toProductSkuVerifyContents(poiSkuList, poiProductValidatorDataHolder);
-
         /*sku的校验*/
         VerifyResultDetail<ProductPoiSku> poiSkuVerifyResultDetail = skuVerify(poiId, currentBizKey, poiSkuList, productSkuVerifyContents, isPackage);
 
