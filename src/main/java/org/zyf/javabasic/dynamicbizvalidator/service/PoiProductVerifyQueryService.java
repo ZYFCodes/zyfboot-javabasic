@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author yanfengzhang
- * @description
+ * @description 商品查询模拟
  * @date 2023/3/9  23:24
  */
 @Service

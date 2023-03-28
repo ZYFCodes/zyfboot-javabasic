@@ -61,7 +61,7 @@ public class CSDNTest {
 //                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
                     start.getAndIncrement();
                 });
-                Thread.sleep(22000);
+                Thread.sleep(60000);
             }
         }
     }
