@@ -1,11 +1,11 @@
-package org.zyf.javabasic.letcode.list;
+package org.zyf.javabasic.letcode.list.base;
 
 /**
  * @author yanfengzhang
  * @description 链表结构
- * @date 2022/8/2  20:49
+ * @date 2022/8/2  23:49
  */
-public class ListNode {
+public class ListNodeWithSize {
     /**
      * 链表长度
      */
@@ -13,12 +13,12 @@ public class ListNode {
     /**
      * 链表头节点
      */
-    Node head;
+    ListNode head;
 
     /**
      * Initialize your data structure here.
      */
-    public ListNode() {
+    public ListNodeWithSize() {
         this.size = 0;
         this.head = null;
     }
@@ -33,7 +33,7 @@ public class ListNode {
             return -1;
         }
         /*2.遍历处理*/
-        Node temp = this.head;
+        ListNode temp = this.head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
@@ -46,7 +46,7 @@ public class ListNode {
      */
     public void addAtHead(int val) {
         /*头部直接插入即可*/
-        Node node = new Node(val);
+        ListNode node = new ListNode(val);
         node.next = this.head;
         this.head = node;
         size++;
@@ -58,17 +58,17 @@ public class ListNode {
     public void addAtTail(int val) {
         /*如果是空链表则进行初始化head即可*/
         if (size == 0) {
-            this.head = new Node(val);
+            this.head = new ListNode(val);
             head.next = null;
             size++;
             return;
         }
         /*非空链表进行遍历插入*/
-        Node temp = this.head;
+        ListNode temp = this.head;
         while (temp.next != null) {
             temp = temp.next;
         }
-        Node tail = new Node(val);
+        ListNode tail = new ListNode(val);
         tail.next = null;
         temp.next = tail;
         size++;
@@ -95,11 +95,11 @@ public class ListNode {
             return;
         }
         /*4.非边界条件：需要遍历插入点后进行插入操作*/
-        Node temp = this.head;
+        ListNode temp = this.head;
         for (int i = 0; i < index - 1; i++) {
             temp = temp.next;
         }
-        Node insertNode = new Node(val);
+        ListNode insertNode = new ListNode(val);
         insertNode.next = temp.next;
         temp.next = insertNode;
         size++;
@@ -122,17 +122,17 @@ public class ListNode {
                 return;
             }
             /*2.2 链表多节点时，相当于删除头节点*/
-            Node temp = this.head.next;
+            ListNode temp = this.head.next;
             this.head = temp;
             size--;
             return;
         }
         /*3.遍历删除指定位置节点*/
-        Node temp = this.head;
+        ListNode temp = this.head;
         for (int i = 0; i < index - 1; i++) {
             temp = temp.next;
         }
-        Node deleteNode = temp.next;
+        ListNode deleteNode = temp.next;
         temp.next = deleteNode.next;
         size--;
     }
