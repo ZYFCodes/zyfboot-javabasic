@@ -52,6 +52,8 @@ public class WordCount {
             }
         }
 
+
+        System.out.println(wordCounts.size());
         /*按照线程数分割成多个任务并发执行*/
         ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);
         int numWordsPerThread = wordCounts.size() / NUM_THREADS;
@@ -66,9 +68,11 @@ public class WordCount {
 
         long endTime = System.currentTimeMillis();
 
+        System.out.println(wordCounts.size());
         /*输出结果*/
         wordCounts.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue((a, b) -> b - a))
+                .filter(entry->entry.getValue()>3)
                 .limit(100)
                 .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
 
