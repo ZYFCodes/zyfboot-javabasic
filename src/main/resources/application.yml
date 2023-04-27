@@ -25,6 +25,8 @@ instance:
   host: http://instance.mops.svc.ab
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: zyfboot
   datasource:
