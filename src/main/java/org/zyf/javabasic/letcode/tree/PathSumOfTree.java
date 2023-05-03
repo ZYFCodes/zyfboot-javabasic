@@ -19,15 +19,15 @@ public class PathSumOfTree {
      * @param sum  目标值
      * @return 符合条件的路径数量
      */
-    public int pathSum(TreeNode root, int sum) {
+    public int pathsOfSum(TreeNode root, int sum) {
         /*如果当前节点为空，返回 0*/
         if (root == null) {
             return 0;
         }
         /*计算当前节点左子树中符合条件的路径数量*/
-        int left = pathSum(root.left, sum - root.val);
+        int left = pathsOfSum(root.left, sum - root.val);
         /*计算当前节点右子树中符合条件的路径数量*/
-        int right = pathSum(root.right, sum - root.val);
+        int right = pathsOfSum(root.right, sum - root.val);
         /*如果当前节点的值等于目标值，说明当前节点可以作为一条符合条件的路径的起点，此时返回 1，否则返回 0*/
         return (sum == root.val ? 1 : 0) + left + right;
     }
@@ -44,7 +44,7 @@ public class PathSumOfTree {
         root.left.right.right = new TreeNode(1);
 
         int targetSum = 8;
-        int pathCount = new PathSumOfTree().pathSum(root, targetSum);
+        int pathCount = new PathSumOfTree().pathsOfSum(root, targetSum);
         /*Path count: 3*/
         System.out.println("Path count: " + pathCount);
     }
