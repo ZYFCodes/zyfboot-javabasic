@@ -22,4 +22,9 @@ public class Product {
      * 商品描述
      */
     private String description;
+
+
+    private int stock;
+
+    private int version;
 }
