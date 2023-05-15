@@ -61,8 +61,14 @@ public class ReversePairs {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 2, 6, 1};
-        System.out.println(new ReversePairs().reversePairs(nums));
+        int[] nums1 = {5, 2, 6, 1};
+        System.out.println(new ReversePairs().reversePairs(nums1));
+
+        int[] nums2 = {1,3,2,3,1};
+        System.out.println(new ReversePairs().reversePairs(nums2));
+
+        int[] nums3 = {2,4,3,5,1};
+        System.out.println(new ReversePairs().reversePairs(nums3));
     }
 
 }

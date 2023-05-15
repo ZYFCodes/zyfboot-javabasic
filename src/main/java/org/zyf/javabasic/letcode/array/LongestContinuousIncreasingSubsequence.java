@@ -21,7 +21,7 @@ public class LongestContinuousIncreasingSubsequence {
      * 最终，我们遍历一遍整个数组，找到 dp 中的最大值即为所求。
      */
     public int lengthOfLIS(int[] nums) {
-        /*p数组，表示以当前元素为结尾的最长上升子序列的长度*/
+        /*dp数组，表示以当前元素为结尾的最长上升子序列的长度*/
         int[] dp = new int[nums.length];
         /*最长上升子序列的长度*/
         int maxLen = 0;
@@ -43,9 +43,13 @@ public class LongestContinuousIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
-        int res = new LongestContinuousIncreasingSubsequence().lengthOfLIS(nums);
-        System.out.println(res);
+        int[] nums1 = {10, 9, 2, 5, 3, 7, 101, 18};
+        int res1 = new LongestContinuousIncreasingSubsequence().lengthOfLIS(nums1);
+        System.out.println(res1);
+
+        int[] nums2 = {0,1,0,3,2,3};
+        int res2 = new LongestContinuousIncreasingSubsequence().lengthOfLIS(nums2);
+        System.out.println(res2);
     }
 
 

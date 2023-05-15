@@ -12,22 +12,22 @@ import java.util.Map;
 public class FourNumberSum {
 
     /**
-     * 四数相加 II 问题可以通过将其分解为两个两数相加的问题来解决。具体步骤如下：
-     * 创建两个哈希表，分别用于存储 A 数组和 B 数组中所有两个数之和的情况。
+     * 四数相加 II 问题可以通过将其分解为两个两数相加的问题来解决。
+     * 具体步骤如下：
+     * 创建哈希表，分别用于存储 A 数组和 B 数组中所有两个数之和的情况。
      * 遍历 A 数组和 B 数组，统计每个数字对应的出现次数，并将其加入哈希表中。
      * 遍历 C 数组和 D 数组，对于每个数字，在哈希表中查找其相反数的出现次数，并将计数器累加至结果中。
      * 返回结果。
      */
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
         /*创建两个哈希表，分别用于存储 A 数组和 B 数组中所有两个数之和的情况*/
-        Map<Integer, Integer> map1 = new HashMap<>();
-        Map<Integer, Integer> map2 = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         /*遍历 A 数组和 B 数组，统计每个数字对应的出现次数，并将其加入哈希表中*/
         for (int i = 0; i < nums1.length; i++) {
             for (int j = 0; j < nums2.length; j++) {
                 int sum = nums1[i] + nums2[j];
-                map1.put(sum, map1.getOrDefault(sum, 0) + 1);
+                map.put(sum, map.getOrDefault(sum, 0) + 1);
             }
         }
 
@@ -36,8 +36,8 @@ public class FourNumberSum {
         for (int i = 0; i < nums3.length; i++) {
             for (int j = 0; j < nums4.length; j++) {
                 int sum = nums3[i] + nums4[j];
-                if (map1.containsKey(-sum)) {
-                    count += map1.get(-sum);
+                if (map.containsKey(-sum)) {
+                    count += map.get(-sum);
                 }
             }
         }

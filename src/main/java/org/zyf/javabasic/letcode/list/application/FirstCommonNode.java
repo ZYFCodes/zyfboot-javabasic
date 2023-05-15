@@ -27,36 +27,68 @@ public class FirstCommonNode {
      * @return 两个单链表的交点，若不存在交点则返回 null
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null || headB == null) {
-            /*若其中一个链表为空，则直接返回 null*/
-            return null;
+        int lenA = getLength(headA);
+        int lenB = getLength(headB);
+        /*将较长的链表头节点指针移动到与另一个链表相同位置*/
+        if (lenA > lenB) {
+            headA = moveHead(headA, lenA - lenB);
+        } else {
+            headB = moveHead(headB, lenB - lenA);
         }
-        /*定义指针 pA 和 pB 分别指向链表 A 和 B 的头节点*/
-        ListNode pA = headA, pB = headB;
-        /*若两个指针不相遇，则一直循环下去*/
-        while (pA != pB) {
-            /*当指针 pA 到达链表 A 的末尾时，将其指向链表 B 的头节点，继续遍历*/
-            pA = pA == null ? headB : pA.next;
-            /*当指针 pB 到达链表 B 的末尾时，将其指向链表 A 的头节点，继续遍历*/
-            pB = pB == null ? headA : pB.next;
+        /*同时遍历两个链表，找到第一个相同的节点*/
+        while (headA != null && headB != null) {
+            if (headA == headB) {
+                return headA;
+            }
+            headA = headA.next;
+            headB = headB.next;
         }
-        /*返回两个指针相遇的节点*/
-        return pA;
+        /*两个链表没有相交的节点*/
+        return null;
+    }
+
+    /**
+     * 计算链表的长度
+     */
+    private int getLength(ListNode head) {
+        int len = 0;
+        while (head != null) {
+            len++;
+            head = head.next;
+        }
+        return len;
+    }
+
+    /**
+     * 将链表头节点指针移动 n 步
+     */
+    private ListNode moveHead(ListNode head, int n) {
+        while (n > 0) {
+            head = head.next;
+            n--;
+        }
+        return head;
     }
 
     public static void main(String[] args) {
+        /*创建两个链表：1->2->3->4->5 和 6->7->4->5*/
+        ListNode commonNode = new ListNode(4);
+        commonNode.next = new ListNode(5);
         ListNode headA = new ListNode(1);
         headA.next = new ListNode(2);
-        ListNode intersection = new ListNode(3);
-        headA.next.next = intersection;
-        intersection.next = new ListNode(4);
-        intersection.next.next = new ListNode(5);
-
+        headA.next.next = new ListNode(3);
+        headA.next.next.next = commonNode;
         ListNode headB = new ListNode(6);
-        headB.next = intersection;
-
+        headB.next = new ListNode(7);
+        headB.next.next = commonNode;
+        /*找到两个链表的第一个公共节点*/
         ListNode intersectionNode = new FirstCommonNode().getIntersectionNode(headA, headB);
-
-        System.out.println(intersectionNode.val);
+        /*输出第一个公共节点的值*/
+        if (intersectionNode != null) {
+            /*4*/
+            System.out.println(intersectionNode.val);
+        } else {
+            System.out.println("null");
+        }
     }
 }

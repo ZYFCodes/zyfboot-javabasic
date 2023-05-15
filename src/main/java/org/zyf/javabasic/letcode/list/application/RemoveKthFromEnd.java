@@ -30,25 +30,31 @@ public class RemoveKthFromEnd {
      * 时间复杂度为O(n)，空间复杂度为O(1)。
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (n <= 0) {
+            throw new IllegalArgumentException("n must be positive integer");
+        }
+        /*创建 dummy 节点，用于处理删除头节点的情况*/
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode fast = dummy;
+        /*创建 slow 和 fast 指针，初始指向 dummy 节点*/
         ListNode slow = dummy;
-
-        /*fast指针先向前移动n+1个节点*/
-        for (int i = 0; i <= n; i++) {
+        ListNode fast = dummy;
+        /*fast 指针先向前移动 n 步*/
+        for (int i = 0; i < n; i++) {
+            /*如果 fast 已经移动到了链表末尾，但还未移动 n 步，说明 k 的值超出了链表的长度，抛出异常*/
+            if (fast.next == null) {
+                throw new IllegalArgumentException("n must be less than or equal to the length of the list");
+            }
             fast = fast.next;
         }
-
-        /*fast和slow指针一起向前移动，直到fast指针到达链表尾部*/
-        while (fast != null) {
-            fast = fast.next;
+        /*同时移动 slow 和 fast 指针，直到 fast 指向链表末尾*/
+        while (fast.next != null) {
             slow = slow.next;
+            fast = fast.next;
         }
-
-        /*删除倒数第n个节点*/
+        /*删除 slow 指针指向的节点*/
         slow.next = slow.next.next;
-
+        /*返回头节点*/
         return dummy.next;
     }
 
