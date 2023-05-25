@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=org.zyf.javabasic.springextend.runext.InterveneApplicationContextInitializer
+org.springframework.boot.SpringApplicationRunListener=org.zyf.javabasic.springextend.runext.IntervenRunListener
