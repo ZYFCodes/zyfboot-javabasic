@@ -13,11 +13,4 @@ public class OrderCons {
         public static final int CONFIRMED = 4;
         public static final int CANCELED = 5;
     }
-
-    public static final class Event {
-        public static final int PAY = 1;
-        public static final int SHIP = 2;
-        public static final int CONFIRM = 3;
-        public static final int CANCEL = 4;
-    }
 }

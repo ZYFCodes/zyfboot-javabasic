@@ -233,6 +233,12 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
             <version>2.5.0</version>
@@ -242,6 +248,17 @@
             <artifactId>cloning</artifactId>
             <version>1.9.3</version>
         </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.atomix</groupId>
+            <artifactId>atomix</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
 
     </dependencies>
 
