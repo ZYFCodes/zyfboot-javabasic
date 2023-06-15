@@ -66,7 +66,7 @@ public class WidthTree {
         root.right.right = new TreeNode(9);
 
         int maxWidth = new WidthTree().widthOfBinaryTree(root);
-/*输出 4*/
+        /*输出 4*/
         System.out.println(maxWidth);
     }
 }

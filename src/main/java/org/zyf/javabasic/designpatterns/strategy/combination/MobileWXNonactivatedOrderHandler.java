@@ -1,5 +1,7 @@
 package org.zyf.javabasic.designpatterns.strategy.combination;
 
+import org.springframework.stereotype.Service;
+
 import java.math.BigDecimal;
 
 /**
@@ -7,6 +9,7 @@ import java.math.BigDecimal;
  * @description 手机端微信支付，用户为未开通状态
  * @date 2022/3/8  23:42
  */
+@Service
 @OrderHandlerType(source = OrderSourceEnum.MOBILE, payMethod = OrderPayMethodEnum.WEIXIN, memberType = MemberTypeEnum.NONACTIVATED)
 public class MobileWXNonactivatedOrderHandler implements OrderHandler {
     /**

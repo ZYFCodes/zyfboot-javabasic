@@ -7,6 +7,7 @@ package org.zyf.javabasic.designpatterns.strategy.combination;
  */
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 
 /**
  * @author yanfengzhang
@@ -14,6 +15,7 @@ import lombok.extern.log4j.Log4j2;
  * @date 2022/3/8  23:39
  */
 @Log4j2
+@Service
 @OrderHandlerType(source = OrderSourceEnum.PC, payMethod = OrderPayMethodEnum.WALLET, memberType = MemberTypeEnum.NONACTIVATED)
 public class PCWalletNonactivatedOrderHandler implements OrderHandler {
     /**

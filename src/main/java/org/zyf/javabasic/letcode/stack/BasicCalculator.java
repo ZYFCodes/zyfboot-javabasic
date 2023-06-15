@@ -84,10 +84,10 @@ public class BasicCalculator {
     }
 
     public static void main(String[] args) {
-        String s = "1 + (2 - 3) + 4";
-        int result = new BasicCalculator().calculate(s);
+        String s1 = "1 + (2 - 3) + 4";
+        int result1 = new BasicCalculator().calculate(s1);
         /*输出4*/
-        System.out.println(result);
+        System.out.println(result1);
     }
 
 
