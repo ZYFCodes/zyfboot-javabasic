@@ -14,10 +14,10 @@ public class KthFromEnd {
      * 首先，让fast指针先向前移动k个位置，然后同时移动fast和slow指针，
      * 直到fast指针到达链表末尾。此时，slow指针指向的节点就是倒数第k个节点。
      * 具体步骤如下：
-     * 	1.	初始化两个指针fast和slow，都指向链表的头节点。
-     * 	2.	让fast指针先向前移动k个位置。
-     * 	3.	同时移动fast和slow指针，直到fast指针到达链表末尾。
-     * 	4.	返回slow指针指向的节点。
+     * 1.	初始化两个指针fast和slow，都指向链表的头节点。
+     * 2.	让fast指针先向前移动k个位置。
+     * 3.	同时移动fast和slow指针，直到fast指针到达链表末尾。
+     * 4.	返回slow指针指向的节点。
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode fast = head;

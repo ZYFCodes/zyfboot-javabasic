@@ -12,10 +12,10 @@ import java.util.List;
 public class FindContinuousSequence {
     /**
      * 可以使用穷举的方法来解决该问题。设定两个指针 start 和 end，分别表示连续序列的起始值和结束值。初始时，start 和 end 均为 1。根据连续序列的性质，可以进行如下操作：
-     * 	•	如果从 start 到 end 的序列的和等于 target，将这个序列添加到结果列表中，并将 end 向后移动一位，继续寻找下一个序列。
-     * 	•	如果从 start 到 end 的序列的和小于 target，将 end 向后移动一位，扩大序列范围，使得序列和增大。
-     * 	•	如果从 start 到 end 的序列的和大于 target，将 start 向后移动一位，缩小序列范围，使得序列和减小。
-     * 	•	当 start 大于等于 target 的一半时，即可停止寻找，因为在这之后的序列和一定大于 target。
+     * •	如果从 start 到 end 的序列的和等于 target，将这个序列添加到结果列表中，并将 end 向后移动一位，继续寻找下一个序列。
+     * •	如果从 start 到 end 的序列的和小于 target，将 end 向后移动一位，扩大序列范围，使得序列和增大。
+     * •	如果从 start 到 end 的序列的和大于 target，将 start 向后移动一位，缩小序列范围，使得序列和减小。
+     * •	当 start 大于等于 target 的一半时，即可停止寻找，因为在这之后的序列和一定大于 target。
      */
     public List<List<Integer>> findContinuousSequence(int target) {
         List<List<Integer>> result = new ArrayList<>();

@@ -2,15 +2,15 @@ package org.zyf.javabasic.letcode.jzoffer;
 
 /**
  * @author yanfengzhang
- * @description  给定一个字符串 s 和一个整数 n，请将字符串左旋转 n 个字符。
+ * @description 给定一个字符串 s 和一个整数 n，请将字符串左旋转 n 个字符。
  * @date 2023/6/5  22:01
  */
 public class StrLeftRotate {
     /**
      * 可以将字符串的左旋转操作拆分为两个步骤：
-     * 	1.	将前 n 个字符翻转。
-     * 	2.	将剩余的字符翻转。
-     * 	3.	将整个字符串翻转。
+     * 1.	将前 n 个字符翻转。
+     * 2.	将剩余的字符翻转。
+     * 3.	将整个字符串翻转。
      */
     public String leftRotateString(String s, int n) {
         if (s == null || s.length() == 0) {

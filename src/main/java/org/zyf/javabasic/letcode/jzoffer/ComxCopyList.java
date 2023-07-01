@@ -10,9 +10,9 @@ package org.zyf.javabasic.letcode.jzoffer;
 public class ComxCopyList {
     /**
      * 要复制一个复杂链表，需要考虑节点的复制以及random指针的复制。可以采用以下步骤进行复制：
-     * 	1.	遍历原链表，复制每个节点，并将复制后的节点插入到原节点的后面。例如，对于原链表节点A，复制后的节点为A’，则将A’插入到A后面。
-     * 	2.	遍历原链表，复制random指针。对于每个复制后的节点A’，其对应的原节点为A，如果A的random指针指向节点B，则A’的random指针指向B的复制节点B’。
-     * 	3.	将复制后的链表拆分成两个链表，一个是原链表，一个是复制链表。遍历原链表，根据每个节点的位置关系，将其从链表中断开，形成两个独立的链表。
+     * 1.	遍历原链表，复制每个节点，并将复制后的节点插入到原节点的后面。例如，对于原链表节点A，复制后的节点为A’，则将A’插入到A后面。
+     * 2.	遍历原链表，复制random指针。对于每个复制后的节点A’，其对应的原节点为A，如果A的random指针指向节点B，则A’的random指针指向B的复制节点B’。
+     * 3.	将复制后的链表拆分成两个链表，一个是原链表，一个是复制链表。遍历原链表，根据每个节点的位置关系，将其从链表中断开，形成两个独立的链表。
      */
     public ListNode copyRandomList(ListNode head) {
         if (head == null) {
@@ -81,7 +81,7 @@ public class ComxCopyList {
         node4.random = node2;
 
         // 打印链表
-        ListNode cur = copyRandomList( head) ;
+        ListNode cur = copyRandomList(head);
         while (cur != null) {
             System.out.println(cur.val);
             cur = cur.next;

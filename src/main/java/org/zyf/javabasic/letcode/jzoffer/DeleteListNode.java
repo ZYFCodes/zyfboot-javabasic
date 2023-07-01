@@ -10,9 +10,9 @@ import org.zyf.javabasic.letcode.list.base.ListNode;
 public class DeleteListNode {
     /**
      * 删除链表中的节点有以下几种情况：
-     * 	1.	要删除的节点是头节点：直接将头指针指向头节点的下一个节点即可。
-     * 	2.	要删除的节点不是头节点：
-     * 	    遍历链表，找到要删除的节点的前一个节点，将前一个节点的指针指向要删除节点的下一个节点。
+     * 1.	要删除的节点是头节点：直接将头指针指向头节点的下一个节点即可。
+     * 2.	要删除的节点不是头节点：
+     * 遍历链表，找到要删除的节点的前一个节点，将前一个节点的指针指向要删除节点的下一个节点。
      */
     public ListNode deleteNode(ListNode head, int val) {
         // 处理头节点是要删除的节点的情况

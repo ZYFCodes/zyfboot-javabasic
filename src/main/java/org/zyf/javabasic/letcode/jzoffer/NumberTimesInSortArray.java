@@ -8,12 +8,12 @@ package org.zyf.javabasic.letcode.jzoffer;
 public class NumberTimesInSortArray {
     /**
      * 由于数组是升序的，可以利用二分查找的思路来解决这个问题。
-     * 	1.	首先使用二分查找找到该数字第一次出现的位置，记为first。
-     * 	•	如果数组中不存在该数字，直接返回0。
-     * 	•	如果存在，继续执行下一步。
-     * 	2.	使用二分查找找到该数字最后一次出现的位置，记为last。
-     * 	3.	该数字在数组中出现的次数为last - first + 1。
-     *
+     * 1.	首先使用二分查找找到该数字第一次出现的位置，记为first。
+     * •	如果数组中不存在该数字，直接返回0。
+     * •	如果存在，继续执行下一步。
+     * 2.	使用二分查找找到该数字最后一次出现的位置，记为last。
+     * 3.	该数字在数组中出现的次数为last - first + 1。
+     * <p>
      * 时间复杂度：O(logN)，其中 N 为数组的长度。
      */
     public int getNumberOfK(int[] array, int k) {

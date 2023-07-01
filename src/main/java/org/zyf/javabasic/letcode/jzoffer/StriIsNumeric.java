@@ -12,11 +12,11 @@ public class StriIsNumeric {
      * 根据题目要求，我们需要判断给定的字符串是否能够表示数值。
      * 为了实现这个功能，我们可以使用有限状态自动机（Finite State Machine）的思想。
      * 我们需要定义多个状态，并根据当前字符和状态转移条件来更新状态，最终判断是否能够到达接受状态。
-     *
+     * <p>
      * 具体的状态定义和转移条件如下：
-     * 	1.	定义以下9种状态：起始空格、符号位、整数部分、小数点、小数部分、字符e、指数符号、指数整数部分、末尾空格。
-     * 	2.	定义以下4种字符类型：数字、正负号、小数点、字符e。
-     * 	3.	根据字符类型和当前状态，定义状态转移规则，更新当前状态。
+     * 1.	定义以下9种状态：起始空格、符号位、整数部分、小数点、小数部分、字符e、指数符号、指数整数部分、末尾空格。
+     * 2.	定义以下4种字符类型：数字、正负号、小数点、字符e。
+     * 3.	根据字符类型和当前状态，定义状态转移规则，更新当前状态。
      */
     public boolean isNumeric(char[] str) {
         if (str == null || str.length == 0) {
@@ -42,16 +42,14 @@ public class StriIsNumeric {
         boolean isNumeric = scanDigits(str, index, len);
 
         // 判断小数部分
-        if (index < len && str[index] == '.')
-        {
+        if (index < len && str[index] == '.') {
             index++;
             // 小数部分可以没有整数部分，因此使用 || 进行判断
             isNumeric = scanDigits(str, index, len) || isNumeric;
         }
 
         // 判断指数部分
-        if (index < len && (str[index] == 'e' || str[index] == 'E'))
-        {
+        if (index < len && (str[index] == 'e' || str[index] == 'E')) {
             index++;
             // 指数部分必须有整数部分，因此使用 && 进行判断
             isNumeric = isNumeric && scanExponent(str, index, len);

@@ -9,10 +9,10 @@ package org.zyf.javabasic.letcode.jzoffer;
 public class OrderOddEvenArrayI {
     /**
      * 最优的解题思路是使用双指针法。具体步骤如下：
-     * 	1.	定义两个指针，一个指针left从数组的左侧开始向右移动，另一个指针right从数组的右侧开始向左移动。
-     * 	2.	当left指针指向偶数而right指针指向奇数时，交换两个指针指向的元素，将奇数放到偶数的前面。
-     * 	3.	继续移动指针，直到left指针和right指针相遇。
-     * 	4.	此时，所有的奇数都已经移动到了偶数的前面，并且它们的相对顺序保持不变。
+     * 1.	定义两个指针，一个指针left从数组的左侧开始向右移动，另一个指针right从数组的右侧开始向左移动。
+     * 2.	当left指针指向偶数而right指针指向奇数时，交换两个指针指向的元素，将奇数放到偶数的前面。
+     * 3.	继续移动指针，直到left指针和right指针相遇。
+     * 4.	此时，所有的奇数都已经移动到了偶数的前面，并且它们的相对顺序保持不变。
      */
     public void reOrderArray(int[] array) {
         if (array == null || array.length == 0) {

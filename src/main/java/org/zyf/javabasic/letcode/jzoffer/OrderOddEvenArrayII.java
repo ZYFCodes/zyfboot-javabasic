@@ -10,10 +10,10 @@ package org.zyf.javabasic.letcode.jzoffer;
 public class OrderOddEvenArrayII {
     /**
      * 最优的解题思路是使用插入排序的思想。具体步骤如下：
-     * 	1.	定义一个辅助数组evenArray，用于存放原数组中的偶数。
-     * 	2.	遍历原数组，将所有偶数按照它们在原数组中的顺序依次存放到evenArray中。
-     * 	3.	遍历原数组，将所有奇数按照它们在原数组中的顺序依次存放到原数组中的空白位置。
-     * 	4.	最后将evenArray中的偶数按照它们在evenArray中的顺序依次存放到原数组中剩余的空白位置。
+     * 1.	定义一个辅助数组evenArray，用于存放原数组中的偶数。
+     * 2.	遍历原数组，将所有偶数按照它们在原数组中的顺序依次存放到evenArray中。
+     * 3.	遍历原数组，将所有奇数按照它们在原数组中的顺序依次存放到原数组中的空白位置。
+     * 4.	最后将evenArray中的偶数按照它们在evenArray中的顺序依次存放到原数组中剩余的空白位置。
      */
     public void reOrderArray(int[] array) {
         if (array == null || array.length == 0) {
