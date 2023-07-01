@@ -1,4 +1,4 @@
-package org.zyf.javabasic.letcode.other;
+package org.zyf.javabasic.letcode.jzoffer;
 
 /**
  * @author yanfengzhang
