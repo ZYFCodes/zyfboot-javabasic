@@ -17,28 +17,42 @@ public class MajorityElement {
      * 否则，如果当前元素等于候选众数 candidate，则将计数器 count 加 1，否则将计数器 count 减 1。
      * 3 遍历完数组后，candidate 即为众数。
      */
-    public int majorityElement(int[] nums) {
-        /*初始化候选人为第一个数*/
-        int candidate = nums[0];
-        /*初始化计数器为 0*/
+    public static int findMajorityElement(int[] nums) {
+        // 候选元素
+        int candidate = 0;
+        // 候选元素的出现次数
         int count = 0;
 
-        /*Boyer-Moore 投票算法*/
         for (int num : nums) {
             if (count == 0) {
-                /*如果计数器为 0，则将当前数设为候选人*/
+                // 如果当前候选元素的出现次数为0，则将当前元素设为候选元素，并将出现次数设为1
                 candidate = num;
+                count = 1;
+            } else if (num == candidate) {
+                // 如果当前元素与候选元素相同，则候选元素的出现次数加1
+                count++;
+            } else {
+                // 如果当前元素与候选元素不同，则候选元素的出现次数减1
+                count--;
             }
-            /*如果当前数等于候选人，则计数器加 1，否则计数器减 1*/
-            count += (num == candidate) ? 1 : -1;
         }
-        /*返回候选人*/
-        return candidate;
+
+        // 最终候选元素可能是多数元素，需要再次验证
+        int countCandidate = 0;
+        for (int num : nums) {
+            if (num == candidate) {
+                countCandidate++;
+            }
+        }
+
+        // -1 表示没有多数元素
+        return countCandidate > nums.length / 2 ? candidate : -1;
     }
 
+
     public static void main(String[] args) {
-        int[] nums = {3, 2, 3};
-        int result = new MajorityElement().majorityElement(nums);
+        int[] nums = {3, 3, 3, 2, 5};
+        int result = new MajorityElement().findMajorityElement(nums);
         /*输出 3*/
         System.out.println(result);
     }

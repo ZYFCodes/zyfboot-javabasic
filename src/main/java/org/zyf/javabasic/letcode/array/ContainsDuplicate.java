@@ -79,7 +79,7 @@ public class ContainsDuplicate {
 
         System.out.println("Test Case 1:   Input:" + Arrays.toString(nums1)
                 + ",Output:" + new ContainsDuplicate().containsDuplByMap(nums1));
-        System.out.println("Test Case 2:   Input:" + Arrays.toString(nums1)
+        System.out.println("Test Case 2:   Input:" + Arrays.toString(nums2)
                 + ",Output:" + new ContainsDuplicate().containsDuplByMap(nums2));
     }
 
