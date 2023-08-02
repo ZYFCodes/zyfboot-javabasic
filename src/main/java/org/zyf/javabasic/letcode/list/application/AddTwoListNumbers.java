@@ -16,18 +16,18 @@ import org.zyf.javabasic.letcode.list.base.ListNode;
 public class AddTwoListNumbers {
     /**
      * 为了实现链表的相加，可以使用迭代的方式从头到尾遍历两个链表，并按照相应位置的节点值相加，同时考虑进位的情况。具体步骤如下：
-     *
-     * 	1.	创建一个新的链表 result 用于保存相加后的结果。
-     * 	2.	初始化两个指针 p 和 q 分别指向链表 A 和 B 的头节点。
-     * 	3.	初始化进位值 carry 为 0。
-     * 	4.	遍历链表 A 和 B，直到两个链表都遍历完：
-     * 	•	获取当前节点的值 x 和 y，如果某个链表已经遍历完，则将对应节点的值设为 0。
-     * 	•	计算当前位置的和 sum = x + y + carry，以及进位值 carry = sum / 10。
-     * 	•	创建一个新的节点，值为 sum % 10，将该节点添加到 result 链表的末尾。
-     * 	•	将指针 p 和 q 向后移动一位。
-     * 	5.	如果遍历结束后，进位值 carry 不为 0，则创建一个新节点，值为 carry，将该节点添加到 result 链表的末尾。
-     * 	6.	返回 result 链表。
-     *
+     * <p>
+     * 1.	创建一个新的链表 result 用于保存相加后的结果。
+     * 2.	初始化两个指针 p 和 q 分别指向链表 A 和 B 的头节点。
+     * 3.	初始化进位值 carry 为 0。
+     * 4.	遍历链表 A 和 B，直到两个链表都遍历完：
+     * •	获取当前节点的值 x 和 y，如果某个链表已经遍历完，则将对应节点的值设为 0。
+     * •	计算当前位置的和 sum = x + y + carry，以及进位值 carry = sum / 10。
+     * •	创建一个新的节点，值为 sum % 10，将该节点添加到 result 链表的末尾。
+     * •	将指针 p 和 q 向后移动一位。
+     * 5.	如果遍历结束后，进位值 carry 不为 0，则创建一个新节点，值为 carry，将该节点添加到 result 链表的末尾。
+     * 6.	返回 result 链表。
+     * <p>
      * 通过上述步骤，我们可以得到两个链表相加的结果。该算法的时间复杂度为 O(max(m, n))，其中 m 和 n 分别是链表 A 和 B 的长度。
      */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -43,13 +43,13 @@ public class AddTwoListNumbers {
         while (p != null || q != null) {
             //查看当前节点p对应的数值
             int x = 0;
-            if(p != null){
-                x= p.val;
+            if (p != null) {
+                x = p.val;
             }
             //查看当前节点q对应的数值
-            int y=0;
-            if(q != null){
-                y=q.val;
+            int y = 0;
+            if (q != null) {
+                y = q.val;
             }
             //对应链表加和计算
             int sum = x + y + carry;
