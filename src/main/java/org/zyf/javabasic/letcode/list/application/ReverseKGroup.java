@@ -93,9 +93,19 @@ public class ReverseKGroup {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         int k = 2;
-        System.out.println("Original List: " + head.toString());
+        System.out.println("Original List: " + printLinkedList(head));
         head = new ReverseKGroup().reverseKGroup(head, k);
-        System.out.println("Reversed List: " + head.toString());
+        System.out.println("Reversed List: " + printLinkedList(head));
+    }
+
+    private static String printLinkedList(ListNode head) {
+        StringBuilder res = new StringBuilder();
+        while (head != null) {
+            res.append(head.val).append(" -> ");
+            head = head.next;
+        }
+        res.append("null");
+        return res.toString();
     }
 
 

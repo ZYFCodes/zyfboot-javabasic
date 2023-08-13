@@ -54,10 +54,6 @@ public class DeleteDuplicates {
         node3.next = node4;
 
         ListNode newHead = new DeleteDuplicates().deleteDuplicates(head);
-
-        while (newHead != null) {
-            System.out.print(newHead.val + "->");
-            newHead = newHead.next;
-        }
+        newHead.traverseList(newHead);
     }
 }
