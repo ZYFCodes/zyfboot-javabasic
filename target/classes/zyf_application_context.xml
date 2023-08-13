@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myTestMsgBean" class="org.zyf.javabasic.springextend.bfppext.MyTestMsgBean">
+        <property name="message" value="Original Message"/>
+    </bean>
+
+    <bean class="org.zyf.javabasic.springextend.bfppext.MyBeanFactoryPostProcessorForUpdateBean"/>
+    <bean class="org.zyf.javabasic.springextend.bfppext.MyBeanFactoryPostProcessorForNewDefinRegi"/>
+    <bean class="org.zyf.javabasic.springextend.bfppext.MyBeanFactoryPostProcessorForDefineMata"/>
+
+</beans>

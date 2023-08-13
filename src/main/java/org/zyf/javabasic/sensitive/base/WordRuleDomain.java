@@ -1,8 +1,6 @@
 package org.zyf.javabasic.sensitive.base;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
 
@@ -44,8 +42,6 @@ public class WordRuleDomain {
     /**
      * 过滤区域(1：商品名称 2：商品描述 3：分类名称 4：规格名称 5：属性 6：商品单位 7：属性值  8：分类描述)
      */
-    @NotEmpty
-    @Length(max = 50)
     public String field;
     /**
      * 0.非泛化、1.泛化

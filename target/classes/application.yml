@@ -1,0 +1,107 @@
+##共同的,不随着环境变量改变而动态变化的值,放到这个文件里面
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+server:
+  port: 8080
+
+#部分远程服务地址配置
+aos:
+  host: http://servicetree-127.dev-bh.mfw
+malert:
+  host: http://malert.mtech.svc.ab
+gen:
+  promexml:
+    host: http://prommgr.mops.svc.ab
+nacos:
+  host: http://172.16.129.173:8848
+instance:
+  host: http://instance.mops.svc.ab
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: zyfboot
+  datasource:
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://localhost:3306/alert_config?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 6000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 20000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙,防止sql注入
+      #spring.datasource.druid.filters=stat,wall,log4j
+      logSlowSql: true
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 172.18.8.205
+    # Redis服务器连接端口
+    port: 6384
+    # Redis服务器连接密码（默认为空）
+    #spring.redis.password=2
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 200
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 10
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 1000MS
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 100MB
+      resolve-lazily: false
+
+default:
+  alert:
+    receive:
+      appcode: default-alert-receiver
+
+elasticsearch:
+  clusterName: elasticsearch_brew
+  userName: elastic
+  password: changeme
+  hosts: 127.0.0.1:9200
+  scheme: http
+  connectTimeOut: 1000
+  socketTimeOut: 30000
+  connectionRequestTimeOut: 500
+  maxConnectNum: 100
+  maxConnectNumPerRoute: 100
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mfw.alertconfig.dao
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  config:
+    classpath: logback-spring.xml

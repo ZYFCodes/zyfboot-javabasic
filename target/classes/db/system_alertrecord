@@ -1,0 +1,22 @@
+CREATE TABLE `t_channel_record` (
+                                    `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+                                    `direct_alert_record_id` int(11) NOT NULL DEFAULT '0' COMMENT '记录表的id',
+                                    `channel` varchar(36) NOT NULL DEFAULT '' COMMENT '发送通道',
+                                    `receivers` varchar(1000) NOT NULL DEFAULT '' COMMENT '接收人',
+                                    `send_status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '发送状态',
+                                    `send_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '发送时间',
+                                    `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录创建时间',
+                                    `mtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',
+                                    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 1062 DEFAULT CHARSET = utf8mb4 COMMENT = '发送通道记录表';
+
+
+CREATE TABLE `t_direct_alert_record` (
+                                         `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+                                         `appcode` varchar(50) NOT NULL DEFAULT '' COMMENT '应用code',
+                                         `uuid` varchar(50) NOT NULL DEFAULT '' COMMENT '请求的唯一标识,用于做数据幂等',
+                                         `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录创建时间',
+                                         `mtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',
+                                         PRIMARY KEY (`id`),
+                                         KEY `idx_appcode` (`appcode`)
+) ENGINE = InnoDB AUTO_INCREMENT = 710 DEFAULT CHARSET = utf8mb4 COMMENT = '直接发送告警记录表';

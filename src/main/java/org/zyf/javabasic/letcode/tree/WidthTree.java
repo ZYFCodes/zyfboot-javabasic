@@ -1,6 +1,6 @@
 package org.zyf.javabasic.letcode.tree;
 
-import javafx.util.Pair;
+import org.apache.commons.math3.util.Pair;
 import org.zyf.javabasic.letcode.tree.base.TreeNode;
 
 import java.util.LinkedList;

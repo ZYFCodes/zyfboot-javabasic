@@ -20,23 +20,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class ZYFApplication {
 
     public static void main(String[] args) {
-
         ApplicationContext context = SpringApplication.run(ZYFApplication.class, args);
-
-//        // 使用 MyBean
-//        MyBean myBean = context.getBean(MyBean.class);
-//        myBean.doSomething(); // 调用 MyBean.doSomething() 方法
     }
-
-//    @Bean
-//    public MyBean myBean(){
-//        return new MyBean();
-//    }
-
-//    @Bean
-//    public TomcatServletWebServerFactory servletContainer() {
-//        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-//        tomcat.setPort(8080);
-//        return tomcat;
-//    }
 }
