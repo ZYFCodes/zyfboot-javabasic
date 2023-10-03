@@ -2,6 +2,7 @@ package org.zyf.javabasic.test;
 
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import org.springframework.util.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 import org.zyf.javabasic.common.Result;
@@ -13,10 +14,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -30,6 +28,10 @@ public class CSDNTest {
         String url = "https://blog.csdn.net/community/home-api/v1/get-business-list";
         String page = "page=";
         String sizeMore = "&size=50&businessType=blog&orderby=&noMore=false&username=xiaofeng10330111";
+
+        List<String> zyfUrl = Arrays.asList("https://zyfcodes.blog.csdn.net/article/details/105360860"
+        ,"https://zyfcodes.blog.csdn.net/article/details/105360974"
+        ,"https://zyfcodes.blog.csdn.net/article/details/105631666");
 
         for (int time = 0; time < 1000; time++) {
             Calendar cal1 = Calendar.getInstance();
@@ -49,19 +51,24 @@ public class CSDNTest {
                 }
                 System.out.println("访问文章总数为:"+list.size()+",其中访问数小于10000的有："+list.stream().filter(x->x.getViewCount()<=10000).count());
                 list.forEach(article -> {
-                    if(article.getViewCount()>10000){
+                    if(article.getViewCount()>15000){
                         return;
                     }
 
                     Calendar cal = Calendar.getInstance();
-                    Date date = cal.getTime();
                     String urlDetail = article.getUrl();
                     HttpUtils.sendPost(urlDetail, null);
-//                    System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date) +
-//                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
+                    System.out.println(new SimpleDateFormat("yyyy/MM/dd      HH:mm:ss:SSS").format(cal.getTime()) +
+                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
                     start.getAndIncrement();
+
                 });
-                Thread.sleep(30000);
+                Thread.sleep(40000);
+                zyfUrl.forEach(urlTest->{
+                    HttpUtils.sendPost(urlTest, null);
+                    System.out.println(new SimpleDateFormat("yyyy/MM/dd       HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
+                            "必须访问网站：" + urlTest);
+                });
             }
         }
     }

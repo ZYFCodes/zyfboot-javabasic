@@ -259,6 +259,12 @@
             <artifactId>atomix</artifactId>
             <version>3.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <!-- 使用最新版本 -->
+            <version>3.16.1</version>
+        </dependency>
     </dependencies>
 
 
