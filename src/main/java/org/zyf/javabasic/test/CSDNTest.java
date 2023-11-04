@@ -49,7 +49,7 @@ public class CSDNTest {
                 if (CollectionUtils.isEmpty(list)) {
                     break;
                 }
-                System.out.println("访问文章总数为:"+list.size()+",其中访问数小于10000的有："+list.stream().filter(x->x.getViewCount()<=10000).count());
+                //System.out.println("访问文章总数为:"+list.size()+",其中访问数小于10000的有："+list.stream().filter(x->x.getViewCount()<=10000).count());
                 list.forEach(article -> {
                     if(article.getViewCount()>15000){
                         return;
@@ -58,16 +58,16 @@ public class CSDNTest {
                     Calendar cal = Calendar.getInstance();
                     String urlDetail = article.getUrl();
                     HttpUtils.sendPost(urlDetail, null);
-                    System.out.println(new SimpleDateFormat("yyyy/MM/dd      HH:mm:ss:SSS").format(cal.getTime()) +
-                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
+//                    System.out.println(new SimpleDateFormat("yyyy/MM/dd      HH:mm:ss:SSS").format(cal.getTime()) +
+//                            "访问网站请求网站为：" + start + "-" + urlDetail + "，文章访问次数当前为：" + article.getViewCount());
                     start.getAndIncrement();
 
                 });
                 Thread.sleep(40000);
                 zyfUrl.forEach(urlTest->{
                     HttpUtils.sendPost(urlTest, null);
-                    System.out.println(new SimpleDateFormat("yyyy/MM/dd       HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
-                            "必须访问网站：" + urlTest);
+//                    System.out.println(new SimpleDateFormat("yyyy/MM/dd       HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
+//                            "必须访问网站：" + urlTest);
                 });
             }
         }

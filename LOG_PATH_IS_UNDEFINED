@@ -48,3 +48,53 @@
 2023-10-03 14:15:51,671 [main] INFO  org.zyf.javabasic.ZYFApplication [StartupInfoLogger.java : 59] - Started ZYFApplication in 2.72 seconds (JVM running for 3.069)
 2023-10-03 14:16:34,544 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'applicationTaskExecutor'
 2023-10-03 14:16:34,545 [Thread-3] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2023-10-20 23:19:29,597 [main] INFO  org.zyf.javabasic.ZYFApplication [StartupInfoLogger.java : 50] - Starting ZYFApplication on 192.168.2.8 with PID 54142 (/Users/zyf/zyfcodes/java/zyfboot-javabasic/target/classes started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2023-10-20 23:19:29,599 [main] INFO  org.zyf.javabasic.ZYFApplication [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2023-10-20 23:19:30,300 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$97c6ed8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-20 23:19:30,657 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 8080 (http)
+2023-10-20 23:19:30,668 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-20 23:19:30,673 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2023-10-20 23:19:30,673 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2023-10-20 23:19:30,739 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2023-10-20 23:19:30,740 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1120 ms
+2023-10-20 23:19:30,909 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 35 ms to scan 1 urls, producing 9 keys and 20 values 
+2023-10-20 23:19:31,470 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-10-20 23:19:31,580 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-20 23:19:31,691 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2023-10-20 23:19:31,696 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2023-10-20 23:19:31,718 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2023-10-20 23:19:31,789 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2023-10-20 23:19:31,791 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2023-10-20 23:19:31,792 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2023-10-20 23:19:31,793 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2023-10-20 23:19:31,795 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2023-10-20 23:19:31,827 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-20 23:19:31,839 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-20 23:19:31,841 [main] INFO  org.zyf.javabasic.ZYFApplication [StartupInfoLogger.java : 59] - Started ZYFApplication in 2.591 seconds (JVM running for 2.82)
+2023-10-21 10:56:27,053 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-21 10:56:27,061 [Thread-3] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2023-11-04 23:36:57,266 [main] INFO  org.zyf.javabasic.ZYFApplication [StartupInfoLogger.java : 50] - Starting ZYFApplication on 192.168.2.10 with PID 76543 (/Users/zyf/zyfcodes/java/zyfboot-javabasic/target/classes started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2023-11-04 23:36:57,267 [main] INFO  org.zyf.javabasic.ZYFApplication [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2023-11-04 23:36:58,020 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$dded0126] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-04 23:36:58,387 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 8080 (http)
+2023-11-04 23:36:58,396 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-04 23:36:58,402 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2023-11-04 23:36:58,402 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2023-11-04 23:36:58,471 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2023-11-04 23:36:58,472 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1183 ms
+2023-11-04 23:36:58,628 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 36 ms to scan 1 urls, producing 9 keys and 20 values 
+2023-11-04 23:36:59,179 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-11-04 23:36:59,291 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-04 23:36:59,401 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2023-11-04 23:36:59,407 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2023-11-04 23:36:59,428 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2023-11-04 23:36:59,495 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2023-11-04 23:36:59,496 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2023-11-04 23:36:59,497 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2023-11-04 23:36:59,498 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2023-11-04 23:36:59,500 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2023-11-04 23:36:59,533 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-11-04 23:36:59,545 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-04 23:36:59,546 [main] INFO  org.zyf.javabasic.ZYFApplication [StartupInfoLogger.java : 59] - Started ZYFApplication in 2.624 seconds (JVM running for 2.855)
+2023-11-04 23:37:06,421 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-04 23:37:06,422 [Thread-3] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
