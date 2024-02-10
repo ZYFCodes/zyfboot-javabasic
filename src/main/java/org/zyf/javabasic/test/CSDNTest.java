@@ -51,7 +51,7 @@ public class CSDNTest {
                 }
                 System.out.println("访问文章总数为:"+list.size()+",其中访问数小于10000的有："+list.stream().filter(x->x.getViewCount()<=10000).count());
                 list.forEach(article -> {
-                    if(article.getViewCount()>15000){
+                    if(article.getViewCount()>12000){
                         return;
                     }
 
