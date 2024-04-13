@@ -280,6 +280,16 @@
             <artifactId>QLExpress</artifactId>
             <version>3.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.8</version> <!-- 根据你的实际情况修改版本号 -->
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version> <!-- 根据你的实际情况修改版本号 -->
+        </dependency>
     </dependencies>
 
 
