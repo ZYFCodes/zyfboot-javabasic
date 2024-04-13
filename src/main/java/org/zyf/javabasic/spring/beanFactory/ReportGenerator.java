@@ -23,13 +23,13 @@ public class ReportGenerator {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
         // 查询数据库并生成报告
-//        String sql = "SELECT * FROM user20240413";
-//        jdbcTemplate.query(sql, (rs, rowNum) -> {
-//            String username = rs.getString("username");
-//            String email = rs.getString("email");
-//            System.out.println("Username: " + username + ", Email: " + email);
-//            return null;
-//        });
+        String sql = "SELECT * FROM user20240413";
+        jdbcTemplate.query(sql, (rs, rowNum) -> {
+            String username = rs.getString("username");
+            String email = rs.getString("email");
+            System.out.println("Username: " + username + ", Email: " + email);
+            return null;
+        });
 
         System.out.println("Report generated successfully.");
     }
