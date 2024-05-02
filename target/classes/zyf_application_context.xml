@@ -10,4 +10,6 @@
     <bean class="org.zyf.javabasic.springextend.bfppext.MyBeanFactoryPostProcessorForNewDefinRegi"/>
     <bean class="org.zyf.javabasic.springextend.bfppext.MyBeanFactoryPostProcessorForDefineMata"/>
 
+    <bean id="zyfService" class="org.zyf.javabasic.spring.beandefinition.ZyfService"/>
+
 </beans>

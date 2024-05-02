@@ -1,2 +1,6 @@
 org.springframework.context.ApplicationContextInitializer=org.zyf.javabasic.springextend.runext.InterveneApplicationContextInitializer
 org.springframework.boot.SpringApplicationRunListener=org.zyf.javabasic.springextend.runext.IntervenRunListener
+
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+org.zyf.javabasic.spring.failureanalyzer.analyzer.ZYFConfigFileFailureAnalyzer,\
+org.zyf.javabasic.spring.failureanalyzer.analyzer.ZYFConfigFileFormatFailureanalyzer
