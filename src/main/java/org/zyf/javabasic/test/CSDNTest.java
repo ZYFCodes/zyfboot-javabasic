@@ -136,7 +136,7 @@ public class CSDNTest {
         List<String> zyfUrl = Lists.newArrayList(getRes(10000));
         System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
 
-        for (int time = 0; time < 1000; time++) {
+        for (int time = 0; time < 3000; time++) {
             Calendar cal1 = Calendar.getInstance();
             Date date1 = cal1.getTime();
             System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) + "执行访问全列表数据进行分析，当前次数：" + time);
@@ -151,9 +151,9 @@ public class CSDNTest {
                             " 存在异常！");
                     ;
                 }
-//                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
-//                        " 访问网站序号：" + idx +
-//                        " 访问网站：" + urlTest);
+                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
+                        " 访问网站序号：" + idx +
+                        " 访问网站：" + urlTest);
             });
         }
 
@@ -172,6 +172,23 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/136779677");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/136970813");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/137670813");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138006892");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138007659");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138051035");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138046927");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138143106");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138143445");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138143503");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138202681");
+        //0602新增
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138388372");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138389766");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138392030");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138402121");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138403861");
+
+
+
 
         Properties prop = new Properties();
         // 使用当前线程的类加载器获取资源的输入流
