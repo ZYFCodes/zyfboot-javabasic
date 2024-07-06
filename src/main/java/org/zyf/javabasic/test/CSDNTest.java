@@ -186,6 +186,29 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138392030");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138402121");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/138403861");
+        //0615新增
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139568339");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139568355");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139584588");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139584623");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139611610");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139611703");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139639510");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139639556");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139667021");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139667074");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139702063");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139702132");
+        //加一个额外的
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/105637394");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/134172514");
+        //0706新增
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139756774");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139909065");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140088827");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140089178");
+
+
 
 
 
