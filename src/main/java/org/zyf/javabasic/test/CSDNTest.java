@@ -207,7 +207,9 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/139909065");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140088827");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140089178");
-
+        //0707新增
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140254995");
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140255023");
 
 
 
