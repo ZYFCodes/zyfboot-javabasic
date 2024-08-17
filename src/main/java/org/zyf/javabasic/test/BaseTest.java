@@ -2,7 +2,23 @@ package org.zyf.javabasic.test;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import org.apache.http.*;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.HttpContext;
+import org.apache.http.util.EntityUtils;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -12,40 +28,26 @@ import java.util.Set;
  * @date 2022/10/31  11:13
  */
 public class BaseTest {
-    public static void main(String[] args) {
-//        System.out.println("编码问题处理");
-//        String[] wordArray = new String[]{"奥", "澳"};
-//        List<String> wordsList = Lists.newArrayList();
-//        for (String item : wordArray) {
-//            try {
-//                wordsList.add(new String(new Base64().encode(item.getBytes())));
-//            } catch (Exception e) {
-//                System.out.println("编码失败" + item);
-//                wordsList.add(item);
-//            }
-//        }
-//        System.out.println(wordsList.toString());
-//
-//
-//        System.out.println("编码问题处理");
-//        String[] wordArrayNew = new String[]{"先"};
-//        List<String> wordsNewList = Lists.newArrayList();
-//        for (String item : wordArrayNew) {
-//            try {
-//                wordsNewList.add(new String(new Base64().decode(item.getBytes())));
-//            } catch (Exception e) {
-//                System.out.println("编码失败" + item);
-//                wordsNewList.add(item);
-//            }
-//        }
-//        System.out.println(wordsNewList.toString());
+    //创建 HttpClient 的实例
+    private static HttpClient client = new DefaultHttpClient();
+    private static String host="https://blog.csdn.net/";
+    public static void main(String[] args) throws IOException {
+        //构建一个POST请求
+        HttpPost post = new HttpPost(host);
+        //构建表单参数
+        List<NameValuePair> formParams = new ArrayList<NameValuePair>();
+        formParams.add(new BasicNameValuePair("username", "18586128339"));
+        formParams.add(new BasicNameValuePair("password", "csdn20142014"));
+        //将表单参数转化为“实体”
+        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formParams, "UTF-8");
+        //将“实体“设置到POST请求里
+        post.setEntity(entity);
 
+        //提交POST请求
+        HttpResponse response = client.execute(post);
 
-
-        List<Long> categoryIdList = Lists.newArrayList();
-        Set<Long> dd= Sets.newHashSet();
-        dd.add(3L);
-        categoryIdList.addAll(null);
-        System.out.println(categoryIdList);
+        HttpEntity result = response.getEntity();//拿到返回的HttpResponse的"实体"
+        String content = EntityUtils.toString(result);;//用httpcore.jar提供的工具类将"实体"转化为字符串打印到控制台
+        System.out.println(content);
     }
 }
