@@ -18,45 +18,26 @@ package org.zyf.javabasic.letcode.math;
  */
 public class PowXN {
 
-    /**
-     * 最优解法可以通过快速幂算法来实现计算 x 的 n 次幂。
-     * 快速幂算法是一种高效的计算幂的方法，基本思想是将幂 n 分解成二进制形式，然后利用二进制幂的特性来进行计算。具体步骤如下：
-     * 1. 初始化一个变量 `result` 用于保存最终的计算结果，初始值为 1。
-     * 2. 将 n 表示为二进制形式，例如 n = 10 的二进制为 1010。
-     * 3. 从低位到高位遍历 n 的二进制位，如果某一位为1，则将 x 的幂乘到 `result` 中，否则继续处理下一位。
-     * 4. 在每一步中，将 x 的幂平方，以便在下一位中使用。
-     * 举例来说，计算 x 的 10 次幂时，n = 10 的二进制为 1010，可以看作 2^3 * 2^1，所以可以通过以下步骤计算：
-     * 1. x = x^1，得到 x = x^2
-     * 2. x = x^2，得到 x = x^4
-     * 3. x = x^4，得到 x = x^8
-     * 4. x = x^8 * x^2，得到 x = x^10
-     * 该算法的时间复杂度为 O(log(n))
-     */
-    public static double zyfPow(double x, int n) {
-        // 边界情况，当 n = 0 时，任何数的 0 次幂均为 1
-        if (n == 0) {
-            return 1;
-        }
-
+    public static double myPow(double x, int n) {
         // 处理 n 为负数的情况
-        if (n < 0) {
+        long N = n;
+        if (N < 0) {
             x = 1 / x;
-            n = -n;
+            N = -N;
         }
 
-        double result = 1;
-        double temp = x;
+        double result = 1.0;
+        double currentProduct = x;
 
-        // 快速幂算法，将 n 表示为二进制形式，从低位到高位遍历
-        while (n > 0) {
-            // 如果当前位是1，将 x 的幂乘到 result 中
-            if (n % 2 == 1) {
-                result *= temp;
+        // 迭代计算 x 的 N 次幂
+        while (N > 0) {
+            // 如果当前指数为奇数，则将当前 x 乘入结果中
+            if ((N % 2) == 1) {
+                result *= currentProduct;
             }
-            // 将 x 的幂平方，以便在下一位中使用
-            temp *= temp;
-            // 右移一位，相当于 n = n / 2
-            n /= 2;
+            // 将指数减半，x 平方
+            currentProduct *= currentProduct;
+            N /= 2;
         }
 
         return result;
@@ -72,8 +53,8 @@ public class PowXN {
         double x3 = 2.00000;
         int n3 = -2;
 
-        System.out.println("Input: " + x1 + ", " + n1 + " Output: " + zyfPow(x1, n1));
-        System.out.println("Input: " + x2 + ", " + n2 + " Output: " + zyfPow(x2, n2));
-        System.out.println("Input: " + x3 + ", " + n3 + " Output: " + zyfPow(x3, n3));
+        System.out.println("Input: " + x1 + ", " + n1 + " Output: " + myPow(x1, n1));
+        System.out.println("Input: " + x2 + ", " + n2 + " Output: " + myPow(x2, n2));
+        System.out.println("Input: " + x3 + ", " + n3 + " Output: " + myPow(x3, n3));
     }
 }
