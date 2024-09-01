@@ -29,7 +29,7 @@ import java.util.stream.IntStream;
 public class CSDNSubmit2Test {
     public static void main(String[] args) throws IOException, ParseException {
         Map<String, String> articleId2commentId= Maps.newHashMap();
-        articleId2commentId.put("53034130", "33954541");
+        //articleId2commentId.put("53034130", "33954541");
         articleId2commentId.put("84936252", "23131709");
         articleId2commentId.put("85162029", "33954727");
         articleId2commentId.put("85163793", "23616534");
@@ -44,7 +44,7 @@ public class CSDNSubmit2Test {
         articleId2commentId.put("85253615", "23689042");
 
         for (String articleId:articleId2commentId.keySet()) {
-            for (int time = 0; time < 500; time++) {
+            for (int time = 0; time < 100; time++) {
                 Calendar cal1 = Calendar.getInstance();
                 Date date1 = cal1.getTime();
                 exe(articleId,articleId2commentId.get(articleId));
