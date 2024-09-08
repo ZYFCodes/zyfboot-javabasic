@@ -21,10 +21,10 @@ public class AccountPerformanceTest {
         startTime = System.currentTimeMillis();
         Thread[] optimisticThreads = new Thread[THREAD_COUNT];
         for (int i = 0; i < THREAD_COUNT; i++) {
-            Account account = new Account(1000); // 创建新的账户对象
             optimisticThreads[i] = new Thread(() -> {
                 for (int j = 0; j < ITERATIONS; j++) {
-                    account.updateBalance(10);
+                    // 所有线程更新同一个账户
+                    optimisticAccount.updateBalance(10);
                 }
             });
             optimisticThreads[i].start();
@@ -40,11 +40,11 @@ public class AccountPerformanceTest {
         startTime = System.currentTimeMillis();
         Thread[] pessimisticThreads = new Thread[THREAD_COUNT];
         for (int i = 0; i < THREAD_COUNT; i++) {
-            Account account = new Account(1000); // 创建新的账户对象
             pessimisticThreads[i] = new Thread(() -> {
                 for (int j = 0; j < ITERATIONS; j++) {
-                    synchronized (account) {
-                        account.updateBalance(10);
+                    synchronized (pessimisticAccount) {
+                        // 所有线程更新同一个账户
+                        pessimisticAccount.updateBalance(10);
                     }
                 }
             });
