@@ -9,16 +9,17 @@ package org.zyf.javabasic.letcode.array;
 public class FindTwoSum {
     /**
      * 由于数组是升序排列的，我们可以使用双指针的方法来解决该问题。具体步骤如下：
-     *
-     * 	1.	初始化两个指针 left 和 right，分别指向数组的起始位置和结束位置。
-     * 	2.	循环遍历数组，直到 left 大于等于 right：
-     * 	•	计算当前指针所指元素的和 currSum = arr[left] + arr[right]。
-     * 	•	如果 currSum 等于 sum，则说明找到了满足条件的两个数，返回 true。
-     * 	•	如果 currSum 小于 sum，说明当前和太小，我们需要增大和，将 left 指针右移一位。
-     * 	•	如果 currSum 大于 sum，说明当前和太大，我们需要减小和，将 right 指针左移一位。
-     * 	3.	如果循环结束后仍未找到满足条件的两个数，则说明数组中不存在这样的两个数，返回 false。
-     *
+     * <p>
+     * 1.	初始化两个指针 left 和 right，分别指向数组的起始位置和结束位置。
+     * 2.	循环遍历数组，直到 left 大于等于 right：
+     * •	计算当前指针所指元素的和 currSum = arr[left] + arr[right]。
+     * •	如果 currSum 等于 sum，则说明找到了满足条件的两个数，返回 true。
+     * •	如果 currSum 小于 sum，说明当前和太小，我们需要增大和，将 left 指针右移一位。
+     * •	如果 currSum 大于 sum，说明当前和太大，我们需要减小和，将 right 指针左移一位。
+     * 3.	如果循环结束后仍未找到满足条件的两个数，则说明数组中不存在这样的两个数，返回 false。
+     * <p>
      * 通过上述步骤，我们可以判断数组中是否存在两个数的和等于给定的 sum。该算法的时间复杂度为 O(n)，其中 n 是数组的长度。
+     *
      * @param arr
      * @param sum
      * @return

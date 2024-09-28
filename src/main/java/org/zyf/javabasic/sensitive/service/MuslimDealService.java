@@ -5,12 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 import org.springframework.stereotype.Service;
-import org.zyf.javabasic.sensitive.base.SensitiveMerchantTypeEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveRuleSceneEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveWordMuslimType;
-import org.zyf.javabasic.sensitive.base.SensitiveWordWithMuslim;
-import org.zyf.javabasic.sensitive.base.WordDomain;
-import org.zyf.javabasic.sensitive.base.WordRuleDomain;
+import org.zyf.javabasic.sensitive.base.*;
 
 import java.util.List;
 import java.util.Map;

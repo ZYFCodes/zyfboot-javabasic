@@ -11,23 +11,13 @@ import org.springframework.stereotype.Component;
 import org.zyf.javabasic.common.utils.CommonUtils;
 import org.zyf.javabasic.common.utils.SensitiveConfigUtil;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.Base64;
-import org.zyf.javabasic.sensitive.base.HitWordResultForBusiness;
-import org.zyf.javabasic.sensitive.base.SensitiveWordTypeEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveWordWithType;
-import org.zyf.javabasic.sensitive.base.ValidateResult;
-import org.zyf.javabasic.sensitive.base.ValidateRule;
-import org.zyf.javabasic.sensitive.base.ValidateWordNodeResult;
-import org.zyf.javabasic.sensitive.base.WordDomain;
+import org.zyf.javabasic.sensitive.base.*;
 import org.zyf.javabasic.sensitive.model.dfa.FilterSet;
 import org.zyf.javabasic.sensitive.model.dfa.WordNode;
 import org.zyf.javabasic.sensitive.service.BusinessIdentityService;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author yanfengzhang

@@ -10,7 +10,6 @@ import org.zyf.javabasic.ZYFApplication;
 import org.zyf.javabasic.bizthreadpool.biz.service.DiscoverFeedService;
 import org.zyf.javabasic.bizthreadpool.biz.service.model.DiscoverFeedRequest;
 import org.zyf.javabasic.bizthreadpool.enums.ResultType;
-import org.zyf.javabasic.dispatcher.base.DispatcherInfo;
 
 /**
  * @program: zyfboot-javabasic

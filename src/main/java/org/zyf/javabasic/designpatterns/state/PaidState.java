@@ -5,7 +5,7 @@ package org.zyf.javabasic.designpatterns.state;
  * @description
  * @date 2020/5/24  23:25
  */
-public class PaidState extends OrderState{
+public class PaidState extends OrderState {
     public PaidState(PDDOrder order) {
         super(order);
     }

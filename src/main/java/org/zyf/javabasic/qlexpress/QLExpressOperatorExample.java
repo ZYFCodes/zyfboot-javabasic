@@ -18,9 +18,9 @@ public class QLExpressOperatorExample {
             // 示例 1：替换 if then else 关键字
             ExpressRunner runner1 = new ExpressRunner();
             DefaultContext<String, Object> context1 = new DefaultContext<>();
-            context1.put("语文",120);
-            context1.put("数学",23);
-            context1.put("英语",23);
+            context1.put("语文", 120);
+            context1.put("数学", 23);
+            context1.put("英语", 23);
 
             runner1.addOperatorWithAlias("如果", "if", null);
             runner1.addOperatorWithAlias("则", "then", null);

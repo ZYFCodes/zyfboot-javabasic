@@ -7,7 +7,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.ParseException;
 import org.apache.hc.core5.http.io.entity.StringEntity;
-import org.zyf.javabasic.common.utils.HttpUtils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -18,7 +17,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.IntStream;
 
 /**
  * @program: zyfboot-javabasic
@@ -28,7 +26,7 @@ import java.util.stream.IntStream;
  **/
 public class CSDNSubmit2Test {
     public static void main(String[] args) throws IOException, ParseException {
-        Map<String, String> articleId2commentId= Maps.newHashMap();
+        Map<String, String> articleId2commentId = Maps.newHashMap();
         //articleId2commentId.put("53034130", "33954541");
         articleId2commentId.put("84936252", "23131709");
         articleId2commentId.put("85162029", "33954727");
@@ -43,11 +41,11 @@ public class CSDNSubmit2Test {
         //微服务建模切入点
         articleId2commentId.put("85253615", "23689042");
 
-        for (String articleId:articleId2commentId.keySet()) {
+        for (String articleId : articleId2commentId.keySet()) {
             for (int time = 0; time < 100; time++) {
                 Calendar cal1 = Calendar.getInstance();
                 Date date1 = cal1.getTime();
-                exe(articleId,articleId2commentId.get(articleId));
+                exe(articleId, articleId2commentId.get(articleId));
                 System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) + "执行访问全列表数据进行分析，当前次数：" + time);
                 try {
                     Thread.sleep(1200);
@@ -61,7 +59,7 @@ public class CSDNSubmit2Test {
         }
     }
 
-    public static void exe(String articleId,String commentId) throws IOException, ParseException {
+    public static void exe(String articleId, String commentId) throws IOException, ParseException {
         // 请求URL
         String url = "https://blog.csdn.net/phoenix/web/v1/comment/submit";
 
@@ -91,7 +89,7 @@ public class CSDNSubmit2Test {
                 // 输出响应状态码
                 System.out.println("Response Code: " + response.getCode());
                 // 输出响应体
-               // System.out.println("Response Body: " + new String(String.valueOf(response.getEntity().getContent().read())));
+                // System.out.println("Response Body: " + new String(String.valueOf(response.getEntity().getContent().read())));
             }
         }
     }

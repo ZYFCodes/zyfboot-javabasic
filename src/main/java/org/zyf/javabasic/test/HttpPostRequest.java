@@ -53,7 +53,7 @@ public class HttpPostRequest {
             // 设置请求体
             String jsonInputString = "{\"key\":\"value\"}"; // 替换为实际的 JSON 输入
             connection.setDoOutput(true);
-            try(OutputStream os = connection.getOutputStream()) {
+            try (OutputStream os = connection.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes("utf-8");
                 os.write(input, 0, input.length);
             }

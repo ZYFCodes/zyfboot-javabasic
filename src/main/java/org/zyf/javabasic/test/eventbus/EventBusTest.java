@@ -1,10 +1,6 @@
 package org.zyf.javabasic.test.eventbus;
 
-import com.google.common.eventbus.AllowConcurrentEvents;
-import com.google.common.eventbus.AsyncEventBus;
-import com.google.common.eventbus.DeadEvent;
-import com.google.common.eventbus.EventBus;
-import com.google.common.eventbus.Subscribe;
+import com.google.common.eventbus.*;
 import lombok.Data;
 import org.junit.Test;
 

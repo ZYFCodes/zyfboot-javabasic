@@ -26,7 +26,7 @@ import java.util.Map;
  **/
 public class CSDNSubmit2OthersTest {
     public static void main(String[] args) throws IOException, ParseException {
-        Map<String, String> articleId2commentId= Maps.newHashMap();
+        Map<String, String> articleId2commentId = Maps.newHashMap();
         articleId2commentId.put("140906011", "ConfigurableBeanFactory 接口提供了一些方法来配置 Bean 工厂的行为和属性，使得我们可以动态地管理和调整 Bean 工厂的配置，从而更好地满足应用程序的需求。通过对 Bean 工厂的配置，可以实现更灵活、更定制化的 Bean 管理方式。欢迎博主来我博客指导一翻！");
         articleId2commentId.put("140906002", "ConfigurableBeanFactory 接口提供了一些方法来配置 Bean 工厂的行为和属性，使得我们可以动态地管理和调整 Bean 工厂的配置，从而更好地满足应用程序的需求。通过对 Bean 工厂的配置，可以实现更灵活、更定制化的 Bean 管理方式。欢迎博主来我博客指导一翻！");
         articleId2commentId.put("140905994", "ConfigurableBeanFactory 接口提供了一些方法来配置 Bean 工厂的行为和属性，使得我们可以动态地管理和调整 Bean 工厂的配置，从而更好地满足应用程序的需求。通过对 Bean 工厂的配置，可以实现更灵活、更定制化的 Bean 管理方式。欢迎博主来我博客指导一翻！");
@@ -68,11 +68,11 @@ public class CSDNSubmit2OthersTest {
         articleId2commentId.put("140906011", "synchronized 是 Java 内置的同步机制，依赖 JVM 实现，通过进入和退出监视器锁（Monitor Lock）来保证线程的安全性。在高并发情况下，线程可能会频繁地在 BLOCKED 状态和 RUNNABLE 状态之间切换，导致用户态和内核态的频繁切换，从而影响性能。而Lock（如 ReentrantLock）是基于 AQS 实现，通过使用自旋锁和非阻塞算法，减少了用户态和内核态的切换，提高了性能。");
 
 
-        for (String articleId:articleId2commentId.keySet()) {
+        for (String articleId : articleId2commentId.keySet()) {
             for (int time = 0; time < 500; time++) {
                 Calendar cal1 = Calendar.getInstance();
                 Date date1 = cal1.getTime();
-                exe(articleId,articleId2commentId.get(articleId));
+                exe(articleId, articleId2commentId.get(articleId));
                 System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) + "执行访问全列表数据进行分析，当前次数：" + time);
                 try {
                     Thread.sleep(8000);
@@ -86,7 +86,7 @@ public class CSDNSubmit2OthersTest {
         }
     }
 
-    public static void exe(String articleId,String commentContent) throws IOException, ParseException {
+    public static void exe(String articleId, String commentContent) throws IOException, ParseException {
         // 请求URL
         String url = "https://blog.csdn.net/phoenix/web/v1/comment/submit";
 

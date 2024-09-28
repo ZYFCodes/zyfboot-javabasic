@@ -17,7 +17,7 @@ public class TwoSum {
 
             if (sum == target) {
                 // 如果和等于目标值，返回下标（加 1，因为题目要求从 1 开始）
-                return new int[] {left + 1, right + 1};
+                return new int[]{left + 1, right + 1};
             } else if (sum < target) {
                 // 如果和小于目标值，左指针向右移动
                 left++;
@@ -28,6 +28,6 @@ public class TwoSum {
         }
 
         // 如果没有找到符合条件的两个数（题目保证有唯一解，这里只是为了编译器完整性）
-        return new int[] {-1, -1};
+        return new int[]{-1, -1};
     }
 }

@@ -5,11 +5,7 @@ import org.zyf.javabasic.designpatterns.strategy.combination.MemberTypeEnum;
 import org.zyf.javabasic.designpatterns.strategy.combination.OrderPayMethodEnum;
 import org.zyf.javabasic.designpatterns.strategy.combination.OrderSourceEnum;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @author yanfengzhang

@@ -104,7 +104,7 @@ public enum BrandTypeEnum {
         return BRAND_TYPE_IMMUTABLE_MAP;
     }
 
-    public static List<BrandTypeEnum> get4ShanGouBrandLevelType(){
+    public static List<BrandTypeEnum> get4ShanGouBrandLevelType() {
         return Lists.newArrayList(BrandTypeEnum.CITY,
                 BrandTypeEnum.CRM,
                 BrandTypeEnum.LING_SHOU,
@@ -120,8 +120,8 @@ public enum BrandTypeEnum {
 
     public static BrandTypeEnum typeOf(int type) {
         BrandTypeEnum[] enums = values();
-        for(BrandTypeEnum item : enums){
-            if(type == item.getValue()){
+        for (BrandTypeEnum item : enums) {
+            if (type == item.getValue()) {
                 return item;
             }
         }

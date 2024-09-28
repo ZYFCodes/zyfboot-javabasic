@@ -6,11 +6,7 @@ import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.PipelineRouteConfig;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveEffectiveContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.*;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.common.CommonHeadHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.common.CommonTailHandler;
 

@@ -14,10 +14,12 @@ import java.lang.annotation.*;
  **/
 @Documented
 @Constraint(validatedBy = ValidPhoneNumbersValidator.class)
-@Target({ ElementType.FIELD })
+@Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidPhoneNumbers {
     String message() default "电话号码无效";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

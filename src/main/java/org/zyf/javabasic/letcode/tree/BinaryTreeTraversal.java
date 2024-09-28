@@ -2,13 +2,7 @@ package org.zyf.javabasic.letcode.tree;
 
 import org.zyf.javabasic.letcode.tree.base.TreeNode;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author yanfengzhang

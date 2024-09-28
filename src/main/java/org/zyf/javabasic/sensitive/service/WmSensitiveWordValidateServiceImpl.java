@@ -6,11 +6,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.sensitive.ValidatePair;
-import org.zyf.javabasic.sensitive.base.SensitiveInfo;
-import org.zyf.javabasic.sensitive.base.SensitiveObjectTypeEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveWhiteListDimensionEnum;
-import org.zyf.javabasic.sensitive.base.ValidateResult;
-import org.zyf.javabasic.sensitive.base.WordDomain;
+import org.zyf.javabasic.sensitive.base.*;
 
 import java.time.Instant;
 import java.util.Map;

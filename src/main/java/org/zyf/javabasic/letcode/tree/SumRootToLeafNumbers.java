@@ -6,7 +6,7 @@ import org.zyf.javabasic.letcode.tree.base.TreeNode;
  * @author yanfengzhang
  * @description 给定一个二叉树，其中每个节点都包含一个 0 或 1 的值，每条从根到叶子节点的路径都代表一个二进制数。求所有路径代表的二进制数之和。
  * 例如，给定以下二叉树:
- *  1
+ * 1
  * / \
  * 2   3
  * 从根到叶子节点的路径包括 1->2 和 1->3，所以二进制数之和为 12 + 13 = 25。

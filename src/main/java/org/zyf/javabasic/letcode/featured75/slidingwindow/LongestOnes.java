@@ -38,27 +38,27 @@ public class LongestOnes {
         LongestOnes solution = new LongestOnes();
 
         // 测试用例 1
-        int[] nums1 = {1,1,1,0,0,0,1,1,1,1,0};
+        int[] nums1 = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k1 = 2;
         System.out.println("Test Case 1: " + (solution.longestOnes(nums1, k1) == 6 ? "Passed" : "Failed"));
 
         // 测试用例 2
-        int[] nums2 = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
+        int[] nums2 = {0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1};
         int k2 = 3;
         System.out.println("Test Case 2: " + (solution.longestOnes(nums2, k2) == 10 ? "Passed" : "Failed"));
 
         // 测试用例 3
-        int[] nums3 = {1,1,0,0,1,1,1,0,0,1,1};
+        int[] nums3 = {1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1};
         int k3 = 2;
         System.out.println("Test Case 3: " + (solution.longestOnes(nums3, k3) == 6 ? "Passed" : "Failed"));
 
         // 测试用例 4
-        int[] nums4 = {0,0,0,0,0,0,0,0};
+        int[] nums4 = {0, 0, 0, 0, 0, 0, 0, 0};
         int k4 = 5;
         System.out.println("Test Case 4: " + (solution.longestOnes(nums4, k4) == 5 ? "Passed" : "Failed"));
 
         // 测试用例 5
-        int[] nums5 = {1,1,1,1,1,1,1};
+        int[] nums5 = {1, 1, 1, 1, 1, 1, 1};
         int k5 = 0;
         System.out.println("Test Case 5: " + (solution.longestOnes(nums5, k5) == 7 ? "Passed" : "Failed"));
     }

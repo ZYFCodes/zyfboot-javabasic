@@ -26,7 +26,7 @@ public class MaximalSquare {
                         dp[i][j] = 1;
                     } else {
                         // 更新 dp[i][j] 的值
-                        dp[i][j] = Math.min(Math.min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) + 1;
+                        dp[i][j] = Math.min(Math.min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
                     }
                     // 更新最大边长
                     maxSide = Math.max(maxSide, dp[i][j]);

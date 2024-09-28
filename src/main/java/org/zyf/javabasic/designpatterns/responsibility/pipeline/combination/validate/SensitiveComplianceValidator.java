@@ -5,11 +5,7 @@ import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.BizType;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentAttr;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.*;
 
 import java.util.List;
 

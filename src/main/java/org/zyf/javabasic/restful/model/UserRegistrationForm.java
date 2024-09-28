@@ -7,8 +7,8 @@ import org.zyf.javabasic.restful.annotations.EachElementNotNull;
 import org.zyf.javabasic.restful.annotations.ValidPhoneNumber;
 import org.zyf.javabasic.restful.annotations.ValidPhoneNumbers;
 
-import javax.validation.constraints.*;
 import javax.validation.Valid;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Date;

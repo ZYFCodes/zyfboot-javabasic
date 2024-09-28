@@ -1,12 +1,7 @@
 package org.zyf.javabasic.designpatterns.strategy.complex;
 
 import lombok.extern.log4j.Log4j2;
-import org.zyf.javabasic.designpatterns.strategy.combination.MemberTypeEnum;
-import org.zyf.javabasic.designpatterns.strategy.combination.Order;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderConsumerResult;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderHandler;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderPayMethodEnum;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderSourceEnum;
+import org.zyf.javabasic.designpatterns.strategy.combination.*;
 
 /**
  * @author yanfengzhang

@@ -44,34 +44,34 @@ public class TreeToList {
         inorderTraversal(node.right);
     }
 
-    public void printDoubleListForward(TreeNode head){
-        TreeNode current =head;
-        while(current!=null){
-            System.out.println(current.val+"");
-            current=current.right;
+    public void printDoubleListForward(TreeNode head) {
+        TreeNode current = head;
+        while (current != null) {
+            System.out.println(current.val + "");
+            current = current.right;
         }
         System.out.println();
     }
 
-    public void printDoubleListBackward(TreeNode tail){
-        TreeNode current =tail;
-        while(current!=null){
-            System.out.println(current.val+"");
-            current=current.left;
+    public void printDoubleListBackward(TreeNode tail) {
+        TreeNode current = tail;
+        while (current != null) {
+            System.out.println(current.val + "");
+            current = current.left;
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(4);
-        root.left=new TreeNode(2);
-        root.right=new TreeNode(6);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(6);
 
-        root.left.left=new TreeNode(1);
-        root.left.right=new TreeNode(3);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
 
-        root.right.left=new TreeNode(5);
-        root.right.right=new TreeNode(7);
+        root.right.left = new TreeNode(5);
+        root.right.right = new TreeNode(7);
 
         //转双向
         TreeToList treeToList = new TreeToList();
@@ -82,9 +82,9 @@ public class TreeToList {
         treeToList.printDoubleListForward(head);
 
         //找到链表尾部
-        TreeNode tail =head;
-        while(tail.right != null){
-            tail=tail.right;
+        TreeNode tail = head;
+        while (tail.right != null) {
+            tail = tail.right;
         }
 
         System.out.println("Backward:");

@@ -38,23 +38,23 @@ public class LongestSubarray {
         LongestSubarray solution = new LongestSubarray();
 
         // 测试用例 1
-        int[] nums1 = {1,1,0,1};
+        int[] nums1 = {1, 1, 0, 1};
         System.out.println("Test Case 1: " + (solution.longestSubarray(nums1) == 3 ? "Passed" : "Failed"));
 
         // 测试用例 2
-        int[] nums2 = {0,1,1,1,0,1,1,0,1};
+        int[] nums2 = {0, 1, 1, 1, 0, 1, 1, 0, 1};
         System.out.println("Test Case 2: " + (solution.longestSubarray(nums2) == 5 ? "Passed" : "Failed"));
 
         // 测试用例 3
-        int[] nums3 = {1,1,1};
+        int[] nums3 = {1, 1, 1};
         System.out.println("Test Case 3: " + (solution.longestSubarray(nums3) == 2 ? "Passed" : "Failed"));
 
         // 测试用例 4
-        int[] nums4 = {1,0,1,0,1,0,1};
+        int[] nums4 = {1, 0, 1, 0, 1, 0, 1};
         System.out.println("Test Case 4: " + (solution.longestSubarray(nums4) == 4 ? "Passed" : "Failed"));
 
         // 测试用例 5
-        int[] nums5 = {0,0,0,0,0};
+        int[] nums5 = {0, 0, 0, 0, 0};
         System.out.println("Test Case 5: " + (solution.longestSubarray(nums5) == 0 ? "Passed" : "Failed"));
     }
 }

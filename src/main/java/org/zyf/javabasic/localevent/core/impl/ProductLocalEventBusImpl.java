@@ -1,6 +1,5 @@
 package org.zyf.javabasic.localevent.core.impl;
 
-import com.google.common.eventbus.EventBus;
 import org.zyf.javabasic.localevent.core.ProductLocalEventBus;
 import org.zyf.javabasic.localevent.enums.ProductEventCode;
 

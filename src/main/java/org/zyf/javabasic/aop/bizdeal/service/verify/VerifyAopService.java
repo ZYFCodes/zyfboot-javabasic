@@ -5,12 +5,7 @@ import org.springframework.stereotype.Component;
 import org.zyf.javabasic.aop.bizdeal.annotation.ZYFActivityDealer;
 import org.zyf.javabasic.aop.bizdeal.constants.ActivityBizConstants;
 import org.zyf.javabasic.aop.bizdeal.constants.ActivityBizMethod;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.AutoRenewalActivityDto;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.BuyForGetActivityDto;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.DiscountActivityDto;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.FirstPurchaseActivityDto;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.LimitTimeActivityDto;
-import org.zyf.javabasic.aop.bizdeal.entity.dto.PriceCutActivityDto;
+import org.zyf.javabasic.aop.bizdeal.entity.dto.*;
 
 /**
  * @author yanfengzhang

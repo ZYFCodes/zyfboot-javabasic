@@ -55,23 +55,23 @@ public class ExistSolution {
     public static void main(String[] args) {
         ExistSolution solution = new ExistSolution();
         char[][] board1 = {
-                {'A','B','C','E'},
-                {'S','F','C','S'},
-                {'A','D','E','E'}
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
         System.out.println(solution.exist(board1, "ABCCED")); // true
 
         char[][] board2 = {
-                {'A','B','C','E'},
-                {'S','F','C','S'},
-                {'A','D','E','E'}
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
         System.out.println(solution.exist(board2, "SEE")); // true
 
         char[][] board3 = {
-                {'A','B','C','E'},
-                {'S','F','C','S'},
-                {'A','D','E','E'}
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
         System.out.println(solution.exist(board3, "ABCB")); // false
     }

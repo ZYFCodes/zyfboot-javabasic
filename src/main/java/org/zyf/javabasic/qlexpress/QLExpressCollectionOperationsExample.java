@@ -3,11 +3,6 @@ package org.zyf.javabasic.qlexpress;
 import com.ql.util.express.DefaultContext;
 import com.ql.util.express.ExpressRunner;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * @program: zyfboot-javabasic
  * @description: 集合操作

@@ -45,7 +45,7 @@ public class ZYFThreadPoolTaskExecutor implements ExecutorService, InitializingB
     }
 
     public void setCorePoolSize(int corePoolSize) {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             this.corePoolSize = corePoolSize;
             if (this.threadPoolExecutor != null) {
                 this.threadPoolExecutor.setCorePoolSize(corePoolSize);
@@ -55,13 +55,13 @@ public class ZYFThreadPoolTaskExecutor implements ExecutorService, InitializingB
     }
 
     public int getCorePoolSize() {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             return this.corePoolSize;
         }
     }
 
     public void setMaxPoolSize(int maxPoolSize) {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             this.maxPoolSize = maxPoolSize;
             if (this.threadPoolExecutor != null) {
                 this.threadPoolExecutor.setMaximumPoolSize(maxPoolSize);
@@ -71,29 +71,29 @@ public class ZYFThreadPoolTaskExecutor implements ExecutorService, InitializingB
     }
 
     public int getMaxPoolSize() {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             return this.maxPoolSize;
         }
     }
 
     public void setKeepAliveSeconds(int keepAliveSeconds) {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             this.keepAliveSeconds = keepAliveSeconds;
             if (this.threadPoolExecutor != null) {
-                this.threadPoolExecutor.setKeepAliveTime((long)keepAliveSeconds, TimeUnit.SECONDS);
+                this.threadPoolExecutor.setKeepAliveTime((long) keepAliveSeconds, TimeUnit.SECONDS);
             }
 
         }
     }
 
     public int getKeepAliveSeconds() {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             return this.keepAliveSeconds;
         }
     }
 
     public void setAllowCoreThreadTimeOut(boolean allowCoreThreadTimeOut) {
-        synchronized(this.poolSizeMonitor) {
+        synchronized (this.poolSizeMonitor) {
             this.allowCoreThreadTimeOut = allowCoreThreadTimeOut;
             if (this.threadPoolExecutor != null) {
                 this.threadPoolExecutor.allowCoreThreadTimeOut(allowCoreThreadTimeOut);
@@ -107,7 +107,7 @@ public class ZYFThreadPoolTaskExecutor implements ExecutorService, InitializingB
     }
 
     protected BlockingQueue<Runnable> createQueue(int queueCapacity) {
-        return (BlockingQueue)(queueCapacity > 0 ? new LinkedBlockingQueue(queueCapacity) : new SynchronousQueue());
+        return (BlockingQueue) (queueCapacity > 0 ? new LinkedBlockingQueue(queueCapacity) : new SynchronousQueue());
     }
 
     public ThreadPoolExecutor getThreadPoolExecutor() throws IllegalStateException {
@@ -206,7 +206,7 @@ public class ZYFThreadPoolTaskExecutor implements ExecutorService, InitializingB
             }
         };
         BlockingQueue<Runnable> queue = this.createQueue(this.queueCapacity);
-        ThreadPoolExecutor executor = new ZYFThreadPoolExecutor(this.corePoolSize, this.maxPoolSize, (long)this.keepAliveSeconds, TimeUnit.SECONDS, queue, threadFactory, this.rejectedExecutionHandler);
+        ThreadPoolExecutor executor = new ZYFThreadPoolExecutor(this.corePoolSize, this.maxPoolSize, (long) this.keepAliveSeconds, TimeUnit.SECONDS, queue, threadFactory, this.rejectedExecutionHandler);
         if (this.allowCoreThreadTimeOut) {
             executor.allowCoreThreadTimeOut(true);
         }

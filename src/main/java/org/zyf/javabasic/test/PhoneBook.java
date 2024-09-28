@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * @program: zyfboot-javabasic
  * @description: 实现一个简单的电话号码簿（电话簿）。
- *               在这个电话簿中，用户可以存储联系人的姓名和电话号码，并且能够通过姓名快速查找相应的电话号码。
+ * 在这个电话簿中，用户可以存储联系人的姓名和电话号码，并且能够通过姓名快速查找相应的电话号码。
  * @author: zhangyanfeng
  * @create: 2023-09-24 22:50
  **/

@@ -7,11 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zyf.javabasic.ZYFApplication;
-import org.zyf.javabasic.designpatterns.strategy.combination.MemberTypeEnum;
-import org.zyf.javabasic.designpatterns.strategy.combination.Order;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderConsumerResult;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderPayMethodEnum;
-import org.zyf.javabasic.designpatterns.strategy.combination.OrderSourceEnum;
+import org.zyf.javabasic.designpatterns.strategy.combination.*;
 
 import java.math.BigDecimal;
 

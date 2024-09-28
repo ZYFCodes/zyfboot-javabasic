@@ -116,11 +116,9 @@ public class ListTest {
 //        System.out.println(keyWords);
 
 
-
         JSONObject resultConfigJson = new JSONObject();
-        resultConfigJson.put("rr",0.1);
+        resultConfigJson.put("rr", 0.1);
         System.out.println(resultConfigJson.getInteger("rr"));
-
 
 
     }

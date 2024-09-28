@@ -23,11 +23,7 @@ import org.zyf.javabasic.dynamicbizvalidator.dynamicdeal.ProductStaticValidator;
 import org.zyf.javabasic.dynamicbizvalidator.enums.DynamicConfigType;
 
 import java.text.DecimalFormat;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * @author yanfengzhang

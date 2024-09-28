@@ -13,6 +13,7 @@ public interface DiscoverFeedService {
 
     /**
      * 小红书推荐流
+     *
      * @param request 请求
      * @return 推荐流信息
      */
@@ -20,6 +21,7 @@ public interface DiscoverFeedService {
 
     /**
      * 小红书直播流
+     *
      * @param request 请求
      * @return 推荐流信息
      */

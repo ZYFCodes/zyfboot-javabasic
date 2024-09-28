@@ -14,10 +14,12 @@ import java.lang.annotation.*;
  **/
 @Documented
 @Constraint(validatedBy = EachElementNotNullValidator.class)
-@Target({ ElementType.FIELD })
+@Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EachElementNotNull {
     String message() default "集合中含有空元素";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

@@ -21,7 +21,7 @@ public class PalindromeSubLinkedList {
      * 最后，将截取的链表恢复原状，即将 leftPrev 的 next 指针指向 reverseNode，将 reverseNode 的 next 指针指向 rightNext。
      * 返回判断结果。
      * 这样，我们就可以判断从第 left 个节点到第 right 个节点的部分是否是回文链表。
-     *
+     * <p>
      * 这个算法的时间复杂度为O(n)，其中n是链表的长度。
      * 这是因为我们需要遍历链表找到第left个节点和第right个节点，然后截取链表和反转链表都需要O(n)的时间复杂度。
      * 最后，我们需要比较两个链表的值是否相等，这也需要O(n)的时间复杂度。

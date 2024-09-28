@@ -35,7 +35,7 @@ public class TestTest {
         System.out.println(provinceIds);
 
 
-        System.out.println( System.currentTimeMillis() );
+        System.out.println(System.currentTimeMillis());
 
         Calendar cal = Calendar.getInstance();
         Date date = cal.getTime();

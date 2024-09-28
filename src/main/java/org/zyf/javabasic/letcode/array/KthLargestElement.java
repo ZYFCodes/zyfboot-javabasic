@@ -12,14 +12,15 @@ import java.util.PriorityQueue;
 public class KthLargestElement {
     /**
      * 一种常见的解法是使用最小堆（Min Heap）来解决该问题。具体步骤如下：
-     *
-     * 	1.	创建一个大小为 k 的最小堆 minHeap。
-     * 	2.	遍历二维矩阵 matrix 的每个元素，将元素加入最小堆 minHeap 中。
-     * 	3.	如果最小堆 minHeap 的大小超过了 k，则将堆顶元素（即当前最小的元素）移除，保持堆的大小为 k。
-     * 	4.	遍历完所有元素后，最小堆 minHeap 中的堆顶元素即为第 k 大的数。
-     *
+     * <p>
+     * 1.	创建一个大小为 k 的最小堆 minHeap。
+     * 2.	遍历二维矩阵 matrix 的每个元素，将元素加入最小堆 minHeap 中。
+     * 3.	如果最小堆 minHeap 的大小超过了 k，则将堆顶元素（即当前最小的元素）移除，保持堆的大小为 k。
+     * 4.	遍历完所有元素后，最小堆 minHeap 中的堆顶元素即为第 k 大的数。
+     * <p>
      * 通过上述步骤，我们可以找到二维矩阵中第 k 大的数。
      * 该算法的时间复杂度为 O(mnlog(k))，其中 m 和 n 分别是矩阵的行数和列数。
+     *
      * @param matrix
      * @param k
      * @return

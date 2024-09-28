@@ -7,7 +7,7 @@ import java.util.BitSet;
  * @program: zyfboot-javabasic
  * @description: 布隆过滤器的基本思路和使用方法
  * 基本思路：
- *
+ * <p>
  * 初始化一个大小为 size 的 int 数组作为位数组。
  * 写入数据时，使用 numHashFunctions 个哈希函数进行哈希运算，并将对应位置置为 1。
  * 查询数据时，同样使用 numHashFunctions 个哈希函数进行哈希运算，如果对应位置有一个值为 0，则认为数据不存在。
@@ -33,7 +33,7 @@ public class ZYFBloomFilter {
     /**
      * 构造方法，创建一个指定大小和哈希函数数量的布隆过滤器
      *
-     * @param size 位数组的大小
+     * @param size             位数组的大小
      * @param numHashFunctions 哈希函数的数量
      */
     public ZYFBloomFilter(int size, int numHashFunctions) {

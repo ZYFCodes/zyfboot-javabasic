@@ -10,7 +10,7 @@ public enum Status {
     CREATED(0, "新建"),
     PROCESSING(1, "处理中"),
     COMPLETED(2, "已完成"),
-    CANCELLED (3, "已取消")      ;
+    CANCELLED(3, "已取消");
 
     private Integer code;
     private String desc;
@@ -23,24 +23,24 @@ public enum Status {
         return desc;
     }
 
-     Status(Integer code, String desc) {
+    Status(Integer code, String desc) {
         this.desc = desc;
         this.code = code;
     }
 
-    public static  Status getEnumById(Integer code) {
-        for ( Status  Status :  Status.values()) {
-            if ( Status.getCode().equals(code)) {
-                return  Status;
+    public static Status getEnumById(Integer code) {
+        for (Status Status : Status.values()) {
+            if (Status.getCode().equals(code)) {
+                return Status;
             }
         }
         return null;
     }
 
-    public static  Status getEnumByDesc(String desc) {
-        for ( Status  Status :  Status.values()) {
-            if ( Status.getDesc().equals(desc)) {
-                return  Status;
+    public static Status getEnumByDesc(String desc) {
+        for (Status Status : Status.values()) {
+            if (Status.getDesc().equals(desc)) {
+                return Status;
             }
         }
         return null;
@@ -50,7 +50,7 @@ public enum Status {
         if (null == code) {
             return false;
         }
-        for ( Status tempEnum :  Status.values()) {
+        for (Status tempEnum : Status.values()) {
             if (tempEnum.getCode().equals(code)) {
                 return true;
             }

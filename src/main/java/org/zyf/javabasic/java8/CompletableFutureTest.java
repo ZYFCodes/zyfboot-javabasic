@@ -16,27 +16,14 @@ import org.zyf.javabasic.designpatterns.responsibility.pipeline.PipelineRouteCon
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.SensitivePipelineExecutor;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidateField;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.BizType;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentAttr;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentInfoContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.*;
 import org.zyf.javabasic.java8.product.SpuSensitiveDealCommand;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -258,15 +245,15 @@ public class CompletableFutureTest {
             }
         });
         CompletableFuture<Void> sensitveHitRes2 = CompletableFuture.supplyAsync(() -> {
-                            ContentCleanResContext contentCleanResContext = sensitivePipelineExecutor.getContentCleanRes(
-                                    ContentInfoContext.builder()
-                                            .content("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰,腾讯,南京酒精")
-                                            .cleanContent("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰,腾讯,南京酒精")
-                                            .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
-                            log.info("任务一：将用户文本进行清洗，清洗结果展示【{}】", contentCleanResContext.getCleanContent());
-                            return contentCleanResContext;
+                    ContentCleanResContext contentCleanResContext = sensitivePipelineExecutor.getContentCleanRes(
+                            ContentInfoContext.builder()
+                                    .content("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰,腾讯,南京酒精")
+                                    .cleanContent("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰,腾讯,南京酒精")
+                                    .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
+                    log.info("任务一：将用户文本进行清洗，清洗结果展示【{}】", contentCleanResContext.getCleanContent());
+                    return contentCleanResContext;
 
-                        }, threadPoolExecutor)
+                }, threadPoolExecutor)
                 .thenAcceptAsync((contentCleanResInfo) -> {
                     SensitveHitContext sensitveHitContext = sensitivePipelineExecutor.getSensitveHitRes(contentCleanResInfo);
                     log.info("任务二：回调清洗结果查看数据数据命中敏感词情况，命中结果展示【{}】",
@@ -840,7 +827,7 @@ public class CompletableFutureTest {
                             .content("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰")
                             .cleanContent("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰")
                             .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
-            return contentCleanResContext.getCleanContent() + 12/0;
+            return contentCleanResContext.getCleanContent() + 12 / 0;
         }, threadPoolExecutor).whenCompleteAsync((res, excption) -> {
             log.info("异步任务成功执行,进行异步通知和保存，结果是：{},异常是：", res, excption);
         }, threadPoolExecutor);
@@ -873,10 +860,10 @@ public class CompletableFutureTest {
                             .content("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰")
                             .cleanContent("中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰")
                             .contentAttr(ContentAttr.builder().bizType(BizType.E_COMMERCE.getType()).cityCode(110010).build()).build());
-            return contentCleanResContext.getCleanContent() + 12/0;
+            return contentCleanResContext.getCleanContent() + 12 / 0;
         }, threadPoolExecutor).exceptionally(excption -> {
             /*可以感知异常，同时返回默认数据*/
-            log.info("执行发生异常，返回默认数据，并异步通知相关业务方，异常信息为：" ,excption);
+            log.info("执行发生异常，返回默认数据，并异步通知相关业务方，异常信息为：", excption);
             return "";
         });
         log.info("异步任务获取用户文本【中國張彥峰㎵㎶㎷㎸㎹㎺外賣⏳⌚⏰】清洗结果:【{}】", future.get());
@@ -1031,7 +1018,7 @@ public class CompletableFutureTest {
     /**
      * 模拟处理一个商品信息中的敏感词命中情况统计
      */
-    private String  containsSensitiveWordSpu(SpuSensitiveDealCommand spuSensitiveDealCommand) {
+    private String containsSensitiveWordSpu(SpuSensitiveDealCommand spuSensitiveDealCommand) {
         /*1.模拟从一个上传的商品信息中提炼商品内含的文本数据*/
         List<ContentInfoContext> spuContentInfos = getContentInfosBySpu();
         /*2.对商品各项数据进行校验检查*/

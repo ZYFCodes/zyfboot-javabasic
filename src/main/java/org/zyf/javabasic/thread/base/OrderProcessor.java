@@ -35,7 +35,7 @@ public class OrderProcessor {
     }
 
     @Data
-    static class Order{
+    static class Order {
         private int id;
 
         Order(int id) {

@@ -20,11 +20,11 @@ public class InvestmentStrategy {
         for (int i = 1; i <= years; i++) {
             for (int j = 0; j < products; j++) {
                 // 假设继续投资当前产品
-                dp[i][j] = dp[i-1][j] * r[j][i] - f1;
+                dp[i][j] = dp[i - 1][j] * r[j][i] - f1;
                 // 考虑转移到其他产品
                 for (int k = 0; k < products; k++) {
                     if (k != j) {
-                        dp[i][j] = Math.max(dp[i][j], dp[i-1][k] * r[j][i] - f2);
+                        dp[i][j] = Math.max(dp[i][j], dp[i - 1][k] * r[j][i] - f2);
                     }
                 }
             }

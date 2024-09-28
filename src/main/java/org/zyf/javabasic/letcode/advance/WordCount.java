@@ -72,7 +72,7 @@ public class WordCount {
         /*输出结果*/
         wordCounts.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue((a, b) -> b - a))
-                .filter(entry->entry.getValue()>3)
+                .filter(entry -> entry.getValue() > 3)
                 .limit(100)
                 .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
 

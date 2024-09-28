@@ -14,16 +14,16 @@ import java.util.List;
  * @create: 2023-12-03 22:27
  **/
 public class JoinOperator extends Operator {
-        public Object executeInner(Object[] list) throws Exception {
-            List<Object> result = new ArrayList<>();
-            for (Object opdata : list) {
-                if (opdata instanceof List) {
-                    result.addAll((List<?>) opdata);
-                } else {
-                    result.add(opdata);
-                }
+    public Object executeInner(Object[] list) throws Exception {
+        List<Object> result = new ArrayList<>();
+        for (Object opdata : list) {
+            if (opdata instanceof List) {
+                result.addAll((List<?>) opdata);
+            } else {
+                result.add(opdata);
             }
-            return result;
+        }
+        return result;
 
     }
 

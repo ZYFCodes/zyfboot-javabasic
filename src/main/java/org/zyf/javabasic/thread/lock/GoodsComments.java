@@ -39,7 +39,7 @@ public class GoodsComments {
     }
 
     //其他方法省略...
-    
+
     class Comment {
     }
 }

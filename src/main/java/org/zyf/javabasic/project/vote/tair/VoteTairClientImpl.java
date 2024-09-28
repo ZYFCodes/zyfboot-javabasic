@@ -333,6 +333,7 @@ public class VoteTairClientImpl implements TairClient {
     }
 
     /**
+     *
      */
     @Override
     public Integer incr(String key, int value, int defalutValue, int expireTime) {
@@ -365,6 +366,7 @@ public class VoteTairClientImpl implements TairClient {
     }
 
     /**
+     *
      */
     @Override
     public Integer getCounter(String key) {
@@ -423,6 +425,7 @@ public class VoteTairClientImpl implements TairClient {
     }
 
     /**
+     *
      */
     @Override
     public Boolean isKeyExsit(String key) {

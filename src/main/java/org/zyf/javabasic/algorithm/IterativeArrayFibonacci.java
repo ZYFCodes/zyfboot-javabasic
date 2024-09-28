@@ -29,7 +29,7 @@ public class IterativeArrayFibonacci {
     }
 
     public static void main(String[] args) {
-        int[] nValues = {10000, 15000, 20000,30000,40000,10000000};
+        int[] nValues = {10000, 15000, 20000, 30000, 40000, 10000000};
 
         for (int n : nValues) {
             long startTime = System.currentTimeMillis();

@@ -117,7 +117,7 @@ public enum PoiOwnerType {
             return PoiOwnerType.CKA;
         }
         /*-1 是 没有绑定品牌，相当于散点，默认它是城市   https://km.sankuai.com/page/1116486676 */
-        if (ownerType == BrandTypeEnum.CITY.getOwnerType() ||ownerType == -1 ) {
+        if (ownerType == BrandTypeEnum.CITY.getOwnerType() || ownerType == -1) {
             return PoiOwnerType.CITY;
         }
 

@@ -1,7 +1,5 @@
 package org.zyf.javabasic.algorithm;
 
-import java.math.BigDecimal;
-
 /**
  * @program: zyfboot-javabasic
  * @description: 使用初等代数推导的公式解法

@@ -161,6 +161,7 @@ public class CSDNTest {
 
     private static Set<String> getRes(int limitViewCount) {
         Set<String> res = Sets.newHashSet();
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/106080394");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/135898629");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/135887474");
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/136090309");
@@ -225,9 +226,6 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/141375167");
         //0902
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140415504");
-
-
-
 
 
         Properties prop = new Properties();

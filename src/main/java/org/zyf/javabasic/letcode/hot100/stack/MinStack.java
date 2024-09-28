@@ -12,13 +12,17 @@ public class MinStack {
     private Stack<Integer> stack;
     private Stack<Integer> minStack;
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
     public MinStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }
 
-    /** Push element val onto stack. */
+    /**
+     * Push element val onto stack.
+     */
     public void push(int val) {
         stack.push(val);
         // Push the new minimum value onto minStack
@@ -27,7 +31,9 @@ public class MinStack {
         }
     }
 
-    /** Removes the element on the top of the stack. */
+    /**
+     * Removes the element on the top of the stack.
+     */
     public void pop() {
         if (!stack.isEmpty()) {
             int top = stack.pop();
@@ -38,12 +44,16 @@ public class MinStack {
         }
     }
 
-    /** Get the top element of the stack. */
+    /**
+     * Get the top element of the stack.
+     */
     public int top() {
         return stack.peek();
     }
 
-    /** Retrieve the minimum element in the stack. */
+    /**
+     * Retrieve the minimum element in the stack.
+     */
     public int getMin() {
         return minStack.peek();
     }

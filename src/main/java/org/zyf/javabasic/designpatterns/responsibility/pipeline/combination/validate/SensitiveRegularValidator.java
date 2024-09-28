@@ -12,11 +12,7 @@ import org.zyf.javabasic.designpatterns.responsibility.pipeline.ContextHandler;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.Base64;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.constants.SensitiveCons;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.enums.SensitiveValidate;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.ContentCleanResContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.RegularTypeEnum;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitiveWord;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.SensitveHitContext;
-import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.WordRegular;
+import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.model.*;
 
 import java.util.List;
 import java.util.Map;

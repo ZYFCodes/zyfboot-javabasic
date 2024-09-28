@@ -47,7 +47,7 @@ public class LongestContinuousIncreasingSubsequence {
         int res1 = new LongestContinuousIncreasingSubsequence().lengthOfLIS(nums1);
         System.out.println(res1);
 
-        int[] nums2 = {0,1,0,3,2,3};
+        int[] nums2 = {0, 1, 0, 3, 2, 3};
         int res2 = new LongestContinuousIncreasingSubsequence().lengthOfLIS(nums2);
         System.out.println(res2);
     }

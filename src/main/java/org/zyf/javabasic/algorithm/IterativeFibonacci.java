@@ -28,7 +28,7 @@ public class IterativeFibonacci {
     }
 
     public static void main(String[] args) {
-        int[] nValues = {10000, 20000, 80000,800000,1000000,5000000,10000000,90000000};
+        int[] nValues = {10000, 20000, 80000, 800000, 1000000, 5000000, 10000000, 90000000};
 
         for (int n : nValues) {
             long startTime = System.currentTimeMillis();
@@ -36,7 +36,7 @@ public class IterativeFibonacci {
             long endTime = System.currentTimeMillis();
             long elapsedTime = endTime - startTime;
 
-            System.out.println("Fibonacci(" + n + ") = " );
+            System.out.println("Fibonacci(" + n + ") = ");
             System.out.println("程序运行时间：" + elapsedTime + " 毫秒");
         }
     }

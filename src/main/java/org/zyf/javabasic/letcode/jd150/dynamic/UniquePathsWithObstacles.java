@@ -23,19 +23,19 @@ public class UniquePathsWithObstacles {
 
         // 填充第一行
         for (int j = 1; j < n; j++) {
-            dp[0][j] = (obstacleGrid[0][j] == 0 && dp[0][j-1] == 1) ? 1 : 0;
+            dp[0][j] = (obstacleGrid[0][j] == 0 && dp[0][j - 1] == 1) ? 1 : 0;
         }
 
         // 填充第一列
         for (int i = 1; i < m; i++) {
-            dp[i][0] = (obstacleGrid[i][0] == 0 && dp[i-1][0] == 1) ? 1 : 0;
+            dp[i][0] = (obstacleGrid[i][0] == 0 && dp[i - 1][0] == 1) ? 1 : 0;
         }
 
         // 填充其余的 dp 数组
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 if (obstacleGrid[i][j] == 0) {
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
                 } else {
                     dp[i][j] = 0; // 如果有障碍物，路径数为 0
                 }
@@ -43,6 +43,6 @@ public class UniquePathsWithObstacles {
         }
 
         // 返回右下角的路径数量
-        return dp[m-1][n-1];
+        return dp[m - 1][n - 1];
     }
 }

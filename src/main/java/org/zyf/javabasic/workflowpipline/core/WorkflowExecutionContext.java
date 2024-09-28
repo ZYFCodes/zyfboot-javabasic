@@ -99,8 +99,9 @@ public class WorkflowExecutionContext implements Serializable {
 
     /**
      * 过去指定配置信息
-     * @param key 指定配置
-     * @param defaultValue 默认值
+     *
+     * @param key                指定配置
+     * @param defaultValue       默认值
      * @param scenarioIdentifier 用于标识特定场景或情景
      * @return
      */

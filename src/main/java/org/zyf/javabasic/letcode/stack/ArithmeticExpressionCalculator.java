@@ -10,22 +10,22 @@ import java.util.Stack;
 public class ArithmeticExpressionCalculator {
 
     /**
-     *
      * 要计算一个包含加减乘除的算术表达式，可以使用栈（Stack）数据结构来辅助计算。以下是一种常见的解题思路：
-     * 	1.	创建两个栈，一个用于存储操作数（Operand Stack），一个用于存储运算符（Operator Stack）。
-     * 	2.	从左到右依次遍历表达式的每个字符。
-     * 	3.	如果当前字符是数字，则将其解析为操作数，并将操作数入栈到 Operand Stack。
-     * 	4.	如果当前字符是运算符，则执行以下步骤：
-     * 	•	a. 如果 Operator Stack 为空，或者栈顶运算符是左括号 ‘(’，则将当前运算符入栈到 Operator Stack。
-     * 	•	b. 如果当前运算符优先级大于栈顶运算符优先级，或者栈顶运算符是左括号 ‘(’，则将当前运算符入栈到 Operator Stack。
-     * 	•	c. 否则，从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到满足条件 b，然后将当前运算符入栈到 Operator Stack。
-     * 	•	注意：在比较运算符优先级时，可以使用一定的约定，例如将加法和减法设定为优先级较低，乘法和除法设定为优先级较高。
-     * 	5.	如果当前字符是左括号 ‘(’，则将其入栈到 Operator Stack。
-     * 	6.	如果当前字符是右括号 ‘)’，则执行以下步骤：
-     * 	•	a. 从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到遇到左括号 ‘(’，将其从 Operator Stack 弹出并丢弃。
-     * 	7.	遍历完表达式后，执行以下步骤：
-     * 	•	a. 如果 Operator Stack 不为空，则从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到 Operator Stack 为空。
-     * 	•	b. 最后 Operand Stack 中剩下的唯一元素就是表达式的最终结果。
+     * 1.	创建两个栈，一个用于存储操作数（Operand Stack），一个用于存储运算符（Operator Stack）。
+     * 2.	从左到右依次遍历表达式的每个字符。
+     * 3.	如果当前字符是数字，则将其解析为操作数，并将操作数入栈到 Operand Stack。
+     * 4.	如果当前字符是运算符，则执行以下步骤：
+     * •	a. 如果 Operator Stack 为空，或者栈顶运算符是左括号 ‘(’，则将当前运算符入栈到 Operator Stack。
+     * •	b. 如果当前运算符优先级大于栈顶运算符优先级，或者栈顶运算符是左括号 ‘(’，则将当前运算符入栈到 Operator Stack。
+     * •	c. 否则，从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到满足条件 b，然后将当前运算符入栈到 Operator Stack。
+     * •	注意：在比较运算符优先级时，可以使用一定的约定，例如将加法和减法设定为优先级较低，乘法和除法设定为优先级较高。
+     * 5.	如果当前字符是左括号 ‘(’，则将其入栈到 Operator Stack。
+     * 6.	如果当前字符是右括号 ‘)’，则执行以下步骤：
+     * •	a. 从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到遇到左括号 ‘(’，将其从 Operator Stack 弹出并丢弃。
+     * 7.	遍历完表达式后，执行以下步骤：
+     * •	a. 如果 Operator Stack 不为空，则从 Operator Stack 弹出栈顶运算符，从 Operand Stack 弹出两个操作数，进行相应的计算，并将结果入栈到 Operand Stack。重复该步骤直到 Operator Stack 为空。
+     * •	b. 最后 Operand Stack 中剩下的唯一元素就是表达式的最终结果。
+     *
      * @param expression
      * @return
      */

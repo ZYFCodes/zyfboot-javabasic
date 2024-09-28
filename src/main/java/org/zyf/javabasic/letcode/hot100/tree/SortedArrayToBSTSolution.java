@@ -2,9 +2,7 @@ package org.zyf.javabasic.letcode.hot100.tree;
 
 import org.zyf.javabasic.letcode.tree.base.TreeNode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**

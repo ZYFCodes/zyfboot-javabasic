@@ -34,7 +34,7 @@ public class ZYFThreadPool {
      * 提交Callable有Future值的任务
      */
     public static <T> Future<T> submitCallableTask(Callable<T> task, ResultType topicType) {
-        log.info("当前提交任务处理类型为：{}-{}",topicType,topicType.getDescription());
+        log.info("当前提交任务处理类型为：{}-{}", topicType, topicType.getDescription());
         try {
             return ZYF_EXECUTOR.submit(task);
         } catch (Exception e) {

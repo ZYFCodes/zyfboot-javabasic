@@ -60,7 +60,7 @@ public final class ExecutionNode {
      * @return
      */
     private static List<ExecutionNode> buildExecutionNode(String name, List<ExecutionNode> executionNodes, Stack<ExecutionNode> parents,
-                                                    Iterator<String> tailWorkerNames) {
+                                                          Iterator<String> tailWorkerNames) {
         if (null == parents) {
             parents = new Stack<>();
         }

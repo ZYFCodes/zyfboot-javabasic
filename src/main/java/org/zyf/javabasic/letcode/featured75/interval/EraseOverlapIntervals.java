@@ -38,13 +38,13 @@ public class EraseOverlapIntervals {
         EraseOverlapIntervals solution = new EraseOverlapIntervals();
 
         // 示例测试用例
-        int[][] intervals1 = {{1,2},{2,3},{3,4},{1,3}};
+        int[][] intervals1 = {{1, 2}, {2, 3}, {3, 4}, {1, 3}};
         System.out.println(solution.eraseOverlapIntervals(intervals1)); // 输出: 1
 
-        int[][] intervals2 = {{1,2},{1,2},{1,2}};
+        int[][] intervals2 = {{1, 2}, {1, 2}, {1, 2}};
         System.out.println(solution.eraseOverlapIntervals(intervals2)); // 输出: 2
 
-        int[][] intervals3 = {{1,2},{2,3}};
+        int[][] intervals3 = {{1, 2}, {2, 3}};
         System.out.println(solution.eraseOverlapIntervals(intervals3)); // 输出: 0
     }
 }

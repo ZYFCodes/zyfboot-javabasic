@@ -32,10 +32,10 @@ public class MaxAreaSolution {
     public static void main(String[] args) {
         MaxAreaSolution solution = new MaxAreaSolution();
 
-        int[] height1 = {1,8,6,2,5,4,8,3,7};
+        int[] height1 = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         System.out.println(solution.maxArea(height1)); // 输出: 49
 
-        int[] height2 = {1,1};
+        int[] height2 = {1, 1};
         System.out.println(solution.maxArea(height2)); // 输出: 1
     }
 }

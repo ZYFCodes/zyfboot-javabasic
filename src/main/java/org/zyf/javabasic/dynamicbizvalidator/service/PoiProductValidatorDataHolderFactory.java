@@ -6,20 +6,11 @@ import com.google.common.collect.Sets;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPackageSkuRel;
-import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiPackageSkuRel;
-import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiSku;
-import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiSpu;
-import org.zyf.javabasic.dynamicbizvalidator.basedata.ProductPoiTag;
+import org.zyf.javabasic.dynamicbizvalidator.basedata.*;
 import org.zyf.javabasic.dynamicbizvalidator.content.PoiProductValidatorDataHolder;
 
 import javax.annotation.Resource;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**

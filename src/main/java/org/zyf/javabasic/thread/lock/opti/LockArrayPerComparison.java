@@ -12,6 +12,7 @@ public class LockArrayPerComparison {
     private static final int NUM_SEGMENTS = 10;
     private static final int SEGMENT_SIZE = 1000;
     private static final int ARRAY_SIZE = NUM_SEGMENTS * SEGMENT_SIZE;
+
     public static void main(String[] args) throws InterruptedException {
         SegmentLockArray array = new SegmentLockArray();
         int numThreads = 100;

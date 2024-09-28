@@ -5,7 +5,7 @@ package org.zyf.javabasic.designpatterns.state;
  * @description 等待支付状态处理
  * @date 2020/5/24  23:19
  */
-public class WaitingForPayState extends OrderState{
+public class WaitingForPayState extends OrderState {
     public WaitingForPayState(PDDOrder order) {
         super(order);
     }

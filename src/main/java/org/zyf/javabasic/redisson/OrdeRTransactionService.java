@@ -1,7 +1,10 @@
 package org.zyf.javabasic.redisson;
 
 import org.redisson.Redisson;
-import org.redisson.api.*;
+import org.redisson.api.RLock;
+import org.redisson.api.RTransaction;
+import org.redisson.api.RedissonClient;
+import org.redisson.api.TransactionOptions;
 import org.redisson.config.Config;
 
 /**

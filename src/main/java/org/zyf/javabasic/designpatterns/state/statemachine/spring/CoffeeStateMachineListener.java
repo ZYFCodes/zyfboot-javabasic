@@ -7,7 +7,7 @@ import org.springframework.statemachine.state.State;
 /**
  * @author yanfengzhang
  * @description 定义状态机的动作
- *              定义了一个状态机监听器，它可以在状态机状态发生变化或者事件不被接受时输出一些信息
+ * 定义了一个状态机监听器，它可以在状态机状态发生变化或者事件不被接受时输出一些信息
  * @date 2020/5/26  23:17
  */
 public class CoffeeStateMachineListener extends StateMachineListenerAdapter<States, Events> {

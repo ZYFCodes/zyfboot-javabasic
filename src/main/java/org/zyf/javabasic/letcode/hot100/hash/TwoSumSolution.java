@@ -21,7 +21,7 @@ public class TwoSumSolution {
             // 检查补数是否在哈希表中
             if (numMap.containsKey(complement)) {
                 // 如果补数在哈希表中，返回补数的下标和当前元素的下标
-                return new int[] { numMap.get(complement), i };
+                return new int[]{numMap.get(complement), i};
             }
 
             // 如果补数不在哈希表中，将当前元素和下标加入哈希表

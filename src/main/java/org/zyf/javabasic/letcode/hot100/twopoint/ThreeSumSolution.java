@@ -55,13 +55,13 @@ public class ThreeSumSolution {
     public static void main(String[] args) {
         ThreeSumSolution solution = new ThreeSumSolution();
 
-        int[] nums1 = {-1,0,1,2,-1,-4};
+        int[] nums1 = {-1, 0, 1, 2, -1, -4};
         System.out.println(solution.threeSum(nums1)); // 输出: [[-1,-1,2],[-1,0,1]]
 
-        int[] nums2 = {0,1,1};
+        int[] nums2 = {0, 1, 1};
         System.out.println(solution.threeSum(nums2)); // 输出: []
 
-        int[] nums3 = {0,0,0};
+        int[] nums3 = {0, 0, 0};
         System.out.println(solution.threeSum(nums3)); // 输出: [[0,0,0]]
     }
 }

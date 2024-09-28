@@ -45,6 +45,7 @@ public class ZYFThreadPoolExecutor extends ThreadPoolExecutor {
 
     static class TraceableRunnable implements Runnable {
         final Runnable innerTask;
+
         public TraceableRunnable(Runnable innerTask) {
             this.innerTask = innerTask;
         }

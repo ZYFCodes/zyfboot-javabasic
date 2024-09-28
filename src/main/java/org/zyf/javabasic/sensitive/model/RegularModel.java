@@ -8,14 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.zyf.javabasic.designpatterns.responsibility.pipeline.combination.base.Base64;
-import org.zyf.javabasic.sensitive.base.SensitiveValidateTypeEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveWordTypeEnum;
-import org.zyf.javabasic.sensitive.base.SensitiveWordWithMuslim;
-import org.zyf.javabasic.sensitive.base.SensitiveWordWithQua;
-import org.zyf.javabasic.sensitive.base.SensitiveWordWithType;
-import org.zyf.javabasic.sensitive.base.ValidateResult;
-import org.zyf.javabasic.sensitive.base.ValidateRule;
-import org.zyf.javabasic.sensitive.base.WordDomain;
+import org.zyf.javabasic.sensitive.base.*;
 import org.zyf.javabasic.sensitive.service.BusinessIdentityService;
 import org.zyf.javabasic.sensitive.service.MuslimDealService;
 

@@ -8,10 +8,10 @@ import org.zyf.javabasic.letcode.list.base.ListNode;
  * 示例 1:输入:1->1->2->2->3->4->4 输出：3
  * 示例 2:输入: 1->1->2->3->3.输出: 2
  * 示例 3:输入:1->2 ->2 ->2 ->5 ->2 ->3 ->3 ->9,输出1 ->5 ->2 ->9
- *  * 注意
- *  * 1.不考虑删除之后在连续重复的元素，如2 ->3 ->3 ->2，处理后为2 ->2
- *  * 2.空间复杂度O(1)
- *  * 写一个函数实现该功能
+ * * 注意
+ * * 1.不考虑删除之后在连续重复的元素，如2 ->3 ->3 ->2，处理后为2 ->2
+ * * 2.空间复杂度O(1)
+ * * 写一个函数实现该功能
  * @date 2023/7/28  23:53
  */
 public class DeleteDuplicatesII {
@@ -80,12 +80,12 @@ public class DeleteDuplicatesII {
         ListNode head2 = new ListNode(1);
         head2.next = new ListNode(2);
         head2.next.next = new ListNode(2);
-        head2.next.next.next=new ListNode(2);
-        head2.next.next.next.next=new ListNode(5);
-        head2.next.next.next.next.next=new ListNode(2);
-        head2.next.next.next.next.next.next=new ListNode(3);
-        head2.next.next.next.next.next.next.next=new ListNode(3);
-        head2.next.next.next.next.next.next.next.next=new ListNode(9);
+        head2.next.next.next = new ListNode(2);
+        head2.next.next.next.next = new ListNode(5);
+        head2.next.next.next.next.next = new ListNode(2);
+        head2.next.next.next.next.next.next = new ListNode(3);
+        head2.next.next.next.next.next.next.next = new ListNode(3);
+        head2.next.next.next.next.next.next.next.next = new ListNode(9);
 
         ListNode newHead2 = new DeleteDuplicatesII().deleteDuplicates(head2);
         newHead2.traverseList(newHead2);

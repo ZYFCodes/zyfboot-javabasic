@@ -1,9 +1,9 @@
 package org.zyf.javabasic.project.vote.attitude;
 
-import org.zyf.javabasic.project.vote.model.attitud.AttitudeVo;
 import org.zyf.javabasic.project.vote.model.attitud.AttitudeMakeReq;
 import org.zyf.javabasic.project.vote.model.attitud.AttitudeQueryReq;
 import org.zyf.javabasic.project.vote.model.attitud.AttitudeShowRes;
+import org.zyf.javabasic.project.vote.model.attitud.AttitudeVo;
 
 import java.util.List;
 

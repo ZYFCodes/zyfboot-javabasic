@@ -47,6 +47,7 @@ public class MaxScore {
 
         return ans;
     }
+
     public static void main(String[] args) {
         MaxScore sol = new MaxScore();
 

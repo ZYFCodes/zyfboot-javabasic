@@ -164,15 +164,15 @@ public class MatrixMultiplication {
         //模拟打印几行验证下
         int total = matrix.length;
         int printrows = 1;
-        if(total<printrows){
+        if (total < printrows) {
             return;
         }
         for (int[] row : matrix) {
-            if(printrows<1){
+            if (printrows < 1) {
                 break;
             }
-            if(row.length>8){
-                int[] newrow = Arrays.copyOfRange(row,0,7);
+            if (row.length > 8) {
+                int[] newrow = Arrays.copyOfRange(row, 0, 7);
                 System.out.println(Arrays.toString(newrow));
             }
             printrows--;

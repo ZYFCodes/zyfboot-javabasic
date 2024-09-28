@@ -14,10 +14,10 @@ public class QLExpressCompileExample {
         try {
             ExpressRunner runner = new ExpressRunner(true, true);
             DefaultContext<String, Object> context = new DefaultContext<>();
-            context.put("语文",120);
-            context.put("数学",23);
-            context.put("英语",23);
-            context.put("综合考试",235);
+            context.put("语文", 120);
+            context.put("数学", 23);
+            context.put("英语", 23);
+            context.put("综合考试", 235);
 
             // 定义脚本
             String express = "double 平均分 = (语文 + 数学 + 英语 + 综合考试) / 4.0; return 平均分";

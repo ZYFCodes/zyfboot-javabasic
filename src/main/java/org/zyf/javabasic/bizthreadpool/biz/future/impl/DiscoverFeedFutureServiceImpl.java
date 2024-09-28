@@ -20,21 +20,21 @@ import java.util.concurrent.Callable;
 public class DiscoverFeedFutureServiceImpl implements DiscoverFeedFutureService {
     @Override
     public DiscoverFeedFuture queryTypesAsync(Callable<?> callable, ResultType topicType) {
-        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable,topicType)).build();
+        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable, topicType)).build();
     }
 
     @Override
     public DiscoverFeedFuture sortInterventionAsync(Callable<?> callable, ResultType topicType) {
-        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable,topicType)).build();
+        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable, topicType)).build();
     }
 
     @Override
     public DiscoverFeedFuture fallbackAsync(Callable<?> callable, ResultType topicType) {
-        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable,topicType)).build();
+        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable, topicType)).build();
     }
 
     @Override
     public DiscoverFeedFuture mergeResultsAsync(Callable<?> callable, ResultType topicType) {
-        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable,topicType)).build();
+        return DiscoverFeedFuture.builder().resultType(topicType).future(ZYFThreadPool.submitCallableTask(callable, topicType)).build();
     }
 }
