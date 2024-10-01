@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  **/
 public class CSDNSubmitOneTest {
     public static void main(String[] args) {
-        String articleId = "105124900";
+        String articleId = "105078547";
         String cookie = "";
         cookie = "";
         cookie = "";
