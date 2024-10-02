@@ -226,6 +226,8 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/141375167");
         //0902
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140415504");
+        //1002
+        res.add("https://blog.csdn.net/xiaofeng10330111/article/details/142446131");
 
 
         Properties prop = new Properties();
