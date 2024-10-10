@@ -1,0 +1,4199 @@
+[
+  {
+    "articleId": 105148032,
+    "title": "领域驱动设计实战：构建高效的在线请假考勤系统",
+    "description": "领域驱动设计DDD是一种设计思想，它可以同时指导中台业务建模和微服务设计(中台本质是业务模型，微服务是业务模型的系统落地)，领域驱动设计强调领域模型和微服务设计的一体性，先有领域模型然后才有微服务，而不是脱离领域模型来谈微服务设计。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105148032",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1655511,
+    "commentCount": 782,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105148032",
+    "postTime": "2020-03-27 19:04:30",
+    "diggCount": 118,
+    "formatTime": "2020.03.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/2020040218090462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 149
+  },
+  {
+    "articleId": 105124900,
+    "title": "微服务与领域驱动设计：构建高内聚低耦合系统的指南",
+    "description": "领域驱动设计DDD是一种设计思想，它可以同时指导中台业务建模和微服务设计(中台本质是业务模型，微服务是业务模型的系统落地)，领域驱动设计强调领域模型和微服务设计的一体性，先有领域模型然后才有微服务，而不是脱离领域模型来谈微服务设计。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105124900",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1724388,
+    "commentCount": 416,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105124900",
+    "postTime": "2020-03-26 18:34:46",
+    "diggCount": 124,
+    "formatTime": "2020.03.26",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200331183940976.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 457
+  },
+  {
+    "articleId": 105078547,
+    "title": "驾驭复杂性：领域驱动设计的核心理论分析",
+    "description": "领域驱动实践基本理论总结与分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105078547",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1652932,
+    "commentCount": 1523,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105078547",
+    "postTime": "2020-03-24 19:03:13",
+    "diggCount": 87,
+    "formatTime": "2020.03.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200326111204680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 176
+  },
+  {
+    "articleId": 87272559,
+    "title": "深入解析Spring Cloud Config：多样配置中心的实现与高可用策略",
+    "description": "这篇文章探讨了配置中心的重要性及其在分布式系统中的应用，特别关注Spring Cloud Config。文章首先介绍了配置中心的由来、功能及选择标准，然后详细阐述了Spring Cloud Config的基本实现方法，包括结合Git、关系型数据库（MySQL）和非关系型数据库（MongoDB）的方案。此外，还讨论了配置中心的高可用性、客户端自动刷新机制及安全认证等扩展功能。最后，文章对比了Spring Cloud Config与Apollo的特性，强调Apollo在企业级应用中的优势。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87272559",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1639215,
+    "commentCount": 1201,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87272559",
+    "postTime": "2019-02-14 14:36:20",
+    "diggCount": 54,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190630231848136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 103
+  },
+  {
+    "articleId": 87272495,
+    "title": "全面解读Spring Cloud Zuul：从配置到优化的实战指南",
+    "description": "在微服务架构中，API网关作为核心组件之一，承担着请求路由、负载均衡、安全认证等重要功能。Spring Cloud Zuul作为一款功能强大的API网关解决方案，得到了广泛应用。本文将深入探讨Spring Cloud Zuul的各项功能，从基础配置到工作原理，再到多层负载和应用优化，全面解析其在实际应用中的最佳实践与实用技巧，为开发者提供一站式指导，助力其打造高性能、高可用的微服务架构。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87272495",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1645085,
+    "commentCount": 474,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87272495",
+    "postTime": "2019-02-14 14:35:42",
+    "diggCount": 80,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190415234103769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 158
+  },
+  {
+    "articleId": 87272248,
+    "title": "深入理解Spring Cloud Feign与Ribbon：优雅的微服务调用解决方案",
+    "description": "在现代的分布式系统中，微服务架构已经成为了构建大型应用的主流方式。而在微服务架构中，服务间的通信尤为重要，直接影响到系统的稳定性和性能。Spring Cloud作为领先的微服务解决方案，提供了Feign和Ribbon这两个强大的工具，用于简化和优化服务间的调用和负载均衡。本文将探讨Spring Cloud Feign和Ribbon的工作原理及其在实际应用中的最佳实践，帮助开发者更好地理解和利用这些工具来构建可靠的微服务系统。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87272248",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1641259,
+    "commentCount": 594,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87272248",
+    "postTime": "2019-02-14 14:32:18",
+    "diggCount": 69,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNDEyNjUxOS1mYWNiODkwZGUwNWQzZDJlLnBuZw?x-oss-process=image/format,png"
+    ],
+    "collectCount": 191
+  },
+  {
+    "articleId": 87271881,
+    "title": "深入理解服务发现与注册：从单体架构到微服务时代的演进",
+    "description": "本文首先回顾了服务发现与注册技术在不同系统架构时代的应用演进，分析了单体架构、SOA架构和现代微服务架构下的实现方式和挑战。随后，文章详细介绍了服务发现与注册的技术选型，并深入探讨了Eureka作为一种基于AP原则的服务注册中心的设计理念，包括其如何解决服务实例注册、剔除和信息一致性问题。接着，本文分析了Eureka的基本架构和细化结构，包括注册中心服务器、服务提供者和消费者的角色和功能。最后，文章讨论了Eureka的高可用方案、区域亲和性以及参数调优与监控策略，帮助读者更好地理解和应用这一关键技术组件来构",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87271881",
+    "type": 1,
+    "top": true,
+    "forcePlan": false,
+    "viewCount": 1642612,
+    "commentCount": 453,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87271881",
+    "postTime": "2019-02-14 14:28:33",
+    "diggCount": 54,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190218112910193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 102
+  },
+  {
+    "articleId": 140415504,
+    "title": "分布式系统中的Dapper与Twitter Zipkin：链路追踪技术的实现与应用",
+    "description": "本文深入探讨了Dapper和Zipkin作为分布式系统中关键的链路追踪工具的演进与应用。Dapper作为Google的开创性作品，通过精确的时间戳和分布式日志记录，革新了对分布式系统性能问题的诊断能力。而Zipkin则以其开放性和社区驱动的特性，成为了广泛采用的开源解决方案，支持多语言、多协议的链路追踪需求。文章详细分析了它们在微服务架构中的实际应用，包括如何通过追踪和监控分布式调用路径，提升系统的可观察性和性能优化的能力。最后，通过案例研究和技术评估，展示了如何利用这些工具解决复杂的分布式系统问题，为开发",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140415504",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 3394,
+    "commentCount": 52,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140415504",
+    "postTime": "2024-09-30 08:54:59",
+    "diggCount": 88,
+    "formatTime": "2024.09.30",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/41a207561c3747f5b638634f7955d53d.png"
+    ],
+    "collectCount": 47
+  },
+  {
+    "articleId": 142446131,
+    "title": "深入理解MySQL InnoDB中的B+索引机制",
+    "description": "InnoDB中的索引是提高数据检索效率的关键。本文介绍了三种主要索引类型：聚簇索引：基于主键排序存储完整的用户记录，适合快速主键查询和范围查询。二级索引：基于非主键列排序，提升非主键查询性能，但需要回表操作。联合索引：基于多个列排序，适用于复杂查询，能够显著提升多列条件查询的效率。通过合理使用和配置这些索引，能有效提升数据库查询和数据操作的性能。理解索引的工作机制和最佳实践，对于优化MySQL数据库性能至关重要。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/142446131",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1957,
+    "commentCount": 9,
+    "editUrl": "https://mp.csdn.net/console/editor/html/142446131",
+    "postTime": "2024-09-30 08:54:42",
+    "diggCount": 33,
+    "formatTime": "2024.09.30",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/484c553ce73b4ef0b2347ba2980693ae.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 141401712,
+    "title": "LeetCode 热题 100 回顾",
+    "description": "力扣最受刷题发烧友欢迎的 100 道题LeetCode 热题 100 : 题目回顾、解题思路、复杂度分析、代码实现、验证算法",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/141401712",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 7090,
+    "commentCount": 611,
+    "editUrl": "https://mp.csdn.net/console/editor/html/141401712",
+    "postTime": "2024-09-23 10:20:44",
+    "diggCount": 161,
+    "formatTime": "2024.09.23",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e02715f324ce4931bad7631d6a12bf08.png"
+    ],
+    "collectCount": 69
+  },
+  {
+    "articleId": 141503823,
+    "title": "LeetCode 面试经典 150 题回顾",
+    "description": "最经典 150 题，掌握面试所有知识点面试经典 150 题 : 题目分析、解题思路、复杂度分析、代码展示",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/141503823",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 5872,
+    "commentCount": 62,
+    "editUrl": "https://mp.csdn.net/console/editor/html/141503823",
+    "postTime": "2024-09-23 10:17:16",
+    "diggCount": 122,
+    "formatTime": "2024.09.23",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/3d831fe18f8c4495978ba7d864b6b68c.png"
+    ],
+    "collectCount": 44
+  },
+  {
+    "articleId": 132390106,
+    "title": "快速学习GO语言总结",
+    "description": "针对有一定计算机语言基础人员快速掌握go语言，直接快速开始学习之旅",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/132390106",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16429,
+    "commentCount": 80,
+    "editUrl": "https://mp.csdn.net/console/editor/html/132390106",
+    "postTime": "2024-09-04 00:38:24",
+    "diggCount": 50,
+    "formatTime": "2024.09.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/df7264c6b6fd40cba15da4354286e678.png"
+    ],
+    "collectCount": 45
+  },
+  {
+    "articleId": 86596036,
+    "title": "探索CompletableFuture：高效异步编程的利器",
+    "description": "随着现代软件系统的复杂性和用户需求的多样化，异步编程成为了提升系统性能和响应速度的重要手段。在Java领域，CompletableFuture作为Java 8引入的新特性，提供了强大的异步编程能力，极大地简化了多线程和并发任务的处理。本文将深入探讨CompletableFuture的基本功能和使用方法，介绍如何利用其提升程序的并发性能和代码的可维护性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86596036",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1659457,
+    "commentCount": 44,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86596036",
+    "postTime": "2024-08-27 21:01:03",
+    "diggCount": 65,
+    "formatTime": "2024.08.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/c950725885134d94b2dcc7384e848006.png"
+    ],
+    "collectCount": 72
+  },
+  {
+    "articleId": 141469870,
+    "title": "LeetCode 精选 75 回顾",
+    "description": "LeetCode 75 面试必考精华版回顾练习: 重新审视题目，对其进行解题思路分析、算法复杂度分析、代码实现以及结果验证",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/141469870",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 4513,
+    "commentCount": 60,
+    "editUrl": "https://mp.csdn.net/console/editor/html/141469870",
+    "postTime": "2024-08-26 00:40:55",
+    "diggCount": 29,
+    "formatTime": "2024.08.26",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e5447710b9674e97b4d6a0434d304e41.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 130466437,
+    "title": "CompletableFuture回调机制的设计与实现",
+    "description": "CompletableFuture回调机制的设计与实现：首先分析Future原理总述与局限性，再次分析CompletableFuture原理与回调机制总结，最后从类图分析、整体流程分析和算法实现分析CompletableFuture回调机制设计，结尾给出简单的使用CompletableFuture注意方面",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130466437",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17597,
+    "commentCount": 52,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130466437",
+    "postTime": "2024-08-22 09:42:02",
+    "diggCount": 52,
+    "formatTime": "2024.08.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8d0707b14d954d9998b2fa4c99c6be4e.png"
+    ],
+    "collectCount": 59
+  },
+  {
+    "articleId": 141375167,
+    "title": "如何在分布式环境中实现高可靠性分布式锁",
+    "description": "通过选择合适的分布式锁实现方式，可以有效提升系统的可靠性和一致性，确保业务逻辑的正确执行。在实际应用中，需要根据具体场景选择合适的实现方式，并进行适当的优化和调整，以应对分布式环境下的复杂挑战。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/141375167",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 5771,
+    "commentCount": 52,
+    "editUrl": "https://mp.csdn.net/console/editor/html/141375167",
+    "postTime": "2024-08-22 09:32:37",
+    "diggCount": 92,
+    "formatTime": "2024.08.22",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/6dac90ebb27e4f688c14b64e276a6b68.png"
+    ],
+    "collectCount": 36
+  },
+  {
+    "articleId": 141116820,
+    "title": "深入InnoDB核心：揭秘B+树在数据库索引中的高效应用",
+    "description": "本文详细介绍了InnoDB存储引擎中B+树的结构和应用。首先，我们探讨了数据页和目录项记录的存储方式及其紧密关联。接着，解析了在未创建索引情况下的查找过程及其低效性，进而引出B+树索引方案。通过多级目录和高效节点管理，B+树实现了快速的数据查找和管理，通常不超过四层的树结构足以满足大部分应用需求。最后，总结了B+树在InnoDB中的重要性和优势，使得数据库系统在面对复杂查询时依然能够保持高效运作，为数据库性能提供了有力保障。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/141116820",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 11455,
+    "commentCount": 558,
+    "editUrl": "https://mp.csdn.net/console/editor/html/141116820",
+    "postTime": "2024-08-12 07:57:24",
+    "diggCount": 121,
+    "formatTime": "2024.08.12",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/b5c5be4507d342baab1b2b3bd502d19d.png"
+    ],
+    "collectCount": 64
+  },
+  {
+    "articleId": 140916579,
+    "title": "聚焦IOC容器刷新环节postProcessBeanFactory（BeanFactory后置处理）专项",
+    "description": "在很早之前我们单独写过一篇文章《分析SpringBoot启动配置原理》，具体可见：解析SpringBoot启动配置原理其中IOC容器的刷新环节可当重点分析，值得在读源码时进行深入分析，我们会从多个方向上再次进行分析回顾和学习。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140916579",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 10106,
+    "commentCount": 181,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140916579",
+    "postTime": "2024-08-05 07:32:49",
+    "diggCount": 83,
+    "formatTime": "2024.08.05",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/282e69e6c6a4443d92d533603ee19a5a.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 140759153,
+    "title": "全面击破工程级复杂缓存难题",
+    "description": "本文详细探讨了缓存技术在现代分布式系统中的应用与优化，涵盖本地缓存与分布式缓存的基本概念和实际应用。分析了旁路缓存模式、读写穿透模式和异步写缓存模式，并从强一致性和最终一致性两个角度提出解决方案。针对缓存穿透、缓存雪崩、缓存击穿和热点key问题，提出了多级缓存、多副本、热点key拆分等策略。最后，介绍了本地缓存+双缓存方案，通过主备缓存切换、数据总线重试机制和自动校对任务，确保系统高可用性和数据一致性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140759153",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 13969,
+    "commentCount": 388,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140759153",
+    "postTime": "2024-07-29 00:36:49",
+    "diggCount": 132,
+    "formatTime": "2024.07.29",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/a891b03331c54b55a885fb8117444d07.png"
+    ],
+    "collectCount": 49
+  },
+  {
+    "articleId": 133500057,
+    "title": "简单走近ChatGPT",
+    "description": "主要涵盖了ChatGPT的背景、NLP学习范式的演进、预训练方法的详细介绍以及OpenAI的GPT系列模型的概述。旨在提供一个全面的认知和理解，以帮助读者更好地了解ChatGPT以及与之相关的NLP领域的发展。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133500057",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 14376,
+    "commentCount": 346,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133500057",
+    "postTime": "2024-07-22 00:09:27",
+    "diggCount": 45,
+    "formatTime": "2024.07.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/e011c44519ad441888629fba13b3f20c.png"
+    ],
+    "collectCount": 43
+  },
+  {
+    "articleId": 140596544,
+    "title": "聚焦IOC容器刷新环节prepareBeanFactory专项",
+    "description": "在很早之前我们单独写过一篇文章《分析SpringBoot启动配置原理》，其中IOC容器的刷新环节可当重点分析，值得在读源码时进行深入分析，我们会从多个方向上再次进行分析回顾和学习。本次讲聚焦其中的prepareBeanFactory专项展开分析。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140596544",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 14724,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140596544",
+    "postTime": "2024-07-22 00:05:25",
+    "diggCount": 107,
+    "formatTime": "2024.07.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/6eca5feab7fa48ffbef0eb029c4ce1de.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 140451190,
+    "title": "解读InnoDB数据库索引页与数据行的紧密关联",
+    "description": "首先介绍了索引页结构的重要组成部分，包括文件头部、页面头部、最小和最大记录等。接着详细解释了数据页的双向链表结构和记录行的单向链表结构，揭示了它们在数据库中的作用和关系。特别关注了User Records在页面空间管理中的应用，包括页满前和页满后的处理策略。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140451190",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17197,
+    "commentCount": 27,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140451190",
+    "postTime": "2024-07-15 22:56:07",
+    "diggCount": 109,
+    "formatTime": "2024.07.15",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/953f337ca0a04f2b9a1150566c92efb1.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 140255023,
+    "title": "互联网数字化商品管理浪潮思考：从信息化到精准运营",
+    "description": "从技术角度来看，从运营百万商家到管理数十亿商品，平台必须依靠数据化手段进行商品管理。通过数据化重构人、货、场的关系，优化流量分配和精准营销，使数据成为连接商业环节的最佳语言，最终提升平台的整体流量价值和用户体验。通过这些策略的实施，电商平台能够实现从“商”到“品”的成功转型，更好地满足市场需求，提升竞争力。从过去以“运营商家”为核心的策略，逐步转变为以“运营商品”为导向的模式。这种转变要求我们重新定义运营重点，针对不同品类的特性，制定相应的优化策略。一、商品数字化转型面临的现状分析。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140255023",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18344,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140255023",
+    "postTime": "2024-07-08 00:17:52",
+    "diggCount": 116,
+    "formatTime": "2024.07.08",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/4a480c309c384f798f928a803e47163a.png"
+    ],
+    "collectCount": 42
+  },
+  {
+    "articleId": 140254995,
+    "title": "投资策略规划最优决策分析",
+    "description": "本文深入探讨了投资策略规划问题，从理论到实践，全面分析了如何在既定规则下最大化投资回报。我们首先通过状态转移方程和初始条件证明了最优投资策略，即每年将所有资金投入到单一投资产品中。接着，证明了规划最优投资策略问题具有最优子结构性质，并设计了最优投资策略规划算法，详细分析了其时间复杂度。最后，我们引入了新的投资限制条件，证明了在这种情况下，最大化10年回报问题不再具有最优子结构性质。通过这些分析，我们展示了理论优化策略与实际约束条件下的投资决策之间的差异，为投资者提供了宝贵的实践参考。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140254995",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16791,
+    "commentCount": 28,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140254995",
+    "postTime": "2024-07-08 00:15:45",
+    "diggCount": 25,
+    "formatTime": "2024.07.08",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/13b768fa916f471aa1271e94f00925f5.png"
+    ],
+    "collectCount": 28
+  },
+  {
+    "articleId": 140089178,
+    "title": "如何在面试中找到最优秀的候选人：雇佣问题的随机化算法探索",
+    "description": "本文探讨了雇佣问题及其解决方案中的随机化算法应用。雇佣问题要求在一系列不可回溯的面试中找到最优秀的候选人，传统贪心策略存在局限性。随机化算法通过随机排列和预面试期的引入，有效地提高了找到最佳候选人的概率。通过数学推导和实际模拟，我们验证了随机化算法在这一问题中的有效性，为面试和招聘过程中决策的优化提供了新的思路和方法。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140089178",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17586,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140089178",
+    "postTime": "2024-07-01 01:38:33",
+    "diggCount": 24,
+    "formatTime": "2024.07.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/73e931f6ac32494e8e285723cef8c122.png"
+    ],
+    "collectCount": 27
+  },
+  {
+    "articleId": 140088827,
+    "title": "高并发场景下的热点key问题探析与应对策略",
+    "description": "当今高并发场景下，热点key问题成为影响系统性能和稳定性的关键挑战。本文探讨了热点key问题的定义及其在分布式系统中的常见表现，如流量集中、缓存分片打垮等。针对这些问题，本文提出了多级缓存策略、多副本策略和热点key拆分与动态分散策略作为有效应对措施。这些策略不仅能显著减轻单点负载压力，还能提升系统的并发处理能力和整体稳定性，从而保障系统在高负载和复杂业务场景下的可靠性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140088827",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19536,
+    "commentCount": 309,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140088827",
+    "postTime": "2024-07-01 00:03:49",
+    "diggCount": 93,
+    "formatTime": "2024.07.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/c7d6f84790c44027b2ff00e619012139.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 139909065,
+    "title": "探究InnoDB Compact行格式背后",
+    "description": "本次我们聚焦 InnoDB 行格式，理解它们是如何在幕后悄悄发挥作用的。行格式的设计反映了数据库设计者在权衡性能、存储和兼容性时的决策。到现在为止一共设计了4种不同类型的行格式 ，分别是 Compact 、 Redundant 、Dynamic 和 Compressed 行格式，随着时间的推移，他们可能会设计出更多的行格式，但是不管怎么变，在原理上大体都是相同的。我们本次主要针对Compact InnoDB 行格式进行分析理解。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139909065",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19083,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139909065",
+    "postTime": "2024-06-24 00:07:29",
+    "diggCount": 112,
+    "formatTime": "2024.06.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/7d1b0eae575d4e4cbd741b8c1d341467.jpeg"
+    ],
+    "collectCount": 21
+  },
+  {
+    "articleId": 139756774,
+    "title": "解放代码：识别与消除循环依赖的实战指南",
+    "description": "本文讨论软件开发中常见的循环依赖问题及其解决方法。首先介绍了循环依赖在代码中的形成原因，并提出了避免循环依赖的基本原则。其次，详细介绍了使用工具如JDepend来识别项目中的循环依赖，并通过具体案例分析了三种消除循环依赖的方法：提取中介者、转移业务逻辑和采用回调接口。每种方法都结合了实际的代码改造示例和测试用例，帮助读者理解和应用这些技术以优化自己的软件架构和设计。主要思想的编排思路来自极客时间《如何有效识别和解决代码中存在的循环依赖问题？》，当然也有其他的参考和自身的一些思考和优化。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139756774",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19173,
+    "commentCount": 832,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139756774",
+    "postTime": "2024-06-17 23:05:33",
+    "diggCount": 115,
+    "formatTime": "2024.06.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/24151c44be7948e88e7987c1c39fe75f.png"
+    ],
+    "collectCount": 37
+  },
+  {
+    "articleId": 139702132,
+    "title": "智能化状态管理：自动状态流转处理模块",
+    "description": "自动流转一般都是一个很大的处理系统，其中包含的处理内容是很庞大的，就这样一个大型系统的开发思路，我后面会抽空来分享一篇全局的思路，本次仅针对一般如果我们需要对一些业务流程需要进行自动化处理思维的给出一个样例的自动状态流转处理模块的代码示例。如果有写的不对的地方，请留言指正！",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139702132",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18523,
+    "commentCount": 43,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139702132",
+    "postTime": "2024-06-15 14:27:39",
+    "diggCount": 42,
+    "formatTime": "2024.06.15",
+    "picList": [
+      "https://img-blog.csdnimg.cn/52d149d13bbb4ea4866569659a9dcbf9.png"
+    ],
+    "collectCount": 37
+  },
+  {
+    "articleId": 139702063,
+    "title": "业务动态校验框架应用实现",
+    "description": "实现一套业务层级的动态校验框架。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139702063",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18667,
+    "commentCount": 42,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139702063",
+    "postTime": "2024-06-15 14:25:01",
+    "diggCount": 36,
+    "formatTime": "2024.06.15",
+    "picList": [
+      "https://img-blog.csdnimg.cn/444984373a7f4e4593931d195259b72b.png"
+    ],
+    "collectCount": 28
+  },
+  {
+    "articleId": 139667074,
+    "title": "实战指南：理解 ThreadLocal 原理并用于Java 多线程上下文管理",
+    "description": "探讨如何基于实现一个高效的上下文管理组件，以解决多线程环境下的数据共享和上下文管理这些问题。通过具体的代码示例和实战展示如何为多线程编程提供一种简洁而高效的上下文管理方案。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139667074",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 20925,
+    "commentCount": 119,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139667074",
+    "postTime": "2024-06-14 00:11:37",
+    "diggCount": 35,
+    "formatTime": "2024.06.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/aaecef3b336646e6814478243755c2fa.png"
+    ],
+    "collectCount": 58
+  },
+  {
+    "articleId": 139667021,
+    "title": "聚焦IOC容器刷新环节obtainFreshBeanFactory初始化BeanFactory专项",
+    "description": "探讨BeanFactory的刷新机制，从最基本的IOC容器刷新环节出发，逐步分析了其具体实现。主要介绍BeanFactory的刷新过程，然后通过源码分析了在注解驱动和XML配置方式下如何创建和初始化BeanFactory。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139667021",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18441,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139667021",
+    "postTime": "2024-06-14 00:09:01",
+    "diggCount": 40,
+    "formatTime": "2024.06.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/0318e49a64e64a029e439a1b1b91234a.png"
+    ],
+    "collectCount": 40
+  },
+  {
+    "articleId": 139639556,
+    "title": "DDD领域应用理论实践分析回顾",
+    "description": "探讨领域驱动设计（DDD）在现代软件开发中的重要性，以复杂的B端营销系统为例看实际应用。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139639556",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18843,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139639556",
+    "postTime": "2024-06-13 00:12:53",
+    "diggCount": 47,
+    "formatTime": "2024.06.13",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/4632af281b3f495c9a1efbbb8f29bd1d.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 139639510,
+    "title": "从ES的JVM配置起步思考JVM常见参数优化",
+    "description": "Java 8目前仍然是许多企业中主要使用的版本之一，尤其是对于比较保守的公司。在过去，CMS (Concurrent Mark-Sweep) 垃圾回收器在Java 8中是一种常见选择，因为它在某些场景下能够提供较好的性能。然而，随着Java版本的不断更新，一些旧的特性和组件被淘汰或替代，比如CMS。Java 14中正式废弃了CMS，而新的垃圾回收器，如ZGC和G1，逐渐成为了主流选择。ZGC和G1在处理大内存堆和低停顿时间方面表现出色，适用于现代应用程序的需求。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139639510",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19857,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139639510",
+    "postTime": "2024-06-13 00:07:48",
+    "diggCount": 36,
+    "formatTime": "2024.06.13",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/6fc31eec526d4a7ba6219d147cbe2d98.png"
+    ],
+    "collectCount": 44
+  },
+  {
+    "articleId": 139611703,
+    "title": "Java 同步锁性能的最佳实践：从理论到实践的完整指南",
+    "description": "在多线程编程中，锁是保证线程安全的重要手段之一，但如何选择合适的锁并进行优化，一直是我们面临的挑战。本博客探讨Java中同步锁的性能分析与优化之路，从使用同步锁和不使用同步锁的性能对比入手，逐步展开对锁的优化手段和技术原理的解析，帮助读者更好地理解和应用Java中的锁机制。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139611703",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19143,
+    "commentCount": 24,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139611703",
+    "postTime": "2024-06-12 00:22:36",
+    "diggCount": 65,
+    "formatTime": "2024.06.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/7a88873f816f4f0ab32038d14f3be972.png"
+    ],
+    "collectCount": 36
+  },
+  {
+    "articleId": 139611610,
+    "title": "缓冲区的奥秘：解析数据交错的魔法",
+    "description": "本文探讨了缓冲区的重要性及其在不同领域的应用。首先，从直观角度解释了缓冲区的好处，包括保持操作节奏、减少性能损耗和优化用户体验等。其次，通过经典案例分析了文件读写流和日志缓冲的应用，展示了缓冲区的加速效果。进一步探讨了缓冲区优化方向，以及在Kafka中可能引发的数据丢失和对业务高可用性的影响。本文旨在帮助读者深入理解缓冲区的奥秘，以及在实际应用中的优化思路。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139611610",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19118,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139611610",
+    "postTime": "2024-06-12 00:09:41",
+    "diggCount": 30,
+    "formatTime": "2024.06.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/f70246ff71684c1bb8f6482cfaf93752.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 139584623,
+    "title": "聚焦新版综合编程能力面试考查汇总",
+    "description": "业务性编程能力指的是开发人员在理解和实现具体业务需求方面的能力。这不仅包括对编程语言、框架和工具的熟练掌握，还涉及对业务逻辑、流程和领域知识的深入理解和灵活运用。在编程结束后或过程中需要扩展分析考查面试者的知识广度。本文总结常考的几类大题分享来说明具体的内容",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139584623",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18761,
+    "commentCount": 46,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139584623",
+    "postTime": "2024-06-11 00:07:36",
+    "diggCount": 41,
+    "formatTime": "2024.06.11",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/8f474426c4604e1cab5908f8aafc227f.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 139584588,
+    "title": "探寻性能优化：如何衡量？如何决策？",
+    "description": "性能优化，看似简单，实则复杂。就像选择一辆汽车一样，你想要的不仅仅是动力强劲，还要兼顾燃油经济性、操控稳定性等一系列指标。而在优化系统性能时，我们也需要综合考虑各种衡量指标，才能做出明智的决策。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139584588",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18631,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139584588",
+    "postTime": "2024-06-11 00:04:03",
+    "diggCount": 41,
+    "formatTime": "2024.06.11",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/058625f167e64f389f212f5f7ee9e60a.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 139568355,
+    "title": "探究IOC容器刷新环节初始化前的预处理",
+    "description": "本文深入探讨了Spring IOC容器刷新前的关键步骤。我们从快速回顾IOC容器刷新环节开始，引出初始化前的预处理 prepareRefresh 方法的源码分析。随后，我们着重研究了初始化属性源的过程，分别探讨了 GenericWebApplicationContext 和 StaticWebApplicationContext 中的属性源初始化方法。最后，我们深入探讨了初始化早期事件集合的重要性。通过本文的阐述，读者将全面了解IOC容器刷新前的幕后操作，进一步加深对Spring框架核心机制的理解。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139568355",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18266,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139568355",
+    "postTime": "2024-06-10 00:08:34",
+    "diggCount": 35,
+    "formatTime": "2024.06.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/2939f3c5d6184ab78c1912746b896e0f.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 139568339,
+    "title": "核心社群营销和覆盖区域选型",
+    "description": "社群营销是一种通过精细化运营和长期用户关系维护，实现企业营销目标的新型营销模式。通过选择合适的平台，建立并管理高价值的社群，企业可以实现拉新、促活和转化等多个目标，为产品的推广和用户关系的维护提供有力支持。在这个过程中，企业微信因其强大的功能和完善的生态系统，成为企业进行社群营销的理想平台。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/139568339",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18403,
+    "commentCount": 514,
+    "editUrl": "https://mp.csdn.net/console/editor/html/139568339",
+    "postTime": "2024-06-10 00:06:32",
+    "diggCount": 36,
+    "formatTime": "2024.06.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/1f61b631f68b45e8bc014a90bf698d6e.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 138403861,
+    "title": "EMall实践DDD模拟电商系统总结",
+    "description": "学习如何利用领域驱动设计（DDD）构建电商系统。从事件风暴开始，团队快速梳理业务流程和事件。系统用例和领域上下文分析系统需求和边界。探讨架构设计，融合六边形架构和系统分层。系统实现包括项目结构、订单功能、领域层实现和Repository层实现。重点介绍聚合、CQRS模式、缓存、Unit Of Work模式等概念。最后，讨论领域事件实现，帮助了解电商系统设计和实现，掌握DDD在电商系统中的应用。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138403861",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 20750,
+    "commentCount": 517,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138403861",
+    "postTime": "2024-05-03 00:28:05",
+    "diggCount": 40,
+    "formatTime": "2024.05.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/416053c638b244018834cb627e8a19b2.png"
+    ],
+    "collectCount": 22
+  },
+  {
+    "articleId": 138402121,
+    "title": "为何数据库推荐将IPv4地址存储为32位整数而非字符串？",
+    "description": "探讨在Java开发中存储IPv4地址的最佳方式。通过对比字符串存储和整数存储两种方式的优缺点，我们发现整数存储方式在存储空间效率、查询效率和数学运算方面更具优势。虽然字符串存储方式更直观易读，但在处理大量数据时会浪费存储空间并降低查询效率。通过具体的示例代码演示了如何生成大量的IPv4地址数据，并将其插入到数据库表中。通过查询和索引效率的比较，我们验证了整数存储方式在性能方面的优势。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138402121",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 21391,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138402121",
+    "postTime": "2024-05-03 00:14:58",
+    "diggCount": 41,
+    "formatTime": "2024.05.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/d5e349ff46b848dabdcfdae0c53f5bba.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 138392030,
+    "title": "解救应用启动危机：Spring Boot的FailureAnalyzer机制",
+    "description": "探讨Spring Boot中的FailureAnalyzer机制，帮助解决应用启动失败的难题。对FailureAnalyzer的工作原理、生效方式以及自定义的基本步骤进行介绍，包括注册方式说明和实例演示。希望可以帮助更好地理解并利用FailureAnalyzer来诊断和解决应用启动失败的问题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138392030",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 21120,
+    "commentCount": 218,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138392030",
+    "postTime": "2024-05-02 22:15:02",
+    "diggCount": 26,
+    "formatTime": "2024.05.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/226d780944e8489181deca007191585d.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 138389766,
+    "title": "聚焦Spring后置处理器分析对比",
+    "description": "Spring Framework 中的后置处理器允许在容器实例化 Bean 或者在 Bean 的生命周期中进行操作。从源码上来看的话，其实其扩展机制下的后置处理器其实很多。我们重点放到我们常用的几个上BeanPostProcessor、BeanFactoryPostProcessor来聚焦分析一下。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138389766",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 20974,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138389766",
+    "postTime": "2024-05-02 14:12:28",
+    "diggCount": 36,
+    "formatTime": "2024.05.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/b9302db164684968848fdec467df0f47.png"
+    ],
+    "collectCount": 34
+  },
+  {
+    "articleId": 138388372,
+    "title": "重看Spring聚焦BeanDefinition分析和构造",
+    "description": "BeanDefinition是Spring框架中重要的概念之一，它定义了Spring容器中Bean的元信息，是Spring实现依赖注入和控制反转的基础。我们本次来深入探讨BeanDefinition的概念与结构设计，并分析四种构造BeanDefinition的方式及其优缺点。帮助读者选择适合自己项目的构造方式，并为理解和应用BeanDefinition提供指导。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138388372",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 20765,
+    "commentCount": 113,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138388372",
+    "postTime": "2024-05-02 12:01:24",
+    "diggCount": 37,
+    "formatTime": "2024.05.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/389a6952575d419e8061cc9c4fd62e45.png"
+    ],
+    "collectCount": 28
+  },
+  {
+    "articleId": 138202681,
+    "title": "JDK 19 协程新特性：Project Loom 项目的延续",
+    "description": "探讨了协程的定义、发展史和 JDK 19 中的实现原理。协程是一种轻量级的并发编程工具，通过 Continuation 控制流、Scheduler 调度和阻塞操作的改造，实现了非阻塞、高效的并发编程。历史回顾包括协程在不同编程语言中的应用和 Java 协程的发展。JDK 19 中的协程原理深入分析了创建协程的方法、非阻塞 IO 改造、Continuation 的作用以及协程的唤醒机制。总结了协程的核心原理和重要组件。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138202681",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 22575,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138202681",
+    "postTime": "2024-04-25 23:48:15",
+    "diggCount": 29,
+    "formatTime": "2024.04.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/25ac2c9834f7418496b8e85f51fd1a7d.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 138143503,
+    "title": "用斐波那契数列感受算法的神奇（21亿耗时0.02毫秒）",
+    "description": "用斐波那契数列感受算法的神奇（21亿耗时0.2毫秒）：在实际应用中，结合快速幂的矩阵解法确实是计算斐波那契数列的最优解之一，尤其是对于大数值的情况。然而，并不是所有情况下都适合使用这种方法。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138143503",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 23084,
+    "commentCount": 45,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138143503",
+    "postTime": "2024-04-25 01:14:51",
+    "diggCount": 43,
+    "formatTime": "2024.04.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/5008ea1f86c24709a1622532371823a3.png"
+    ],
+    "collectCount": 47
+  },
+  {
+    "articleId": 138143445,
+    "title": "业务通用校验能力建设",
+    "description": "业务通用校验能力建设主要建设目标：将上层重复的校验能力抽取为校验模型，同时为模型提供配置化的管理能力，降低人力成本和研发成本；建立集中化的校验平台，提供多种校验模型的整合能力。标准化接入方式和处理能力，解决业务多场景变化和规则变化所带来的维护成本，同时有利于业务快速迭代；将业务数据校验功能进行解耦，建立校验规则场景化灵活处理，降低业务多场景和规则条件下的业务校验耦合能力，降低业务调用成本；建立校验能力规则化场景化联动功能，规则场景变化后快速提供能力给前后台赋能，提高业务灵活性",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138143445",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 22597,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138143445",
+    "postTime": "2024-04-24 04:03:09",
+    "diggCount": 25,
+    "formatTime": "2024.04.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/26df196cc6b14111adbf802593703df3.png"
+    ],
+    "collectCount": 36
+  },
+  {
+    "articleId": 138143106,
+    "title": "重看Spring聚焦Environment分析",
+    "description": "Environment模块在 Spring 中主要负责管理应用程序的配置和环境（定义为一组 profile配置文件）相关的信息，每个 profile 对应一个特定的应用程序部署环境，比如开发、测试、生产等。在这些 profile 中，可以包含各种属性，比如数据库连接信息、服务器端口、日志级别等。而对应的属性在 Spring 中被表示为键值对，其中键是属性的名称，值是属性的取值。属性可以通过不同的方式进行配置，比如在属性文件中、通过系统属性、操作系统环境变量等。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138143106",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 23006,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138143106",
+    "postTime": "2024-04-24 03:54:06",
+    "diggCount": 29,
+    "formatTime": "2024.04.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/30d431f7597d45e7b1013bde8899de95.png"
+    ],
+    "collectCount": 24
+  },
+  {
+    "articleId": 138046927,
+    "title": "简易分发器设计和开发（重点看代码设计）",
+    "description": "设计分发平台的终极目标是为内容提供者和运营厂商提供全面的解决方案，帮助他们实现内容的高效管理和精准分发。通过灵活的配置和定制化功能，以及强大的数据分析和监控统计功能，平台能够帮助用户优化内容策略，提升内容传播的效果和用户体验，实现业务的持续增长和发展。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138046927",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 25900,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138046927",
+    "postTime": "2024-04-22 00:44:46",
+    "diggCount": 47,
+    "formatTime": "2024.04.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/cf7a1eea8f284fe4b9fa6360948381ef.png"
+    ],
+    "collectCount": 36
+  },
+  {
+    "articleId": 138051035,
+    "title": "检索技术知识全景图分析",
+    "description": "学习检索技术（Information Retrieval，IR）具有多种重要的原因，特别是在今天信息爆炸的数字化时代。总的来说，学习检索技术有助于提高信息处理和利用的效率，无论是个人生活还是在职业和学术领域中。这些技能可以增强信息搜索、分析和组织的能力，有助于更好地满足各种需求和目标。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138051035",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 25293,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138051035",
+    "postTime": "2024-04-22 00:27:29",
+    "diggCount": 28,
+    "formatTime": "2024.04.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/ea293c11c16842099a37bd23b0fe3f5d.png"
+    ],
+    "collectCount": 40
+  },
+  {
+    "articleId": 138007659,
+    "title": "检索算法和技术的本质回顾",
+    "description": "检索的核心思路，其实就是通过合理组织数据，尽可能地快速减少查询范围。也就是说到更多的检索算法和技术，其实它们的本质都是通过灵活应用各种数据结构的特点来组织数据，从而达到快速减少查询范围的目的。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138007659",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 27523,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138007659",
+    "postTime": "2024-04-20 18:58:37",
+    "diggCount": 30,
+    "formatTime": "2024.04.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/cf5fca0ac13b4cf6aeeef411bfe27c57.png"
+    ],
+    "collectCount": 41
+  },
+  {
+    "articleId": 138006892,
+    "title": "解锁ApplicationContext vs BeanFactory: 谁更具选择性？",
+    "description": "解锁ApplicationContext vs BeanFactory: 谁更具选择性？如果你的应用程序需要更全面的功能，如事件发布、资源加载等，并且不太在意启动速度和资源占用，那么 ApplicationContext 是更好的选择。但是，如果你的应用程序对启动速度和资源占用有较高的要求，或者只需要基本的 IoC 容器功能，那么 BeanFactory 可能更适合你。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/138006892",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 27934,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/138006892",
+    "postTime": "2024-04-20 18:32:57",
+    "diggCount": 32,
+    "formatTime": "2024.04.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/04db56bdf49c4c2a81f44996625425ba.png"
+    ],
+    "collectCount": 23
+  },
+  {
+    "articleId": 137670813,
+    "title": "重看Spring聚焦ApplicationContext分析",
+    "description": "深入探讨Spring框架中的核心组件ApplicationContext，着重介绍了其根接口及其子接口，解析关键组件的源码，并通过简单应用举例进行了说明。接着，深入探讨了与ApplicationContext相关的几个父接口，分析了其与ApplicationContext的关系，并提供了简单的应用示例。最后，对几个ApplicationContext实现类进行了详细分析。希望能够更深入地理解Spring框架中的ApplicationContext，并能够更有效地应用于实际项目中。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/137670813",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 32626,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/137670813",
+    "postTime": "2024-04-12 17:56:59",
+    "diggCount": 28,
+    "formatTime": "2024.04.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/b775d5a4f5824ad5a8f01aa2bbfeca8b.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 136970813,
+    "title": "重看Spring聚焦BeanFactory分析",
+    "description": "重看Spring聚焦BeanFactory分析，重点重新看下BeanFactory和它的子接口",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136970813",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 33651,
+    "commentCount": 29,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136970813",
+    "postTime": "2024-03-24 14:23:51",
+    "diggCount": 26,
+    "formatTime": "2024.03.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/b8b65536964b46bf9f7b809ccbeacfee.png"
+    ],
+    "collectCount": 39
+  },
+  {
+    "articleId": 136779677,
+    "title": "可微分因果发现理论学习",
+    "description": "因果发现的目标是通过观测数据找出变量之间的因果关系，并用图模型来表示这些关系。这样的因果图能够最好地解释数据的生成过程，即在给定因果结构下生成观测数据的概率最大。因此，因果发现旨在寻找一个最佳的因果图模型，使其能够最好地解释观测数据并揭示变量之间的因果关系。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136779677",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42186,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136779677",
+    "postTime": "2024-03-17 13:34:21",
+    "diggCount": 35,
+    "formatTime": "2024.03.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/304c16246b6e4aa3a099ee1e71deca14.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 136285506,
+    "title": "Amazon Aurora：面向高吞吐量云原生关系型数据库的设计考虑",
+    "description": "理解《Amazon Aurora: 面向高吞吐量云原生关系型数据库的设计考虑》zooming对于亚马逊AWS的关系数据库服务Aurora的设计理念和架构。Aurora采用了分离计算和存储的方案，将事务和并发控制放在计算层，同时将Redo Log推送到可扩展存储的服务中。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136285506",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 36466,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136285506",
+    "postTime": "2024-03-06 23:38:07",
+    "diggCount": 36,
+    "formatTime": "2024.03.06",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/eb32174ce5e046a2a1730a1c87d139a1.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 136090309,
+    "title": "了解数据治理体系化建模",
+    "description": "数据体系化建模初步学习与建模实践了解",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136090309",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 36558,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136090309",
+    "postTime": "2024-02-10 13:17:44",
+    "diggCount": 32,
+    "formatTime": "2024.02.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/54d3a6a158a24ab3950811f5f7c0eaa6.png"
+    ],
+    "collectCount": 28
+  },
+  {
+    "articleId": 136087636,
+    "title": "Amazon Dynamo学习总结",
+    "description": "Amazon Dynamo是由亚马逊在2007年开发的一种高度可扩展和分布式的键值存储系统，旨在解决公司面临的大规模、任务关键型服务的需求。其起源于亚马逊早期在运营电子商务业务时遇到的挑战，传统的关系型数据库无法满足其大规模、高可用性和分布式存储的需求。因此，亚马逊的工程团队开始寻找一种新的存储解决方案。Amazon Dynamo采用了分布式架构和键值存储模型，实现了高度的可扩展性、灵活性和可定制性，成为许多大型互联网公司处理大规模数据存储和访问的首选解决方案之一。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136087636",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 36402,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136087636",
+    "postTime": "2024-02-09 19:39:44",
+    "diggCount": 32,
+    "formatTime": "2024.02.09",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/df5da9c34bab441991c93d8b620409d5.png"
+    ],
+    "collectCount": 32
+  },
+  {
+    "articleId": 136073769,
+    "title": "DevOps：CI、CD、CB、CT、CD",
+    "description": "快速回顾了软件开发流程的演化历程，从传统的瀑布模型到原型模型、螺旋模型、增量模型、敏捷开发，最终到达了当今广受关注的DevOps。接着，深入探讨了DevOps的核心概念和实践，包括开发全流程周期、与传统开发方式的区别以及具体落地方式。其中，特别强调了DevOps的团队文化、流程和工具的重要性。随后，文章介绍了持续集成、持续交付、持续构建、持续测试和持续部署等关键概念，强调了它们在DevOps实践中的关联和重要性。最后，对于每个概念进行了简要的说明，突出了它们在实现DevOps流程中的作用和优势。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136073769",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 38701,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136073769",
+    "postTime": "2024-02-08 00:03:51",
+    "diggCount": 35,
+    "formatTime": "2024.02.08",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/195bb3cb09b344a6ab2986467522d126.png"
+    ],
+    "collectCount": 41
+  },
+  {
+    "articleId": 136007584,
+    "title": "快速理解复杂系统组成学习内容整合",
+    "description": "复杂系统是由多个相互关联、相互作用的组件组成的大型系统，通过这些组件的协同工作来完成特定的任务或提供特定的服务。在设计复杂系统时，通常会考虑以下五个关键模块：接入系统 (Access System)+应用系统 (Application System)+基础平台 (Foundation Platform)+中间件 (Abundant External Middleware)+支撑系统 (Supporting System)",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/136007584",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 36343,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/136007584",
+    "postTime": "2024-02-03 22:02:07",
+    "diggCount": 33,
+    "formatTime": "2024.02.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/455b8727584b45a8a682ad4a0e4c1c13.png"
+    ],
+    "collectCount": 29
+  },
+  {
+    "articleId": 135898629,
+    "title": "云上高可用系统-韧性设计模式",
+    "description": "同质化部署是一种部署策略，它指的是在部署时将系统的所有组件集成在一起，然后部署到系统的每个实例上。“拥抱故障”的理念强调了开发者需要在系统的全生命周期中考虑系统如何应对故障，确保系统在故障发生时的状态是符合预期的。因此，一个具备韧性的系统需要在部分故障的情况下仍能够正常运行，即使面对较大规模的故障，系统也能够提供大部分的服务。另外，在大规模系统中，事故定级是一个常见的做法，通过事故定级，可以更有针对性地采取措施，提高系统的韧性。这些模式的综合应用能够帮助构建更具韧性的系统，提高系统的可用性和稳定性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/135898629",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 43013,
+    "commentCount": 35,
+    "editUrl": "https://mp.csdn.net/console/editor/html/135898629",
+    "postTime": "2024-01-28 19:48:47",
+    "diggCount": 37,
+    "formatTime": "2024.01.28",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/88f9d6a8f3eb4a63a2e0bbf53c5085c1.png"
+    ],
+    "collectCount": 38
+  },
+  {
+    "articleId": 135887474,
+    "title": "分布式空间索引了解与扩展",
+    "description": "空间索引简单思考和架构设计，先通过快速理解空间索引的基本知识如区域编码、区域编码检索、Geohash编码、RTree变体等，然后开始讨论业内的方案对比，最后介绍分布式空间索引架构的设计",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/135887474",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37009,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/135887474",
+    "postTime": "2024-01-28 15:19:50",
+    "diggCount": 35,
+    "formatTime": "2024.01.28",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/9f2139aaf3d9432da5740928e6535a5f.png"
+    ],
+    "collectCount": 32
+  },
+  {
+    "articleId": 134768083,
+    "title": "抖音外卖商品模型",
+    "description": "抖音外卖商品模型基本探究",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134768083",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37616,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134768083",
+    "postTime": "2023-12-03 18:57:10",
+    "diggCount": 32,
+    "formatTime": "2023.12.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/33be097de0b5443382e7e3d2a17c8764.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 134767172,
+    "title": "业务数据治理体系化实施流程学习总结",
+    "description": "数据治理的实施流程是一个基于业务数据治理标准框架的标准化操作流程，用于解决具体数据问题：步骤 1：发现问题和制定目标步骤 2：针对问题进行拆解，设计可衡量的指标步骤 3：制定解决SOP和检查研发标准规范步骤 4：推广运营，以拿结果为核心目标步骤 5：总结沉淀方法论，迭代认知",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134767172",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37548,
+    "commentCount": 39,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134767172",
+    "postTime": "2023-12-03 18:05:45",
+    "diggCount": 32,
+    "formatTime": "2023.12.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/a997d42d1c2e4f94866d9757afe6933f.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 134614460,
+    "title": "了解抽象思维的应用与实践",
+    "description": "抽象思维是一种认知和思维方式，通过在众多事物中提取共同的、本质性的特征，舍弃非本质的特征，形成概念、判断、推理等思维形式，以反映事物的本质和规律。抽象是将复杂的现实世界简化为更易于理解和处理的概念或模型的过程。这种思维方式使人们能够通过一般性的规律和原则来理解和处理复杂的现实情境。在抽象思维中，人们通过对感性材料的加工制作，去粗取精、去伪存真，从具体事物中提炼出普遍性的特征。这有助于人们更有效地组织和理解信息，提高认知效率，并使得复杂的问题变得更加可管理。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134614460",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37621,
+    "commentCount": 35,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134614460",
+    "postTime": "2023-11-25 15:58:18",
+    "diggCount": 34,
+    "formatTime": "2023.11.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/af298be8fd7f48faba39e8392ddd1d59.png"
+    ],
+    "collectCount": 34
+  },
+  {
+    "articleId": 134363363,
+    "title": "QLExpress学习使用总结",
+    "description": "QLExpress（Quick Language Express）是阿里巴巴开源的一门动态脚本引擎解析工具，起源于阿里巴巴的电商业务，旨在解决业务规则、表达式、数学计算等动态脚本的解析问题。线程安全：QLExpress被设计为线程安全的动态脚本引擎，它使用类型的临时变量，确保在引擎运算过程中的并发场景下的线程安全性。高效执行：为了提高执行效率，QLExpress在编译过程中可以将比较耗时的脚本编译结果缓存到本地机器。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134363363",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 43686,
+    "commentCount": 37,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134363363",
+    "postTime": "2023-11-12 23:39:13",
+    "diggCount": 21,
+    "formatTime": "2023.11.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/45e1d6ae4ea448b098763a649f55496a.png"
+    ],
+    "collectCount": 46
+  },
+  {
+    "articleId": 134347139,
+    "title": "推荐系统质量模型建设与思考",
+    "description": "美团到店综合业务的推荐系统是其关键技术组件，旨在通过智能化方式高效匹配用户需求与多元化本地服务，能够涵盖到综业务中的各个行业，包括但不限于洗浴、KTV、美业、医美、亲子、结婚、运动健身、玩乐、教育培训、家居、宠物、酒吧、生活服务等。这要求推荐系统具有良好的扩展性和适应性，能够处理多样化的业务类型和用户需求。在美团到店综合业务中，推荐系统扮演着关键的角色，是实现供给和需求高效匹配的重要环节。其作用类似于一座智能的桥梁，连接用户的需求与各类本地服务，确保用户能够迅速而准确地找到符合其期望的服务。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134347139",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37457,
+    "commentCount": 35,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134347139",
+    "postTime": "2023-11-11 17:49:02",
+    "diggCount": 12,
+    "formatTime": "2023.11.11",
+    "picList": [
+      "https://img-blog.csdnimg.cn/451d3190f39b4c6faa03b1c15e18377a.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 134223322,
+    "title": "快速了解推荐引擎检索技术",
+    "description": "推荐引擎的工作过程是一个复杂的流程，需要深入了解用户兴趣、文章内容和各种推荐算法，以生成个性化的推荐列表。这个过程结合了用户行为数据的分析、用户画像、文章画像以及不同的推荐策略，以提供用户满意的推荐体验。不同的推荐系统可以根据需求和数据采用不同的组合和算法。在建立用户画像和文章画像之后，推荐引擎可以根据需求采用不同的推荐算法来为用户提供文章推荐。主要的推荐算法分为两大类：基于统计的静态召回算法和个性化召回算法。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134223322",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 38741,
+    "commentCount": 28,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134223322",
+    "postTime": "2023-11-04 21:58:50",
+    "diggCount": 12,
+    "formatTime": "2023.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/269592692f244fdd9060f075ce7a5967.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 134222464,
+    "title": "广告引擎检索技术快速学习",
+    "description": "学习广告引擎的整体架构和工作过程是本文的关键内容，包括广告请求解析、标签检索、向量检索、打分排序等多个关键环节。这些环节共同构建了一个强大的广告引擎，使其能够在极短的时间内返回最相关的广告。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134222464",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 38856,
+    "commentCount": 41,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134222464",
+    "postTime": "2023-11-04 20:51:08",
+    "diggCount": 14,
+    "formatTime": "2023.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/416f2ca1df4b499e931d2959f9d893fa.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 134221229,
+    "title": "搜索引擎系统简要分析",
+    "description": "搜索引擎是一种强大的工具，帮助你快速找到互联网上的信息。它通过使用复杂的算法，迅速检索成千上万甚至数十亿的网页，并将与你的搜索查询相关的结果呈现给你。搜索引擎背后涉及多种关键技术，它们协同工作以实现高效的信息检索和呈现。搜索引擎通常由三个核心组件构成：爬虫系统、索引系统和检索系统。这些组件协同工作，使搜索引擎能够从互联网上检索、索引和呈现相关的信息。我们可以展开快速学习一下。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134221229",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 39064,
+    "commentCount": 34,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134221229",
+    "postTime": "2023-11-04 19:47:10",
+    "diggCount": 12,
+    "formatTime": "2023.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a30d6a8013ae41a5925330aca3ddf628.png"
+    ],
+    "collectCount": 19
+  },
+  {
+    "articleId": 134213027,
+    "title": "快速了解相似检索方法",
+    "description": "相似检索方法是一种用于从大量数据中找到与查询数据相似的数据项的技术。这种方法通常用于信息检索、推荐系统、图像处理、自然语言处理等领域。相似检索主要方法可以总体分为以下几类：这些方法各自有其适用的场景和特点，选择合适的相似检索方法取决于应用的需求、数据类型和性能要求。通常，研究和实践中会根据具体情况采用不同的方法或它们的组合来解决相似检索问题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134213027",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 39895,
+    "commentCount": 31,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134213027",
+    "postTime": "2023-11-04 01:18:58",
+    "diggCount": 11,
+    "formatTime": "2023.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8e7257f6dcf1454dbcdfac00ce650601.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 134212094,
+    "title": "学习LevelDB架构的检索技术",
+    "description": "学习LevelDB架构的检索技术：LevelDB的检索和存储设计提供了许多启发和优化方向，这些思想和技术可以在构建其他检索系统时考虑和借鉴，以提高性能、效率和可伸缩性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134212094",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 39221,
+    "commentCount": 30,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134212094",
+    "postTime": "2023-11-04 00:03:12",
+    "diggCount": 12,
+    "formatTime": "2023.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/13590d3535de4a5e82a7595b328329f4.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 134172514,
+    "title": "动态规划：签约棒球自由球员",
+    "description": "动态规划：签约棒球自由球员我们定义了一个二维数组 dp，其中 dp[i][j] 表示在考虑前 i 个位置且预算不超过 j 时的最大总VORP值。通过状态转移方程更新 dp 数组，不选择当前位置球员的情况与选择当前位置球员的情况进行比较，选择VORP值更高的方案。最终通过回溯 dp 数组，确定具体选择的球员。时间复杂度为 O(N×X×P)，其中 N是位置数量，X是预算，P 是每个位置上球员的平均数量。空间复杂度为 O(N×X)，主要用于存储 dp 数组和选择标记数组 chosen。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/134172514",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16676,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/134172514",
+    "postTime": "2023-11-01 23:45:14",
+    "diggCount": 13,
+    "formatTime": "2023.11.01",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/421a725342774cb39798fc7aed35ce11.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 133976569,
+    "title": "搜索问答技术学习：基于知识图谱+基于搜索和机器阅读理解（MRC）",
+    "description": "研究问答系统在各领域的需求类型，处理多样数据源和不同文本形态的能力。关键技术包括基于知识图谱的KBQA和基于深度学习的DeepQA。KBQA重点在结构化数据上，而DeepQA结合了搜索和机器阅读理解，适用于更广泛非结构化数据。探讨了短答案和长答案机器阅读理解，面对挑战如搜索结果噪声和常识性错误。文章旨在提供深入了解问答系统技术和应用领域的资源。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133976569",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42046,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133976569",
+    "postTime": "2023-10-22 19:42:12",
+    "diggCount": 14,
+    "formatTime": "2023.10.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/f19bad4a20f84353b5f719fe64a06e37.png"
+    ],
+    "collectCount": 33
+  },
+  {
+    "articleId": 133973152,
+    "title": "复杂系统设计基本注意事项",
+    "description": "系统复杂性是指系统的构建、运作和维护过程中涉及到的多个因素、组件、关系和交互的综合程度。认识软件的复杂性之前，需要找到合适的方法来度量一个软件系统是否复杂，以及复杂度有多少。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133973152",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 40940,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133973152",
+    "postTime": "2023-10-22 15:33:54",
+    "diggCount": 13,
+    "formatTime": "2023.10.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/c1be652b2c0e41e4ae4a6be9e9176cc2.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 133967931,
+    "title": "一些简单高级的 SQL 查询技巧记录",
+    "description": "介绍数据库查询中一些高级技巧和常用表达式的使用方法：涵盖常用表表达式（CTEs）、递归CTEs、临时函数、数据的枢转、EXCEPT 和 NOT IN 操作符、自联结、排名函数、计算差值和总数、以及日期时间处理等内容。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133967931",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 41536,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133967931",
+    "postTime": "2023-10-21 23:55:13",
+    "diggCount": 13,
+    "formatTime": "2023.10.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/d8ec4a98bf284d0ba10e6d06b4b818a8.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 133829892,
+    "title": "找到分析问题的起点:7 步追问法",
+    "description": "\"7 步追问法\" 是一种问题分析和解决方法，旨在帮助人们更全面地理解问题、找到问题的根本原因，并确定解决问题的途径。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829892",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42638,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829892",
+    "postTime": "2023-10-14 20:38:57",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/32e74222c25f40afa4bf81595febb15c.webp"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 133829848,
+    "title": "解析MYSQL行头信息数据详细",
+    "description": "在数据库管理系统中，理解数据行格式的内部结构对于优化性能和确保数据完整性至关重要。这次我们来探讨一下数据行格式，特别关注行头信息的各个属性，如delete_mask、min_rec_flag、n_owned、heap_no、record_type和next_record等。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829848",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42488,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829848",
+    "postTime": "2023-10-14 20:36:23",
+    "diggCount": 14,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/0d207a0d544e4adeb0d27648026356be.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 133829770,
+    "title": "认真来看下正则表达式",
+    "description": "快速学习正则基础",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829770",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42007,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829770",
+    "postTime": "2023-10-14 20:31:28",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a9097fcb890742eda981f6e475ec6d43.png"
+    ],
+    "collectCount": 12
+  },
+  {
+    "articleId": 133829743,
+    "title": "ES指定链表字段的统计查询记录",
+    "description": "ES指定链表字段的统计查询记录，记录其一些复杂结构的查询方式",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829743",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42030,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829743",
+    "postTime": "2023-10-14 20:29:42",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/77e88c1f0b9840518ecb272f82eebc90.png"
+    ],
+    "collectCount": 12
+  },
+  {
+    "articleId": 133829707,
+    "title": "优化分布式系统性能：热key识别与实战解决方案",
+    "description": "热key问题在分布式缓存系统中是一个常见但具有挑战性的难题。有效地发现和处理热key不仅可以提升系统的性能和稳定性，还能显著改善用户体验。本文从热key的定义及其危害出发，深入探讨了热key产生的多种原因，并介绍了几种主流的热key发现解决方案。通过人为预测，客户端监控，机器层面监控，Redis服务端Monitor以及热点发现系统等多种手段，可以及时识别并处理潜在的热点key。每种解决方案都有其独特的优势和局限性，应根据具体业务场景选择合适的策略进行实施。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829707",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42161,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829707",
+    "postTime": "2023-10-14 20:27:34",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/cecef41e35414e77b2dba0c80b1782ee.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 133829596,
+    "title": "重看高可用架构",
+    "description": "系统的高可用性是当今数字化时代中至关重要的一环，高可用性不仅对于保障业务的稳定运行和持续发展至关重要，而且是维护客户关系、增强品牌价值、履行法律责任的关键保障。在当今数字化时代，任何企业都应该将高可用性视为优先考虑的重要议题，并投入适当的资源和技术来建立和维护可靠的系统架构。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829596",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42000,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829596",
+    "postTime": "2023-10-14 20:20:05",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/e881cd4cdd67425eb7ce55d2de7929e2.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 133829575,
+    "title": "对架构复用理解分析",
+    "description": "对架构复用理解分析：在架构设计中实现系统的高可复用性需要考虑多个方面，一般包括技术复用和业务复用。从复用的程度可以依次划分为产品复用>业务流程复用>业务实体复用>组件复用>代码复用。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829575",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42144,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829575",
+    "postTime": "2023-10-14 20:19:08",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/a4ff7bef9b9344069a137c216325d9b1.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 133829561,
+    "title": "可扩展架构案例学习总结",
+    "description": "可扩展性是软件架构中至关重要的特性，它确保系统能够在需求增长和规模扩大的情况下保持高效运行。为实现可扩展性，首要考虑模块化设计，将系统分解为独立、低耦合的模块，使得扩展时能够有针对性地进行修改而不影响整体。同时，水平扩展和垂直扩展是两种常见的扩展策略，前者通过增加节点或服务器来分担负载，后者则通过提升单节点性能来处理更多请求。弹性设计是实现可扩展性的关键，系统需要能够动态地分配和释放资源，以适应负载的波动。采用服务化架构，将系统拆解成小型服务单元，有助于独立开发和扩展。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829561",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42254,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829561",
+    "postTime": "2023-10-14 20:18:15",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/651e1b0a48b641588354d1dd04413e1e.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 133829536,
+    "title": "高并发场景下的缓存雪崩探析与应对策略",
+    "description": "在高并发场景中，缓存作为前置查询机制，显著减轻了数据库的压力。然而，缓存雪崩问题依然存在，可能导致大量请求直接涌入数据库，引发系统性能瓶颈甚至崩溃。本文探讨了缓存雪崩的定义和成因，提出了三种应对策略：分散过期时间、提前演练压测、cache高可用和后端数据库限流。通过分散缓存失效时间、提前发现和优化系统性能瓶颈，以及提升缓存资源的可用性和保护数据库的稳定性，这些策略可有效防止缓存雪崩，保障系统在高并发情况下的可靠性和性能。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829536",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42090,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829536",
+    "postTime": "2023-10-14 20:16:38",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/0c41a16b1215467199bd77c33d276431.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 133829338,
+    "title": "深入理解多线程概念、同步与无锁机制",
+    "description": "介绍多线程编程的相关概念、同步机制以及无锁编程。从线程的基础概念出发，包括逻辑线程和硬件线程的比较，以及线程、核心和函数的关系。随后，我们探讨了多线程编程的基本原则，包括时间分片、上下文切换、线程安全函数和可重入函数等。接着，我们讨论了为什么需要多线程同步、什么情况需要进行同步以及多线程同步的方式，包括串行化、原子操作和锁等。我们还深入研究了非阻塞的无锁同步机制，如CAS循环和无锁数据结构。最后，我们解释了程序序、内存序、乱序执行、存储缓冲区和失效队列等概念，以帮助更好地理解多线程编程。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133829338",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42545,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133829338",
+    "postTime": "2023-10-14 20:02:37",
+    "diggCount": 15,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/3bd4b328d24e46029cfbd6476d1748dc.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 133828729,
+    "title": "Aviator表达式引擎",
+    "description": "而Aviator的编译执行方式可以将表达式在执行前编译成字节码，这有助于提高性能，特别是对于需要频繁执行相同表达式的应用。总的来说，Aviator的设计目标是提供一个介于重量级脚本语言（如Groovy）和轻量级表达式引擎（如IKExpression）之间的解决方案，它强调高性能和轻量级特性。Aviator的设计目标之一是轻量级和高性能。Aviator与许多其他表达式引擎的不同之处在于，它不是通过解释表达式来执行，而是将表达式编译成Java字节码，然后将其交给Java虚拟机（JVM）执行。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133828729",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 12820,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133828729",
+    "postTime": "2023-10-14 19:22:18",
+    "diggCount": 16,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/4edbdbff8df34358b2b95c35c79cbf01.webp"
+    ],
+    "collectCount": 40
+  },
+  {
+    "articleId": 133828661,
+    "title": "Restful API优雅原则统一规范",
+    "description": "本部分预留作业，后续总结后分享。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133828661",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42084,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133828661",
+    "postTime": "2023-10-14 18:56:28",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a62f98bf124a48b59729404b71000ec9.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 133828628,
+    "title": "高并发场景下的缓存击穿问题探析与应对策略",
+    "description": "在高并发场景中，缓存作为前置查询机制，显著减轻了数据库的压力，提高了系统性能。然而，缓存击穿问题可能导致大量请求同时到达数据库，引发系统性能瓶颈甚至崩溃。本文详细探讨了缓存击穿的定义和成因，提出了三种应对策略：互斥锁、软过期+互斥锁、静态数据+Lazy Expiration。通过引入分布式锁和逻辑过期时间等机制，这些策略可以有效防止缓存击穿，减少数据库压力，确保系统在高并发情况下的稳定性和性能。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133828628",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42066,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133828628",
+    "postTime": "2023-10-14 18:51:27",
+    "diggCount": 12,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/1e859fc222774bc5810dbda0f929e50c.png"
+    ],
+    "collectCount": 12
+  },
+  {
+    "articleId": 133828614,
+    "title": "高并发场景下的大 Key 问题及应对策略",
+    "description": "本文探讨了高并发场景下的大 Key 问题及应对策略。大 Key 可能导致响应超时和数据不均衡，严重影响系统性能和稳定性。针对这些挑战，文章提出了拆分大 Key、分拆集合数据和数据压缩等多种解决方案。拆分大 Key 可以减轻单节点压力，提高系统吞吐量；分拆集合数据和合理分片则有助于优化数据访问效率和负载均衡；而数据压缩技术则能减少存储空间和网络传输成本。这些策略的综合应用有助于提升缓存系统在高并发环境下的可靠性和性能表现。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133828614",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 42091,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133828614",
+    "postTime": "2023-10-14 18:49:53",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/669e2950a41547fe93205b8224db8251.png"
+    ],
+    "collectCount": 12
+  },
+  {
+    "articleId": 133828594,
+    "title": "RedLock 与 Redisson 实现分布式锁---算法与应用",
+    "description": "分布式锁在分布式系统中至关重要，它能够确保对共享资源的互斥访问并避免数据冲突。RedLock 算法通过在多个 Redis 节点上实现分布式锁来提升锁的可靠性，即使部分节点发生故障，也能保证锁的有效性。本文介绍了 RedLock 的基本思路和实现步骤，包括锁获取、超时计算和失败处理等关键操作。另一方面，Redisson 作为 Redis 的 Java 客户端，简化了分布式锁的实现过程，提供了易于使用的 API 以及内置的看门狗机制来自动续期锁，确保业务逻辑在锁有效期内顺利执行。通过比较 RedLock 和 R",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133828594",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 41990,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133828594",
+    "postTime": "2023-10-14 18:46:56",
+    "diggCount": 13,
+    "formatTime": "2023.10.14",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e49f78a289cd4c03bdbeeef582ac393b.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 133615069,
+    "title": "Elasticsearch基础索引操作演示总结",
+    "description": "在 Elasticsearch 中执行索引相关操作的基本内容总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133615069",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 13718,
+    "commentCount": 13,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133615069",
+    "postTime": "2023-10-06 23:00:55",
+    "diggCount": 11,
+    "formatTime": "2023.10.06",
+    "picList": [
+      "https://img-blog.csdnimg.cn/921fd52c90c946bdbbde1013a0e0ec22.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 133583097,
+    "title": "Elasticsearch架构原理快速了解",
+    "description": "介绍Elasticsearch（ES）的核心概念、工作原理、写入和读取过程以及提高数据可用性和高并发性能的方法。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133583097",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 12896,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133583097",
+    "postTime": "2023-10-05 21:28:33",
+    "diggCount": 14,
+    "formatTime": "2023.10.05",
+    "picList": [
+      "https://img-blog.csdnimg.cn/4646b0f9708d404f9083581bc10f7fec.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 133515591,
+    "title": "谈谈Redis分布式锁",
+    "description": "主要内容是关于分布式锁的理论和实践，以及Redisson作为一个分布式锁的实现工具的详细介绍。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133515591",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 11323,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133515591",
+    "postTime": "2023-10-03 15:39:02",
+    "diggCount": 12,
+    "formatTime": "2023.10.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/f350358ea18d48d9bc2ecc0a54501259.webp"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 133501947,
+    "title": "存储选型决策案例模版",
+    "description": "存储选型决策案例模板是一种有助于组织或个人更有效地选择适合其需求的存储解决方案的工具。它通过提供结构和透明度，帮助确保决策是基于充分的信息和综合的分析，从而降低了不明智的决策风险。提醒：依然是模版，所以也可以应用与其他选型决策！",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133501947",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 11002,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133501947",
+    "postTime": "2023-10-03 01:20:02",
+    "diggCount": 13,
+    "formatTime": "2023.10.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/0ff165f3fc854587af1721cc4aacca15.webp"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 133472816,
+    "title": "大型项目开发设计文档规范",
+    "description": "大型项目开发设计文档规范总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/133472816",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 12654,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/133472816",
+    "postTime": "2023-10-02 00:37:37",
+    "diggCount": 17,
+    "formatTime": "2023.10.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8eddf65eddf94b94b5998be7c9aadf0f.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 132866513,
+    "title": "Elasticsearch基础文档操作演示总结",
+    "description": "了解和掌握在 Elasticsearch 中执行文档写入和更新操作的方法和技术，以便更好地管理和维护 Elasticsearch 索引中的数据。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/132866513",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 13672,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/132866513",
+    "postTime": "2023-09-13 23:11:54",
+    "diggCount": 16,
+    "formatTime": "2023.09.13",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/c4c79bf2f3ea4fe38eab764911a5d8ae.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 132718410,
+    "title": "科普初步了解大模型",
+    "description": "科普初步了解大模型",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/132718410",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 21256,
+    "commentCount": 699,
+    "editUrl": "https://mp.csdn.net/console/editor/html/132718410",
+    "postTime": "2023-09-06 17:54:16",
+    "diggCount": 38,
+    "formatTime": "2023.09.06",
+    "picList": [
+      "https://img-blog.csdnimg.cn/9de07454b51c4ee08a68c8c7ea87498a.png"
+    ],
+    "collectCount": 194
+  },
+  {
+    "articleId": 132515850,
+    "title": "软件架构业务及技术复杂度分析总结",
+    "description": "软件架构业务及技术复杂度分析总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/132515850",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15385,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/132515850",
+    "postTime": "2023-08-26 21:54:21",
+    "diggCount": 14,
+    "formatTime": "2023.08.26",
+    "picList": [
+      "https://img-blog.csdnimg.cn/446d002360ec421da549c782fa36e608.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 132419533,
+    "title": "互联网广告及产品变现认知分析整理",
+    "description": "无论是互联网企业还是传统的其他企业情况，变现模式比如说用户直接付费、佣金分成、内容付费、电子商务、金融运作、增值服务等，哪怕刚开始选择的是其他变现模式，最终也还是免不了要增加广告产品进行变现，也就是说广告才是互联网产品最常见的变现模式。本文对广告产品进行基本分析和变现模式分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/132419533",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15786,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/132419533",
+    "postTime": "2023-08-22 01:11:39",
+    "diggCount": 18,
+    "formatTime": "2023.08.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/2af80db28dc44113bf9e0874527f6846.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 131928432,
+    "title": "从风控系统看架构设计原型图分析",
+    "description": "从风控系统看架构设计原型图分析：业务架构、数据架构、产品架构、应用架构、技术架构。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/131928432",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15389,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/131928432",
+    "postTime": "2023-07-26 01:05:32",
+    "diggCount": 16,
+    "formatTime": "2023.07.26",
+    "picList": [
+      "https://img-blog.csdnimg.cn/cfd2b9c410cb4662809d6def3e334943.png"
+    ],
+    "collectCount": 34
+  },
+  {
+    "articleId": 131026729,
+    "title": "对Java远程热部署实践学习和分析",
+    "description": "对Java远程热部署实践学习和分析：热部署现状、必要性、实现难度分析+走进美团ava远程热部署实践学习总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/131026729",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15265,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/131026729",
+    "postTime": "2023-06-03 23:42:28",
+    "diggCount": 17,
+    "formatTime": "2023.06.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/bd33811ff1e0438a87ac136ad67f4071.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 130903779,
+    "title": "分析SpringBoot启动配置原理",
+    "description": "分析SpringBoot启动配置原理：给出整体初步分析和对应流程图，并从三方面进行展开分析（SpringApplication构造过程分析+SpringApplication启动过程分析+SpringBoot自动配置分析）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130903779",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17154,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130903779",
+    "postTime": "2023-05-27 17:31:59",
+    "diggCount": 27,
+    "formatTime": "2023.05.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a6b0efa0bede47d1abcd6804dee58982.png"
+    ],
+    "collectCount": 63
+  },
+  {
+    "articleId": 130716074,
+    "title": "重新学习下IO多路复用",
+    "description": "I/O 模型是指在进行输入输出操作时，操作系统和应用程序之间如何进行交互的方式。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130716074",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 37303,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130716074",
+    "postTime": "2023-05-16 23:24:18",
+    "diggCount": 12,
+    "formatTime": "2023.05.16",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/1a636996fd884f199134dda77736a4f3.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 130469938,
+    "title": "常识性概念图谱建设与应用",
+    "description": "分析常识性概念图谱建设与应用，主要以美团发布的案例来主要学习总结，同时给出业内的一些应用举例，只是初步的学习总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130469938",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15927,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130469938",
+    "postTime": "2023-05-03 11:22:36",
+    "diggCount": 15,
+    "formatTime": "2023.05.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/288178fe4a0147dabbb71aff3a043f32.png"
+    ],
+    "collectCount": 21
+  },
+  {
+    "articleId": 130464048,
+    "title": "InnoDB存储引擎B+树的树高推导",
+    "description": "InnoDB存储引擎B+树的树高推导：通常在3-4层左右",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130464048",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16262,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130464048",
+    "postTime": "2023-05-02 16:32:11",
+    "diggCount": 20,
+    "formatTime": "2023.05.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/f779d18369b64e90a6d381c1add06075.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 130457788,
+    "title": "Reactive Streams介绍与应用分析",
+    "description": "Reactive Streams基本知识和具体代码应用举例，加入Reactor原理分析和业务应用中的建议",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130457788",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15896,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130457788",
+    "postTime": "2023-05-01 20:19:36",
+    "diggCount": 19,
+    "formatTime": "2023.05.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/1eae1984f22b48c0bf0931cec10cc31a.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 130456859,
+    "title": "如何使用事件风暴构建领域模型",
+    "description": "事件风暴是一种快速探索复杂业务领域和对领域建模的实践。事件风暴从领域中关注的业务事件出发，在此过程中团队经过充分讨论，统一语言，最后找到领域模型。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130456859",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15169,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130456859",
+    "postTime": "2023-05-01 17:25:09",
+    "diggCount": 15,
+    "formatTime": "2023.05.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200407101519130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 130456197,
+    "title": "Java回收垃圾的基本过程与常用算法",
+    "description": "Java 垃圾回收的基本过程可以分为以下三个步骤：垃圾分类、垃圾查找和垃圾清理，我们可以展开分析，并详细讲下垃圾算法的基本内容",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130456197",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16499,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130456197",
+    "postTime": "2023-05-01 16:15:40",
+    "diggCount": 21,
+    "formatTime": "2023.05.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/02ed3c20385844fd862a593e87ec591a.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 130191656,
+    "title": "如何快速设计一个高并发系统？",
+    "description": "高并发系统设计与优化高并发系统设计应包括：系统拆分：功能和数据拆分提升扩展性。缓存机制：利用本地和分布式缓存（如Redis）减少数据库负担。消息队列：使用MQ（如Kafka）处理流量，支持异步处理。分库分表：将数据分布到多个数据库和表中。读写分离：主从数据库架构优化读写性能。搜索引擎：用ElasticSearch进行高效检索。性能监控：进行压力测试和实时监控，保证系统稳定。这些策略能有效提升高并发场景下的系统性能和稳定性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130191656",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15485,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130191656",
+    "postTime": "2023-04-17 07:50:56",
+    "diggCount": 15,
+    "formatTime": "2023.04.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/68374d34043543f099b20caa8026e413.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 130191653,
+    "title": "一站式了解分布式服务框架Dubbo细枝末节",
+    "description": "Dubbo 是一个高效的分布式服务框架，采用服务注册、订阅和调用机制，实现服务的高性能通信。服务提供者在注册中心注册服务，消费者通过订阅获取并调用这些服务。Dubbo 支持多种通信协议和序列化协议，包括高效的 Hessian。框架具备负载均衡、集群容错和动态代理策略，保证系统稳定性和高可用性。Dubbo 的 SPI 机制支持插件化扩展，增加系统灵活性。服务治理功能包括服务降级、失败重试和超时重试，确保系统可靠性。对于分布式服务，还需考虑幂等性和请求顺序性，采用唯一标识和一致性哈希等方法来解决这些问题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130191653",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15549,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130191653",
+    "postTime": "2023-04-17 07:50:45",
+    "diggCount": 14,
+    "formatTime": "2023.04.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/07f609026ae74d879c8ccacbaf791ca0.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 130191649,
+    "title": "Spring经典扩展接口应用：InitializingBean和DisposableBean",
+    "description": "一、InitializingBean和DisposableBean基本知识总结。二、InitializingBean和DisposableBean实际应用分析。备注：新进行基本思路总结，四五月总结完。三、实际应用代码展示。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130191649",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 15416,
+    "commentCount": 10,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130191649",
+    "postTime": "2023-04-17 07:50:19",
+    "diggCount": 13,
+    "formatTime": "2023.04.17",
+    "picList": [],
+    "collectCount": 14
+  },
+  {
+    "articleId": 130191645,
+    "title": "微信红包系统整体架构分析探讨",
+    "description": "微信红包系统的设计与实施展示了面对高并发和大数据处理挑战时的技术创新和架构优化。系统通过模块化设计，从接入层到业务逻辑层再到数据存储层，确保了高效性和稳定性。采用了单元化架构和分库分表策略来应对并发请求，同时通过 Redis 缓存和异步处理机制优化性能。红包分配算法如实时拆分和二倍均值法，提升了用户体验并确保了公平性。为了提高系统可用性和容灾能力，实施了微服务架构、无状态设计和冗余部署。微信红包系统不仅解决了技术挑战，还提供了流畅的用户体验，是现代分布式系统设计的成功案例。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130191645",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16130,
+    "commentCount": 765,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130191645",
+    "postTime": "2023-04-17 07:50:06",
+    "diggCount": 28,
+    "formatTime": "2023.04.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/662d2d1cf09c49fcae54a5f078c38d51.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 130191640,
+    "title": "Spring经典扩展接口应用：BeanFactoryPostProcessor",
+    "description": "对BeanFactoryPostProcessor基本知识总结，并给出框架中的应用举例分析，再次给出扩展应用代码举例和一些建议，最后简单分析对应的源码分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130191640",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17768,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130191640",
+    "postTime": "2023-04-17 07:49:41",
+    "diggCount": 17,
+    "formatTime": "2023.04.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/7b636ef4b93a454ca43b76aa47f98120.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 130190804,
+    "title": "Spring经典扩展接口应用：BeanPostProcessor",
+    "description": "BeanPostProcessor 接口在 Spring 框架中的实际应用场景有很多，以下是一些举例:属性注入+AOP 预处理+定制初始化逻辑+数据校验+资源回收",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130190804",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18357,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130190804",
+    "postTime": "2023-04-17 00:02:01",
+    "diggCount": 15,
+    "formatTime": "2023.04.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/0d138e0172484624ab885b76b8262b2c.png"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 130190129,
+    "title": "Spring启动及Bean实例化过程来看经典扩展接口",
+    "description": "从Spring启动及Bean实例化过程来看经典扩展接口如下，并给出我们可能的应用分析：BeanPostProcessor+BeanFactoryPostProcessor+ApplicationContextAware++InitializingBean和DisposableBean+BeanDefinitionRegistryPostProcessor+ApplicationListener",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130190129",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16318,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130190129",
+    "postTime": "2023-04-16 23:16:16",
+    "diggCount": 15,
+    "formatTime": "2023.04.16",
+    "picList": [
+      "https://img-blog.csdnimg.cn/537697f520fc44259fe71056d923ad6e.png"
+    ],
+    "collectCount": 24
+  },
+  {
+    "articleId": 130061624,
+    "title": "业务异步离线任务平台思考",
+    "description": "离线任务平台通常是指一种基于云计算或分布式计算技术，用于处理批量离线数据的计算平台。它可以自动化地执行一系列离线数据处理任务，如数据清洗、数据转换、数据分析、机器学习模型训练等。离线任务平台通常包括数据存储、数据处理和数据输出三个主要组件。在离线任务平台上，用户可以定义和配置数据处理任务，然后提交任务并等待任务完成。任务完成后，用户可以从输出目录中获取结果数据。在业务应用中，离线任务平台通常指一种数据处理平台，用于对大规模离线数据进行处理和分析，以便于业务决策和优化。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130061624",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17430,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130061624",
+    "postTime": "2023-04-10 15:34:37",
+    "diggCount": 14,
+    "formatTime": "2023.04.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/7889845b646443ab971af979dd69aff5.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 130061447,
+    "title": "分析Spring事务管理原理及应用",
+    "description": "通过配置已经大体知道了spring事务管理实现的原理就是AOP，不难推测，spring会提供实现事务管理相关功能的切面，切点和通知相关的类，来完成对于事务相关功能的支持。我们以配置最简单的注解式配置为例，分析其实现方式。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130061447",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17473,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130061447",
+    "postTime": "2023-04-10 15:32:40",
+    "diggCount": 13,
+    "formatTime": "2023.04.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/ef22b425fd0c4dbeb29aee8e539741a5.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 130037195,
+    "title": "队列知识及编程练习总结",
+    "description": "队列知识及编程练习总结：背景知识 +队列的应用（在Spring中的应用+在其他框架中的应用+在实际开发中的应用）+相关编程练习（用队列实现栈+使用栈实现队列+设计循环队列+滑动窗口最大值 +课程表+队列的最大值+用数组实现一个队列）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130037195",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17601,
+    "commentCount": 41,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130037195",
+    "postTime": "2023-04-09 00:43:14",
+    "diggCount": 15,
+    "formatTime": "2023.04.09",
+    "picList": [
+      "https://img-blog.csdnimg.cn/e983b30fbb2e4587b6f8255a9e3777c3.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 129901120,
+    "title": "反本能---如何对抗你的习以为常",
+    "description": "一、概述二、自我提升（一）我们为什么总想拖延（二）如何有效应对拖延（三）如何更好的自我控制（四）为啥付出了没有回报（五）如何提高学习效率三、群体接触，成为高情商（一）情商的五个维度（二）社交过程中的盲区（三）有效社交关系的建立（四）怎么才能好好说话（五）与他人相处的艺术（六）与情绪相处的艺术四、社会洞见，看到本质清晰表达（一）常见的决策陷阱（二）我们有哪些思维误区（三）表达的逻辑（四）看到事物的本质五、学习+改变的过程。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/129901120",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17453,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/129901120",
+    "postTime": "2023-04-01 19:19:24",
+    "diggCount": 13,
+    "formatTime": "2023.04.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/fbd8b5e240e3467aba96d3b95b557e8f.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 129899788,
+    "title": "了解自己的内心冲突并进行解决",
+    "description": "神经症冲突概述-冲突的基本类型-未解决冲突的后果-尝试解决的途径-真正解决冲突",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/129899788",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17213,
+    "commentCount": 12,
+    "editUrl": "https://mp.csdn.net/console/editor/html/129899788",
+    "postTime": "2023-04-01 18:35:13",
+    "diggCount": 11,
+    "formatTime": "2023.04.01",
+    "picList": [
+      "https://img-blog.csdnimg.cn/d5250852a1294621bba278ec143ad03c.png"
+    ],
+    "collectCount": 12
+  },
+  {
+    "articleId": 129701878,
+    "title": "美团架构（技术+业务）简单总结",
+    "description": "美团的技术架构演变+美团业务架构优化+O2O 技术优化贯通的",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/129701878",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 21202,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/129701878",
+    "postTime": "2023-03-22 08:48:37",
+    "diggCount": 13,
+    "formatTime": "2023.03.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/1439685a1a7643b183e95520154ec222.png"
+    ],
+    "collectCount": 47
+  },
+  {
+    "articleId": 129674941,
+    "title": "业务异步化实现通用线程池封装（实现小红书发现页异步线程池调用）",
+    "description": "实现异步通用线程池封装的同时，考虑了业务场景下的任务执行需求，提供了灵活的线程池配置和任务执行方式，并且对任务执行过程中的异常进行了处理和日志记录，整体设计合理。。在此基础上，结合小红书发现页业务逻辑来实现上面的设计。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/129674941",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17665,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/129674941",
+    "postTime": "2023-03-20 20:07:48",
+    "diggCount": 16,
+    "formatTime": "2023.03.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/2fccbd840e184f00b38f61ef5181d18a.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 129626030,
+    "title": "大规模分布式系统跟踪基础设施Dapper",
+    "description": "论文《Dapper, a Large-Scale Distributed Systems Tracing Infrastructure》介绍了谷歌开发的大规模分布式系统跟踪基础设施Dapper。Dapper旨在通过提供跨多个服务和计算机的详细跟踪信息，帮助开发人员理解和调试复杂的分布式系统。论文讨论了Dapper背后的动机、其架构以及在诊断性能问题和优化分布式系统方面所提供的实际好处。本文作为回顾经典，重新学习，翻译的同时加入一些现有的理解。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/129626030",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17306,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/129626030",
+    "postTime": "2023-03-17 18:19:30",
+    "diggCount": 12,
+    "formatTime": "2023.03.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/fad4a7be90074202b8ec4d471d731298.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 128145596,
+    "title": "工作方法论总结（学会在工作中不停思考和使用）",
+    "description": "总结一些在工作中应用的方法论",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/128145596",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18306,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/128145596",
+    "postTime": "2022-12-02 14:20:29",
+    "diggCount": 12,
+    "formatTime": "2022.12.02",
+    "picList": [
+      "https://img-blog.csdnimg.cn/b055695b4f6649d6a9e1fc8ce18bee31.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 127559918,
+    "title": "TikTok变现玩法分析",
+    "description": "TikTok变现玩法分析：从个人角而言，以及看到和前期简单尝试调研的结果来看，我更偏向于转战tiktok进行捞福利，因为国内的抖音已经进入了红海市场，变现的可能性有些太卷了，我自己是没有啥精力在用心通过这个搞外快的，但是就当前看到的情况来说，tiktok当前的蓝海市场我还是可以捞到一些油水的。而创建海外店铺通过国内货源进行跨境电商这些我还没开始弄，如果有已经开始玩的朋友请私信带带我，一起成长，谢谢！一下是自己的一些小总结，如果有经验的同学觉得不对的内容请进行指正一下，谢谢！",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127559918",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17277,
+    "commentCount": 13,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127559918",
+    "postTime": "2022-10-27 20:17:17",
+    "diggCount": 12,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/c4c98db2c723449d8e2421aa34eb9d61.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 127559869,
+    "title": "散列表相关知识及编程练习总结",
+    "description": "哈希表相关知识及编程练习总结：背景知识+应用举例（Spring框架或其他框架中的应用举例+实际开发中的应用举例）+相关编程练习（无重复字符的最长子串+有效的数独+最小覆盖子串+字母异位词分组+有效的字母异位词+找到字符串中所有字母异位词+LRU缓存机制+多数元素+重复的DNA序列+快乐数+存在重复元素+存在重复元素+单词规律+前K个高频元素+字符串中的第一个唯一字符+四数相加 II+和为K的子数组+最常见的单词+同构字符串+两个数组的交集+两个数组的交集 II+分糖果+宝石与石头）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127559869",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17577,
+    "commentCount": 50,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127559869",
+    "postTime": "2022-10-27 20:14:39",
+    "diggCount": 15,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/e07db0a1eaa540f48ecb12817679cdd5.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 127557224,
+    "title": "树相关知识及编程练习总结",
+    "description": "树相关知识及编程练习总结：背景知识+树的应用举例（Spring中的应用举例+其他框架中的应用举例+实际开发中的应用举例）+相关编程练习（二叉树遍历：包括前序遍历、中序遍历、后序遍历、层序遍历等+二叉树的最大深度+二叉树的最小深度+对称二叉树+二叉树的最近公共祖先+二叉树的直径+二叉树的路径和+二叉搜索树中的插入操作+二叉搜索树中的删除操作+二叉搜索树中的搜索操作+二叉树的层平均值+二叉树的镜像+二叉树的序列化与反序列化+二叉树的右视图+二叉树的最大宽度+前序遍历和中序遍历构造二叉树+平衡二叉树）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127557224",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17545,
+    "commentCount": 45,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127557224",
+    "postTime": "2022-10-27 17:34:55",
+    "diggCount": 14,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/cb8a26162ca84d5c8221d2098adb4936.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 127557182,
+    "title": "排序算法知识及编程练习总结",
+    "description": "排序算法知识及编程练习总结：背景知识介绍+主流排序算法与应用+相关排序算法练习（冒泡排序+鸡尾酒排序+插入排序+选择排序+快速排序+归并排序+堆排序+Top K 问题分析+使用堆排序思想实现优先级队列+计数排序+桶排序+基数排序）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127557182",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17339,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127557182",
+    "postTime": "2022-10-27 17:32:48",
+    "diggCount": 15,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/img_convert/d79cfca6000a704d4d89b87b3abefdaa.gif"
+    ],
+    "collectCount": 19
+  },
+  {
+    "articleId": 127557152,
+    "title": "栈知识及编程练习总结",
+    "description": "栈与队列知识及编程练习总结：背景知识+栈的应用+相关编程练习（有效的括号+最小栈+每日温度+用栈实现队列+用队列实现栈+接雨水+逆波兰表达式求值+基本计算器+简化路径+岛屿数量+用数组实现一个栈+基本数学运算表达式求值+IP 范围判断）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127557152",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17408,
+    "commentCount": 55,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127557152",
+    "postTime": "2022-10-27 17:31:32",
+    "diggCount": 14,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/fad52200b6484343a0c328be05919dd7.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 127557093,
+    "title": "数组知识及编程练习总结",
+    "description": "数组基础、应用以及编程练习（找到数组 A 元素组成的小于 n的最大整数+两数之和 +三数之和 +最接近的三数之和+移动零 +旋转数组+搜索旋转排序数组 +寻找旋转排序数组中的最小值 +加一 +存在重复元素 +寻找数组的中心索引+翻转对 +只出现一次的数字+合并两个有序数组+合并区间+最大子序列+最长连续递增序列+最长公共前缀+移除元素+除自身以外数组乘积+颜色分类）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127557093",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17428,
+    "commentCount": 41,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127557093",
+    "postTime": "2022-10-27 17:29:32",
+    "diggCount": 15,
+    "formatTime": "2022.10.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/b177b48c84114f0b8e53855a19a47c05.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 127500756,
+    "title": "链表知识及编程练习总结",
+    "description": "了解链表结构，并在单链表或双链表中实现遍历、插入和删除以及分析在单链表或双链表中的各种操作的复杂度，同时附上相关面试考点的基本分类试题库（反转链表、链表中环的检测、链表中环的入口点、删除链表中倒数第K个节点、两个链表的第一个公共节点、链表的中间节点、合并两个有序链表、删除链表中的重复元素、排序链表、K 个一组翻转链表、旋转链表、分隔链表、奇偶链表、合并k个排序链表、链表相加、回文链表判定、回文链表重排、交换相邻节点、删除指定元素、反转链表指定部分、存在回文链表、链表最长递增子序列）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127500756",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17782,
+    "commentCount": 51,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127500756",
+    "postTime": "2022-10-24 20:33:51",
+    "diggCount": 15,
+    "formatTime": "2022.10.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/003a08ef05504248b55c718a2c8c50fa.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 127499927,
+    "title": "业务圈选系统搭建",
+    "description": "解决线上业务经常性通过大量写复杂ETL来完成一些基本的业务圈选操作，通过思考推出一套圈选系统来基本解决以上基本的业务和技术问题等内容。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127499927",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17258,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127499927",
+    "postTime": "2022-10-24 20:04:36",
+    "diggCount": 13,
+    "formatTime": "2022.10.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/cd4fae1125bc4fc5b12d31aca781d705.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 127499647,
+    "title": "业务审核系统",
+    "description": "随着业务的不断演变，其实我们会生产出众多的业务系统，这些系统会为对应的业务形态进行赋能工作，赋能后相关系统会开放给运营人员根据业务需要进行线上的实际操作，但是往往会因为运营相关人员在配置上的误操作会给相关业务线或相关功能模块带来一定的线上事故和损失。为了避免类似这样事件的发生，个人认为是需要在内部搭建一套业务审核系统的，该系统主要针对业务实际上线生效前通知相关的业务同学协助进行复查和确认，对任意线上的操作都能有一层基本的保障处理。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/127499647",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17646,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/127499647",
+    "postTime": "2022-10-24 19:49:57",
+    "diggCount": 15,
+    "formatTime": "2022.10.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/91542eae9b0f4a8cb04081d2d4a74eb4.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 124414624,
+    "title": "超越并发瓶颈：CAS与乐观锁的智慧应用",
+    "description": "synchronized 是 Java 内置的同步机制，依赖 JVM 实现，通过进入和退出监视器锁（Monitor Lock）来保证线程的安全性。在高并发情况下，线程可能会频繁地在 BLOCKED 状态和 RUNNABLE 状态之间切换，导致用户态和内核态的频繁切换，从而影响性能。CAS和乐观锁作为两种重要的并发控制机制备受关注。CAS机制直接利用硬件保证原子性，而乐观锁则基于乐观的思想进行并发控制。本文将学习这两种机制的原理、应用及性能特点来进行体会",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/124414624",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17532,
+    "commentCount": 28,
+    "editUrl": "https://mp.csdn.net/console/editor/html/124414624",
+    "postTime": "2022-04-25 21:18:46",
+    "diggCount": 17,
+    "formatTime": "2022.04.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/772f7a080867467fa48e5230e9606347.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 123956717,
+    "title": "责任链模式（以及变种管道模式）的应用案例",
+    "description": "责任链在实际开发中的应用还是比较多的，特别是在营销订购系统、审核流转换处理、任务流程处理系统等系统中，其实我们在开发中往往主要应用的主要无非是以下三个场景（起码以我的平时开发的角度来看）：一是无需太关心责任链中各处理流的顺序的简单使用；二是需要关注处理顺序，按责任链条延续处理，每个处理节点均可对请求进行节点的处理， 或将其传递给链上的下个处理节点；三是在处理中和纯的责任链模式在链上只会有一个处理器用于处理业务数据存在差异，需要进行管道模式采用多个处理器都会处理业务数据。针对以上场景进行业务举例和代码书写",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/123956717",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 18205,
+    "commentCount": 41,
+    "editUrl": "https://mp.csdn.net/console/editor/html/123956717",
+    "postTime": "2022-04-04 19:25:16",
+    "diggCount": 27,
+    "formatTime": "2022.04.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8a16a385996e4a04b5d47ab8c55fbaa0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAWllGLVpZRg==,size_20,color_FFFFFF,t_70,g_se,x_16"
+    ],
+    "collectCount": 58
+  },
+  {
+    "articleId": 123619576,
+    "title": "模版模式的应用实际举例",
+    "description": "模版模式应该是工作中最常用的设计模式之一，直白的讲就是如果的一些处理方式是有一定的模版流程处理的，那么在应用中使用该模式在合适不过了。对于其基本的业务应用，我简单写了以下三个基本的通用模版（业务失败重试机制、业务前置检查流程模版、Thrift远程调用处理模版）来展示，有问题的可以留言纠正，谢谢！",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/123619576",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17489,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/123619576",
+    "postTime": "2022-03-20 22:03:40",
+    "diggCount": 17,
+    "formatTime": "2022.03.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/3387dd4bc5bd482c93e916077dec4978.png"
+    ],
+    "collectCount": 24
+  },
+  {
+    "articleId": 123294732,
+    "title": "采用注解实现策略模式",
+    "description": "​平时的开发中往往需要嵌套的策略去解决一定的业务或底层问题，如果在上一层已经通过工厂模式和策略模式的综合使用_xiaofeng10330111的博客-CSDN博客该方式进行了相关的策略模式的使用，但是在紧接着的下层逻辑上再次使用相同逻辑的策略往往会创建大量的工厂去实现，各策略也需要向工厂写入内容，这个时候我往往会使用注解方式去实现对应的下层策略模式，主要采用方式写三个业务场景来使用展示，以便供大家记录，写的不对的可留言指正。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/123294732",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17743,
+    "commentCount": 27,
+    "editUrl": "https://mp.csdn.net/console/editor/html/123294732",
+    "postTime": "2022-03-05 15:07:53",
+    "diggCount": 22,
+    "formatTime": "2022.03.05",
+    "picList": [
+      "https://img-blog.csdnimg.cn/2f1f9a63ef1349a9b83d28ef2d2feeac.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5byg5b2m5bOwWllG,size_20,color_FFFFFF,t_70,g_se,x_16"
+    ],
+    "collectCount": 44
+  },
+  {
+    "articleId": 123063356,
+    "title": "ES初识学习与简单实践总结",
+    "description": "Mac下安装ElasticSearch（依赖Java 环境，没有的话按相同方式进行安装操作即可）和Kibana，无需其他配置，如果中间遇到问题，直接“brew reinstall **”即可（**代码对应安装失败的内容）安装项目\t\t\t安装指令\t\t\t启动指令\t\t\t验证\t\tElasticSearch\t\t\tbrew install elasticsearch\t\t\tbrew services start elasticsearch\t\t\thttp://localhost:9200/\t\tKi...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/123063356",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17679,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/123063356",
+    "postTime": "2022-02-22 11:01:15",
+    "diggCount": 17,
+    "formatTime": "2022.02.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/72fdddd212274cc59909bce1873af105.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 121396875,
+    "title": "表态投票：让你的文章得到更真实的读者反馈",
+    "description": "在内容创作的过程中，了解读者的真实反馈对于提高文章质量和提升读者体验至关重要。表态投票机制作为一种有效的反馈收集工具，能够帮助创作者实时掌握读者对内容的态度和意见。这种机制通过设置不同的投票选项，使读者能够对文章的各个方面进行评分或选择，从而提供精准的数据支持。本文探讨了表态投票机制的设计原则、实施方法以及在实际应用中的优势。重点分析了如何通过合理设置投票选项来引导读者表达真实意见，以及如何利用收集到的数据进行内容优化。通过案例研究，文章还展示了表态投票机制在提升内容互动性和满意度方面的实际效果。综上所述，",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/121396875",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17295,
+    "commentCount": 46,
+    "editUrl": "https://mp.csdn.net/console/editor/html/121396875",
+    "postTime": "2021-11-18 11:26:04",
+    "diggCount": 14,
+    "formatTime": "2021.11.18",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/dbf720d299ee4014a26a1845e42c23f8.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 118000193,
+    "title": "MySQL查询请求执行过程分析",
+    "description": "MYSQL服务器程序在处理来自客户端查询请求时，大致需要处理流程可以分为三个部分：连接管理、解析与优化、存储引擎。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/118000193",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17444,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/118000193",
+    "postTime": "2021-06-17 19:37:41",
+    "diggCount": 13,
+    "formatTime": "2021.06.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20210617192904918.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 23
+  },
+  {
+    "articleId": 117075767,
+    "title": "散列技术自问自答",
+    "description": "散列技术自问自答",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/117075767",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17275,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/117075767",
+    "postTime": "2021-05-20 14:45:00",
+    "diggCount": 13,
+    "formatTime": "2021.05.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a2e3fa01a3684577af0f676e3befc2f5.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 116803687,
+    "title": "基本使用explain分析SQL",
+    "description": "目录一、慢查询explain分析的基本思路二、explain返回字段详解三、索引优化的原则以及失效情况举例建立索引优化索引索引失效四、通过explain优化sql的基本思路五、知识补充六、参考相关博客一、慢查询explain分析的基本思路explain命令是分析慢查询的一个常用方式，可以用来分析select 语句的运行效果，通过explain命令可以得到下面这些信息: 表的读取顺序，数据读取操作的操作类型 ，哪些索引可以使用，哪些索引被实际使用，表之间的引用，每张",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/116803687",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 19178,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/116803687",
+    "postTime": "2021-05-14 19:50:23",
+    "diggCount": 18,
+    "formatTime": "2021.05.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20210520163351475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 37
+  },
+  {
+    "articleId": 107635951,
+    "title": "guava平时基本常用的基本操作整理",
+    "description": "主要针对平时开发中最常用的guava操作做基本的操作总结，并不完善，只整理平时使用较多的地方！",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/107635951",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17344,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/107635951",
+    "postTime": "2020-07-28 14:51:35",
+    "diggCount": 14,
+    "formatTime": "2020.07.28",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/a7a198324600451c95f3f9c500b1e8fa.png"
+    ],
+    "collectCount": 18
+  },
+  {
+    "articleId": 106943391,
+    "title": "工厂模式和策略模式的综合使用",
+    "description": "其实在很多的开发设计中，将工厂模式和策略模式的综合使用的案例是很多的，而且解决的实际问题也一样很多，本次对基本的简单工厂模式和策略模式做简单介绍，重点放在两者结合后的具体应用上做分析和讲解。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106943391",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 22576,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106943391",
+    "postTime": "2020-06-24 14:34:37",
+    "diggCount": 43,
+    "formatTime": "2020.06.24",
+    "picList": [
+      "https://img-blog.csdnimg.cn/2020062920031798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 161
+  },
+  {
+    "articleId": 106091174,
+    "title": "数据库记录行在页内查询探索分析",
+    "description": "索引与记录行的管理是提高查询效率和数据存储优化的核心，本次我们讨论一下索引页与记录行之间的关系，并解析数据行内部单向链表的形成过程和记录行在页内的高效查找策略。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106091174",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1665555,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106091174",
+    "postTime": "2020-05-13 09:51:44",
+    "diggCount": 15,
+    "formatTime": "2020.05.13",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/8fb92adee0c947f0a43941b04a7afe93.png"
+    ],
+    "collectCount": 13
+  },
+  {
+    "articleId": 106086563,
+    "title": "Tair基本认识和实现总结",
+    "description": "Tair基本认识和实现总结:简单认识tair并对其实现进行总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106086563",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1644567,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106086563",
+    "postTime": "2020-05-12 22:22:55",
+    "diggCount": 19,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/97db7710a8cc4558a7fe1d9948dff02f.png"
+    ],
+    "collectCount": 19
+  },
+  {
+    "articleId": 106086455,
+    "title": "Spring AOP理解与研发使用",
+    "description": "Spring AOP理解与研发使用：基本理论（基本术语总结+具体开发注意事项+切点正则和指示器规则）+AOP开发应用与分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106086455",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1645751,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106086455",
+    "postTime": "2020-05-12 22:14:53",
+    "diggCount": 18,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/f108430073bf4155929af23bce215a9d.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 106086200,
+    "title": "数学思维编程练习总结",
+    "description": "数学思维考察练习（众数+快乐数+丑数+回文数+计数质数+有效数字+整数反转+罗马数字+平方根+超级次方+整数拆分+阶乘后的零+复数乘法+两数加法除法+最大公约数和最小公倍数+二进制中1的个数+从1到n整数中1出现的次数+求1+2+3+···+n数字之和等）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106086200",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1648915,
+    "commentCount": 44,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106086200",
+    "postTime": "2020-05-12 22:05:24",
+    "diggCount": 21,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/2ae67f628a4643cb9a7e63c32d16a6bf.png"
+    ],
+    "collectCount": 25
+  },
+  {
+    "articleId": 106086035,
+    "title": "图论总结与编程练习",
+    "description": "图论基本分析以及相关编程练习加深练习（单词接龙、克隆图、岛屿数量、网络延迟时间、单源最短路径、负权最短路径问题、具有最小生成树的连通图的最小代价、找到最终的安全状态、网络流问题的最大流、图中的可变流量、图中的割边、隐藏的好友、欧拉路径、哈密顿路径、判断是否为二分图、用颜色填充区域等）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106086035",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1649598,
+    "commentCount": 45,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106086035",
+    "postTime": "2020-05-12 21:57:40",
+    "diggCount": 21,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/254dddaa796a4a418454757385a5f830.png"
+    ],
+    "collectCount": 24
+  },
+  {
+    "articleId": 106081590,
+    "title": "Java Hotspot G1 GC的理解总结",
+    "description": "G1垃圾回收原理和回收过程分析，并给出适用场景和应用建议参考文献、书籍及链接1.https://tech.meituan.com/2016/09/23/g1.html2.书",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106081590",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1655833,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106081590",
+    "postTime": "2020-05-12 17:52:29",
+    "diggCount": 26,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/207143a83f4f4defaa1135f34fb4fdef.png"
+    ],
+    "collectCount": 29
+  },
+  {
+    "articleId": 106081236,
+    "title": "Java中常用的锁总结与理解",
+    "description": "对java锁相关内容进行整理分析：乐观锁 VS 悲观锁+自旋锁 VS 适应性自旋锁+无锁 VS 偏向锁 VS 轻量级锁 VS 重量级锁+公平锁 VS 非公平锁+可重入锁 VS 非可重入锁+独享锁 VS 共享锁",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106081236",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1662800,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106081236",
+    "postTime": "2020-05-12 17:36:44",
+    "diggCount": 24,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/df77a70a5df24beeb0fa2eac6db730ad.png"
+    ],
+    "collectCount": 77
+  },
+  {
+    "articleId": 106081077,
+    "title": "从ReentrantLock理解AQS的原理及应用总结",
+    "description": "对AQS做基本的总结，并给出应用案例，然后从ReentrantLock理解AQS的原理及应用（开发中的基本应用指导+框架中的应用展示举例+开发应用举例），重点在AQS原理分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106081077",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1666261,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106081077",
+    "postTime": "2020-05-12 17:30:44",
+    "diggCount": 25,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/5a1bc25770ab47b396557613066ff975.png"
+    ],
+    "collectCount": 93
+  },
+  {
+    "articleId": 106080861,
+    "title": "对Java线程池ThreadPoolExecutor的理解分析",
+    "description": "对Java线程池ThreadPoolExecutor的理解分析：介绍线程池的使用分析和建议，并展开分析线程池的设计和实现，给出常用的四种线程池推荐和举例，最后扩展线程池在业务中的实践分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080861",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1665435,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080861",
+    "postTime": "2020-05-12 17:24:37",
+    "diggCount": 18,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/6254157629c741269036e93d0d3ffc97.png"
+    ],
+    "collectCount": 31
+  },
+  {
+    "articleId": 106080490,
+    "title": "Java中的阻塞队列学习与总结体会",
+    "description": "Java中的阻塞队列学习与总结体会：介绍几种阻塞队列的基本知识以及他们的应用，常见的几种加入相关源码分析和应用分析举例",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080490",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1665964,
+    "commentCount": 24,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080490",
+    "postTime": "2020-05-12 17:10:39",
+    "diggCount": 21,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/f3faa89b74ba4048875b1ca18c671555.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 106080394,
+    "title": "对红黑树的认识总结",
+    "description": "当在红黑树中执行插入操作时，需要考虑两个主要方面：保持二叉搜索树性质和保持红黑性质。以下是插入操作的详细步骤，包括可能的旋转操作和颜色调整。插入操作的基本步骤：首先，将新节点插入到红黑树中，就像在普通的二叉搜索树中一样。新节点会被标记为红色，因为它可能会破坏红黑性质的第一个性质（根节点必须是黑色）。插入新节点后，可能会破坏红黑性质。需要通过一系列的操作来调整以确保所有的红黑性质得到满足。在进行旋转操作之前，需要进行颜色调整以满足红黑性质。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080394",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1709545,
+    "commentCount": 45,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080394",
+    "postTime": "2020-05-12 17:06:50",
+    "diggCount": 334,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200527114451482.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 1968
+  },
+  {
+    "articleId": 106080301,
+    "title": "Optional实战与源码分析",
+    "description": "Java 8 引入的新特性Optional类，主要解决空指针异常（NullPointerException）问题。从实际使用来看，Optional对多层判空嵌套有奇效，但如果只是简单的单层判空，确实没有必要去引入Optional。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080301",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17630,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080301",
+    "postTime": "2020-05-12 17:03:32",
+    "diggCount": 14,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/202107011759574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 22
+  },
+  {
+    "articleId": 106080206,
+    "title": "高并发场景下的缓存穿透问题探析与应对策略",
+    "description": "本文探讨在高并发场景下，缓存穿透问题对系统稳定性和性能的威胁。缓存穿透是指恶意请求或不存在的数据频繁穿透缓存直达数据库，严重影响系统的效率和资源利用率。为了有效应对这一挑战，文章详细介绍了三种主要的解决策略：缓存空结果、参数合法性校验和布隆过滤器的应用。每种策略都包括了具体的实施方法和技术实现，以及其在提升系统性能方面的优势和局限性。通过本文的阐述，读者将能够深入理解缓存穿透问题的本质及其解决方案，为设计和优化高并发系统提供实用的指导和技术支持。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080206",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1667809,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080206",
+    "postTime": "2020-05-12 17:00:12",
+    "diggCount": 18,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/3a3790235717496fb90cbe8fad7f5267.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 106080007,
+    "title": "快速应用设计模式：状态模式使用",
+    "description": "状态模式基本介绍与应用分析介绍，同时对于Spring-statemachine状态机框架给出了应用，最后介绍在外卖营销业务中的具体案例分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106080007",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1667537,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106080007",
+    "postTime": "2020-05-12 16:54:14",
+    "diggCount": 19,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/b55424a9eec74807b867c9f86bf4f36c.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 106079903,
+    "title": "快速应用模板方法设计模式",
+    "description": "模版模式应该是工作中最常用的设计模式之一，直白的讲就是如果的一些处理方式是有一定的模版流程处理的，那么在应用中使用该模式在合适不过了。对于其基本的业务应用，我简单写了以下三个基本的通用模版（业务失败重试机制、业务前置检查流程模版、Thrift远程调用处理模版）来展示，有问题的可以留言纠正，谢谢————————————————版权声明：本文为CSDN博主「张彦峰ZYF」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。.........",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106079903",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1659902,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106079903",
+    "postTime": "2020-05-12 16:50:49",
+    "diggCount": 14,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e49412c8d54f4653a8ba8a940afc09a8.png"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 106079740,
+    "title": "设计模式：快速理解原型模式和应用",
+    "description": "一、原型模式的定义与理解（一）基本定义（二）基本理解分析（三）在Spring中的具体体现二、具体简单实现方式(一)实现原型类具备的三个条件（二）具体举例三、深拷贝、浅拷贝与原型模式的解决方案（一）理解复制的含义，去除原有的误解（二）浅拷贝及其带来的问题1.新建一个上司类作为员工类的某个属性2.测试浅拷贝带来的问题（三）通过深拷贝来解决问题四、原型模式的应用场景分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/106079740",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1664933,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/106079740",
+    "postTime": "2020-05-12 16:46:00",
+    "diggCount": 22,
+    "formatTime": "2020.05.12",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200526095831753.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 105652399,
+    "title": "快速理解设计模式：单例模式深入",
+    "description": "单例模式是指确保一个类在任何情况下都绝对只有一个实例，并提供一个全局访问点。实现方式介绍分析：饿汉式单例模式+懒汉式单例模式（双重检查锁）+静态内部类实现单例模式+注册式单例模式",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105652399",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1690572,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105652399",
+    "postTime": "2020-04-21 11:15:59",
+    "diggCount": 42,
+    "formatTime": "2020.04.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/3df2c0195b8547ce8e55faaf17a8eb60.png"
+    ],
+    "collectCount": 144
+  },
+  {
+    "articleId": 105640313,
+    "title": "动态规划相关高频笔试汇总",
+    "description": "动态规划基本理解分析以及应用举例，同时给出高频笔试考题解法分析和代码展示验证（最大子序和、最长上升子序列、最长公共子序列、最大子数组乘积、分割整数的最大乘积、最长有效括号、不同路径、最小路径和、最大矩形、0-1背包问题、编辑距离、单词拆分、爬楼梯、打家劫舍、强盗抢劫环形街区、股票买卖问题、最佳买卖股票时机含冷冻期、找零钱的最少硬币数、从起点到终点的最小路径数等）",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105640313",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 14353,
+    "commentCount": 44,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105640313",
+    "postTime": "2020-04-20 17:34:58",
+    "diggCount": 14,
+    "formatTime": "2020.04.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a30245eb6498458b876e377c8db49398.png"
+    ],
+    "collectCount": 23
+  },
+  {
+    "articleId": 105637394,
+    "title": "生日悖论理论及在哈希函数碰撞中的应用",
+    "description": "生日悖论揭示了在一个相对较小的群体中，至少有两人生日相同的概率远高于预期。本文探讨了生日悖论在计算机科学中的应用，特别是在哈希函数碰撞问题上的重要性。哈希函数将输入映射到固定大小的输出，而生日悖论的概念帮助我们理解即使在输出空间远小于输入空间时，碰撞的概率也显著增加。文章强调了在数字签名和数据完整性验证中避免碰撞的重要性，并提出了采用强抗碰撞能力的哈希算法和定期更新安全措施来保护信息安全的建议。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105637394",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 16818,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105637394",
+    "postTime": "2020-04-20 16:44:00",
+    "diggCount": 11,
+    "formatTime": "2020.04.20",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/15a6a2cefa3c417c9cf941de69369d8f.png"
+    ],
+    "collectCount": 11
+  },
+  {
+    "articleId": 105633821,
+    "title": "总结Redis Cluster原理+基本使用+运维注意事项",
+    "description": "总结Redis Cluster原理+基本使用+运维注意事项",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105633821",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1735263,
+    "commentCount": 80,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105633821",
+    "postTime": "2020-04-20 14:14:37",
+    "diggCount": 527,
+    "formatTime": "2020.04.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190520235542848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 2685
+  },
+  {
+    "articleId": 105631666,
+    "title": "SpringBoot启动扩展应用：干预优化+加快启动时间",
+    "description": "给出SpringBoot启动配置原理详解分析，并介绍Spring Boot启动过程中可以实现的干预工作，最后给出如何缩短SpringBoot项目的启动时间",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105631666",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1729420,
+    "commentCount": 24,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105631666",
+    "postTime": "2020-04-20 13:54:07",
+    "diggCount": 174,
+    "formatTime": "2020.04.20",
+    "picList": [
+      "https://img-blog.csdnimg.cn/88784535efff4bff8cf0be410dd153d0.png"
+    ],
+    "collectCount": 829
+  },
+  {
+    "articleId": 105608235,
+    "title": "掌握装饰器模式：概念、用法及商品价格策略优化案例",
+    "description": "本文系统性地介绍了装饰器模式，从基本概念到实际应用，逐步展开。首先，阐述了装饰器模式的定义和功能，配合结构图和具体实例进行说明。接着，深入探讨了装饰器模式的基本用法，包括接口定义、具体对象初始化、装饰类设计以及其他具体装饰类的实现。在实际案例分析部分，我们通过构建一套商品价格策略优化方案，展示了装饰器模式的强大灵活性。案例步骤包括订单和商品属性类的建立、计算支付金额的接口和基本类设计、优惠券和红包计算类的实现，以及工厂类的组合应用。最后，通过实际操作演示，为读者提供了详实的学习参考和实践指导。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105608235",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1695680,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105608235",
+    "postTime": "2020-04-19 12:36:44",
+    "diggCount": 47,
+    "formatTime": "2020.04.19",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200419154615651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 180
+  },
+  {
+    "articleId": 105413134,
+    "title": "前端页面的简单学习与项目搭建（主要针对HTML和VUE的学习）",
+    "description": "备注：只是本人的自学与备注，自己本身不是做前端的，只是简单搭建一些前端的东西，自己玩的。一、HTML简单的回顾（一）HTML 基本结构<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"        \"http://www.w3.org/TR/html4/loose.dtd\"><html&...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105413134",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1698820,
+    "commentCount": 24,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105413134",
+    "postTime": "2020-04-09 16:32:06",
+    "diggCount": 46,
+    "formatTime": "2020.04.09",
+    "picList": [
+      "https://img-blog.csdn.net/20170708141252847?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvUGVuZ0ZseWluZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"
+    ],
+    "collectCount": 270
+  },
+  {
+    "articleId": 105361100,
+    "title": "相关业务问题+系统问题+设计问题整理统计",
+    "description": "业务系统及其他相关面试问题整理：线上相关问题排查+高并发系统的限流+高并发秒杀系统设计+负载均衡+一个网站有 20 亿 url 存在一个黑名单中，这个黑名单要怎么存？若此时随便输入一个 url，你如何快速判断该 url 是否在这个黑名单中？并且需在给定内存空间（比如：500M）内快速判断出？",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105361100",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1683421,
+    "commentCount": 24,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105361100",
+    "postTime": "2020-04-07 11:51:11",
+    "diggCount": 21,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/a6cf08ba85074707b9d24ac704cb1eef.png"
+    ],
+    "collectCount": 57
+  },
+  {
+    "articleId": 105361083,
+    "title": "消息中间件高频面试题整理（RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ）",
+    "description": "消息中间件基本问题整理分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105361083",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1688286,
+    "commentCount": 1260,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105361083",
+    "postTime": "2020-04-07 11:50:15",
+    "diggCount": 29,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200415123015439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 144
+  },
+  {
+    "articleId": 105361059,
+    "title": "网络协议与编程IO相关面试问题整理",
+    "description": "HTTP一些基本问题的整理",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105361059",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1686446,
+    "commentCount": 31,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105361059",
+    "postTime": "2020-04-07 11:49:24",
+    "diggCount": 19,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200409094914618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 61
+  },
+  {
+    "articleId": 105361028,
+    "title": "Spring一些基础问题整理",
+    "description": "Spring相关高频面试题整理",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105361028",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1698550,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105361028",
+    "postTime": "2020-04-07 11:48:27",
+    "diggCount": 45,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200417174944638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 375
+  },
+  {
+    "articleId": 105361002,
+    "title": "MySQL高频基本面试问题整理",
+    "description": "总结MySQL高频基本面试问题整理，用于快速查缺补漏",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105361002",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1704192,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105361002",
+    "postTime": "2020-04-07 11:47:29",
+    "diggCount": 102,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200414151845150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 825
+  },
+  {
+    "articleId": 105360974,
+    "title": "MySQL索引性能优化分析",
+    "description": "总结MySQL索引性能优化，主要集中在索引的背景介绍以及索引的高效创建、使用和查询等，最有给出除了索引的一些其他优化思路",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105360974",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1731641,
+    "commentCount": 624,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105360974",
+    "postTime": "2020-04-07 11:46:20",
+    "diggCount": 176,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/3e10ee3824724e78935b0514dad9b6b3.png"
+    ],
+    "collectCount": 1244
+  },
+  {
+    "articleId": 105360939,
+    "title": "Redis高频面试基本问题整理",
+    "description": "对Redis一些重点内容进行整理总结用于查缺补漏",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105360939",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1702356,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105360939",
+    "postTime": "2020-04-07 11:45:25",
+    "diggCount": 59,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200413141708514.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 416
+  },
+  {
+    "articleId": 105360860,
+    "title": "深度解析ZGC：高效垃圾回收的应用与优化",
+    "description": "主要总结ZGC关键技术与垃圾回收原理，并总结ZGC调优案例实践，以及业务升级JDK11与应用ZGC注意事项",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105360860",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1728689,
+    "commentCount": 430,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105360860",
+    "postTime": "2020-04-07 11:44:14",
+    "diggCount": 122,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/94df80814c174887a82d7287c272e997.png"
+    ],
+    "collectCount": 862
+  },
+  {
+    "articleId": 105358094,
+    "title": "CMS垃圾回收器介绍与优化分析案列整理总结",
+    "description": "CMS垃圾回收器介绍与优化分析案列整理总结：CMS基本介绍+CMS回收过程讲解+实际案例分析（基本内存参数设置分析+优化目标分析+GC优化案例）案例一 Major GC和Minor GC频繁+案例二 请求高峰期发生GC，导致服务可用性下降",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/105358094",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1707035,
+    "commentCount": 21,
+    "editUrl": "https://mp.csdn.net/console/editor/html/105358094",
+    "postTime": "2020-04-07 11:39:18",
+    "diggCount": 26,
+    "formatTime": "2020.04.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/32d2d68b046d4fe8b8dbe463a4ad0bd6.png"
+    ],
+    "collectCount": 92
+  },
+  {
+    "articleId": 88667231,
+    "title": "基于Shell脚本的Java服务管理与配置初始化自动化方案",
+    "description": "本文通过两个主要脚本app.sh和start.sh，展示了如何实现Java服务的管理和配置初始化自动化。app.sh脚本负责Java服务的启动、停止、重启和状态查询，而start.sh脚本则用于初始化配置文件、管理软链接和启动服务。本文详细介绍了各个功能模块的实现方法，包括如何检查服务是否运行、如何动态更新配置文件、如何通过软链接管理日志目录以及如何使用confd工具实现配置管理。通过实例演示，读者可以清晰地了解如何应用这套脚本方案来优化微服务的管理和维护工作。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/88667231",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1683585,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/88667231",
+    "postTime": "2020-04-03 18:23:34",
+    "diggCount": 16,
+    "formatTime": "2020.04.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/616325bbb8e34beaa0c4f4a20f672ad0.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 88641737,
+    "title": "Shell提升配置管理的效率与质量：基于Shell脚本修改变更值",
+    "description": "基于Shell脚本修改变更值：我们详细展示了现有的配置文件内容和相关代码，并针对原始脚本提出了优化建议。优化后的脚本不仅提高了代码的可读性、灵活性和稳健性，还增加了实用性和可维护性。具体的优化措施包括增加注释、加强参数验证、提取重复代码到函数中、定义常量、添加日志记录功能、支持命令行参数传递以及使用更具可读性的语法结构。希望对以后的编码有所帮助。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/88641737",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1686608,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/88641737",
+    "postTime": "2020-04-03 18:17:45",
+    "diggCount": 16,
+    "formatTime": "2020.04.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/07df7e2ff54d4bbe9f9d1acee21e80e0.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 100706167,
+    "title": "高频面试题基本总结回顾（含笔试高频算法整理）",
+    "description": "1.自我介绍+项目介绍+项目细节/难点提问-------这个主要看个人的经历了，每个人都不一样2.基础知识点考核---------还是可以去增强自己的，也是这次的主要的一些总结思路3.算法题-----------一般都是LeetCode高频题，这个得在找工作之前的好好的练习(d对常见的高频题进行总结分析，见对应的链接提示)",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/100706167",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1725474,
+    "commentCount": 529,
+    "editUrl": "https://mp.csdn.net/console/editor/html/100706167",
+    "postTime": "2020-04-03 18:13:53",
+    "diggCount": 346,
+    "formatTime": "2020.04.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/7d57f30a3276491ca725c069e2c3df17.png"
+    ],
+    "collectCount": 2807
+  },
+  {
+    "articleId": 104836403,
+    "title": "淘系商品发展历程分析",
+    "description": "淘系商品的发展历程是一个持续创新和扩张的过程，通过不断优化用户体验、引入新技术和拓展业务领域，阿里巴巴集团在淘系商品领域取得了显著的成就。从一些文章中整理内容对其做个简单的认识和了解",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/104836403",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 17792,
+    "commentCount": 17,
+    "editUrl": "https://mp.csdn.net/console/editor/html/104836403",
+    "postTime": "2020-03-13 11:03:38",
+    "diggCount": 14,
+    "formatTime": "2020.03.13",
+    "picList": [
+      "https://img-blog.csdnimg.cn/0fd4f773b6bb4268bc13650fd66bbaf6.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 97183370,
+    "title": "剑指offer所有编程练习总结分析",
+    "description": "给出剑指offer所有题目描述和对应的解题思路，并且在最有给出对应的代码展示和测试内容由于牛客剑指Offer题目经过整理和筛选，是面试备考的经典资源之一，因此它的重要性在面试准备过程中是很高的。做这些题目可以帮助面试者熟悉常见的面试题型、巩固基础知识、提升编程能力，为应对面试提供了很好的准备。然而，还需注意不仅仅局限于做题，理解背后的原理和思想同样重要，以便能够在面试时灵活运用和展示自己的能力。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/97183370",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1684756,
+    "commentCount": 45,
+    "editUrl": "https://mp.csdn.net/console/editor/html/97183370",
+    "postTime": "2019-07-25 00:27:03",
+    "diggCount": 28,
+    "formatTime": "2019.07.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190724234503470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 92
+  },
+  {
+    "articleId": 90384502,
+    "title": "设计模式之代理模式分析使用",
+    "description": "代理模式原理和使用分析总结",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/90384502",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1641846,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/90384502",
+    "postTime": "2019-05-21 00:11:30",
+    "diggCount": 73,
+    "formatTime": "2019.05.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200416162339477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 205
+  },
+  {
+    "articleId": 87958174,
+    "title": "统计一篇超过10G的文章中每个单词出现的次数",
+    "description": "统计一篇超过10G的文章中每个单词出现的次数，可以通过分布式计算来提高效率。我提供一些思路和代码展示解决方案",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87958174",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1682497,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87958174",
+    "postTime": "2019-02-27 21:04:12",
+    "diggCount": 24,
+    "formatTime": "2019.02.27",
+    "picList": [
+      "https://img-blog.csdnimg.cn/866f63e460754ace960ad1ff4c160e5d.png"
+    ],
+    "collectCount": 40
+  },
+  {
+    "articleId": 87272970,
+    "title": "字符串高频编程笔试汇总",
+    "description": "字符串相关基本练习题总结（最长公共子串、最长回文子串、最长无重复字符子串、最小覆盖子串、字符串相乘、中文数字表达转实际数字格式等）参考书籍、文献和资料：【1】郑天民. 微服务设计原理与架构. 北京：人民邮电出版社，2018.",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87272970",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1681965,
+    "commentCount": 34,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87272970",
+    "postTime": "2019-02-14 14:42:25",
+    "diggCount": 17,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/24e1c235151640d788912c5402d232ae.png"
+    ],
+    "collectCount": 19
+  },
+  {
+    "articleId": 87272337,
+    "title": "聚焦Spring Cloud Hystrix原理与注意事项",
+    "description": "目录一、Spring Cloud Hytrix概述和设计目标（一）Spring Cloud Hytrix基本概述（二）Spring Cloud Hytrix概述设计目标二、Spring Cloud Hytrix解决的主要内容（一）隔离（线程池隔离和信号量隔离）1.线程和线程池线程隔离的好处：线程隔离的缺点2.信号量隔离（Semaphores）（二）优雅的降级...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87272337",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1635622,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87272337",
+    "postTime": "2019-02-14 14:34:52",
+    "diggCount": 34,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190221100202203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 54
+  },
+  {
+    "articleId": 87271644,
+    "title": "微服务架构Spring Cloud概述和基本讲解",
+    "description": "微服务架构Spring Cloud概述和基本讲解",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87271644",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1646263,
+    "commentCount": 13,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87271644",
+    "postTime": "2019-02-14 14:23:56",
+    "diggCount": 39,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/fd1090c188184fa8ae1439ba7be2bc0b.png"
+    ],
+    "collectCount": 103
+  },
+  {
+    "articleId": 87271456,
+    "title": "布隆过滤器介绍和业务使用说明",
+    "description": "布隆过滤器（Bloom Filter）是1970年由布隆提出的。它实际上是一个很长的二进制向量和一系列随机映射函数。布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点是空间效率和查询时间都比一般的算法要好的多，缺点是有一定的误识别率和删除困难。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87271456",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1646908,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87271456",
+    "postTime": "2019-02-14 14:21:17",
+    "diggCount": 35,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/c2421200e90748549b70933be04a474c.png"
+    ],
+    "collectCount": 95
+  },
+  {
+    "articleId": 87271101,
+    "title": "微服务架构实现需求与技术选型",
+    "description": "微服务架构实现需求与技术选型",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/87271101",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1652705,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/87271101",
+    "postTime": "2019-02-14 14:18:34",
+    "diggCount": 37,
+    "formatTime": "2019.02.14",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190214150132889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 81
+  },
+  {
+    "articleId": 86772740,
+    "title": "微服务架构服务可靠性分析",
+    "description": "微服务架构服务可靠性分析：服务访问失败的原因和应对策略+服务容错+服务隔离+服务限流+服务降级",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86772740",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1648407,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86772740",
+    "postTime": "2019-02-07 20:13:53",
+    "diggCount": 30,
+    "formatTime": "2019.02.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190210174538983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 49
+  },
+  {
+    "articleId": 86772650,
+    "title": "微服务架构数据一致性分析",
+    "description": "微服务架构数据一致性分析：分布式事物+CAP&BASE+可靠事件模式+补偿模式+Sagas模式+TCC模式+最大努力通知模式+人工干预模式",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86772650",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1653697,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86772650",
+    "postTime": "2019-02-07 20:03:27",
+    "diggCount": 49,
+    "formatTime": "2019.02.07",
+    "picList": [
+      "https://img-blog.csdnimg.cn/201902080919322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 187
+  },
+  {
+    "articleId": 86770057,
+    "title": "微服务架构下服务治理基本功能",
+    "description": "服务注册中心：注册中心核心功能+实现策略，讲解注册中心核心功能和注册中心实现策略+服务发布与注册+服务发现与调用+服务监控",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86770057",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1652821,
+    "commentCount": 16,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86770057",
+    "postTime": "2019-02-06 23:42:42",
+    "diggCount": 31,
+    "formatTime": "2019.02.06",
+    "picList": [
+      "https://img-blog.csdnimg.cn/201902071607229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 57
+  },
+  {
+    "articleId": 86694766,
+    "title": "Shell使用软链接挂载目录的最佳实践",
+    "description": "将某一目录整体通过软连接挂载到目标目录，可以方便于自身的管理与分析。1.设置打印日志，方便问题定位，采用函数方式在多处可以引用；2.将这个外挂软连接的方式用函数实现，方便在多处使用，同时，给具体目录更改对应的权限控制；3.针对自己当前的业务使用上面的基本函数实现自我的功能。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86694766",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1681743,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86694766",
+    "postTime": "2019-01-29 20:04:49",
+    "diggCount": 13,
+    "formatTime": "2019.01.29",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8cf6dee3085a465d82900ec14e9591ae.png"
+    ],
+    "collectCount": 14
+  },
+  {
+    "articleId": 86605409,
+    "title": "Redis八大附加功能：慢查询分析+Redis Shell+PiPline+事务与Lua脚本+Bitmaps+HyperLogLog+发布订阅+GEO",
+    "description": "一、慢查询分析慢查询日志帮助开发和运维人员定位系统存在的慢操作。慢查询日志就是系统在命令执行前后计算每条命令的执行时间，当超过预设阀值，就将这条命令的相关信息（慢查询ID，发生时间戳，耗时，命令的详细信息）记录下来。    ⑴慢查询的两个配置参数◎慢查询的预设阀值 slowlog-log-slower-than①单位是微秒，默认值是1000；②如果slowlog...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86605409",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1652670,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86605409",
+    "postTime": "2019-01-23 10:27:25",
+    "diggCount": 24,
+    "formatTime": "2019.01.23",
+    "picList": [
+      "https://img-blog.csdnimg.cn/62263e4daa89479f864ee2f43d587a51.png"
+    ],
+    "collectCount": 26
+  },
+  {
+    "articleId": 86596105,
+    "title": "Redis的基本键值API使用、内部编码、使用场景讲解",
+    "description": "一、Redis的启动、配置、命令行操作和关闭1.启动Redis：默认配置 + 运行配置 + 配置文件启动默认配置：redis-server运行配置：redis--server --configKey1 configValue1 --configKey2 configValue2配置文件启动：redis-server /root/yangf/redis-4.0.6/redis.con...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86596105",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1653643,
+    "commentCount": 13,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86596105",
+    "postTime": "2019-01-22 15:56:08",
+    "diggCount": 18,
+    "formatTime": "2019.01.22",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190123100203719.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 20
+  },
+  {
+    "articleId": 86517016,
+    "title": "Mybatis TypeHandler介绍使用举例",
+    "description": "Mybatis TypeHandler介绍使用举例，主要回顾Mybatis的原理内容，在介绍TypeHandler的基本功能，最后给出使用TypeHandler的样例和注意事项等内容",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86517016",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 813472,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86517016",
+    "postTime": "2019-01-17 00:14:02",
+    "diggCount": 17,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/09de4ce479dc4925bba4ea2333f009f0.png"
+    ],
+    "collectCount": 40
+  },
+  {
+    "articleId": 86516999,
+    "title": "揭秘CAS：深入理解与应用解析",
+    "description": "在并发编程中，Compare-And-Swap（CAS）机制作为一种无锁算法，凭借其高效性和避免线程阻塞的优势，受到广泛关注。CAS不仅在底层实现上有着重要地位，还在实际开发中发挥着关键作用。本文将从CAS的工作原理、在Java中的实现及其增强机制来回顾和加深理解一下CAS。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516999",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 812089,
+    "commentCount": 14,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516999",
+    "postTime": "2019-01-17 00:12:31",
+    "diggCount": 11,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/c77fcfe786e64aea8af33390aa12beba.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 86516988,
+    "title": "常见限流算法和Guava RateLimiter实现",
+    "description": "常见限流算法和Guava RateLimiter实现分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516988",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 813780,
+    "commentCount": 19,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516988",
+    "postTime": "2019-01-17 00:11:34",
+    "diggCount": 12,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/81f15155607846728aa004f27ed85a58.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 86516955,
+    "title": "阿里Sentinel学习总结",
+    "description": "阿里Sentinel学习总结与部分源码分析",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516955",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 815112,
+    "commentCount": 15,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516955",
+    "postTime": "2019-01-17 00:08:26",
+    "diggCount": 12,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/8023939e02524944bc2ba5113dacf3dc.png"
+    ],
+    "collectCount": 15
+  },
+  {
+    "articleId": 86516943,
+    "title": "MySQL事务及实现原理",
+    "description": "MySQL事务简单介绍+事务特性分析+事务隔离级别+事务实现原理",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516943",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 817557,
+    "commentCount": 23,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516943",
+    "postTime": "2019-01-17 00:07:25",
+    "diggCount": 23,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://img-blog.csdnimg.cn/32afffce19004c9c99f32d9cab80615d.png"
+    ],
+    "collectCount": 43
+  },
+  {
+    "articleId": 86516911,
+    "title": "自动化Google Chrome的强大工具：chromedriver下载、安装、简单使用",
+    "description": "ChromeDriver 是一个强大的工具，可以通过编程方式自动化控制 Chrome 浏览器，使得 Selenium WebDriver 能够执行复杂的浏览器操作。下载与安装 ChromeDriver 时，需要确保 ChromeDriver 与 Chrome 浏览器版本匹配。在使用 Selenium 进行自动化测试时，添加正确的依赖，并确保 ChromeDriver 路径设置正确。如果需要在无界面模式下运行测试，还可以配置为无头浏览器模式。通过这些步骤，开发者可以轻松编写和运行自动化测试脚本，大幅提高工作效",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516911",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 820630,
+    "commentCount": 29,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516911",
+    "postTime": "2019-01-17 00:03:11",
+    "diggCount": 19,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/1ddb60e740874c45a189df10f23d44bc.png"
+    ],
+    "collectCount": 35
+  },
+  {
+    "articleId": 86516890,
+    "title": "MySQL：基本表查询操作汇总（单表查询+多表操作）",
+    "description": "本文详细介绍了MySQL单表查询和多表操作的基础知识和实践方法。单表查询部分涵盖了简单查询、条件查询、高级查询以及表和字段取别名等内容，通过具体示例展示了各类查询的基本用法。多表操作部分则探讨了外键约束、关联表操作、连接查询和子查询等技术，并结合实际案例演示了多表查询的应用场景。文章最后总结了提高查询效率和保证数据质量的注意事项，旨在帮助读者更好地理解和应用MySQL的查询技术，以提升数据库管理和数据处理的能力。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516890",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 820314,
+    "commentCount": 25,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516890",
+    "postTime": "2019-01-17 00:00:13",
+    "diggCount": 17,
+    "formatTime": "2019.01.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/cc4e33cf483944299903c7cbab6a0810.png"
+    ],
+    "collectCount": 16
+  },
+  {
+    "articleId": 86516876,
+    "title": "实现一个熔断器公共组件接入其他服务？",
+    "description": "实现一个熔断器公共组件接入其他服务？回顾熔断器的基本概念及其工作原理，介绍如何通过监控失败率来判断调用是否可能失败，以及熔断器如何在服务恢复时自动切换状态。接着，提供了一个 Java 实现的基本熔断器代码示例，展示了熔断器如何管理状态并处理服务调用。最后，文章列出了几种流行的开源熔断器库供后续学习",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516876",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 821196,
+    "commentCount": 36,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516876",
+    "postTime": "2019-01-16 23:57:45",
+    "diggCount": 17,
+    "formatTime": "2019.01.16",
+    "picList": [
+      "https://img-blog.csdnimg.cn/4e2f886a88bd419182567f16d184f346.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 86516867,
+    "title": "JVM高频基本面试问题整理",
+    "description": "JVM一些基本问题的总结分享",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/86516867",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 824886,
+    "commentCount": 30,
+    "editUrl": "https://mp.csdn.net/console/editor/html/86516867",
+    "postTime": "2019-01-16 23:56:21",
+    "diggCount": 23,
+    "formatTime": "2019.01.16",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200411204027144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 77
+  },
+  {
+    "articleId": 85682513,
+    "title": "微服务架构基础组件：服务通信+事件驱动+负载均衡+服务路由+API网关+配置管理",
+    "description": "微服务架构的实现首先需要提供一些基础组件，这些基础的功能性组件主要包括服务之间的通信、面向事件驱动的架构设计方法、负载均衡、服务路由、API网关和分布式配置中心等，我们对这六大基本组件进行初步的分析定案。一、服务通信：网络连接+IO模型+可靠性+同步与异步对于微服务而言，网络通信主要关注于网络连接、IO模型、可靠性设计及服务调用方式。1.网络连接一般，基于TCP网络连接有两种基本方...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85682513",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1665494,
+    "commentCount": 20,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85682513",
+    "postTime": "2019-01-03 11:04:50",
+    "diggCount": 40,
+    "formatTime": "2019.01.03",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20190204161341297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 175
+  },
+  {
+    "articleId": 85330132,
+    "title": "MyBatis设计模式应用分析",
+    "description": "对MyBatis中应用的一些设计模式的整体分析，主要从三方面进行展开分析：创建型设计模式+结构型设计模式+行为型设计模式，每一种都提炼源码进行对应的分析详解",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85330132",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1682924,
+    "commentCount": 27,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85330132",
+    "postTime": "2018-12-28 19:04:53",
+    "diggCount": 16,
+    "formatTime": "2018.12.28",
+    "picList": [
+      "https://img-blog.csdnimg.cn/e7398831659349d28b227bc8dc261aac.png"
+    ],
+    "collectCount": 22
+  },
+  {
+    "articleId": 85254052,
+    "title": "微服务集成的四种主要方式",
+    "description": "系统集成的四种基本方式+微服务集成的四种主要方式",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85254052",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1664638,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85254052",
+    "postTime": "2018-12-25 20:50:35",
+    "diggCount": 22,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/b3adcdd03ed540f2af40419ace162143.png"
+    ],
+    "collectCount": 42
+  },
+  {
+    "articleId": 85253976,
+    "title": "管理服务依赖关系+服务数据+事务边界",
+    "description": "管理服务的依赖关系：构建无环依赖关系1.上移切入点：交互部分抽离2.下移切入点：依赖关系转移重构3.回调切入点：接口或抽象类管理服务数据1.微服务中的数据管理策略2.数据管理尝试策略：CQRS模式及与领域驱动相结合三、管理事务边界：微服务架构中推崇打破事务边界实现数据弱一致性",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253976",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1666249,
+    "commentCount": 26,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253976",
+    "postTime": "2018-12-25 20:44:03",
+    "diggCount": 22,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20181228111456134.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 21
+  },
+  {
+    "articleId": 85253886,
+    "title": "微服务架构服务拆分维度和策略",
+    "description": "目录一、架构的轮回理论二、服务拆分的维度：业务与数据的AKF扩展立方体分析X轴扩展讲解：Y轴扩展讲解：Z轴扩展讲解：总结:三、服务拆分的两大策略：绞杀者模式+修缮者模式1.绞杀者模式策略2.修缮者模式策略参考书籍、文献和资料：一、架构的轮回理论架构轮回给我们的启示是，将所有的东西放在一个系统中是不好的，软件系统的关注点应该清晰划分，并能通过功能拆分降...",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253886",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1670596,
+    "commentCount": 27,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253886",
+    "postTime": "2018-12-25 20:37:24",
+    "diggCount": 24,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20181228105529628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 27
+  },
+  {
+    "articleId": 85253615,
+    "title": "微服务建模切入点",
+    "description": "服务建模切入点：服务分类+服务模型+服务边界+服务数据",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253615",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1672720,
+    "commentCount": 28,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253615",
+    "postTime": "2018-12-25 20:28:28",
+    "diggCount": 23,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20181226204616115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 58
+  },
+  {
+    "articleId": 85253477,
+    "title": "实施微服务架构的优势与技术挑战",
+    "description": "实施微服务架构的优势与技术挑战：实施前提+实施模式+架构优势+面临的挑战",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253477",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1675913,
+    "commentCount": 27,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253477",
+    "postTime": "2018-12-25 20:08:12",
+    "diggCount": 19,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20181226205824191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 32
+  },
+  {
+    "articleId": 85253412,
+    "title": "构建微服务架构的系统方法",
+    "description": "构建微服务架构的系统方法：服务模型+实现技术+基础设施+研发过程",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253412",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1676668,
+    "commentCount": 25,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253412",
+    "postTime": "2018-12-25 20:02:38",
+    "diggCount": 18,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/3b7a16bfa73440659d09da3948a8a66a.png"
+    ],
+    "collectCount": 17
+  },
+  {
+    "articleId": 85253353,
+    "title": "分布式锁的几种简单实现方式分析",
+    "description": "分布式锁是一种用于在分布式系统中实现协调的机制，用于确保在多个节点上的并发操作之间的互斥性。介绍几种可能的分布式锁实现方法：基于数据库+基于缓存+基于ZooKeeper+基于分布式算法+基于分布式算法，同时给出使用建议和业务应用举例，最后我们谈谈面试过程中对其的思考",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253353",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1690442,
+    "commentCount": 986,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253353",
+    "postTime": "2018-12-25 19:59:21",
+    "diggCount": 17,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/b132021d8a2642e5ae2070852b2515e5.png"
+    ],
+    "collectCount": 37
+  },
+  {
+    "articleId": 85253251,
+    "title": "对IOC的相关理解总结",
+    "description": "在Java开发中，Ioc意味着将你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。理解好Ioc的关键是要明确“谁控制谁，控制什么，为何是反转（有反转就应该有正转了），哪些方面反转了”",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85253251",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 824625,
+    "commentCount": 29,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85253251",
+    "postTime": "2018-12-25 19:51:08",
+    "diggCount": 21,
+    "formatTime": "2018.12.25",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200420115748990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 85169642,
+    "title": "实现动态配置执行工作流",
+    "description": "实现动态配置执行工作流代码简单实现",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85169642",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1687905,
+    "commentCount": 725,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85169642",
+    "postTime": "2018-12-21 19:16:24",
+    "diggCount": 19,
+    "formatTime": "2018.12.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/91fdf2549edf485eaf1359b4f22bca07.png"
+    ],
+    "collectCount": 23
+  },
+  {
+    "articleId": 85163814,
+    "title": "MySQL：表的约束+设置表的字段值自动增加",
+    "description": "MySQL：表的约束+设置表的字段值自动增加",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85163814",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 830162,
+    "commentCount": 67,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85163814",
+    "postTime": "2018-12-21 16:09:19",
+    "diggCount": 16,
+    "formatTime": "2018.12.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/20200528140359348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9mZW5nMTAzMzAxMTE=,size_16,color_FFFFFF,t_70"
+    ],
+    "collectCount": 30
+  },
+  {
+    "articleId": 85163793,
+    "title": "MYSQL数据表基本操作：创建+查看+修改+删除",
+    "description": "数据表的基本操作--创建+查看+修改+删除",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85163793",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 825929,
+    "commentCount": 39,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85163793",
+    "postTime": "2018-12-21 16:08:13",
+    "diggCount": 24,
+    "formatTime": "2018.12.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/16d1b0d0a5d04cc8868d1607b9ce95a9.png"
+    ],
+    "collectCount": 57
+  },
+  {
+    "articleId": 85162029,
+    "title": "MYSQL：创建、查看、修改、删除数据库",
+    "description": "创建和查看数据库+修改数据库+删除数据库",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/85162029",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 840508,
+    "commentCount": 622,
+    "editUrl": "https://mp.csdn.net/console/editor/html/85162029",
+    "postTime": "2018-12-21 14:49:37",
+    "diggCount": 33,
+    "formatTime": "2018.12.21",
+    "picList": [
+      "https://img-blog.csdnimg.cn/cb505083d7f34457a4641831960bfc90.png"
+    ],
+    "collectCount": 193
+  },
+  {
+    "articleId": 84936252,
+    "title": "Shell脚本：完成日志老化，将保存一周的日志打包转移到新目录下，并保存一月后清除。",
+    "description": "要求日志老化，具体要求如下：将以上具体某个日志下的日志已保留了七天的统一打包到一个目录下，该目录的名称和原来的目录名称基本对应，以保证在看其备份日志时，可以方便查找；上面打包以后采用直接move操作来转移到新目录下；在新的统一目录下，要求所有的tar包都只保留一个月，一个月后自动清除。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/84936252",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1690856,
+    "commentCount": 659,
+    "editUrl": "https://mp.csdn.net/console/editor/html/84936252",
+    "postTime": "2018-12-10 10:40:56",
+    "diggCount": 17,
+    "formatTime": "2018.12.10",
+    "picList": [
+      "https://img-blog.csdnimg.cn/6bda88657e6b4f62a8af739cc1a4060f.png"
+    ],
+    "collectCount": 21
+  },
+  {
+    "articleId": 53034130,
+    "title": "Java高频面试基础知识点整理",
+    "description": "Java高频面试知识点总结：覆盖高频基础知识考点+高频集合知识点深入分析+高频多线程与并发编程面试题汇总+其他扩展考察等。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/53034130",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1678830,
+    "commentCount": 534,
+    "editUrl": "https://mp.csdn.net/console/editor/html/53034130",
+    "postTime": "2016-11-04 14:00:37",
+    "diggCount": 30,
+    "formatTime": "2016.11.04",
+    "picList": [
+      "https://img-blog.csdnimg.cn/direct/1fc22bfc58ab40dbbc8d6445e2b39e55.png"
+    ],
+    "collectCount": 123
+  }
+]
