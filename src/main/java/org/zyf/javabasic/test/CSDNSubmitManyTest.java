@@ -13,10 +13,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -30,12 +27,7 @@ public class CSDNSubmitManyTest {
     private static final SecureRandom secureRandom = new SecureRandom();
 
     public static void main(String[] args) {
-        List<String> articleIds = Lists.newArrayList(
-                "105360860","105148032","105124900","105078547","87272559","6","7","8",
-                "1","2","3","4","5","6","7","8",
-                "1","2","3","4","5","6","7","8",
-                "1","2","3","4","5","6"
-        );
+        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30);
 
         String cookie = "";
         cookie = "";
@@ -58,10 +50,10 @@ public class CSDNSubmitManyTest {
             String url = "https://blog.csdn.net/phoenix/web/v1/comment/submit";
 
             // 准备请求参数
-            List<String> comments = CSDNComments.getComments(articleId);
+            List<String> comments = CSDNComments.getComments(articleId.toString());
             Map<String, String> parameters = new HashMap<>();
             parameters.put("content", getRandomString(comments));
-            parameters.put("articleId", articleId);
+            parameters.put("articleId", articleId.toString());
             String form = null;
             try {
                 form = getFormUrlEncodedData(parameters);

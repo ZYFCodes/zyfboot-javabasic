@@ -2,6 +2,7 @@ package org.zyf.javabasic.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.io.InputStream;
 import java.util.List;
@@ -29,11 +30,16 @@ public class CSDNComments {
     }
 
     public static List<String> getComments(String key) {
-        return COMMENTS.getOrDefault(key, Lists.newArrayList());
+        List<String> comments = COMMENTS.getOrDefault(key, Lists.newArrayList());
+        if(CollectionUtils.isEmpty(comments)){
+            comments = COMMENTS.get("commentComments");
+        }
+
+        return comments;
     }
 
     public static void main(String[] args) {
-        String articleId = "105360860";
+        String articleId = "10536ee0860";
         System.out.println(getComments(articleId));
     }
 }
