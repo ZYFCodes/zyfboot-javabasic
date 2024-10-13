@@ -41,6 +41,10 @@ public class CSDNArticles {
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toSet());
     }
 
+    public static List<Integer> articleIdList(){
+        return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toList());
+    }
+
     /**
      * 从 articleIds 集合中随机选取 randomNums 个文章 ID。
      *
@@ -97,6 +101,27 @@ public class CSDNArticles {
         return resultLinks;
     }
 
+    /**
+     * 获取给定文章ID在排序后的文章列表中的索引。
+     *
+     * @param articleId   要查找的文章ID
+     * @return 文章ID在排序后的列表中的索引
+     * @throws NoSuchElementException 如果文章ID不在列表中
+     */
+    public static int getIndex(Integer articleId) {
+        List<Integer> articleList =articleIdList();
+
+        // 查找文章ID的索引
+        int index = articleList.indexOf(articleId);
+
+        // 如果找不到，抛出异常
+        if (index == -1) {
+            throw new NoSuchElementException("文章ID未找到");
+        }
+
+        return index;
+    }
+
 
     public static void main(String[] args) {
         String articleId = "105360860";
@@ -104,6 +129,7 @@ public class CSDNArticles {
         System.out.println(articleIds().size());
         System.out.println(getRandomArticleIds( 30));
         System.out.println(getRandomArticleLinks(30,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
+        System.out.println(getIndex(139611703));
     }
 }
 
