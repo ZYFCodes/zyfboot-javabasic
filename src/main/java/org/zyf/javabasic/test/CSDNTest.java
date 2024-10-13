@@ -229,6 +229,10 @@ public class CSDNTest {
         //1002
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/142446131");
 
+        //随机再加50篇吧
+        res.addAll(CSDNArticles.getRandomArticleLinks(50,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
+
+
 
         Properties prop = new Properties();
         // 使用当前线程的类加载器获取资源的输入流

@@ -65,12 +65,45 @@ public class CSDNArticles {
         return new HashSet<>(articleList.subList(0, randomNums));
     }
 
+    /**
+     * 从 articleIds 集合中随机选取 randomNums 个文章 ID，并与固定的 URL 前缀进行拼接，返回链接集合。
+     *
+     * @param articleIds 文章 ID 集合
+     * @param randomNums 需要随机选取的数量
+     * @param urlPrefix  固定的 URL 前缀
+     * @return 包含完整链接的 Set<String> 集合
+     * @throws IllegalArgumentException 如果 randomNums 大于 articleIds 的数量
+     */
+    public static Set<String> getRandomArticleLinks(int randomNums, String urlPrefix) {
+        Set<Integer> articleIds = articleIds();
+        // 检查边界条件
+        if (randomNums > articleIds.size()) {
+            throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");
+        }
+
+        // 将 Set 转换为 List 以支持索引操作
+        List<Integer> articleList = new ArrayList<>(articleIds);
+
+        // 打乱列表以确保随机性
+        Collections.shuffle(articleList);
+
+        // 从打乱后的列表中选取前 randomNums 个元素，并拼接为完整链接
+        Set<String> resultLinks = new HashSet<>();
+        for (int i = 0; i < randomNums; i++) {
+            String link = urlPrefix + articleList.get(i);
+            resultLinks.add(link);
+        }
+
+        return resultLinks;
+    }
+
 
     public static void main(String[] args) {
         String articleId = "105360860";
         System.out.println(articleIds());
         System.out.println(articleIds().size());
         System.out.println(getRandomArticleIds( 30));
+        System.out.println(getRandomArticleLinks(30,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
     }
 }
 
