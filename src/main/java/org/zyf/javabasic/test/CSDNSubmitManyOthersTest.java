@@ -19,16 +19,15 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @program: zyfboot-javabasic
  * @description: CSDNSubmitManyTest
  * @author: zhangyanfeng
- * @create: 2024-09-30 22:28
+ * @create: 2024-10-16 23:32
  **/
-public class CSDNSubmitManyTest {
-
+public class CSDNSubmitManyOthersTest {
     private static final SecureRandom secureRandom = new SecureRandom();
 
     public static void main(String[] args) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30);
+        Set<Integer> articleIds = CSDNArticles.getRandomArticleIdsForOthers(43);
 
         String cookie = "";
         cookie = "";
@@ -145,4 +144,3 @@ public class CSDNSubmitManyTest {
         }
     }
 }
-

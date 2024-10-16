@@ -2,6 +2,7 @@ package org.zyf.javabasic.test;
 
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.Sets;
 import org.apache.commons.collections.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 
@@ -18,9 +19,9 @@ import java.util.stream.Collectors;
 public class CSDNArticles {
 
     public static final List<Article> ARTICLES;
+    public static final List<Article> ARTICLES_ONLY;
 
     static {
-        ObjectMapper objectMapper = new ObjectMapper();
         try (InputStream inputStream = CSDNComments.class.getClassLoader().getResourceAsStream("articleIds.json")) {
             if (inputStream == null) {
                 throw new Exception("articleIds.json not found in resources");
@@ -35,10 +36,29 @@ public class CSDNArticles {
         } catch (Exception e) {
             throw new RuntimeException("Failed to load comments", e);
         }
+
+        try (InputStream inputStream = CSDNComments.class.getClassLoader().getResourceAsStream("articleIds-only.json")) {
+            if (inputStream == null) {
+                throw new Exception("articleIds-only.json not found in resources");
+            }
+            Scanner scanner = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
+            String  articleInfo = scanner.hasNext() ? scanner.next() : "";
+            List<Article> articleList = JSON.parseArray(articleInfo, Article.class);
+//            if (CollectionUtils.isEmpty(articleList)) {
+//                throw new Exception("articleList is empty!!!");
+//            }
+            ARTICLES_ONLY = articleList;
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to load comments", e);
+        }
     }
 
     public static Set<Integer> articleIds(){
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toSet());
+    }
+
+    public static Set<String> articlesForOnly(){
+        return ARTICLES_ONLY.stream().map(Article::getUrl).collect(Collectors.toSet());
     }
 
     public static List<Integer> articleIdList(){
@@ -72,7 +92,6 @@ public class CSDNArticles {
     /**
      * 从 articleIds 集合中随机选取 randomNums 个文章 ID，并与固定的 URL 前缀进行拼接，返回链接集合。
      *
-     * @param articleIds 文章 ID 集合
      * @param randomNums 需要随机选取的数量
      * @param urlPrefix  固定的 URL 前缀
      * @return 包含完整链接的 Set<String> 集合
@@ -120,6 +139,33 @@ public class CSDNArticles {
         }
 
         return index;
+    }
+
+    /**
+     * 从 articleIds 集合中随机选取 randomNums 个文章 ID。
+     *
+     * @param randomNums 需要随机选取的数量
+     * @return 随机选取的文章 ID 集合
+     * @throws IllegalArgumentException 如果 randomNums 大于 articleIds 的数量
+     */
+    public static Set<Integer> getRandomArticleIdsForOthers(int randomNums) {
+        Set<Integer> articleIds = Sets.newHashSet(
+                2,
+                3
+        );
+        // 检查边界条件
+        if (randomNums > articleIds.size()) {
+            throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");
+        }
+
+        // 将 Set 转换为 List 以支持索引操作
+        List<Integer> articleList = new ArrayList<>(articleIds);
+
+        // 打乱列表以确保随机性
+        Collections.shuffle(articleList);
+
+        // 从打乱后的列表中选取前 randomNums 个元素
+        return new HashSet<>(articleList.subList(0, randomNums));
     }
 
 
