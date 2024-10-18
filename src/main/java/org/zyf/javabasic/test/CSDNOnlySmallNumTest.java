@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 /**
  * @program: zyfboot-javabasic
- * @description: CSDNOnlySmallNumTest
+ * @description: 任务：给指定的其他账号开始刷浏览量
  * @author: zhangyanfeng
  * @create: 2024-10-16 23:44
  **/

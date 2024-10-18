@@ -57,6 +57,10 @@ public class CSDNArticles {
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toSet());
     }
 
+    public static Set<Integer> articleIdsForOnly(){
+        return ARTICLES_ONLY.stream().map(Article::getArticleId).collect(Collectors.toSet());
+    }
+
     public static Set<String> articlesForOnly(){
         return ARTICLES_ONLY.stream().map(Article::getUrl).collect(Collectors.toSet());
     }
@@ -149,10 +153,7 @@ public class CSDNArticles {
      * @throws IllegalArgumentException 如果 randomNums 大于 articleIds 的数量
      */
     public static Set<Integer> getRandomArticleIdsForOthers(int randomNums) {
-        Set<Integer> articleIds = Sets.newHashSet(
-                2,
-                3
-        );
+        Set<Integer> articleIds = articleIdsForOnly();
         // 检查边界条件
         if (randomNums > articleIds.size()) {
             throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");

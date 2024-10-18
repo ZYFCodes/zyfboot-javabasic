@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @program: zyfboot-javabasic
- * @description: CSDNSubmitManyTest
+ * @description: 给指定的文章列表随机的评论
  * @author: zhangyanfeng
  * @create: 2024-10-16 23:32
  **/
