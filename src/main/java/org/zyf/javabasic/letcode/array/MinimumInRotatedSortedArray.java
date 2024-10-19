@@ -2,51 +2,66 @@ package org.zyf.javabasic.letcode.array;
 
 /**
  * @author yanfengzhang
- * @description 假设一个按照升序排列的数组在预先未知的某个点上进行了旋转（例如，数组[0,1,2,4,5,6,7] 可能变为[4,5,6,7,0,1,2] ）。
- * 请找出其中最小的元素。
- * 你可以假设数组中不存在重复元素。
+ * @description 给定一个升序排列的数组，该数组在某个未知点上进行了旋转，
+ * 需要找出数组中的最小值，数组可能包含重复元素。
+ *
  * 示例 1：输入: [3,4,5,1,2] 输出: 1
- * 示例 2：输入: [4,5,6,7,0,1,2] 输出: 0
- * <p>
- * 提示：
- * n是数组中的元素数量。
- * 没有重复元素。
- * 时间复杂度O(logn)
- * @date 2023/4/1  23:03
+ * 示例 2：输入: [2,2,2,0,1] 输出: 0
+ *
+ * 本题要求在包含重复元素的旋转排序数组中找到最小值，
+ * 我们可以使用二分查找的思路进行求解。
+ * 时间复杂度：O(log n) （最坏情况退化为 O(n)）
  */
 public class MinimumInRotatedSortedArray {
 
     /**
-     * 与搜索旋转排序数组不同的是，本题只需要返回最小值即可，因此没有目标值和边界值的判断。
-     * 首先初始化左右指针为数组的首尾位置。在每一次循环中，
-     * 先计算出中间位置 mid，然后判断如果 nums[mid] > nums[right]，
-     * 则最小值肯定在右半边，因此将左指针移到 mid + 1 处。
-     * 否则，最小值可能在左半边或就是 mid 本身，因此将右指针移到 mid 处。
-     * 当左指针 left 和右指针 right 相遇时，此时的值就是最小值。
+     * 使用二分查找寻找旋转数组中的最小元素，允许数组中存在重复元素。
+     * @param nums 旋转后的数组
+     * @return 数组中的最小值
      */
     public int findMin(int[] nums) {
+        // 初始化左右指针，left 指向数组开头，right 指向数组末尾
         int left = 0, right = nums.length - 1;
+
+        // 当 left 和 right 没有相遇时，继续进行搜索
         while (left < right) {
+            // 计算中间位置，避免溢出：mid = (left + right) / 2
             int mid = left + (right - left) / 2;
+
+            // 解题思路：
+            // 如果中间元素大于右边界元素，说明最小值一定在右半部分
+            // 因为数组在旋转后，右边部分可能是未旋转的较小部分
             if (nums[mid] > nums[right]) {
-                /*如果中间元素大于右边元素，则最小值在右半边*/
+                // 因此，我们将左边界 left 移动到 mid + 1
                 left = mid + 1;
-            } else {
-                /*否则最小值在左半边或就是mid本身*/
+            }
+            // 如果中间元素小于右边界元素，说明最小值在左半部分或就是 mid 本身
+            else if (nums[mid] < nums[right]) {
+                // 缩小右边界到 mid
                 right = mid;
             }
+            // 当 nums[mid] 等于 nums[right] 时，无法确定最小值在左边还是右边
+            // 由于存在重复元素，我们可以安全地将 right 左移一位来缩小搜索范围
+            else {
+                right--; // 缩小右边界
+            }
         }
+
+        // 当 left 和 right 相遇时，最小值就是 nums[left] 或 nums[right]（相等）
         return nums[left];
     }
 
     public static void main(String[] args) {
+        // 测试用例 1：无重复元素
         int[] nums1 = {3, 4, 5, 1, 2};
-        int[] nums2 = {4, 5, 6, 7, 0, 1, 2};
+        // 测试用例 2：有重复元素
+        int[] nums2 = {2, 2, 2, 0, 1};
+        // 测试用例 3：无旋转的有序数组
         int[] nums3 = {11, 13, 15, 17};
 
-        System.out.println(new MinimumInRotatedSortedArray().findMin(nums1));
-        System.out.println(new MinimumInRotatedSortedArray().findMin(nums2));
-        System.out.println(new MinimumInRotatedSortedArray().findMin(nums3));
+        // 输出结果：最小值
+        System.out.println(new MinimumInRotatedSortedArray().findMin(nums1)); // 输出: 1
+        System.out.println(new MinimumInRotatedSortedArray().findMin(nums2)); // 输出: 0
+        System.out.println(new MinimumInRotatedSortedArray().findMin(nums3)); // 输出: 11
     }
-
 }

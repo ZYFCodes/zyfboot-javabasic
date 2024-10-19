@@ -30,7 +30,7 @@ public class CSDNOnlySmallNumTest {
                 String urlTest = zyfUrl.get(idx);
                 String res = HttpUtils.sendPost(urlTest, null); // 假设这是发送 POST 请求的方法
                 try {
-                    Thread.sleep(800);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
                             " 访问网站序号：" + idx +
