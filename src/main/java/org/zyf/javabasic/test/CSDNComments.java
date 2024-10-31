@@ -41,5 +41,8 @@ public class CSDNComments {
     public static void main(String[] args) {
         String articleId = "10536ee0860";
         System.out.println(getComments(articleId));
+
+        System.out.println(COMMENTS.keySet());
+        System.out.println(COMMENTS.keySet().size());
     }
 }
