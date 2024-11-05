@@ -12,6 +12,9 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -24,6 +27,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CSDNSubmitManyTest {
 
     private static final SecureRandom secureRandom = new SecureRandom();
+    // 时间格式为 "yyyy-MM-dd HH:mm"
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
 
     public static void main(String[] args) {
         // 记录开始时间
@@ -130,7 +136,22 @@ public class CSDNSubmitManyTest {
         // 打乱列表以确保随机性
         Collections.shuffle(comments);
 
-        return comments.get(randomIndex);
+        //获取该评论，如果有%s的信息则替换为时间
+        String comment = comments.get(randomIndex);
+        if(comment.contains("%s")){
+            comment = String.format(comment,getCurrentBeijingTime());
+        }
+
+        return comment;
+    }
+
+    /**
+     * 获取当前北京时间，格式为 yyyy-MM-dd HH:mm
+     * @return 当前的北京时间字符串
+     */
+    public static String getCurrentBeijingTime() {
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
+        return now.format(DATE_TIME_FORMATTER);
     }
 
     private static void costTime(long startTime) {
