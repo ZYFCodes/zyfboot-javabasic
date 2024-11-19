@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;

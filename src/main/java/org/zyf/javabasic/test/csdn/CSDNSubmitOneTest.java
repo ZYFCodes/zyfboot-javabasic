@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
@@ -6,6 +6,7 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.io.entity.StringEntity;
+import org.zyf.javabasic.test.csdn.CSDNComments;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

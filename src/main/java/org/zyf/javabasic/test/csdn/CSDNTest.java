@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 
 import com.alibaba.fastjson.JSON;
@@ -8,6 +8,7 @@ import org.springframework.util.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 import org.zyf.javabasic.common.Result;
 import org.zyf.javabasic.common.utils.HttpUtils;
+import org.zyf.javabasic.test.csdn.CSDNArticles;
 
 import java.io.BufferedReader;
 import java.io.IOException;

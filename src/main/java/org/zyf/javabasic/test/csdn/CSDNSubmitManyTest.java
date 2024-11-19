@@ -1,10 +1,12 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.io.entity.StringEntity;
+import org.zyf.javabasic.test.csdn.CSDNArticles;
+import org.zyf.javabasic.test.csdn.CSDNComments;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -12,22 +14,29 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @program: zyfboot-javabasic
- * @description: 给指定的文章列表随机的评论
+ * @description: 任务：给自己的账号开始刷浏览量
  * @author: zhangyanfeng
- * @create: 2024-10-16 23:32
+ * @create: 2024-09-30 22:28
  **/
-public class CSDNSubmitManyOthersTest {
+public class CSDNSubmitManyTest {
+
     private static final SecureRandom secureRandom = new SecureRandom();
+    // 时间格式为 "yyyy-MM-dd HH:mm"
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
 
     public static void main(String[] args) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        Set<Integer> articleIds = CSDNArticles.getRandomArticleIdsForOthers(40);
+        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30);
 
         String cookie = "";
         cookie = "";
@@ -36,11 +45,7 @@ public class CSDNSubmitManyOthersTest {
         cookie = "";
         cookie = "";
         cookie = "";
-        cookie = "";
-        cookie = "";
-        cookie = "";
-        cookie = "uuid_tt_dd=10_10799280460-1729181125668-130168; fid=20_69363885578-1729181127059-913233; c_first_ref=default; c_segment=8; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1729181143; HMACCOUNT=2B5DA67F120A89C5; csdn_newcert_weixin_48861542=1; csdn_newcert_LJ11111111111111=1; csdn_newcert_DJV2980765=1; csdn_newcert_pengyou23452=1; pengyou23452comment_new=1728097831868; csdn_newcert_CWFDSDFGHJ1098=1; csdn_newcert_CMuhgf7654=1; csdn_newcert_ZXYokjhgf9=1; csdn_newcert_LFY5678=1; csdn_newcert_ZWL53223456789=1; csdn_newcert_XWL9875435=1; csdn_newcert_BXL3456=1; csdn_newcert_JH8876434=1; csdn_newcert_LH34568=1; csdn_newcert_LLN98765=1; csdn_newcert_ZF265467=1; csdn_newcert_JX275431234568=1; csdn_newcert_SR9872345686689=1; csdn_newcert_PZX9845=1; csdn_newcert_PZX87654323=1; csdn_newcert_LYLWDFGH4567=1; csdn_newcert_m0_74022416=1; csdn_newcert_m0_74022498=1; csdn_newcert_tianshu11tianshu=1; csdn_newcert_xiaoxu2022xiaoxu=1; csdn_newcert_2401_86609655=1; csdn_newcert_macbookpro11=1; csdn_newcert_u010861107=1; csdn_newcert_2301_76981999=1; csdn_newcert_2401_86608186=1; csdn_newcert_xiaofeng10330111=1; c_ins_prid=-; c_ins_rid=1729313983688_920679; c_ins_fref=https://edu.csdn.net/; c_ins_fpage=/index.html; c_ins_um=-; ins_first_time=1729314060817; c_first_page=https%3A//blog.csdn.net/xiaofeng10330111%3Ftype%3Dblog; csdn_newcert_2401_86608312=1; CMuhgf7654comment_new=1729608929367; x_inscode_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVkZW50aWFsIjoiIiwiY3NkblVzZXJuYW1lIjoieGlhb2ZlbmcxMDMzMDExMSIsInVzZXJJZCI6IjYzMjE0OTFlN2ZkZTYzN2ZhM2E0NTFhYyIsInVzZXJuYW1lIjoieGlhb2ZlbmcxMDMzMDExMSJ9.7ZvHFeRVs9zjuvLCY5nyfHR86sS-Bfv1PbLR-SJxn2c; CWFDSDFGHJ1098comment_new=1729470903118; xiaofeng10330111comment_new=1730731031833; loginbox_strategy=%7B%22taskId%22%3A317%2C%22abCheckTime%22%3A1731226578321%2C%22version%22%3A%22ExpA%22%2C%22nickName%22%3A%22%E6%80%9D%E4%BA%98er%22%2C%22blog-threeH-dialog-expa%22%3A1729305626760%7D; dc_sid=9d4acd7611e8ae1ab2142719c6120304; csdn_newcert_2401_86608273=1; csdn_newcert_2401_86608357=1; __gads=ID=14d0d494b3ce1f4b:T=1729211486:RT=1731248990:S=ALNI_MboS8tOkr7t1-xMUipNO7TTf-NOsg; __gpi=UID=00000f2b431c7bcf:T=1729211486:RT=1731248990:S=ALNI_MbJfxC_gq6apcum1nbhxrIFNNKl2A; __eoi=ID=a196d5e2b4979ec0:T=1729211486:RT=1731248990:S=AA-AfjbE9fL1C-ymryWPWJIEyM0x; FCCDCF=%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B13%2C%22%5B%5C%22DBABL~BVQqAAAAAg%5C%22%2C%5B%5B7%2C%5B1731248991%2C853317000%5D%5D%5D%5D%22%5D%5D%5D; FCNEC=%5B%5B%22AKsRol8gVNU26Bs-_1fmCVflnpjp9UbJsrzD5BwEmq4b-l-PuF-zORb1gaeWT5DLtHtgG71s7DIlQK3987I3iskSn1o7jOs3cqzA_85pfhAsB96CKkSynBMp_r35MtkzLinnf-D3wSuvJGrrsaCCa6haF5J29Sg5lA%3D%3D%22%5D%5D; UserName=xiaofeng10330111; UserInfo=21bc77fcc372494b80b0e04afd8c06aa; UserToken=21bc77fcc372494b80b0e04afd8c06aa; UserNick=%E5%BC%A0%E5%BD%A6%E5%B3%B0ZYF; AU=F6D; UN=xiaofeng10330111; BT=1731253446020; p_uid=U110000; creative_btn_mp=3; c_hasSub=true; SESSION=76600a0b-4e2f-4855-9d31-d4f96e6e10f6; _clck=odihnm%7C2%7Cfqu%7C0%7C1751; dc_session_id=10_1731457613624.610173; c_dsid=11_1731457613677.546837; creativeSetApiNew=%7B%22toolbarImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20230921102607.png%22%2C%22publishSuccessImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20240229024608.png%22%2C%22articleNum%22%3A232%2C%22type%22%3A2%2C%22oldUser%22%3Atrue%2C%22useSeven%22%3Afalse%2C%22oldFullVersion%22%3Atrue%2C%22userName%22%3A%22xiaofeng10330111%22%7D; c_pref=https%3A//mp.csdn.net/mp_blog/creation/success/139667074; c_ref=https%3A//mp.csdn.net/mp_blog/creation/success/127499647; c_page_id=default; log_Id_pv=8; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1731457783; _clsk=x88od%7C1731457784234%7C3%7C0%7Cw.clarity.ms%2Fcollect; log_Id_view=233; dc_tos=smv5dy; log_Id_click=15\n";
-
+        cookie = "uuid_tt_dd=10_10799280460-1729181125668-130168; fid=20_69363885578-1729181127059-913233; c_first_ref=default; c_segment=8; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1729181143; HMACCOUNT=2B5DA67F120A89C5; csdn_newcert_weixin_48861542=1; csdn_newcert_LJ11111111111111=1; csdn_newcert_DJV2980765=1; csdn_newcert_pengyou23452=1; pengyou23452comment_new=1728097831868; csdn_newcert_CWFDSDFGHJ1098=1; csdn_newcert_CMuhgf7654=1; csdn_newcert_ZXYokjhgf9=1; csdn_newcert_LFY5678=1; csrfToken=91wpItN4kYOzin0n9ITzBVJG; csdn_newcert_ZWL53223456789=1; csdn_newcert_XWL9875435=1; csdn_newcert_BXL3456=1; csdn_newcert_JH8876434=1; csdn_newcert_LH34568=1; csdn_newcert_LLN98765=1; csdn_newcert_ZF265467=1; csdn_newcert_JX275431234568=1; csdn_newcert_SR9872345686689=1; csdn_newcert_PZX9845=1; csdn_newcert_PZX87654323=1; csdn_newcert_LYLWDFGH4567=1; csdn_newcert_m0_74022416=1; csdn_newcert_m0_74022498=1; csdn_newcert_tianshu11tianshu=1; csdn_newcert_xiaoxu2022xiaoxu=1; csdn_newcert_2401_86609655=1; csdn_newcert_macbookpro11=1; csdn_newcert_u010861107=1; csdn_newcert_2301_76981999=1; csdn_newcert_2401_86608186=1; csdn_newcert_xiaofeng10330111=1; c_ins_prid=-; c_ins_rid=1729313983688_920679; c_ins_fref=https://edu.csdn.net/; c_ins_fpage=/index.html; c_ins_um=-; ins_first_time=1729314060817; c_first_page=https%3A//blog.csdn.net/xiaofeng10330111%3Ftype%3Dblog; csdn_newcert_2401_86608312=1; CMuhgf7654comment_new=1729608929367; x_inscode_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVkZW50aWFsIjoiIiwiY3NkblVzZXJuYW1lIjoieGlhb2ZlbmcxMDMzMDExMSIsInVzZXJJZCI6IjYzMjE0OTFlN2ZkZTYzN2ZhM2E0NTFhYyIsInVzZXJuYW1lIjoieGlhb2ZlbmcxMDMzMDExMSJ9.7ZvHFeRVs9zjuvLCY5nyfHR86sS-Bfv1PbLR-SJxn2c; CWFDSDFGHJ1098comment_new=1729470903118; xiaofeng10330111comment_new=1730731031833; loginbox_strategy=%7B%22taskId%22%3A317%2C%22abCheckTime%22%3A1731226578321%2C%22version%22%3A%22ExpA%22%2C%22nickName%22%3A%22%E6%80%9D%E4%BA%98er%22%2C%22blog-threeH-dialog-expa%22%3A1729305626760%7D; dc_sid=9d4acd7611e8ae1ab2142719c6120304; csdn_newcert_2401_86608273=1; csdn_newcert_2401_86608357=1; __gads=ID=14d0d494b3ce1f4b:T=1729211486:RT=1731248990:S=ALNI_MboS8tOkr7t1-xMUipNO7TTf-NOsg; __gpi=UID=00000f2b431c7bcf:T=1729211486:RT=1731248990:S=ALNI_MbJfxC_gq6apcum1nbhxrIFNNKl2A; __eoi=ID=a196d5e2b4979ec0:T=1729211486:RT=1731248990:S=AA-AfjbE9fL1C-ymryWPWJIEyM0x; FCCDCF=%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B13%2C%22%5B%5C%22DBABL~BVQqAAAAAg%5C%22%2C%5B%5B7%2C%5B1731248991%2C853317000%5D%5D%5D%5D%22%5D%5D%5D; FCNEC=%5B%5B%22AKsRol8gVNU26Bs-_1fmCVflnpjp9UbJsrzD5BwEmq4b-l-PuF-zORb1gaeWT5DLtHtgG71s7DIlQK3987I3iskSn1o7jOs3cqzA_85pfhAsB96CKkSynBMp_r35MtkzLinnf-D3wSuvJGrrsaCCa6haF5J29Sg5lA%3D%3D%22%5D%5D; SESSION=6a1fae28-6ceb-4283-b7e1-3223dc40f4f4; UserName=xiaofeng10330111; UserInfo=21bc77fcc372494b80b0e04afd8c06aa; UserToken=21bc77fcc372494b80b0e04afd8c06aa; UserNick=%E5%BC%A0%E5%BD%A6%E5%B3%B0ZYF; AU=F6D; UN=xiaofeng10330111; BT=1731253446020; p_uid=U110000; https_waf_cookie=5a5431ff-16ce-4a886de35e89283550551029fa910eb817e0; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1731256170; c_pref=https%3A//zyfcodes.blog.csdn.net/article/details/127499647%3Fspm%3D1001.2014.3001.5502; c_ref=https%3A//mp.csdn.net/mp_blog/creation/success/127499647; _clck=odihnm%7C2%7Cfqs%7C0%7C1751; dc_tos=smsjr0; _clsk=l58wg5%7C1731336444739%7C1%7C0%7Cj.clarity.ms%2Fcollect; dc_session_id=10_1731336450295.658529\n";
 
         //对圈定的文章进行评论处理
         AtomicInteger num = new AtomicInteger();
@@ -125,7 +130,27 @@ public class CSDNSubmitManyOthersTest {
         // 生成一个随机索引
         // size() 只会返回 0 到 size()-1
         int randomIndex = secureRandom.nextInt(comments.size());
-        return comments.get(randomIndex);
+
+        //增加随机性
+        // 打乱列表以确保随机性
+        Collections.shuffle(comments);
+
+        //获取该评论，如果有%s的信息则替换为时间
+        String comment = comments.get(randomIndex);
+        if(comment.contains("%s")){
+            comment = String.format(comment,getCurrentBeijingTime());
+        }
+
+        return comment;
+    }
+
+    /**
+     * 获取当前北京时间，格式为 yyyy-MM-dd HH:mm
+     * @return 当前的北京时间字符串
+     */
+    public static String getCurrentBeijingTime() {
+        LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
+        return now.format(DATE_TIME_FORMATTER);
     }
 
     private static void costTime(long startTime) {
@@ -146,3 +171,4 @@ public class CSDNSubmitManyOthersTest {
         }
     }
 }
+

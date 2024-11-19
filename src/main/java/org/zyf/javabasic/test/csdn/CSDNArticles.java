@@ -1,8 +1,6 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.Sets;
 import org.apache.commons.collections.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 

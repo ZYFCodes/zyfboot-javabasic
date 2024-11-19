@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test;
+package org.zyf.javabasic.test.csdn;
 
 import com.google.common.collect.Maps;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
