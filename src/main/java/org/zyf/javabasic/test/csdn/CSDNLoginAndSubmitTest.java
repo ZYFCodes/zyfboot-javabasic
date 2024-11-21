@@ -139,7 +139,7 @@ public class CSDNLoginAndSubmitTest {
                     // 进行登出请求
                     logout(userIdentification, httpClient, logoutUrl, cookieString.toString());
 
-                    Thread.sleep(22000);
+                    Thread.sleep(15000);
 
                 } else {
                     System.out.println(userIdentification + "登录失败，请检查参数！");
@@ -230,7 +230,7 @@ public class CSDNLoginAndSubmitTest {
             try {
                 System.out.println(userIdentification + "在" + new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
                         " 回复文章：" + articleId + " 成功, 这是自开始进行的第" + num.get() + "次。");
-                Thread.sleep(22000);
+                Thread.sleep(SleepTimeGenerator.generateSleepTime());
             } catch (InterruptedException e) {
                 System.out.println(userIdentification + "在" + new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
                         " 回复文章：" + articleId + " 存在异常！, 这是第" + num.get() + "次了");
