@@ -19,6 +19,10 @@ public class CSDNArticles {
     public static final List<Article> ARTICLES;
     public static final List<Article> ARTICLES_ONLY;
 
+    // 全局记录文章的被选次数
+    private static final Map<Integer, Integer> articleSelectionCount = new HashMap<>();
+
+
     static {
         try (InputStream inputStream = CSDNComments.class.getClassLoader().getResourceAsStream("articleIds.json")) {
             if (inputStream == null) {
@@ -81,14 +85,29 @@ public class CSDNArticles {
             throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");
         }
 
-        // 将 Set 转换为 List 以支持索引操作
-        List<Integer> articleList = new ArrayList<>(articleIds);
+        // 初始化计数器
+        for (Integer id : articleIds) {
+            articleSelectionCount.putIfAbsent(id, 0);
+        }
 
-        // 打乱列表以确保随机性
-        Collections.shuffle(articleList);
+        // 构造按被选次数排序的列表
+        List<Integer> sortedArticles = new ArrayList<>(articleIds);
+        sortedArticles.sort(Comparator.comparingInt(articleSelectionCount::get));
 
-        // 从打乱后的列表中选取前 randomNums 个元素
-        return new HashSet<>(articleList.subList(0, randomNums));
+        // 从选次数较低的前 80% 的文章中随机选择
+        int selectionPoolSize = (int) (sortedArticles.size() * 0.8);
+        List<Integer> selectionPool = sortedArticles.subList(0, selectionPoolSize);
+
+        // 随机打乱候选池并选取 randomNums 个文章
+        Collections.shuffle(selectionPool);
+        Set<Integer> selectedArticles = new HashSet<>(selectionPool.subList(0, randomNums));
+
+        // 更新选次数
+        for (Integer article : selectedArticles) {
+            articleSelectionCount.put(article, articleSelectionCount.get(article) + 1);
+        }
+
+        return selectedArticles;
     }
 
     /**
