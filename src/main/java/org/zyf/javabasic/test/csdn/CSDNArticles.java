@@ -188,12 +188,36 @@ public class CSDNArticles {
 
 
     public static void main(String[] args) {
-        String articleId = "105360860";
+
+        Set<String> articleIdsForComments = CSDNComments.COMMENTS.keySet();
+        Set<String> articleIdsForArticles = articleIds().stream().map(String::valueOf).collect(Collectors.toSet());
+        soutDiff(articleIdsForComments, articleIdsForArticles);
         System.out.println(articleIds());
+        System.out.println(articleIds().contains("140538842"));
         System.out.println(articleIds().size());
         System.out.println(getRandomArticleIds( 30));
         System.out.println(getRandomArticleLinks(30,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println(getIndex(139611703));
+    }
+
+    public static void soutDiff(Set<String> articleIdsForComments,Set<String> articleIdsForArticles) {
+        System.out.println("diff start!");
+
+        // 找到多出的（articleIdsForArticles 中有，而 articleIdsForComments 中没有）
+        Set<String> extraInArticles = new HashSet<>(articleIdsForArticles);
+        extraInArticles.removeAll(articleIdsForComments); // 移除在 articleIdsForComments 中存在的元素
+
+        // 找到少出的（articleIdsForComments 中有，而 articleIdsForArticles 中没有）
+        Set<String> missingInArticles = new HashSet<>(articleIdsForComments);
+        missingInArticles.removeAll(articleIdsForArticles); // 移除在 articleIdsForArticles 中存在的元素
+
+        // 打印出差异
+        System.out.println("多出的 ID（在 articleIdsForArticles 中）：");
+        extraInArticles.forEach(System.out::println);
+
+        System.out.println("少出的 ID（在 articleIdsForComments 中）：");
+        missingInArticles.forEach(System.out::println);
+        System.out.println("diff end!");
     }
 }
 
