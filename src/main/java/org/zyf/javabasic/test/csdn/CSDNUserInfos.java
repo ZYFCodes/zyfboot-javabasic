@@ -12,6 +12,7 @@ import java.util.Map;
  **/
 public class CSDNUserInfos {
     public static final Map<String, String> userInfo = Maps.newHashMap();
+    public static final Map<String, String> userNewInfo = Maps.newHashMap();
 
     static {
         //18586128339   思亘er csdn20142014
@@ -79,9 +80,25 @@ public class CSDNUserInfos {
         userInfo.put("18648486708", "csdn20142014");
         //15540724495  刘飞跃 csdn20142014
         userInfo.put("15540724495", "csdn20142014");
+
+        //新增加的账号
+        //15141901140 小红  csdn20142014
+        userNewInfo.put("15141901140", "csdn20142014");
+        //18842306752 闯哥 csdn20142014
+        userNewInfo.put("18842306752", "csdn20142014");
+        //18766148225 超 csdn20142014
+        userNewInfo.put("18766148225", "csdn20142014");
+        //15637908500 鸿昌 csdn20142014
+        userNewInfo.put("15637908500", "csdn20142014");
+        //15670398290 鸿昌 csdn20142014
+        userNewInfo.put("15670398290", "csdn20142014");
+        //17538573025 鸿昌 csdn20142014
+        userNewInfo.put("17538573025", "csdn20142014");
+
     }
 
-    public static Map<String, String> getUserInfo(){
+    public static Map<String, String> getUserInfo() {
+        userInfo.putAll(userNewInfo);
         return userInfo;
     }
 

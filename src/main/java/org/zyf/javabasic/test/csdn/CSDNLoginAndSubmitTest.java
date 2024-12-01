@@ -1,6 +1,8 @@
 package org.zyf.javabasic.test.csdn;
 
+import com.google.common.collect.Sets;
 import com.google.gson.JsonObject;
+import org.apache.commons.lang.StringUtils;
 import org.apache.http.Header;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -34,7 +36,7 @@ public class CSDNLoginAndSubmitTest {
     // 用于统计每篇文章被返回的次数
     private static Map<Integer, Integer> articleFrequencyMap = new HashMap<>();
 
-    public static void main(String[] args) {
+    public static void commitDeal() {
         // 记录程序开始时间
         long startTime = System.currentTimeMillis();
 
@@ -177,7 +179,18 @@ public class CSDNLoginAndSubmitTest {
     public static void doSubmit(String userIdentification, String cookie) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30);
+        int randomNums = 30;
+        if (CSDNUserInfos.userNewInfo.containsKey(userIdentification)) {
+            randomNums = 10;
+        }
+
+        Set<Integer> articleIds = Sets.newHashSet();
+        if (StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
+            randomNums = 40;
+            articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
+        } else {
+            articleIds = CSDNArticles.getRandomArticleIds(randomNums);
+        }
 
         //对圈定的文章进行评论处理
         AtomicInteger num = new AtomicInteger();

@@ -6,7 +6,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.io.entity.StringEntity;
-import org.zyf.javabasic.test.csdn.CSDNComments;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -120,7 +119,7 @@ public class CSDNSubmitOneTest {
         return form.toString();
     }
 
-    private static void costTime(long startTime){
+    private static void costTime(long startTime) {
         // 记录结束时间
         long endTime = System.currentTimeMillis();
 

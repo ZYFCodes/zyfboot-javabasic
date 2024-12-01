@@ -2,7 +2,6 @@ package org.zyf.javabasic.test.csdn;
 
 import com.google.common.collect.Lists;
 import org.zyf.javabasic.common.utils.HttpUtils;
-import org.zyf.javabasic.test.csdn.CSDNArticles;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

@@ -35,13 +35,13 @@ public class CSDNComments {
 
     public static List<String> getComments(String key) {
         List<String> comments = COMMENTS.getOrDefault(key, Lists.newArrayList());
-        if(CollectionUtils.isEmpty(comments)){
+        if (CollectionUtils.isEmpty(comments)) {
             //没有对应文章的评论时采用默认
             return COMMENTS.get("commentComments");
         }
 
         //有的话，查看文章是否在特殊列表中，如果时特殊列表则直接返回特殊的内容
-        if(limitedComments.contains(key)){
+        if (limitedComments.contains(key)) {
             return comments;
         }
 

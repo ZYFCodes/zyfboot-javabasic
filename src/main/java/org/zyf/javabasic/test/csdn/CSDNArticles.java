@@ -29,7 +29,7 @@ public class CSDNArticles {
                 throw new Exception("articleIds.json not found in resources");
             }
             Scanner scanner = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
-            String  articleInfo = scanner.hasNext() ? scanner.next() : "";
+            String articleInfo = scanner.hasNext() ? scanner.next() : "";
             List<Article> articleList = JSON.parseArray(articleInfo, Article.class);
             if (CollectionUtils.isEmpty(articleList)) {
                 throw new Exception("articleList is empty!!!");
@@ -44,7 +44,7 @@ public class CSDNArticles {
                 throw new Exception("articleIds-only.json not found in resources");
             }
             Scanner scanner = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
-            String  articleInfo = scanner.hasNext() ? scanner.next() : "";
+            String articleInfo = scanner.hasNext() ? scanner.next() : "";
             List<Article> articleList = JSON.parseArray(articleInfo, Article.class);
 //            if (CollectionUtils.isEmpty(articleList)) {
 //                throw new Exception("articleList is empty!!!");
@@ -55,19 +55,19 @@ public class CSDNArticles {
         }
     }
 
-    public static Set<Integer> articleIds(){
+    public static Set<Integer> articleIds() {
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toSet());
     }
 
-    public static Set<Integer> articleIdsForOnly(){
+    public static Set<Integer> articleIdsForOnly() {
         return ARTICLES_ONLY.stream().map(Article::getArticleId).collect(Collectors.toSet());
     }
 
-    public static Set<String> articlesForOnly(){
+    public static Set<String> articlesForOnly() {
         return ARTICLES_ONLY.stream().map(Article::getUrl).collect(Collectors.toSet());
     }
 
-    public static List<Integer> articleIdList(){
+    public static List<Integer> articleIdList() {
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toList());
     }
 
@@ -90,17 +90,23 @@ public class CSDNArticles {
             articleSelectionCount.putIfAbsent(id, 0);
         }
 
-        // 构造按被选次数排序的列表
-        List<Integer> sortedArticles = new ArrayList<>(articleIds);
-        sortedArticles.sort(Comparator.comparingInt(articleSelectionCount::get));
+        // 创建权重列表，权重越小，优先级越高
+        List<Integer> weightedArticles = new ArrayList<>();
+        for (Integer id : articleIds) {
+            int weight = 10 - articleSelectionCount.get(id); // 权重公式
+            weight = Math.max(weight, 1); // 确保权重最小为 1
+            for (int i = 0; i < weight; i++) {
+                weightedArticles.add(id);
+            }
+        }
 
-        // 从选次数较低的前 80% 的文章中随机选择
-        int selectionPoolSize = (int) (sortedArticles.size() * 0.8);
-        List<Integer> selectionPool = sortedArticles.subList(0, selectionPoolSize);
-
-        // 随机打乱候选池并选取 randomNums 个文章
-        Collections.shuffle(selectionPool);
-        Set<Integer> selectedArticles = new HashSet<>(selectionPool.subList(0, randomNums));
+        // 随机打乱并选取文章
+        Collections.shuffle(weightedArticles);
+        Set<Integer> selectedArticles = new HashSet<>();
+        Iterator<Integer> iterator = weightedArticles.iterator();
+        while (selectedArticles.size() < randomNums && iterator.hasNext()) {
+            selectedArticles.add(iterator.next());
+        }
 
         // 更新选次数
         for (Integer article : selectedArticles) {
@@ -144,12 +150,12 @@ public class CSDNArticles {
     /**
      * 获取给定文章ID在排序后的文章列表中的索引。
      *
-     * @param articleId   要查找的文章ID
+     * @param articleId 要查找的文章ID
      * @return 文章ID在排序后的列表中的索引
      * @throws NoSuchElementException 如果文章ID不在列表中
      */
     public static int getIndex(Integer articleId) {
-        List<Integer> articleList =articleIdList();
+        List<Integer> articleList = articleIdList();
 
         // 查找文章ID的索引
         int index = articleList.indexOf(articleId);
@@ -195,12 +201,12 @@ public class CSDNArticles {
         System.out.println(articleIds());
         System.out.println(articleIds().contains("140538842"));
         System.out.println(articleIds().size());
-        System.out.println(getRandomArticleIds( 30));
-        System.out.println(getRandomArticleLinks(30,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
+        System.out.println(getRandomArticleIds(30));
+        System.out.println(getRandomArticleLinks(30, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println(getIndex(139611703));
     }
 
-    public static void soutDiff(Set<String> articleIdsForComments,Set<String> articleIdsForArticles) {
+    public static void soutDiff(Set<String> articleIdsForComments, Set<String> articleIdsForArticles) {
         System.out.println("diff start!");
 
         // 找到多出的（articleIdsForArticles 中有，而 articleIdsForComments 中没有）

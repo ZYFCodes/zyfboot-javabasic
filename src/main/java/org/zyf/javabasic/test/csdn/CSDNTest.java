@@ -8,7 +8,6 @@ import org.springframework.util.CollectionUtils;
 import org.zyf.javabasic.common.Article;
 import org.zyf.javabasic.common.Result;
 import org.zyf.javabasic.common.utils.HttpUtils;
-import org.zyf.javabasic.test.csdn.CSDNArticles;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -132,15 +131,28 @@ public class CSDNTest {
         }
     }
 
-    private static void v2() throws InterruptedException {
+    public static void v2() {
         int limitViewCount = 10000;
         List<String> zyfUrl = Lists.newArrayList(getRes(10000));
         System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
 
         for (int time = 0; time < 3000; time++) {
-            Calendar cal1 = Calendar.getInstance();
+            Calendar cal1 = Calendar.getInstance(TimeZone.getTimeZone("Asia/Beijing"));
             Date date1 = cal1.getTime();
-            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) + "执行访问全列表数据进行分析，当前次数：" + time);
+            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) +
+                    " 执行访问全列表数据进行分析，当前次数：" + time);
+
+            // 判断是否到晚上 11 点 50 分，若是则停止程序
+            Calendar current = Calendar.getInstance(TimeZone.getTimeZone("Asia/Beijing"));
+            int hour = current.get(Calendar.HOUR_OF_DAY);
+            int minute = current.get(Calendar.MINUTE);
+            if (hour == 23 && minute >= 50) {
+                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
+                        .format(current.getTime()) + " 当前时间已到北京时间晚上 11 点 50 分，程序停止！");
+                break;
+            }
+
+
             IntStream.range(0, zyfUrl.size()).forEach(idx -> {
                 String urlTest = zyfUrl.get(idx);
                 String res = HttpUtils.sendPost(urlTest, null); // 假设这是发送 POST 请求的方法
@@ -157,7 +169,6 @@ public class CSDNTest {
                         " 访问网站：" + urlTest);
             });
         }
-
     }
 
     private static Set<String> getRes(int limitViewCount) {
@@ -229,10 +240,12 @@ public class CSDNTest {
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/140415504");
         //1002
         res.add("https://blog.csdn.net/xiaofeng10330111/article/details/142446131");
+        //1201
+        res.add("https://zyfcodes.blog.csdn.net/article/details/140538842");
+
 
         //随机再加50篇吧
-        res.addAll(CSDNArticles.getRandomArticleLinks(50,"https://blog.csdn.net/xiaofeng10330111/article/details/"));
-
+        res.addAll(CSDNArticles.getRandomArticleLinks(50, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
 
 
         Properties prop = new Properties();

@@ -5,8 +5,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.io.entity.StringEntity;
-import org.zyf.javabasic.test.csdn.CSDNArticles;
-import org.zyf.javabasic.test.csdn.CSDNComments;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -137,8 +135,8 @@ public class CSDNSubmitManyTest {
 
         //获取该评论，如果有%s的信息则替换为时间
         String comment = comments.get(randomIndex);
-        if(comment.contains("%s")){
-            comment = String.format(comment,getCurrentBeijingTime());
+        if (comment.contains("%s")) {
+            comment = String.format(comment, getCurrentBeijingTime());
         }
 
         return comment;
@@ -146,6 +144,7 @@ public class CSDNSubmitManyTest {
 
     /**
      * 获取当前北京时间，格式为 yyyy-MM-dd HH:mm
+     *
      * @return 当前的北京时间字符串
      */
     public static String getCurrentBeijingTime() {

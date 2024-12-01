@@ -4178,6 +4178,25 @@
     "collectCount": 21
   },
   {
+    "articleId": 140538842,
+    "title": "优化JSON对象打印与数据处理的工具类：深入理解与应用",
+    "description": "本文介绍了ObjectPrintOptimizer工具类的设计与实现，该工具类用于优化JSON数据打印，解决了冗余信息暴露和敏感数据泄露的问题。通过修改JSON对象的特定字段、替换过长字符串以及递归处理嵌套对象和数组，ObjectPrintOptimizer提高了数据处理的灵活性和安全性。本文详细分析了其核心功能和设计理念，旨在帮助开发者高效、安全地处理复杂数据结构，提升开发效率和代码质量。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/140538842",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 942,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/140538842",
+    "postTime": "2024-11-20 00:00:16",
+    "diggCount": 39,
+    "formatTime": "2024.11.20",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/90c5e97c9fdc437cb15cb38e692137a0.png"
+    ],
+    "collectCount": 21
+  },
+  {
     "articleId": 53034130,
     "title": "Java高频面试基础知识点整理",
     "description": "Java高频面试知识点总结：覆盖高频基础知识考点+高频集合知识点深入分析+高频多线程与并发编程面试题汇总+其他扩展考察等。",
