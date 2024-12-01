@@ -1,5 +1,7 @@
 package org.zyf.javabasic.guava.collectiontools;
 
+import com.google.common.base.Joiner;
+import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.MapDifference;
 import com.google.common.collect.Maps;
@@ -62,4 +64,32 @@ public class MapTest {
         System.out.println("第二个map具体内容为：" + right);
         System.out.println("两个map中找到只存在于右边的有：" + diff.entriesOnlyOnRight());
     }
+
+    @Test
+    public void testMapToString() {
+        Map<String, Integer> salary = Maps.newHashMap();
+        salary.put("John", 1000);
+        salary.put("Jane", 1500);
+
+        // 使用 key-value 分隔符将 Map 转为字符串
+        String result = Joiner.on(", ").withKeyValueSeparator(" = ").join(salary);
+
+        System.out.println("原 Map 内容: " + salary);
+        System.out.println("转换为字符串结果: " + result);
+    }
+
+    @Test
+    public void testStringToMap() {
+        String input = "John=Developer, Jane=Manager";
+
+        // 根据分隔符解析字符串为 Map
+        Map<String, String> result = Splitter.on(", ")
+                .withKeyValueSeparator("=")
+                .split(input);
+
+        System.out.println("原字符串内容: " + input);
+        System.out.println("转换为 Map 内容: " + result);
+    }
+
+
 }

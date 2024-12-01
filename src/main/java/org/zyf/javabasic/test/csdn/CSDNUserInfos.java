@@ -16,6 +16,8 @@ public class CSDNUserInfos {
 
     static {
         //18586128339   思亘er csdn20142014
+        userInfo.put("18252060161", "csdn20142014");
+        //18586128339   思亘er csdn20142014
         userInfo.put("18586128339", "csdn20142014");
         //15847798961   TopicOnline csdn20142014
         userInfo.put("15847798961", "csdn20142014");

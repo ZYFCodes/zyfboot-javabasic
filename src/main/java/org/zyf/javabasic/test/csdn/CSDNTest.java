@@ -153,11 +153,13 @@ public class CSDNTest {
             }
 
 
+            // 记录开始时间
+            long startTime = System.currentTimeMillis();
             IntStream.range(0, zyfUrl.size()).forEach(idx -> {
                 String urlTest = zyfUrl.get(idx);
                 String res = HttpUtils.sendPost(urlTest, null); // 假设这是发送 POST 请求的方法
                 try {
-                    Thread.sleep(800);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
                             " 访问网站序号：" + idx +
@@ -168,6 +170,18 @@ public class CSDNTest {
                         " 访问网站序号：" + idx +
                         " 访问网站：" + urlTest);
             });
+
+            // 记录结束时间
+            long endTime = System.currentTimeMillis();
+
+            // 计算耗时（毫秒转为分钟和秒）
+            long totalMillis = endTime - startTime;
+            long minutes = totalMillis / 1000 / 60;
+            long seconds = (totalMillis / 1000) % 60;
+
+            // 打印耗时
+            System.out.println("本次访问全列表数据完成，总耗时：" + minutes + " 分 " + seconds + " 秒");
+
         }
     }
 
@@ -245,7 +259,7 @@ public class CSDNTest {
 
 
         //随机再加50篇吧
-        res.addAll(CSDNArticles.getRandomArticleLinks(50, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
+        res.addAll(CSDNArticles.getRandomArticleLinks(80, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
 
 
         Properties prop = new Properties();

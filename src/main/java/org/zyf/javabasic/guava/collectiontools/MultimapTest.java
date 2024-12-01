@@ -1,13 +1,13 @@
 package org.zyf.javabasic.guava.collectiontools;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
+import com.google.common.collect.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zyf.javabasic.ZYFApplication;
+
+import java.util.Map;
 
 /**
  * 描述：Multimap系列接口集合 和Multiset很相似 可以理解成Multiset的map版本 对应的实现将上面的对应map改为Multimap
@@ -39,4 +39,46 @@ public class MultimapTest {
 
         System.out.println(multimap);
     }
+
+    @Test
+    public void testMultimapBasic() {
+        Multimap<String, String> multimap = ArrayListMultimap.create();
+
+        // 添加多组键值对
+        multimap.put("Fruits", "Apple");
+        multimap.put("Fruits", "Banana");
+        multimap.put("Vegetables", "Carrot");
+
+        System.out.println("Multimap 内容: " + multimap);
+        System.out.println("Fruits 分组: " + multimap.get("Fruits"));
+        System.out.println("Vegetables 分组: " + multimap.get("Vegetables"));
+    }
+
+    @Test
+    public void testMapToMultimap() {
+        Map<String, String> map = Maps.newHashMap();
+        map.put("A", "1");
+        map.put("B", "2");
+        map.put("A", "3");
+
+        // 转换为 Multimap
+        Multimap<String, String> multimap = Multimaps.forMap(map);
+
+        System.out.println("普通 Map 内容: " + map);
+        System.out.println("转换后的 Multimap 内容: " + multimap);
+    }
+
+    @Test
+    public void testMultimapAdvanced() {
+        Multimap<String, String> multimap = ArrayListMultimap.create();
+
+        multimap.putAll("Fruits", Lists.newArrayList("Apple", "Banana", "Orange"));
+        multimap.put("Fruits", "Grape");
+        multimap.remove("Fruits", "Banana");
+
+        System.out.println("更新后的 Multimap 内容: " + multimap);
+    }
+
+
+
 }
