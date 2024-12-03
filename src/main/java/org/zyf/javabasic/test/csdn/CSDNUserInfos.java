@@ -96,6 +96,18 @@ public class CSDNUserInfos {
         userNewInfo.put("15670398290", "csdn20142014");
         //17538573025 鸿昌 csdn20142014
         userNewInfo.put("17538573025", "csdn20142014");
+        //18638922808 阿珂 csdn20142014
+        userNewInfo.put("18638922808", "csdn20142014");
+        //18293145328 财财  xxx12301001
+        userNewInfo.put("18293145328", "xxx12301001");
+        // 14795997599 少婷 Chenshaoting1028
+        userNewInfo.put("14795997599", "Chenshaoting1028");
+        //18690325433 景峰 csdn20142014
+        userNewInfo.put("18690325433", "csdn20142014");
+        //17799189833 景峰 csdn20142014
+        userNewInfo.put("17799189833", "csdn20142014");
+        //17767414616 景峰 csdn20142014
+        userNewInfo.put("17767414616", "csdn20142014");
 
     }
 

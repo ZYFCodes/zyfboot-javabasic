@@ -137,13 +137,13 @@ public class CSDNTest {
         System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
 
         for (int time = 0; time < 3000; time++) {
-            Calendar cal1 = Calendar.getInstance(TimeZone.getTimeZone("Asia/Beijing"));
+            Calendar cal1 = Calendar.getInstance(TimeZone.getTimeZone("Asia/Shanghai"));
             Date date1 = cal1.getTime();
             System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) +
                     " 执行访问全列表数据进行分析，当前次数：" + time);
 
             // 判断是否到晚上 11 点 50 分，若是则停止程序
-            Calendar current = Calendar.getInstance(TimeZone.getTimeZone("Asia/Beijing"));
+            Calendar current = Calendar.getInstance(TimeZone.getTimeZone("Asia/Shanghai"));
             int hour = current.get(Calendar.HOUR_OF_DAY);
             int minute = current.get(Calendar.MINUTE);
             if (hour == 23 && minute >= 50) {
