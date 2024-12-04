@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test.csdn;
+package org.zyf.javabasic.test.wzzz;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.collections.CollectionUtils;

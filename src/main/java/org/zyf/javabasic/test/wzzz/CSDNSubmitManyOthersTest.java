@@ -1,4 +1,4 @@
-package org.zyf.javabasic.test.csdn;
+package org.zyf.javabasic.test.wzzz;
 
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
