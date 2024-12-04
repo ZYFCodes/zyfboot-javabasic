@@ -108,6 +108,12 @@ public class CSDNUserInfos {
         userNewInfo.put("17799189833", "csdn20142014");
         //17767414616 景峰 csdn20142014
         userNewInfo.put("17767414616", "csdn20142014");
+        //13734716339 张慧芳 csdn20142014
+        userNewInfo.put("13734716339", "csdn20142014");
+        //13212141499 张亚鑫 csdn20142014
+        userNewInfo.put("13212141499", "csdn20142014");
+        //18840850877 吴翰禺 csdn20142014
+        userNewInfo.put("18840850877", "csdn20142014");
 
     }
 

@@ -27,7 +27,7 @@ public class DailyTaskScheduler {
             public void run() {
                 System.out.println("任务开始执行：" + LocalDateTime.now());
                 //开启账号进行评论处理,包括自己的本账号
-                CSDNLoginAndSubmitTest.commitDeal();
+                CSDNLoginAndSubmitTest.commitDealNew();
                 //对现有的一些文章进行阅读
                 CSDNTest.v2();
             }
@@ -55,7 +55,7 @@ public class DailyTaskScheduler {
 
         // 随机生成一个分钟数，范围是10到30
         Random random = new Random();
-        int randomMinute = random.nextInt(21) + 10;  // 随机值范围是 [10, 30]
+        int randomMinute = random.nextInt(16) + 10;  // 随机值范围是 [10, 30]
 
         // 将随机分钟数加到午夜时间上
         midnight = midnight.plusMinutes(randomMinute);

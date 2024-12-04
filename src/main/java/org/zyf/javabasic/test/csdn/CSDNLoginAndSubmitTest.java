@@ -21,6 +21,10 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -34,7 +38,7 @@ public class CSDNLoginAndSubmitTest {
     // 时间格式为 "yyyy-MM-dd HH:mm"
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     // 用于统计每篇文章被返回的次数
-    private static Map<Integer, Integer> articleFrequencyMap = new HashMap<>();
+    private static Map<Integer, Integer> articleFrequencyMap = new ConcurrentHashMap<>();
 
     public static void commitDeal() {
         // 记录程序开始时间
@@ -82,6 +86,81 @@ public class CSDNLoginAndSubmitTest {
 
         // 输出程序执行时长
         System.out.println("本次执行总共花费时间：" + hours + "小时 " + minutes + "分钟 " + seconds + "秒");
+
+    }
+
+    public static void commitDealNew() {
+        // 记录程序开始时间
+        long startTime = System.currentTimeMillis();
+        Map<String, String> userInfo = CSDNUserInfos.getUserInfo();
+        // 将 Map 的条目转换为 List
+        List<Map.Entry<String, String>> entryList = new ArrayList<>(userInfo.entrySet());
+        // 打乱 List 中的条目顺序
+        Collections.shuffle(entryList);
+
+        // 创建线程池（限制线程数量为 CPU 核心数或自定义值）
+        int threadCount = Runtime.getRuntime().availableProcessors();
+        ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
+
+        // 创建 AtomicInteger 来跟踪循环次数
+        AtomicInteger num = new AtomicInteger(1);
+        // 记录线程池任务提交开始时间
+        long taskStartTime = System.currentTimeMillis();
+        for (Map.Entry<String, String> entry : entryList) {
+            executorService.submit(() -> {
+                String currentTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime());
+                System.out.println("账号：" + entry.getKey() + " 在 " + currentTime +
+                        " 进行登陆和评论数据, 该账号当前位于第" + num.getAndIncrement() + "位。");
+
+                // 执行登录和提交操作
+                doLoginAndSubmit(entry.getKey(), entry.getValue());
+            });
+        }
+
+        // 关闭线程池并等待所有任务完成
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            System.err.println("线程池等待任务完成时被中断：" + e.getMessage());
+        }
+
+        // 记录线程池任务执行完成时间
+        long taskEndTime = System.currentTimeMillis();
+        // 输出线程池任务总时间
+        long taskDuration = taskEndTime - taskStartTime;
+        long taskSeconds = (taskDuration / 1000) % 60;
+        long taskMinutes = (taskDuration / (1000 * 60)) % 60;
+        long taskHours = taskDuration / (1000 * 60 * 60);
+
+        System.out.println(String.format("本次线程池完成所有任务总时间：%s小时 %s分钟 %s秒", taskHours, taskMinutes, taskSeconds));
+
+        // 输出一共有多少篇文章
+        System.out.println("本次全部账号登陆并随机选取文章进行评论，统计当前随机选取文章一共有 " + articleFrequencyMap.size() + " 篇。");
+        // 输出每篇文章被返回的次数
+        System.out.println("具体到每篇文章被随机命中的次数进行统计输出结果如下：");
+        // 使用 AtomicInteger 来作为计数器
+        AtomicInteger index = new AtomicInteger(1);
+        articleFrequencyMap.forEach((articleId, count) -> {
+            System.out.println("编号 " + index.getAndIncrement() + " - 文章 ID " + articleId + " 被返回了 " + count + " 次");
+        });
+
+        // 记录程序结束时间
+        long endTime = System.currentTimeMillis();
+
+        // 计算程序执行时长
+        long duration = endTime - startTime;
+        long hours = duration / (1000 * 60 * 60);
+        long minutes = (duration % (1000 * 60 * 60)) / (1000 * 60);
+        long seconds = (duration % (1000 * 60)) / 1000;
+
+        // 统计所有 value 的总和
+        int totalFrequency = articleFrequencyMap.values().stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+        // 输出程序评论执行时长数据
+        System.out.println(String.format("本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章%s篇, 所有辅助账号一共评论%s次！",
+                hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency));
 
     }
 
@@ -185,21 +264,26 @@ public class CSDNLoginAndSubmitTest {
         }
 
         Set<Integer> articleIds = Sets.newHashSet();
+        boolean needFrequencyCount = false;
         if (StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
             randomNums = 40;
             articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
         } else {
             articleIds = CSDNArticles.getRandomArticleIds(randomNums);
+            needFrequencyCount = true;
         }
 
         //对圈定的文章进行评论处理
         AtomicInteger num = new AtomicInteger();
         String finalCookie = cookie;
+        boolean finalNeedFrequencyCount = needFrequencyCount;
         articleIds.forEach(articleId -> {
             num.getAndIncrement();
 
-            // 统计每篇文章被返回的次数
-            articleFrequencyMap.put(articleId, articleFrequencyMap.getOrDefault(articleId, 0) + 1);
+            if (finalNeedFrequencyCount) {
+                // 统计每篇文章被返回的次数
+                articleFrequencyMap.put(articleId, articleFrequencyMap.getOrDefault(articleId, 0) + 1);
+            }
 
             // 请求URL
             String url = "https://blog.csdn.net/phoenix/web/v1/comment/submit";
