@@ -55,7 +55,7 @@ public class DailyTaskScheduler {
 
         // 随机生成一个分钟数，范围是10到30
         Random random = new Random();
-        int randomMinute = random.nextInt(16) + 10;  // 随机值范围是 [10, 30]
+        int randomMinute = random.nextInt(12) + 6;  // 随机值范围是 [10, 30]
 
         // 将随机分钟数加到午夜时间上
         midnight = midnight.plusMinutes(randomMinute);

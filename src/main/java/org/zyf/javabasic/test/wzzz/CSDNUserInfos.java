@@ -114,6 +114,23 @@ public class CSDNUserInfos {
         userNewInfo.put("13212141499", "csdn20142014");
         //18840850877 吴翰禺 csdn20142014
         userNewInfo.put("18840850877", "csdn20142014");
+        //15947025995 陈波1 csdn20142014
+        userNewInfo.put("15947025995", "csdn20142014");
+        //13847761293 陈波3 csdn20142014
+        userNewInfo.put("13847761293", "csdn20142014");
+        //13948734830 陈波4 csdn20142014
+        userNewInfo.put("13948734830", "csdn20142014");
+        //15661494429 陈波5 csdn20142014
+        userNewInfo.put("15661494429", "csdn20142014");
+        //18610028610 陈波6 csdn20142014    === 这个当前密码是错的
+        //18131272195 张翰 csdn20142014
+        userNewInfo.put("18131272195", "csdn20142014");
+        //15831234312 张翰的婆婆 csdn20142014
+        userNewInfo.put("15831234312", "csdn20142014");
+        //15856237025 周永  csdn20142014
+        userNewInfo.put("15856237025", "csdn20142014");
+        //17621395257  张殿飞 feigecsdn666
+        userNewInfo.put("17621395257", "feigecsdn666");
 
     }
 
