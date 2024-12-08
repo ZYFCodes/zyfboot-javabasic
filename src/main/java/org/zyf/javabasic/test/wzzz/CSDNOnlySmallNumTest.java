@@ -5,9 +5,12 @@ import org.zyf.javabasic.common.utils.HttpUtils;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.stream.IntStream;
 
 /**
  * @program: zyfboot-javabasic
@@ -16,7 +19,12 @@ import java.util.concurrent.*;
  * @create: 2024-10-16 23:44
  **/
 public class CSDNOnlySmallNumTest {
+
     public static void main(String[] args) throws IOException, InterruptedException {
+        v1();
+        //v2();
+    }
+    public static void v2() throws IOException, InterruptedException {
         int limitViewCount = 10000;
         List<String> zyfUrl = Lists.newArrayList(CSDNArticles.articlesForOnly());
         System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
@@ -73,7 +81,34 @@ public class CSDNOnlySmallNumTest {
             // 可以记录或重新处理 remainingTasks
         }
 
-// 日志记录
+        // 日志记录
         System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(new Date()) + " 任务执行结束！");
+    }
+
+    public static void v1() throws IOException, InterruptedException {
+        int limitViewCount = 10000;
+        List<String> zyfUrl = Lists.newArrayList(CSDNArticles.articlesForOnly());
+        System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
+
+        for (int time = 0; time < 3000; time++) {
+            Calendar cal1 = Calendar.getInstance();
+            Date date1 = cal1.getTime();
+            System.out.println(new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss:SSS").format(date1) + "执行访问全列表数据进行分析，当前次数：" + time);
+            IntStream.range(0, zyfUrl.size()).forEach(idx -> {
+                String urlTest = zyfUrl.get(idx);
+                String res = HttpUtils.sendPost(urlTest, null); // 假设这是发送 POST 请求的方法
+//                try {
+//                    Thread.sleep(6);
+//                } catch (InterruptedException e) {
+//                    System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
+//                            " 访问网站序号：" + idx +
+//                            " 存在异常！");
+//                    ;
+//                }
+                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
+                        " 访问网站序号：" + idx +
+                        " 访问网站：" + urlTest);
+            });
+        }
     }
 }
