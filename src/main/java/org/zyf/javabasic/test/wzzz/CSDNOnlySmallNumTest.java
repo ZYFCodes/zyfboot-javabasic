@@ -23,7 +23,28 @@ public class CSDNOnlySmallNumTest {
     public static void main(String[] args) throws IOException, InterruptedException {
         v1();
         //v2();
+        executeBasedOnTime();
     }
+
+    /**
+     * 根据当前时间执行不同的方法
+     */
+    public static void executeBasedOnTime() throws IOException, InterruptedException {
+        // 获取当前时间
+        LocalTime currentTime = LocalTime.now();
+        // 定义凌晨3点的时间
+        LocalTime startTime = LocalTime.of(3, 0);
+        // 定义晚上11点55分的时间
+        LocalTime endTime = LocalTime.of(23, 55);
+
+        // 判断当前时间是否在指定范围内
+        if (currentTime.isAfter(startTime) && currentTime.isBefore(endTime)) {
+            v1(); // 执行方法1
+        } else {
+            v2(); // 执行方法2
+        }
+    }
+
     public static void v2() throws IOException, InterruptedException {
         int limitViewCount = 10000;
         List<String> zyfUrl = Lists.newArrayList(CSDNArticles.articlesForOnly());
