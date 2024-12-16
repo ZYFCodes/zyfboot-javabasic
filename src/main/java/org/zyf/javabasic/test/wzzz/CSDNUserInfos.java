@@ -7,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,17 +22,19 @@ public class CSDNUserInfos {
     // 文件路径
     private static final String USER_INFO_10_FILE = "/Users/zyf/Downloads/csdn/user_info_10.txt";
     private static final String USER_INFO_30_FILE = "/Users/zyf/Downloads/csdn/user_info_30.txt";
+    private static final String USER_INFO_50_FILE = "/Users/zyf/Downloads/csdn/user_info_50.txt";
     private static final String USER_INFO_ME_FILE = "/Users/zyf/Downloads/csdn/user_info_me.txt";
 
     // 存储用户信息
     public static final Map<String, String> userInfo10 = new HashMap<>();
     public static final Map<String, String> userNewInfo30 = new HashMap<>();
+    public static final Map<String, String> userNewInfo50 = new HashMap<>();
     public static final Map<String, String> userNewInfoMe = new HashMap<>();
 
     /**
      * 从指定文件中加载用户信息
      *
-     * @param filePath 文件路径
+     * @param filePath  文件路径
      * @param targetMap 存储到的目标Map
      */
     private static void loadUserInfoFromFile(String filePath, Map<String, String> targetMap) {
@@ -61,18 +62,38 @@ public class CSDNUserInfos {
     static {
         loadUserInfoFromFile(USER_INFO_10_FILE, userInfo10);
         loadUserInfoFromFile(USER_INFO_30_FILE, userNewInfo30);
+        loadUserInfoFromFile(USER_INFO_50_FILE, userNewInfo50);
         loadUserInfoFromFile(USER_INFO_ME_FILE, userNewInfoMe);
         // 合并新用户到总用户列表
         userAllInfo.putAll(userInfo10);
         userAllInfo.putAll(userNewInfo30);
+        userAllInfo.putAll(userNewInfo50);
         userAllInfo.putAll(userNewInfoMe);
     }
 
-    public static  Map<String, String> getAllUserInfo(){
+    public static Map<String, String> getAllUserInfo() {
         return userAllInfo;
     }
 
-    public static Set<String> get10UserInfoKeys(){
+    public static int getRandomNums(String userIdentification) {
+        int randomNums = 30;
+        if (userInfo10.containsKey(userIdentification)) {
+            randomNums = 10;
+        }
+        if (userNewInfo30.containsKey(userIdentification)) {
+            randomNums = 30;
+        }
+        if (userNewInfo50.containsKey(userIdentification)) {
+            randomNums = 49;
+        }
+        if (userNewInfoMe.containsKey(userIdentification)) {
+            randomNums = 40;
+        }
+
+        return randomNums;
+    }
+
+    public static Set<String> get10UserInfoKeys() {
         return userInfo10.keySet();
     }
 
@@ -92,6 +113,11 @@ public class CSDNUserInfos {
         System.out.println(userNewInfo30);
         System.out.println(userNewInfo30.size());
         System.out.println(JSON.toJSON(userNewInfo30));
+
+        System.out.println("所有50用户信息");
+        System.out.println(userNewInfo50);
+        System.out.println(userNewInfo50.size());
+        System.out.println(JSON.toJSON(userNewInfo50));
 
         System.out.println("自身信息");
         System.out.println(userNewInfoMe);

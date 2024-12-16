@@ -23,7 +23,7 @@ public class CSDNOnlySmallNumTest {
     public static void main(String[] args) throws IOException, InterruptedException {
         v1();
         //v2();
-        executeBasedOnTime();
+        //executeBasedOnTime();
     }
 
     /**
@@ -39,9 +39,9 @@ public class CSDNOnlySmallNumTest {
 
         // 判断当前时间是否在指定范围内
         if (currentTime.isAfter(startTime) && currentTime.isBefore(endTime)) {
-            v1(); // 执行方法1
+            v2(); // 执行方法1
         } else {
-            v2(); // 执行方法2
+            v1(); // 执行方法2
         }
     }
 

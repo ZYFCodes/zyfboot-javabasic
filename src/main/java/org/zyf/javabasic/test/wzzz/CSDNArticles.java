@@ -116,6 +116,26 @@ public class CSDNArticles {
         return selectedArticles;
     }
 
+    public static Set<Integer> getRandomArticleIdsForZhidingUser(String userIdentificationFlag, int randomNums) {
+        Set<Integer> articleIds = ARTICLES_ONLY.stream()
+                .filter(article -> article.getUrl().contains(userIdentificationFlag))
+                .map(Article::getArticleId)
+                .collect(Collectors.toSet());
+        // 检查边界条件
+        if (randomNums > articleIds.size()) {
+            throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");
+        }
+
+        // 将 Set 转换为 List 以支持索引操作
+        List<Integer> articleList = new ArrayList<>(articleIds);
+
+        // 打乱列表以确保随机性
+        Collections.shuffle(articleList);
+
+        // 从打乱后的列表中选取前 randomNums 个元素
+        return new HashSet<>(articleList.subList(0, randomNums));
+    }
+
     /**
      * 从 articleIds 集合中随机选取 randomNums 个文章 ID，并与固定的 URL 前缀进行拼接，返回链接集合。
      *

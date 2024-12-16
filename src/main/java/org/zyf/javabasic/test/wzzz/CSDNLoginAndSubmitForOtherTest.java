@@ -42,7 +42,7 @@ public class CSDNLoginAndSubmitForOtherTest {
     private static Map<Integer, Integer> articleFrequencyMap = new ConcurrentHashMap<>();
 
     //至少初始化50篇文章
-    private static Set<Integer> articleIds = Sets.newHashSet(1, 2, 3, 4);
+    private static String userIdentificationFlag = "";
 
     public static void commitDealNew() {
         // 记录程序开始时间
@@ -213,14 +213,9 @@ public class CSDNLoginAndSubmitForOtherTest {
     public static void doSubmit(String userIdentification, String cookie) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        int randomNums = 30;
-        if (CSDNUserInfos.userInfo10.containsKey(userIdentification)) {
-            randomNums = 10;
-        }
-        if (StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
-            randomNums = 40;
-        }
+        int randomNums = CSDNUserInfos.getRandomNums(userIdentification);
 
+        Set<Integer> articleIds = CSDNArticles.getRandomArticleIdsForZhidingUser(userIdentificationFlag, randomNums);
         //对圈定的文章进行评论处理
         AtomicInteger num = new AtomicInteger();
         String finalCookie = cookie;

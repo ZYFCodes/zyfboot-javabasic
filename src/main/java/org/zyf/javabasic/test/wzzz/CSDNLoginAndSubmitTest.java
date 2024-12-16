@@ -318,15 +318,11 @@ public class CSDNLoginAndSubmitTest {
     public static void doSubmit(String userIdentification, String cookie) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        int randomNums = 30;
-        if (CSDNUserInfos.userInfo10.containsKey(userIdentification)) {
-            randomNums = 10;
-        }
+        int randomNums = CSDNUserInfos.getRandomNums(userIdentification);
 
         Set<Integer> articleIds = Sets.newHashSet();
         boolean needFrequencyCount = false;
         if (StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
-            randomNums = 40;
             articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
         } else {
             articleIds = CSDNArticles.getRandomArticleIds(randomNums);
