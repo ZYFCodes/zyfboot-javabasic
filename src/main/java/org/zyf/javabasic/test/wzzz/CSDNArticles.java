@@ -17,7 +17,9 @@ import java.util.stream.Collectors;
 public class CSDNArticles {
 
     public static final List<Article> ARTICLES;
+    private static final Map<Integer, Article> ARTICLES_DETAILS = new HashMap<>();
     public static final List<Article> ARTICLES_ONLY;
+    private static final Map<Integer, Article> ARTICLES_ONLY_DETAILS = new HashMap<>();
 
     // 全局记录文章的被选次数
     private static final Map<Integer, Integer> articleSelectionCount = new HashMap<>();
@@ -35,6 +37,11 @@ public class CSDNArticles {
                 throw new Exception("articleList is empty!!!");
             }
             ARTICLES = articleList;
+
+            ARTICLES.forEach(article -> {
+                ARTICLES_DETAILS.put(article.getArticleId(), article);
+            });
+
         } catch (Exception e) {
             throw new RuntimeException("Failed to load comments", e);
         }
@@ -50,6 +57,10 @@ public class CSDNArticles {
 //                throw new Exception("articleList is empty!!!");
 //            }
             ARTICLES_ONLY = articleList;
+
+            ARTICLES_ONLY.forEach(article -> {
+                ARTICLES_ONLY_DETAILS.put(article.getArticleId(), article);
+            });
         } catch (Exception e) {
             throw new RuntimeException("Failed to load comments", e);
         }
@@ -69,6 +80,15 @@ public class CSDNArticles {
 
     public static List<Integer> articleIdList() {
         return ARTICLES.stream().map(Article::getArticleId).collect(Collectors.toList());
+    }
+
+    public static Article getArticleById(Integer id) {
+        Article article = ARTICLES_DETAILS.get(id);
+        if (Objects.nonNull(article)) {
+            return article;
+        }
+
+        return ARTICLES_ONLY_DETAILS.get(id);
     }
 
     /**

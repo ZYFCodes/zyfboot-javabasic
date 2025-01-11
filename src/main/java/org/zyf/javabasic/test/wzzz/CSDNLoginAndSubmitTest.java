@@ -16,8 +16,6 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -38,6 +36,10 @@ public class CSDNLoginAndSubmitTest {
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     // 用于统计每篇文章被返回的次数
     private static Map<Integer, Integer> articleFrequencyMap = new ConcurrentHashMap<>();
+
+    public static void clearFrequencyMap() {
+        articleFrequencyMap.clear();
+    }
 
     public static void commitDeal() {
         // 记录程序开始时间
@@ -347,7 +349,7 @@ public class CSDNLoginAndSubmitTest {
             // 准备请求参数
             List<String> comments = CSDNComments.getComments(articleId.toString());
             Map<String, String> parameters = new HashMap<>();
-            parameters.put("content", getRandomString(comments));
+            parameters.put("content", CSDNComments.getRandomString(articleId, comments));
             parameters.put("articleId", articleId.toString());
             String form = null;
             try {
@@ -406,38 +408,6 @@ public class CSDNLoginAndSubmitTest {
             form.append(URLEncoder.encode(entry.getValue(), String.valueOf(StandardCharsets.UTF_8)));
         }
         return form.toString();
-    }
-
-    public static String getRandomString(List<String> comments) {
-        if (comments == null || comments.isEmpty()) {
-            throw new IllegalArgumentException("The input comments cannot be null or empty.");
-        }
-
-        // 生成一个随机索引
-        // size() 只会返回 0 到 size()-1
-        int randomIndex = secureRandom.nextInt(comments.size());
-
-        //增加随机性
-        // 打乱列表以确保随机性
-        Collections.shuffle(comments);
-
-        //获取该评论，如果有%s的信息则替换为时间
-        String comment = comments.get(randomIndex);
-        if (comment.contains("%s")) {
-            comment = String.format(comment, getCurrentBeijingTime());
-        }
-
-        return comment;
-    }
-
-    /**
-     * 获取当前北京时间，格式为 yyyy-MM-dd HH:mm
-     *
-     * @return 当前的北京时间字符串
-     */
-    public static String getCurrentBeijingTime() {
-        LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
-        return now.format(DATE_TIME_FORMATTER);
     }
 
     private static String costTime(long startTime) {

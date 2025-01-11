@@ -30,6 +30,8 @@ public class DailyTaskScheduler {
                 CSDNLoginAndSubmitTest.commitDealNew();
                 //对现有的一些文章进行阅读
                 CSDNTest.v2();
+                //先清理统计
+                CSDNLoginAndSubmitTest.clearFrequencyMap();
             }
         }, initialDelay, 24 * 60 * 60, TimeUnit.SECONDS);
 
@@ -55,7 +57,7 @@ public class DailyTaskScheduler {
 
         // 随机生成一个分钟数，范围是10到30
         Random random = new Random();
-        int randomMinute = random.nextInt(3) + 3;  // 随机值范围是 [10, 30]
+        int randomMinute = random.nextInt(3) + 44;  // 随机值范围是 [10, 30]
 
         // 将随机分钟数加到午夜时间上
         midnight = midnight.plusMinutes(randomMinute);

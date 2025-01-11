@@ -2,6 +2,8 @@ package org.zyf.javabasic.common;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author yanfengzhang
  * @description
@@ -16,6 +18,8 @@ public class Article {
     private Integer viewCount;
     private String editUrl;
     private Boolean forcePlan;
+    private String postTime;
     private String title;
     private String url;
+    private List<String> tags;
 }

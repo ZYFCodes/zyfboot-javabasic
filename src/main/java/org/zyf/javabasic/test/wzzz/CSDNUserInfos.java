@@ -87,7 +87,7 @@ public class CSDNUserInfos {
             randomNums = 49;
         }
         if (userNewInfoMe.containsKey(userIdentification)) {
-            randomNums = 40;
+            randomNums = 0;
         }
 
         return randomNums;
