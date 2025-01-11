@@ -36,7 +36,7 @@ public class SleepTimeGenerator {
         }
 
         // 在选中的范围内随机生成具体时间（范围 + 0~2000毫秒随机）
-        return selectedRange + random.nextInt(2000);
+        return selectedRange + random.nextInt(2500);
     }
 
     public static void main(String[] args) {
