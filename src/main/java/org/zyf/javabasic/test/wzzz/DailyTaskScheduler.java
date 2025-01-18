@@ -20,7 +20,8 @@ public class DailyTaskScheduler {
         ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
         // 计算下一个随机午夜的延迟时间（在00:10到00:30之间）
-        long initialDelay = calculateRandomInitialDelay();
+        long initialDelay = calculateRandomDelayWithRandomRange();
+        System.out.println("Random delay with random range: " + initialDelay + " seconds");
 
         scheduler.scheduleAtFixedRate(new Runnable() {
             @Override
@@ -44,30 +45,43 @@ public class DailyTaskScheduler {
     }
 
     /**
-     * 计算距离下一个随机午夜的延迟时间（00:10到00:30之间）
+     * 计算距离下一个随机时间段内的延迟时间
+     * 随机选择开始和结束时间
      *
      * @return 延迟时间（秒）
      */
-    private static long calculateRandomInitialDelay() {
+    private static long calculateRandomDelayWithRandomRange() {
         // 获取当前时间
         LocalDateTime now = LocalDateTime.now();
 
-        // 获取今天午夜的时间
-        LocalDateTime midnight = LocalDateTime.of(now.toLocalDate(), LocalTime.MIDNIGHT);
-
-        // 随机生成一个分钟数，范围是10到30
+        // 随机生成 startHour 和 endHour，范围是6到22之间
         Random random = new Random();
-        int randomMinute = random.nextInt(3) + 44;  // 随机值范围是 [10, 30]
+        int startHour = random.nextInt(17);  // 随机范围从6到22
+        int endHour = random.nextInt(17);  // 随机范围从6到22
 
-        // 将随机分钟数加到午夜时间上
-        midnight = midnight.plusMinutes(randomMinute);
-
-        // 如果当前时间已经过了这个随机午夜时刻，则计算到第二天的同一时刻
-        if (now.isAfter(midnight)) {
-            midnight = midnight.plusDays(1);
+        // 保证 startHour < endHour
+        while (endHour <= startHour) {
+            endHour = random.nextInt(17);
         }
 
-        // 计算当前时间到下一个随机午夜的延迟秒数
-        return Duration.between(now, midnight).getSeconds();
+        // 获取随机生成的开始时间和结束时间的 LocalDateTime
+        LocalDateTime startTime = LocalDateTime.of(now.toLocalDate(), LocalTime.of(startHour, 0));
+        LocalDateTime endTime = LocalDateTime.of(now.toLocalDate(), LocalTime.of(endHour, 0));
+
+        // 如果当前时间已经过了该时间段，则将时间段设置为第二天
+        if (now.isAfter(endTime)) {
+            startTime = startTime.plusDays(1);
+            endTime = endTime.plusDays(1);
+        }
+
+        // 随机生成一个分钟数，范围是开始时间和结束时间之间的分钟数
+        long randomMinutes = random.nextInt((int) Duration.between(startTime, endTime).toMinutes()) + 1;
+
+        // 计算目标随机时间
+        LocalDateTime randomTime = startTime.plusMinutes(randomMinutes);
+
+        // 计算当前时间到目标随机时间的延迟秒数
+        return Duration.between(now, randomTime).getSeconds();
     }
+
 }

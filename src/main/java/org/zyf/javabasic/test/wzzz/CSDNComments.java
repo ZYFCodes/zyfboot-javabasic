@@ -104,11 +104,9 @@ public class CSDNComments {
     private static String getRandomComment(Integer articleId, String comment) {
         //对里面的一些指定内容进行替换
         comment = replaceComment(articleId, comment);
-
-        StringBuilder sb = new StringBuilder(comment);
         //随机增加一个时间前缀
-        sb.append(getRandomTimePrefix());
-
+        comment = comment + getRandomTimePrefix() + " ";
+        StringBuilder sb = new StringBuilder(comment);
         //随机增加尾部信息
         sb.append("\n");
         sb.append(getRandomTimeEnd());
@@ -120,15 +118,28 @@ public class CSDNComments {
         // 创建随机数生成器
         Random random = new Random();
 
-        // 随机选择返回其中一种结果
-        if (random.nextBoolean()) {
-            return AncientChineseTime.getAncientTime()
-                    + "  " + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord();
-        } else {
-            return TimeDescription.getRandomTimeDescription("", 0, true)
-                    + "  " + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord();
+        // 生成随机数 0, 1, 2 三种情况
+        int choice = random.nextInt(3);
+
+        // 根据随机数返回不同结果
+        switch (choice) {
+            case 0:
+                // 返回第一种情况
+                return AncientChineseTime.getAncientTime()
+                        + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord() + "？";
+            case 1:
+                // 返回第二种情况
+                return TimeDescription.getRandomTimeDescription("", 0, true)
+                        + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord() + "？";
+            case 2:
+                // 返回空字符串
+                return "";
+            default:
+                // 理论上不会到达这里
+                return "";
         }
     }
+
 
     private static String getRandomTimePrefix() {
         // 创建随机数生成器
@@ -138,7 +149,7 @@ public class CSDNComments {
         if (random.nextBoolean()) {
             return TimeDescription.getRandomTimeDescription("", 0, true);
         } else {
-            return "";
+            return " ";
         }
     }
 
@@ -149,7 +160,9 @@ public class CSDNComments {
         }
         //对文章基本信息进行替换
         comment = comment.replace("[文章题目]", article.getTitle());
-        comment = comment.replace("[文章标签]", article.getTags().toString());
+        comment = comment.replace("[文章标签]", CollectionUtils.isNotEmpty(article.getTags())
+                ? article.getTags().toString()
+                : article.getDescription());
         comment = comment.replace("[文章描述]", article.getDescription());
         comment = comment.replace("[发布时间]", getRandomComment(article.getPostTime()));
 
@@ -163,7 +176,7 @@ public class CSDNComments {
         // 随机选择返回其中一种结果
         if (random.nextBoolean()) {
             // 返回 AncientChineseTime 的结果
-            return AncientChineseTime.getAncientTimeFromString(postTime) + "发布";
+            return AncientChineseTime.getAncientTimeFromString(postTime);
         } else {
             // 返回 TimeDescription 的结果
             return getRandomPrex() + TimeDescription.getRandomTimeDescription(postTime, 0, false);
@@ -204,10 +217,13 @@ public class CSDNComments {
     }
 
     public static void main(String[] args) {
-        String articleId = "10536ee0860";
+        String articleId = "144246733";
         System.out.println(getComments(articleId));
 
         System.out.println(COMMENTS.keySet());
         System.out.println(COMMENTS.keySet().size());
+
+        List<String> comments = getComments(articleId.toString());
+        System.out.println(getRandomString(Integer.parseInt(articleId), comments));
     }
 }

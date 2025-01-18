@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 /**
@@ -30,6 +31,8 @@ public class CSDNUserInfos {
     public static final Map<String, String> userNewInfo30 = new HashMap<>();
     public static final Map<String, String> userNewInfo50 = new HashMap<>();
     public static final Map<String, String> userNewInfoMe = new HashMap<>();
+
+    static Random random = new Random();  // 创建一个Random对象
 
     /**
      * 从指定文件中加载用户信息
@@ -76,21 +79,30 @@ public class CSDNUserInfos {
     }
 
     public static int getRandomNums(String userIdentification) {
-        int randomNums = 30;
         if (userInfo10.containsKey(userIdentification)) {
-            randomNums = 10;
+            // 生成0到10之间的随机
+            // nextInt(10)返回[0, 9]之间的值
+            return random.nextInt(10) + 1;
         }
         if (userNewInfo30.containsKey(userIdentification)) {
-            randomNums = 30;
+            // 生成18到29之间的随机数
+            // nextInt(10)返回[0, 9]之间的值，加上18使得范围变成[18, 29]
+            return random.nextInt(10) + 18;
         }
         if (userNewInfo50.containsKey(userIdentification)) {
-            randomNums = 49;
+            // 生成25到44之间的随机数
+            // nextInt(20)返回[0, 19]之间的值，加上26使得范围变成[26, 45]
+            return random.nextInt(20) + 26;
         }
         if (userNewInfoMe.containsKey(userIdentification)) {
-            randomNums = 0;
+            // 生成1到10之间的随机数
+            // nextInt(10)返回[0, 9]之间的值，加上1使得范围变成[1, 10]
+            return random.nextInt(10) + 1;
         }
 
-        return randomNums;
+        // 默认返回5到25之间的随机数
+        // nextInt(10)返回[0, 9]之间的值，加上5使得范围变成[5, 14]
+        return random.nextInt(10) + 5;
     }
 
     public static Set<String> get10UserInfoKeys() {

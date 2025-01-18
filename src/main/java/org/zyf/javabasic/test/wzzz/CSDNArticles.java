@@ -244,6 +244,10 @@ public class CSDNArticles {
         System.out.println(getRandomArticleIds(30));
         System.out.println(getRandomArticleLinks(30, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println(getIndex(139611703));
+
+
+        System.out.println(articleIdsForOnly().size());
+        System.out.println(getRandomArticleIdsForOthers(30));
     }
 
     public static void soutDiff(Set<String> articleIdsForComments, Set<String> articleIdsForArticles) {

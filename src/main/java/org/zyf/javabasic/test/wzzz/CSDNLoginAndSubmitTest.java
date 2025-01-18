@@ -193,14 +193,19 @@ public class CSDNLoginAndSubmitTest {
 
         // 创建 PrintStream 用于输出日志
         try (PrintStream logPrintStream = new PrintStream(new FileOutputStream(logFile, true))) {
-            // 记录线程池任务总时间
-            logPrintStream.printf("本次线程池完成所有任务总时间：%s小时 %s分钟 %s秒%n", taskHours, taskMinutes, taskSeconds);
+            String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
-            // 输出一共有多少篇文章
-            logPrintStream.println("本次全部账号登陆并随机选取文章进行评论，统计当前随机选取文章一共有 " + articleFrequencyMap.size() + " 篇。");
+            // 记录线程池任务总时间
+            logPrintStream.printf("[%s] 本次线程池完成所有任务总时间：%s小时 %s分钟 %s秒%n", currentTime, taskHours, taskMinutes, taskSeconds);
+
+            // 输出一共有多少篇文章，并附加当前时间
+            currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+            logPrintStream.printf("[%s] 本次全部账号登陆并随机选取文章进行评论，统计当前随机选取文章一共有 %d 篇。%n", currentTime, articleFrequencyMap.size());
 
             // 输出每篇文章被返回的次数
-            logPrintStream.println("具体到每篇文章被随机命中的次数进行统计输出结果如下：");
+            currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+            logPrintStream.printf("[%s] 具体到每篇文章被随机命中的次数进行统计输出结果如下：%n", currentTime);
+
             AtomicInteger index = new AtomicInteger(1);
             articleFrequencyMap.forEach((articleId, count) -> {
                 logPrintStream.printf("编号 %d - 文章 ID %s 被返回了 %d 次%n", index.getAndIncrement(), articleId, count);
@@ -220,9 +225,11 @@ public class CSDNLoginAndSubmitTest {
             int totalFrequency = articleFrequencyMap.values().stream()
                     .mapToInt(Integer::intValue)
                     .sum();
-            // 输出程序评论执行时长数据
-            logPrintStream.printf("本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章%s篇, 所有辅助账号一共评论%s次！%n",
-                    hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency);
+            // 输出程序评论执行时长数据，并附加当前时间
+            currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+            logPrintStream.printf("[%s] 本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章 %d 篇, 所有辅助账号一共评论 %d 次！%n",
+                    currentTime, hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency);
+
         }
     }
 
