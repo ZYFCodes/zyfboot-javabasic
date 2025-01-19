@@ -124,13 +124,27 @@ public class CSDNComments {
         // 根据随机数返回不同结果
         switch (choice) {
             case 0:
-                // 返回第一种情况
-                return AncientChineseTime.getAncientTime()
-                        + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord() + "？";
+                // 返回第一种情况，只调用一个随机词
+                if (random.nextBoolean()) {
+                    // 返回 MoodWords
+                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " + MoodWords.getRandomMoodWord();
+                } else {
+                    // 返回 TimeWords
+                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " + TimeWords.getRandomTimeWord();
+                }
             case 1:
-                // 返回第二种情况
-                return TimeDescription.getRandomTimeDescription("", 0, true)
-                        + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + MoodWords.getRandomMoodWord() + "---" + TimeWords.getRandomTimeWord() + "？";
+                // 返回第二种情况，只调用一个随机词
+                if (random.nextBoolean()) {
+                    // 返回 MoodWords
+                    return TimeDescription.getRandomTimeDescription("", 0, true)
+                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
+                            + "  " + MoodWords.getRandomMoodWord();
+                } else {
+                    // 返回 TimeWords
+                    return TimeDescription.getRandomTimeDescription("", 0, true)
+                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
+                            + "  " + TimeWords.getRandomTimeWord();
+                }
             case 2:
                 // 返回空字符串
                 return "";

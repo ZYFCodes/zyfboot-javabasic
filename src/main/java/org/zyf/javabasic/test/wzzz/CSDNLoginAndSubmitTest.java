@@ -129,6 +129,7 @@ public class CSDNLoginAndSubmitTest {
         // 调用方法输出到日志文件
         try {
             outputLogToFile(taskStartTime);
+            CSDNLoginAndSubmitTest.clearFrequencyMap();
         } catch (IOException e) {
             System.err.println("日志文件写入失败：" + e.getMessage());
         }
@@ -158,9 +159,9 @@ public class CSDNLoginAndSubmitTest {
 
         // 计算程序执行时长
         long duration = endTime - startTime;
-        long hours = duration / (1000 * 60 * 60);
-        long minutes = (duration % (1000 * 60 * 60)) / (1000 * 60);
         long seconds = (duration % (1000 * 60)) / 1000;
+        long minutes = (duration % (1000 * 60 * 60)) / (1000 * 60);
+        long hours = duration / (1000 * 60 * 60);
 
         // 统计所有 value 的总和
         int totalFrequency = articleFrequencyMap.values().stream()
