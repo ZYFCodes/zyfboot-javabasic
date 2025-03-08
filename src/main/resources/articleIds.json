@@ -5899,5 +5899,101 @@
     "tags": [
       "人工智能"
     ]
+  },
+  {
+    "articleId": 145668734,
+    "title": "Java GC 基础知识快速回顾",
+    "description": "本篇文章深入探讨了 Java 垃圾回收（GC）机制的核心概念、工作原理及其对应用性能的影响。我们介绍了垃圾回收的基本概念，包括堆和栈的内存管理、GC 的触发机制、GC 对开发者的重要性等。文章重点分析了常见的垃圾回收算法和回收器，涵盖了分代收集和分区收集策略，以及如何根据应用需求选择合适的回收器。最后，我们还讨论了 GC 的性能调优方法，帮助开发者通过优化内存管理提升应用性能，避免内存泄漏和性能瓶颈。通过本文的学习，读者将能够更好地理解和优化 Java 应用中的垃圾回收机制，确保程序的高效稳定运行。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145668734",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 77,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145668734",
+    "postTime": "2025-02-16 22:03:59",
+    "diggCount": 0,
+    "formatTime": "5 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/3d7a6a07efd84262953327e16a972ace.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "后端",
+      "架构",
+      "JVM基础"
+    ]
+  },
+  {
+    "articleId": 145671747,
+    "title": "深入剖析GC问题：如何有效判断与排查",
+    "description": "本文介绍了Java垃圾回收（GC）的基本原理及其优化策略。通过分析GC的工作机制，探讨了常见的GC类型、内存管理模型及其对应用性能的影响。文章还详细阐述了如何通过调整JVM参数、选择合适的GC算法和分析GC日志来优化内存回收效率。通过这些实用的优化方法，开发者可以有效减少GC暂停时间，提高应用的响应速度和吞吐量。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145671747",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 308,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145671747",
+    "postTime": "2025-02-17 00:00:29",
+    "diggCount": 2,
+    "formatTime": "12 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/c822fcd95c934e7a841c23977c73b917.png"
+    ],
+    "collectCount": 1,
+    "tags": [
+      "java",
+      "算法",
+      "JVM基础"
+    ]
+  },
+  {
+    "articleId": 145798261,
+    "title": "动态扩缩容引发的JVM堆内存震荡：从原理到实践的GC调优指南",
+    "description": "本文分析了 JVM 内存弹性机制及其在高负载环境中的挑战，重点探讨了堆内存伸缩、内存扩展与收缩的核心机制。通过对系统发布后 GC 雪崩事件的分析，文章揭示了多代际内存管理中的响应差异，尤其是年轻代、老年代与 Metaspace 的协调问题。为避免这些问题，提出了优化内存配置、调整 GC 策略和合理设置代际大小的解决方案。此外，文章进一步探讨了从被动响应到主动防御的转变，建议结合智能调节与自动化监控机制。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145798261",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 689,
+    "commentCount": 3,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145798261",
+    "postTime": "2025-03-03 08:57:04",
+    "diggCount": 23,
+    "formatTime": "13 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/02822a4d26334af897bd63d45053f9be.png"
+    ],
+    "collectCount": 15,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识准备分享",
+      "CMS",
+      "G1",
+      "ZGC"
+    ]
+  },
+  {
+    "articleId": 145799683,
+    "title": "显式 GC 的使用：留与去，如何选择？",
+    "description": "显式垃圾回收（Explicit GC）是 Java 中通过开发者调用 System.gc() 手动触发的垃圾回收过程。与自动 GC 不同，显式 GC 允许开发者在内存压力较大时主动清理不再使用的对象。然而，显式 GC 可能导致应用性能下降，因为它会触发全堆回收，造成线程暂停（STW）现象，尤其在高负载情况下。尽管它能帮助清理堆外内存（如 DirectByteBuffer 中的内存），但频繁使用会干扰 JVM 的自动垃圾回收策略，从而影响系统性能。使用显式 GC 是否适合，取决于应用的性能需求和内存管理要求。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145799683",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 391,
+    "commentCount": 1,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145799683",
+    "postTime": "2025-03-03 08:56:31",
+    "diggCount": 12,
+    "formatTime": "13 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e368b002c2c04f17b07942cee10221e4.png"
+    ],
+    "collectCount": 10,
+    "tags": [
+      "jvm"
+    ]
   }
 ]

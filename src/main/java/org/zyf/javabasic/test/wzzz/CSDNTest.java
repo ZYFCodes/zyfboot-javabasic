@@ -143,14 +143,14 @@ public class CSDNTest {
                     " 执行访问全列表数据进行分析，当前次数：" + time);
 
             // 判断是否到晚上 11 点 50 分，若是则停止程序
-            Calendar current = Calendar.getInstance(TimeZone.getTimeZone("Asia/Shanghai"));
-            int hour = current.get(Calendar.HOUR_OF_DAY);
-            int minute = current.get(Calendar.MINUTE);
-            if (hour == 23 && minute >= 50) {
-                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
-                        .format(current.getTime()) + " 当前时间已到北京时间晚上 11 点 50 分，程序停止！");
-                break;
-            }
+//            Calendar current = Calendar.getInstance(TimeZone.getTimeZone("Asia/Shanghai"));
+//            int hour = current.get(Calendar.HOUR_OF_DAY);
+//            int minute = current.get(Calendar.MINUTE);
+//            if (hour == 23 && minute >= 50) {
+//                System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
+//                        .format(current.getTime()) + " 当前时间已到北京时间晚上 11 点 50 分，程序停止！");
+//                break;
+//            }
 
 
             // 记录开始时间
@@ -258,9 +258,18 @@ public class CSDNTest {
         res.add("https://zyfcodes.blog.csdn.net/article/details/140538842");
         //20250118
         res.add("https://zyfcodes.blog.csdn.net/article/details/145230528");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/105360974");
+        //20250216
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145668734");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145671747");
+        //20250307
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145799683");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145798261");
 
 
         //随机再加50篇吧
+        Random random = new Random();  // 创建一个Random对象
+        int randomNums =  random.nextInt(20) + 80;
         res.addAll(CSDNArticles.getRandomArticleLinks(80, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
 
 

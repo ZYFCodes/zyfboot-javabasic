@@ -59,7 +59,11 @@ public class TimeDescription {
                 };
                 String dayOfWeek = getDayOfWeek(now);
                 String prefix = random.nextBoolean() ? "周" : "星期";
-                return prefix + dayOfWeek + timeOfDay[random.nextInt(timeOfDay.length)];
+                String time = random.nextBoolean() ?
+                        now.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日")) :
+                        now.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm"));
+                return time + " " + prefix + dayOfWeek;
+                //return prefix + dayOfWeek + timeOfDay[random.nextInt(timeOfDay.length)];
             case 9:
                 return now.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日"));
             case 10:

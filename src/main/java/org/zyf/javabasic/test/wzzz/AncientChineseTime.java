@@ -29,20 +29,12 @@ public class AncientChineseTime {
         Solar solar = new Solar(now.getYear(), now.getMonthValue(), now.getDayOfMonth());
         Lunar lunar = solar.getLunar();
 
-        // 获取干支年、月、日
-        String ganzhiYear = lunar.getYearInGanZhi();
-        String ganzhiMonth = lunar.getMonthInGanZhi();
-        String ganzhiDay = lunar.getDayInGanZhi();
-
         // 获取时辰对应的干支
         int hour = now.getHour();
         String ganzhiHour = getGanZhiHour(hour, lunar.getDayGanIndex());
 
         // 随机选取一个时辰
         String randomShichen = getRandomShichen();
-
-        // 格式化时间（时分秒）
-        String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
         // 返回完整的中国古代时间表示
         return String.format("农历%s年%s月%s日 %s %s",
@@ -77,20 +69,12 @@ public class AncientChineseTime {
         Solar solar = new Solar(dateTime.getYear(), dateTime.getMonthValue(), dateTime.getDayOfMonth());
         Lunar lunar = solar.getLunar();
 
-        // 获取干支年、月、日
-        String ganzhiYear = lunar.getYearInGanZhi();
-        String ganzhiMonth = lunar.getMonthInGanZhi();
-        String ganzhiDay = lunar.getDayInGanZhi();
-
         // 获取时辰对应的干支
         int hour = dateTime.getHour();
         String ganzhiHour = getGanZhiHour(hour, lunar.getDayGanIndex());
 
         // 随机选取一个时辰
         String randomShichen = getRandomShichen();
-
-        // 格式化时间（时分秒）
-        String time = dateTime.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
         // 返回完整的中国古代时间表示
         return String.format("农历%s年%s月%s日 %s %s",

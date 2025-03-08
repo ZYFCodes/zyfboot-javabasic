@@ -2,6 +2,7 @@ package org.zyf.javabasic.test.wzzz;
 
 import com.google.common.collect.Sets;
 import com.google.gson.JsonObject;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.Header;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -36,9 +37,12 @@ public class CSDNLoginAndSubmitTest {
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     // 用于统计每篇文章被返回的次数
     private static Map<Integer, Integer> articleFrequencyMap = new ConcurrentHashMap<>();
+    // 用于统计每个用户文章评论次数
+    private static Map<String, Integer> articleComentsFrequencyMap = new ConcurrentHashMap<>();
 
     public static void clearFrequencyMap() {
         articleFrequencyMap.clear();
+        articleComentsFrequencyMap.clear();
     }
 
     public static void commitDeal() {
@@ -129,7 +133,6 @@ public class CSDNLoginAndSubmitTest {
         // 调用方法输出到日志文件
         try {
             outputLogToFile(taskStartTime);
-            CSDNLoginAndSubmitTest.clearFrequencyMap();
         } catch (IOException e) {
             System.err.println("日志文件写入失败：" + e.getMessage());
         }
@@ -170,6 +173,7 @@ public class CSDNLoginAndSubmitTest {
         // 输出程序评论执行时长数据
         System.out.println(String.format("本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章%s篇, 所有辅助账号一共评论%s次！",
                 hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency));
+        CSDNTest.v2();
 
     }
 
@@ -231,6 +235,11 @@ public class CSDNLoginAndSubmitTest {
             logPrintStream.printf("[%s] 本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章 %d 篇, 所有辅助账号一共评论 %d 次！%n",
                     currentTime, hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency);
 
+            AtomicInteger num = new AtomicInteger();
+            articleComentsFrequencyMap.forEach((commentUser, count) -> {
+                num.getAndIncrement();
+                logPrintStream.printf(num.get() + " 评论者 %s - 评论文章 %d 次%n", commentUser, count);
+            });
         }
     }
 
@@ -336,8 +345,11 @@ public class CSDNLoginAndSubmitTest {
             articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
         } else {
             articleIds = CSDNArticles.getRandomArticleIds(randomNums);
+            articleIds.addAll(CSDNArticles.getRandomArticleIdsForOthers(3));
             needFrequencyCount = true;
         }
+
+        articleComentsFrequencyMap.put(userIdentification, CollectionUtils.isNotEmpty(articleIds)?articleIds.size():0);
 
         //对圈定的文章进行评论处理
         AtomicInteger num = new AtomicInteger();
@@ -434,5 +446,9 @@ public class CSDNLoginAndSubmitTest {
         } else {
             return "   本次总耗时: " + seconds + " 秒";
         }
+    }
+
+    public static void main(String[] args) {
+        commitDealNew();
     }
 }

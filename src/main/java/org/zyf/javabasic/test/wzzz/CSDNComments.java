@@ -105,7 +105,7 @@ public class CSDNComments {
         //对里面的一些指定内容进行替换
         comment = replaceComment(articleId, comment);
         //随机增加一个时间前缀
-        comment = comment + getRandomTimePrefix() + " ";
+        //comment = getRandomTimePrefix() + " " + comment ;
         StringBuilder sb = new StringBuilder(comment);
         //随机增加尾部信息
         sb.append("\n");
@@ -127,10 +127,10 @@ public class CSDNComments {
                 // 返回第一种情况，只调用一个随机词
                 if (random.nextBoolean()) {
                     // 返回 MoodWords
-                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " + MoodWords.getRandomMoodWord();
+                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord()+ "  " + MoodWords.getRandomMoodWord();
                 } else {
                     // 返回 TimeWords
-                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " + TimeWords.getRandomTimeWord();
+                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " +  TimeWords.getRandomTimeWord();
                 }
             case 1:
                 // 返回第二种情况，只调用一个随机词
@@ -138,12 +138,12 @@ public class CSDNComments {
                     // 返回 MoodWords
                     return TimeDescription.getRandomTimeDescription("", 0, true)
                             + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
-                            + "  " + MoodWords.getRandomMoodWord();
+                            + "  " +  MoodWords.getRandomMoodWord();
                 } else {
                     // 返回 TimeWords
                     return TimeDescription.getRandomTimeDescription("", 0, true)
-                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
-                            + "  " + TimeWords.getRandomTimeWord();
+                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord();
+//                            + "  " +  TimeWords.getRandomTimeWord();
                 }
             case 2:
                 // 返回空字符串
@@ -199,19 +199,19 @@ public class CSDNComments {
 
     private static String getRandomPrex() {
         String[] TIME_DESCRIPTIONS = {
-                "距今发布已", "时至今日发布有", "发布现如今已有", "直至现在发布已过", "至今为止发布已有", "从那时起发布已", "到今天发布有", "发布到此时已", "到此刻发布已",
-                "迄今发布有", "发布至今有", "时至此刻发布已过", "发布迄今为止已有", "自发布以后", "自从发布", "自发布之后", "自发布至今",
-                "从发布到现在", "发布现今", "如今距离发布", "此时此刻距离发布", "从发布那时到现在", "过去发布至今", "发布一直到今天", "发布历经岁月",
-                "发布随着时间推移", "发布以来", "发布今来", "发布已久有", "发布流传至今", "从发布穿越时光", "发布穿越岁月已达",
-                "从发布至今", "跨越发布时空已", "发布经历", "横跨发布有", "发布穿越已", "时光荏苒，发布已过", "一晃发布",
-                "发布转瞬之间", "岁月悠悠发布已过", "风雨沧桑发布已过", "发布已过历史长河", "经年累月发布已过", "沧海桑田发布已过", "岁月流转发布已过", "历史沉淀发布已过",
-                "一晃眼发布", "不觉间发布", "不知不觉发布", "在时间长河中发布", "在时间流逝中发布", "穿梭时空发布", "跨越千年发布", "跨越百年发布",
-                "时光轮转", "岁月长河已发布", "流年似水已发布", "经历风雨已发布", "时光匆匆已发布", "历史传承已发布", "古今交替已发布", "风云变幻已发布",
-                "人事更迭已发布", "星移斗转已发布", "日新月异已发布", "光阴荏苒已发布", "天地变迁已发布", "风起云涌已发布", "斗转星移已发布", "岁月蹉跎已发布",
-                "历史脚步已发布", "岁月变迁已发布", "在岁月长河中已发布", "随着时光流逝已发布", "一转眼已发布", "昔日到今日已发布", "日积岁累已发布",
-                "长年累月已发布", "千年流传已发布", "亘古至今已发布", "一直以来已发布", "历史跨越已发布", "岁月延续已发布", "发布经历漫长时间",
-                "随着历史进程发布", "从远古到现代发布", "从古到今发布", "发布一路走来", "发布沧桑变化", "发布从历史中走来", "发布时间延续",
-                "发布岁月更替", "发布年复一年", "发布代代相传", "发布经年往事", "发布时间见证"
+                "距今已", "时至今日", "现如今已有", "直至现在已过", "至今为止已有", "到今天有", "到此时已", "到此刻已",
+                "迄今有", "至今有", "时至此刻已过", "迄今为止已有",  "至今",
+                "到现在", "如今距离", "此时此刻距离", "从那时到现在", "过去至今", "到今天", "历经岁月",
+                "随着时间推移",  "今来", "穿越时光", "穿越岁月已达",
+                "跨越时空已", "经历", "横跨","时光荏苒已", "一晃",
+                "转瞬之间", "岁月悠悠已", "风雨沧桑已", "经年累月已", "沧海桑田已", "岁月流转已", "历史沉淀已",
+                "一晃眼", "不觉间已", "不知不觉",
+                "时光轮转", "岁月长河已", "流年似水已", "经历风雨已", "时光匆匆已", "古今交替已", "风云变幻已",
+                "人事更迭已", "星移斗转已", "日新月异已", "光阴荏苒已", "天地变迁已", "风起云涌已", "斗转星移已", "岁月蹉跎已",
+                "历史脚步已", "岁月变迁已", "在岁月长河中已", "随着时光流逝已", "一转眼已", "昔日到今日已", "日积岁累已",
+                "长年累月已", "千年流传已", "亘古至今已", "一直以来已", "历史跨越已", "岁月延续已", "经历漫长时间",
+                "随着历史进程", "从远古到现代", "从古到今", "一路走来", "沧桑变化", "从历史中走来", "时间延续",
+                "岁月更替", "年复一年", "代代相传", "经年往事", "时间见证"
         };
 
         // 随机选择一个时间描述
@@ -231,7 +231,7 @@ public class CSDNComments {
     }
 
     public static void main(String[] args) {
-        String articleId = "144246733";
+        String articleId = "145668734";
         System.out.println(getComments(articleId));
 
         System.out.println(COMMENTS.keySet());

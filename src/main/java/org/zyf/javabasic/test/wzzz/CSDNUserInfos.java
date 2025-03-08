@@ -82,7 +82,11 @@ public class CSDNUserInfos {
         if (userInfo10.containsKey(userIdentification)) {
             // 生成0到10之间的随机
             // nextInt(10)返回[0, 9]之间的值
-            return random.nextInt(10) + 1;
+            int num = random.nextInt(10) + 1;
+            if(num<8){
+                num=num+2;
+            }
+            return num;
         }
         if (userNewInfo30.containsKey(userIdentification)) {
             // 生成18到29之间的随机数
@@ -92,7 +96,9 @@ public class CSDNUserInfos {
         if (userNewInfo50.containsKey(userIdentification)) {
             // 生成25到44之间的随机数
             // nextInt(20)返回[0, 19]之间的值，加上26使得范围变成[26, 45]
-            return random.nextInt(20) + 26;
+            int min = 39;
+            int max = 44;
+            return random.nextInt(max-min +1) + min;
         }
         if (userNewInfoMe.containsKey(userIdentification)) {
             // 生成1到10之间的随机数
