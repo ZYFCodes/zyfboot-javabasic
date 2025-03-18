@@ -5995,5 +5995,98 @@
     "tags": [
       "jvm"
     ]
+  },
+  {
+    "articleId": 145801635,
+    "title": "如何选取合适的 NewRatio 值来优化 JVM 的垃圾回收策略",
+    "description": "本文探讨了 NewRatio 在 JVM 垃圾回收中的作用及优化策略。通过调整 NewRatio 值，可以在不同负载下优化新生代与老年代的内存分配，减少垃圾回收停顿。在高负载环境中，减小 NewRatio 有助于减少 Full GC 的频率，而低负载下则通过增大 NewRatio 提高内存利用率。结合 CMS 收集器和堆内存调整，合理配置垃圾回收参数，能显著提升 JVM 性能，优化内存管理。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145801635",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 821,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145801635",
+    "postTime": "2025-03-10 08:35:27",
+    "diggCount": 15,
+    "formatTime": "14 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/31d446f475b0448e96d594aa0478cc31.png"
+    ],
+    "collectCount": 11,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识准备分享"
+    ]
+  },
+  {
+    "articleId": 145808157,
+    "title": "分析CMS GC退化为单线程串行GC模式的原因与优化",
+    "description": "本文分析了Java CMS（Concurrent Mark-Sweep）垃圾回收器在特定情况下退化为串行GC模式的现象，导致停顿时间显著增加，影响系统性能。文章详细探讨了退化的原因，包括老年代空间不足、并发标记失败、内存碎片化和应用程序中断等，并提出了相应的优化建议，如增加老年代空间、调整GC参数、定期触发Full GC和优化内存分配等。通过合理配置JVM和优化内存管理，可以有效降低CMS退化的风险，提升系统的吞吐量和响应速度，确保Java应用的稳定运行。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145808157",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 790,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145808157",
+    "postTime": "2025-03-10 08:34:57",
+    "diggCount": 12,
+    "formatTime": "14 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/ec5e0924e5434260a624ce747d6058a9.png"
+    ],
+    "collectCount": 18,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识储备分享"
+    ]
+  },
+  {
+    "articleId": 145799980,
+    "title": "深入剖析 MetaSpace OOM 问题：根因分析与高效解决策略",
+    "description": "MetaSpace区是JVM内存管理中的关键部分，负责存储类元数据。随着Java 8的推出，MetaSpace取代了PermGen区，但其灵活性也带来了新的挑战，尤其是在动态类加载和频繁类更新的场景下，容易导致MetaSpace内存溢出（OOM）问题。本文探讨了MetaSpace OOM的根本原因，包括类加载器泄漏、内存管理不当和GC效率低下等，并提供了一系列调优策略和解决方案，帮助开发者有效排查和防止此类问题的发生，确保应用程序的稳定性和高可用性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145799980",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145799980",
+    "postTime": "2025-03-16 21:13:58",
+    "diggCount": 0,
+    "formatTime": "1 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/05889d28c4094faabc3c860d130c38ee.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识储备分享"
+    ]
+  },
+  {
+    "articleId": 145809647,
+    "title": "如何高效解决 Java 内存泄漏问题方法论",
+    "description": "本文介绍了高效诊断和优化 Java 内存泄漏问题的系统化方法。通过获取内存快照、使用 MAT 和 JProfiler 等工具分析对象，逐步排查泄漏源，确认问题并优化代码，开发者可以解决内存泄漏并提升应用性能。内容包括内存快照生成、内存差异对比、疑似泄漏检测、代码优化等，确保垃圾回收机制正常工作，最终提高应用的稳定性和效率。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145809647",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145809647",
+    "postTime": "2025-03-16 21:13:31",
+    "diggCount": 0,
+    "formatTime": "2 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/67635821d1904411986c814a440d3391.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "java",
+      "jvm",
+      "ZYF JVM 知识储备分享"
+    ]
   }
 ]

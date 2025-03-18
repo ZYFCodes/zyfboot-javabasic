@@ -104,7 +104,7 @@ public class CSDNLoginAndSubmitTest {
         Collections.shuffle(entryList);
 
         // 创建线程池（限制线程数量为 CPU 核心数或自定义值）
-        int threadCount = Runtime.getRuntime().availableProcessors();
+        int threadCount = Math.min(entryList.size(), Runtime.getRuntime().availableProcessors() );
         ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
 
         // 创建 AtomicInteger 来跟踪循环次数
@@ -345,7 +345,7 @@ public class CSDNLoginAndSubmitTest {
             articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
         } else {
             articleIds = CSDNArticles.getRandomArticleIds(randomNums);
-            articleIds.addAll(CSDNArticles.getRandomArticleIdsForOthers(3));
+            //articleIds.addAll(CSDNArticles.getRandomArticleIdsForOthers(3));
             needFrequencyCount = true;
         }
 

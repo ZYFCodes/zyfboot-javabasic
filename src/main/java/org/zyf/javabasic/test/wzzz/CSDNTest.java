@@ -265,6 +265,10 @@ public class CSDNTest {
         //20250307
         res.add("https://zyfcodes.blog.csdn.net/article/details/145799683");
         res.add("https://zyfcodes.blog.csdn.net/article/details/145798261");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145801635");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145808157");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145799980");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/145809647");
 
 
         //随机再加50篇吧
