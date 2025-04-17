@@ -133,7 +133,8 @@ public class CSDNTest {
 
     public static void v2() {
         int limitViewCount = 10000;
-        List<String> zyfUrl = Lists.newArrayList(getRes(10000));
+        //List<String> zyfUrl = Lists.newArrayList(getRes(10000));
+        List<String> zyfUrl = Lists.newArrayList(CSDNArticles.getArticleLinks("https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println("当前访问次数少于" + limitViewCount + "的文章个数为" + zyfUrl.size());
 
         for (int time = 0; time < 3000; time++) {
@@ -159,7 +160,7 @@ public class CSDNTest {
                 String urlTest = zyfUrl.get(idx);
                 String res = HttpUtils.sendPost(urlTest, null); // 假设这是发送 POST 请求的方法
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(150);
                 } catch (InterruptedException e) {
                     System.out.println(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime()) +
                             " 访问网站序号：" + idx +
@@ -269,6 +270,7 @@ public class CSDNTest {
         res.add("https://zyfcodes.blog.csdn.net/article/details/145808157");
         res.add("https://zyfcodes.blog.csdn.net/article/details/145799980");
         res.add("https://zyfcodes.blog.csdn.net/article/details/145809647");
+        res.add("https://zyfcodes.blog.csdn.net/article/details/146302652");
 
 
         //随机再加50篇吧

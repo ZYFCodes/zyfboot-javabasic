@@ -6088,5 +6088,174 @@
       "jvm",
       "ZYF JVM 知识储备分享"
     ]
+  },
+  {
+    "articleId": 146302652,
+    "title": "RAG 架构地基工程-Retrieval 模块的系统设计分享",
+    "description": "Retrieval-Augmented Generation（RAG）架构在大模型时代大放异彩，而其中的 Retrieval 模块往往被低估。本文系统梳理了 Retrieval 模块的关键设计点，包括数据源类型、文档切分策略、向量化与存储结构、语义检索方式，以及多文档融合机制。通过图示与表格对比，揭示不同设计选择对生成效果的深远影响，强调 Retrieval 不仅是召回，更是影响最终答案质量的“地基工程”。本文旨在为研发者构建可控、可调、可解释的 RAG 系统提供结构化参考。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146302652",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1492,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146302652",
+    "postTime": "2025-03-21 07:16:18",
+    "diggCount": 12,
+    "formatTime": "昨天 07:16",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/5e7ef5d88e574f7091a9fc58e53e72fb.png"
+    ],
+    "collectCount": 9,
+    "tags": [
+      "人工智能"
+    ]
+  },
+  {
+    "articleId": 146114022,
+    "title": "深入解析 Java GC 调优：减少 Minor GC 频率，优化系统吞吐",
+    "description": "这篇文章深入探讨了Java垃圾回收（GC）的优化与调优，重点分析了GC频率、内存分配、以及垃圾回收过程中可能带来的性能问题。通过结合实际案例，文章详细介绍了如何通过调整JVM参数来减少Minor GC频率、避免老年代过早增长并触发Major GC，进一步优化系统性能。通过对GC日志的分析，作者提出了具体的优化策略，并在实践中取得了显著的改进，减少了GC带来的延迟，并优化了TP90/TP99响应时间。文章为开发者提供了丰富的垃圾回收调优技巧，并通过实际操作帮助提升Java应用的稳定性与性能。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146114022",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1000,
+    "commentCount": 3,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146114022",
+    "postTime": "2025-03-25 09:10:17",
+    "diggCount": 19,
+    "formatTime": "13 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/blog_migrate/2ee5c9e5f76dc1051c1b011e571b3e02.png"
+    ],
+    "collectCount": 17,
+    "tags": [
+      "jvm",
+      "java",
+      "算法",
+      "ZYF JVM知识储备分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 145808998,
+    "title": "堆外内存 OOM：现象分析与优化方案",
+    "description": "本文分析了 Java 中堆外内存泄漏及其引发的 OOM 问题，重点讨论了主动申请未释放和 JNI 调用未释放的两大原因。提供了排查策略，如启用 Native Memory Tracking（NMT）和监控堆外内存使用。并提出了优化方案，包括合理管理堆外内存、设置内存限制及定期监控，帮助避免内存泄漏对系统性能的影响。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145808998",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 761,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145808998",
+    "postTime": "2025-03-25 09:10:07",
+    "diggCount": 20,
+    "formatTime": "13 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/cc91ede33fa34ccd8a76c6a4d32baeb4.png"
+    ],
+    "collectCount": 10,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识准备分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146117856,
+    "title": "ZGC 参数优化与 GC 触发机制解析分享",
+    "description": "本文深入探讨了 ZGC（Z Garbage Collector）参数优化与 GC 触发机制，旨在帮助开发者理解如何通过合理配置 ZGC 的参数来降低 Allocation Stall，提高系统吞吐量和稳定性。文章分析了影响 ZGC 性能的关键因素，如 heap 设置、线程池配置等，并通过实际案例展示了不同参数设置对 GC 行为的影响。通过对 GC 触发机制的解析，本文提供了可行的优化策略，以有效减少系统停顿时间，实现高效的内存管理。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146117856",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 774,
+    "commentCount": 10,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146117856",
+    "postTime": "2025-03-31 08:10:23",
+    "diggCount": 30,
+    "formatTime": "15 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/8e4d6ad7274b42b5a36756d0e7a8bdae.png"
+    ],
+    "collectCount": 19,
+    "tags": [
+      "ZGC",
+      "ZYF JVM知识储备分享",
+      "jvm"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 145802451,
+    "title": "解决 CMS Old GC 频繁触发线上问题技术方案",
+    "description": "CMS Old GC 频繁触发不仅会对系统的吞吐量造成影响，还可能导致响应时间波动，严重时甚至可能影响到整个应用的稳定性。通过深入分析其触发原因和优化措施，我们可以采取一系列的解决方案来缓解或消除这一问题，从而提升系统的性能和响应能力。合理配置 CMS 启动条件：通过调整 -XX:CMSInitiatingOccupancyFraction，提前触发 Old GC 回收，避免 Old 区过度占用内存，提高内存回收的及时性，从而减轻系统压力。调整 GC 等待时间。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145802451",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 507,
+    "commentCount": 5,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145802451",
+    "postTime": "2025-03-31 08:09:50",
+    "diggCount": 26,
+    "formatTime": "15 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/62e7a676e1d24c4eab07e6578864636e.png"
+    ],
+    "collectCount": 26,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识储备分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 145800918,
+    "title": "Java垃圾回收的隐性杀手：过早晋升的识别与优化实战",
+    "description": "过早晋升是JVM垃圾回收中的一种常见性能问题，通常由Young区配置不合理、内存分配速率过高或晋升阈值设置不当引起。过早晋升会导致频繁的Full GC、增加停顿时间，并显著影响系统吞吐量。通过调整Young/Eden区的大小、优化内存分配速率、灵活配置MaxTenuringThreshold等策略，可以有效避免过早晋升现象，提升垃圾回收效率。本文结合具体案例，详细介绍了优化措施及其实际效果，提供了对JVM垃圾回收优化的深入分析与实践指南。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/145800918",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/145800918",
+    "postTime": "2025-04-08 09:09:23",
+    "diggCount": 0,
+    "formatTime": "2 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/85e07897deba465ca07a5ca81c5aad45.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "jvm",
+      "ZYF JVM 知识储备分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146111354,
+    "title": "单次 CMS Old GC 耗时长问题分析与优化",
+    "description": "本文探讨了 Java 应用中 CMS Old GC 停顿时间过长的问题，分析了可能导致长时间 GC 停顿的原因，如 Full GC、Promotion Failure、内存碎片化等，并提出了相应的优化方案。通过调整 JVM 参数（如增加 Old Generation 内存、减少 Promotion Failure、开启内存压缩等）和提高 GC 并行度，可以有效减少 GC 停顿时间，提高系统性能。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146111354",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146111354",
+    "postTime": "2025-04-08 09:09:03",
+    "diggCount": 0,
+    "formatTime": "2 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/c857d1690dee49ab9ee4234c8d0918d5.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "jvm",
+      "ZYF JVM知识储备分享"
+    ],
+    "hasInsCode": false
   }
 ]

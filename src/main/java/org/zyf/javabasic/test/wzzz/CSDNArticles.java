@@ -3,6 +3,7 @@ package org.zyf.javabasic.test.wzzz;
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.collections.CollectionUtils;
 import org.zyf.javabasic.common.Article;
+import org.zyf.javabasic.test.wzzz.fetcher.AllUserInfoArticleGetUtil;
 
 import java.io.InputStream;
 import java.util.*;
@@ -187,6 +188,25 @@ public class CSDNArticles {
         return resultLinks;
     }
 
+    public static Set<String> getArticleLinks(String urlPrefix) {
+        Set<Integer> articleIds = articleIds();
+
+        // 将 Set 转换为 List 以支持索引操作
+        List<Integer> articleList = new ArrayList<>(articleIds);
+
+        // 打乱列表以确保随机性
+        Collections.shuffle(articleList);
+
+        // 从打乱后的列表中选取前 randomNums 个元素，并拼接为完整链接
+        Set<String> resultLinks = new HashSet<>();
+        for (int i = 0; i < articleIds.size(); i++) {
+            String link = urlPrefix + articleList.get(i);
+            resultLinks.add(link);
+        }
+
+        return resultLinks;
+    }
+
     /**
      * 获取给定文章ID在排序后的文章列表中的索引。
      *
@@ -216,7 +236,7 @@ public class CSDNArticles {
      * @throws IllegalArgumentException 如果 randomNums 大于 articleIds 的数量
      */
     public static Set<Integer> getRandomArticleIdsForOthers(int randomNums) {
-        Set<Integer> articleIds = articleIdsForOnly();
+        Set<Integer> articleIds = AllUserInfoArticleGetUtil.getgetAllArticleIds();
         // 检查边界条件
         if (randomNums > articleIds.size()) {
             throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");

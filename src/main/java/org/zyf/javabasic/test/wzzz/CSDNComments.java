@@ -51,7 +51,7 @@ public class CSDNComments {
         }
 
         //非特殊的，随机增加十条共有的返回
-        List<String> randomCommonComents = getRandomComments(COMMENTS.get("commentComments"), 2);
+        List<String> randomCommonComents = getRandomComments(COMMENTS.get("commentComments"), 55);
         comments.addAll(randomCommonComents);
 
         return comments;
@@ -125,26 +125,28 @@ public class CSDNComments {
         switch (choice) {
             case 0:
                 // 返回第一种情况，只调用一个随机词
-                if (random.nextBoolean()) {
-                    // 返回 MoodWords
-                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord()+ "  " + MoodWords.getRandomMoodWord();
-                } else {
-                    // 返回 TimeWords
-                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " +  TimeWords.getRandomTimeWord();
-                }
+//                if (random.nextBoolean()) {
+//                    // 返回 MoodWords
+//                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord()+ "  " + MoodWords.getRandomMoodWord();
+//                } else {
+//                    // 返回 TimeWords
+//                    return AncientChineseTime.getAncientTime() + "  " + CurrentMomentWords.getRandomCurrentMomentWord() + "  " +  TimeWords.getRandomTimeWord();
+//                }
+                return AncientChineseTime.getAncientTime();
             case 1:
                 // 返回第二种情况，只调用一个随机词
-                if (random.nextBoolean()) {
-                    // 返回 MoodWords
-                    return TimeDescription.getRandomTimeDescription("", 0, true)
-                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
-                            + "  " +  MoodWords.getRandomMoodWord();
-                } else {
-                    // 返回 TimeWords
-                    return TimeDescription.getRandomTimeDescription("", 0, true)
-                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord();
-//                            + "  " +  TimeWords.getRandomTimeWord();
-                }
+//                if (random.nextBoolean()) {
+//                    // 返回 MoodWords
+//                    return TimeDescription.getRandomTimeDescription("", 0, true)
+//                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord()
+//                            + "  " +  MoodWords.getRandomMoodWord();
+//                } else {
+//                    // 返回 TimeWords
+//                    return TimeDescription.getRandomTimeDescription("", 0, true)
+//                            + "  " + CurrentMomentWords.getRandomCurrentMomentWord();
+////                            + "  " +  TimeWords.getRandomTimeWord();
+//                }
+                return TimeDescription.getRandomTimeDescription("", 0, true);
             case 2:
                 // 返回空字符串
                 return "";

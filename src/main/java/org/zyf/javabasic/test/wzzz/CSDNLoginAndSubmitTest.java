@@ -11,6 +11,8 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.zyf.javabasic.test.wzzz.like.CsdnLike;
+import org.zyf.javabasic.test.wzzz.login.CSDNLoginTest;
 
 import java.io.*;
 import java.net.URLEncoder;
@@ -19,10 +21,7 @@ import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -39,6 +38,8 @@ public class CSDNLoginAndSubmitTest {
     private static Map<Integer, Integer> articleFrequencyMap = new ConcurrentHashMap<>();
     // 用于统计每个用户文章评论次数
     private static Map<String, Integer> articleComentsFrequencyMap = new ConcurrentHashMap<>();
+
+    private static String zhiDingNum = null;
 
     public static void clearFrequencyMap() {
         articleFrequencyMap.clear();
@@ -103,32 +104,29 @@ public class CSDNLoginAndSubmitTest {
         // 打乱 List 中的条目顺序
         Collections.shuffle(entryList);
 
-        // 创建线程池（限制线程数量为 CPU 核心数或自定义值）
-        int threadCount = Math.min(entryList.size(), Runtime.getRuntime().availableProcessors() );
-        ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
-
         // 创建 AtomicInteger 来跟踪循环次数
         AtomicInteger num = new AtomicInteger(1);
-        // 记录线程池任务提交开始时间
+        // 用于记录所有的异步任务
+        List<CompletableFuture<Void>> futures = new ArrayList<>();
         long taskStartTime = System.currentTimeMillis();
         for (Map.Entry<String, String> entry : entryList) {
-            executorService.submit(() -> {
+            CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+                if(CSDNUserInfos.userNewInfoNonvaild.containsKey(entry.getKey())){
+                    System.out.println("账号：" + entry.getKey() + "已经失效了，不在参与点赞、评论、收藏行为！！！");
+                    return;
+                }
                 String currentTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(Calendar.getInstance().getTime());
                 System.out.println("账号：" + entry.getKey() + " 在 " + currentTime +
                         " 进行登陆和评论数据, 该账号当前位于第" + num.getAndIncrement() + "位。");
 
-                // 执行登录和提交操作
                 doLoginAndSubmit(entry.getKey(), entry.getValue());
             });
+
+            futures.add(future);
         }
 
-        // 关闭线程池并等待所有任务完成
-        executorService.shutdown();
-        try {
-            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.MILLISECONDS);
-        } catch (InterruptedException e) {
-            System.err.println("线程池等待任务完成时被中断：" + e.getMessage());
-        }
+        // 等待所有任务完成
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
 
         // 调用方法输出到日志文件
         try {
@@ -173,7 +171,8 @@ public class CSDNLoginAndSubmitTest {
         // 输出程序评论执行时长数据
         System.out.println(String.format("本次执行总共花费时间：%s小时 %s分钟 %s秒, 一共评论文章%s篇, 所有辅助账号一共评论%s次！",
                 hours, minutes, seconds, articleFrequencyMap.size(), totalFrequency));
-        CSDNTest.v2();
+        //CSDNTest.v2();
+        //CsdnLike.call();
 
     }
 
@@ -337,15 +336,16 @@ public class CSDNLoginAndSubmitTest {
     public static void doSubmit(String userIdentification, String cookie) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        int randomNums = CSDNUserInfos.getRandomNums(userIdentification);
 
         Set<Integer> articleIds = Sets.newHashSet();
-        boolean needFrequencyCount = false;
-        if (StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
-            articleIds = CSDNArticles.getRandomArticleIdsForOthers(randomNums);
+        if(StringUtils.isNotBlank(zhiDingNum)){
+            //如果指定，则返回指定的文章评论
+            articleIds = CSDNUserRandomCommentsNum.getRandomZhiDingArticleIds(userIdentification, zhiDingNum);
         } else {
-            articleIds = CSDNArticles.getRandomArticleIds(randomNums);
-            //articleIds.addAll(CSDNArticles.getRandomArticleIdsForOthers(3));
+            articleIds = CSDNUserRandomCommentsNum.getNormal(userIdentification);
+        }
+        boolean needFrequencyCount = false;
+        if (!StringUtils.equalsIgnoreCase(userIdentification, "18252060161")) {
             needFrequencyCount = true;
         }
 
@@ -357,8 +357,7 @@ public class CSDNLoginAndSubmitTest {
         boolean finalNeedFrequencyCount = needFrequencyCount;
         articleIds.forEach(articleId -> {
             num.getAndIncrement();
-
-            if (finalNeedFrequencyCount) {
+            if (finalNeedFrequencyCount && CSDNArticles.articleIds().contains(articleId)) {
                 // 统计每篇文章被返回的次数
                 articleFrequencyMap.put(articleId, articleFrequencyMap.getOrDefault(articleId, 0) + 1);
             }

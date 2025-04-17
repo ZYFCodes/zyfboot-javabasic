@@ -5868,3 +5868,316 @@ Caused by: org.zyf.javabasic.extendsdeal.exception.PaymentException: 支付网�
 2025-03-09 16:48:08,120 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
 2025-03-09 16:48:08,121 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
 2025-03-09 16:48:08,121 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:15:46,341 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 16927 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:15:46,342 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:15:47,238 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$2865e7ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:15:47,617 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:15:47,627 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:15:47,635 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:15:47,635 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:15:47,702 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:15:47,702 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1348 ms
+2025-03-22 15:15:47,938 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 34 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:15:48,205 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:15:48,209 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:15:48,220 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:15:48,523 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:15:48,523 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:15:48,686 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:15:49,101 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:15:49,108 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:15:49,129 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:15:49,279 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:15:49,280 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:15:49,281 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:15:49,283 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:15:49,284 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:15:49,314 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:15:49,328 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 59701 (http) with context path ''
+2025-03-22 15:15:49,330 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.265 seconds (JVM running for 3.616)
+2025-03-22 15:15:50,594 [main] WARN  o.a.h.c.p.ResponseProcessCookies [ResponseProcessCookies.java : 130] - Invalid cookie header: "Set-Cookie: https_waf_cookie=47ec6851-57f9-4bb5f65fc7a5ac21af612f357a0eeacfe9c9; Expires=1742634948; Path=/; Secure; HttpOnly". Invalid 'expires' attribute: 1742634948
+2025-03-22 15:15:51,333 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:15:51,346 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:15:51,348 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:15:51,348 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:18:39,673 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 16959 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:18:39,674 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:18:40,530 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c699b335] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:18:40,893 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:18:40,901 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:18:40,907 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:18:40,908 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:18:40,973 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:18:40,973 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1287 ms
+2025-03-22 15:18:41,205 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 34 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:18:41,428 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:18:41,435 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:18:41,449 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:18:41,788 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:18:41,789 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:18:41,941 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:18:42,311 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:18:42,316 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:18:42,337 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:18:42,481 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:18:42,483 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:18:42,484 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:18:42,485 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:18:42,486 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:18:42,516 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:18:42,529 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 60506 (http) with context path ''
+2025-03-22 15:18:42,531 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.111 seconds (JVM running for 3.446)
+2025-03-22 15:18:43,338 [main] WARN  o.a.h.c.p.ResponseProcessCookies [ResponseProcessCookies.java : 130] - Invalid cookie header: "Set-Cookie: https_waf_cookie=74b443b8-c4e1-413d56d1499dc1d5b13f9253afcd1d988449; Expires=1742635121; Path=/; Secure; HttpOnly". Invalid 'expires' attribute: 1742635121
+2025-03-22 15:18:43,627 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:18:43,639 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:18:43,641 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:18:43,641 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:19:00,634 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 16972 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:19:00,635 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:19:01,503 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$235ce935] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:19:01,846 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:19:01,855 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:19:01,863 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:19:01,863 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:19:01,927 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:19:01,927 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1280 ms
+2025-03-22 15:19:02,169 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 40 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:19:02,393 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:19:02,397 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:19:02,407 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:19:02,724 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:19:02,724 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:19:02,863 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:19:03,246 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:19:03,250 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:19:03,270 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:19:03,409 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:19:03,410 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:19:03,412 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:19:03,413 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:19:03,414 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:19:03,445 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:19:03,459 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 60655 (http) with context path ''
+2025-03-22 15:19:03,461 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.077 seconds (JVM running for 3.408)
+2025-03-22 15:19:04,371 [main] WARN  o.a.h.c.p.ResponseProcessCookies [ResponseProcessCookies.java : 130] - Invalid cookie header: "Set-Cookie: https_waf_cookie=afc9a136-65a8-45929229c9a7c173ed7c7949ee053faaf102; Expires=1742635144; Path=/; Secure; HttpOnly". Invalid 'expires' attribute: 1742635144
+2025-03-22 15:19:04,697 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:19:04,711 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:19:04,713 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:19:04,713 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:21:52,811 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17010 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:21:52,812 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:21:53,665 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$153e2dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:21:54,039 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:21:54,048 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:21:54,053 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:21:54,053 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:21:54,117 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:21:54,118 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1294 ms
+2025-03-22 15:21:54,349 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 38 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:21:54,586 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:21:54,590 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:21:54,600 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:21:54,928 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:21:54,928 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:21:55,068 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:21:55,470 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:21:55,475 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:21:55,495 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:21:55,635 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:21:55,645 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:21:55,646 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:21:55,647 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:21:55,648 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:21:55,678 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:21:55,691 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 61482 (http) with context path ''
+2025-03-22 15:21:55,692 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.122 seconds (JVM running for 3.44)
+2025-03-22 15:21:56,474 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:21:56,485 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:21:56,486 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:21:56,486 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:24:22,318 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17081 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:24:22,319 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:24:23,177 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$90e9b3c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:24:23,525 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:24:23,538 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:24:23,543 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:24:23,544 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:24:23,607 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:24:23,607 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1274 ms
+2025-03-22 15:24:23,837 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 35 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:24:24,066 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:24:24,072 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:24:24,085 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:24:24,424 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:24:24,424 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:24:24,573 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:24:24,957 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:24:24,964 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:24:24,984 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:24:25,133 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:24:25,134 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:24:25,135 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:24:25,136 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:24:25,138 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:24:25,168 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:24:25,182 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 62230 (http) with context path ''
+2025-03-22 15:24:25,184 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.112 seconds (JVM running for 3.433)
+2025-03-22 15:24:26,783 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:24:26,795 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:24:26,797 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:24:26,797 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:26:24,301 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17119 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:26:24,302 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:26:25,181 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$387baecb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:26:25,527 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:26:25,536 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:26:25,542 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:26:25,542 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:26:25,609 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:26:25,610 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1295 ms
+2025-03-22 15:26:25,846 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 37 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:26:26,085 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:26:26,090 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:26:26,100 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:26:26,443 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:26:26,444 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:26:26,588 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:26:26,957 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:26:26,964 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:26:26,984 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:26:27,128 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:26:27,129 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:26:27,130 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:26:27,131 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:26:27,132 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:26:27,163 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:26:27,177 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 62770 (http) with context path ''
+2025-03-22 15:26:27,179 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.133 seconds (JVM running for 3.45)
+2025-03-22 15:26:28,092 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:26:28,106 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:26:28,108 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:26:28,108 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:28:52,336 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17159 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:28:52,337 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:28:53,199 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$920ff8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:28:53,550 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:28:53,561 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:28:53,568 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:28:53,569 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:28:53,630 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:28:53,630 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1281 ms
+2025-03-22 15:28:53,867 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 35 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:28:54,092 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:28:54,097 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:28:54,108 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:28:54,409 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:28:54,410 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:28:54,563 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:28:54,954 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:28:54,959 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:28:54,978 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:28:55,111 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:28:55,113 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:28:55,114 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:28:55,115 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:28:55,117 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:28:55,149 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:28:55,162 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 63408 (http) with context path ''
+2025-03-22 15:28:55,164 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.075 seconds (JVM running for 3.39)
+2025-03-22 15:28:55,855 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:28:55,867 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:28:55,869 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:28:55,869 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:29:45,870 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17175 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:29:45,871 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:29:46,742 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$251deab1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:29:47,106 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:29:47,116 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:29:47,122 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:29:47,122 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:29:47,188 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:29:47,188 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1305 ms
+2025-03-22 15:29:47,427 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 33 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:29:47,657 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:29:47,663 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:29:47,678 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:29:48,042 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:29:48,042 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:29:48,195 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:29:48,608 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:29:48,613 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:29:48,633 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:29:48,778 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:29:48,780 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:29:48,781 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:29:48,782 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:29:48,783 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:29:48,814 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:29:48,827 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 63660 (http) with context path ''
+2025-03-22 15:29:48,829 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.205 seconds (JVM running for 3.522)
+2025-03-22 15:29:49,426 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:29:49,439 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:29:49,440 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:29:49,440 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:34:45,158 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 50] - Starting CSDNTestAll on ZYFdeMacBook-Pro.local with PID 17210 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 15:34:45,159 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 15:34:46,027 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9fbfc577] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 15:34:46,367 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 15:34:46,375 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:34:46,383 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 15:34:46,384 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 15:34:46,445 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 15:34:46,445 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1274 ms
+2025-03-22 15:34:46,682 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 31 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 15:34:46,904 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:34:46,909 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:34:46,919 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 15:34:47,232 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 15:34:47,233 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 15:34:47,375 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 15:34:47,740 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 15:34:47,745 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 15:34:47,768 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 15:34:47,899 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 15:34:47,900 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 15:34:47,901 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 15:34:47,902 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 15:34:47,903 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 15:34:47,932 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 15:34:47,945 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 64924 (http) with context path ''
+2025-03-22 15:34:47,947 [main] INFO  o.z.javabasic.test.wzzz.CSDNTestAll [StartupInfoLogger.java : 59] - Started CSDNTestAll in 3.034 seconds (JVM running for 3.354)
+2025-03-22 15:34:48,862 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 15:34:48,872 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 15:34:48,874 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 15:34:48,874 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 20:40:08,323 [main] INFO  o.z.j.g.collectiontools.TableTest [StartupInfoLogger.java : 50] - Starting TableTest on ZYFdeMacBook-Pro.local with PID 21285 (started by zyf in /Users/zyf/zyfcodes/java/zyfboot-javabasic)
+2025-03-22 20:40:08,324 [main] INFO  o.z.j.g.collectiontools.TableTest [SpringApplication.java : 675] - No active profile set, falling back to default profiles: default
+2025-03-22 20:40:09,235 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d13425d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-03-22 20:40:09,606 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] - Tomcat initialized with port(s): 0 (http)
+2025-03-22 20:40:09,615 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Initializing ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 20:40:09,622 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java : 173] - Starting service [Tomcat]
+2025-03-22 20:40:09,622 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2025-03-22 20:40:09,684 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] - Initializing Spring embedded WebApplicationContext
+2025-03-22 20:40:09,684 [main] INFO  o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] - Root WebApplicationContext: initialization completed in 1348 ms
+2025-03-22 20:40:09,922 [main] INFO  org.reflections.Reflections [Reflections.java : 232] - Reflections took 35 ms to scan 1 urls, producing 9 keys and 20 values 
+2025-03-22 20:40:10,169 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 20:40:10,173 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 20:40:10,186 [main] INFO  o.z.j.extendsdeal.BasePaymentNew [BasePaymentNew.java : 16] - BasePaymentNew BasePaymentNew BasePaymentNew
+2025-03-22 20:40:10,511 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService
+2025-03-22 20:40:10,511 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] - Initializing ExecutorService 'taskExecutor'
+2025-03-22 20:40:10,671 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping [PropertySourcedRequestMappingHandlerMapping.java : 69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2025-03-22 20:40:11,050 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 151] - Context refreshed
+2025-03-22 20:40:11,054 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java : 154] - Found 1 custom documentation plugin(s)
+2025-03-22 20:40:11,075 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java : 41] - Scanning for api listing references
+2025-03-22 20:40:11,230 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_1
+2025-03-22 20:40:11,232 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_2
+2025-03-22 20:40:11,233 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_3
+2025-03-22 20:40:11,234 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_4
+2025-03-22 20:40:11,235 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator [CachingOperationNameGenerator.java : 40] - Generating unique operation named: addOrUpdatePolicyUsingPOST_5
+2025-03-22 20:40:11,266 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] - Starting ProtocolHandler ["http-nio-auto-1"]
+2025-03-22 20:40:11,279 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 204] - Tomcat started on port(s): 49656 (http) with context path ''
+2025-03-22 20:40:11,281 [main] INFO  o.z.j.g.collectiontools.TableTest [StartupInfoLogger.java : 59] - Started TableTest in 3.223 seconds (JVM running for 3.571)
+2025-03-22 20:40:11,389 [Thread-4] INFO  o.s.s.support.LifecycleObjectSupport [LifecycleObjectSupport.java : 86] - destroy called
+2025-03-22 20:40:11,398 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'taskExecutor'
+2025-03-22 20:40:11,399 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
+2025-03-22 20:40:11,399 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] - Shutting down ExecutorService 'customThreadPoolTaskExecutor'
