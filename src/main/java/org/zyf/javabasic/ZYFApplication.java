@@ -9,6 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * 描述：启动入口类
+ * http://localhost:8080/swagger-ui.html
  *
  * @author yanfengzhang
  * @date 2019-12-19 18:11

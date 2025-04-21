@@ -86,22 +86,22 @@ public class CSDNUserInfos {
         if (userInfo10.containsKey(userIdentification)) {
             // 生成0到10之间的随机
             // nextInt(10)返回[0, 9]之间的值
-            int min = 5;
+            int min = 7;
             int max = 9;
             return random.nextInt(max - min + 1) + min;
         }
         if (userNewInfo30.containsKey(userIdentification)) {
             // 生成18到29之间的随机数
             // nextInt(10)返回[0, 9]之间的值，加上18使得范围变成[18, 29]
-            int min = 17;
-            int max = 20;
+            int min = 25;
+            int max = 28;
             return random.nextInt(max - min + 1) + min;
         }
         if (userNewInfo50.containsKey(userIdentification)) {
             // 生成25到44之间的随机数
             // nextInt(20)返回[0, 19]之间的值，加上26使得范围变成[26, 45]
-            int min = 27;
-            int max = 36;
+            int min = 44;
+            int max = 47;
             return random.nextInt(max - min + 1) + min;
         }
         if (userNewInfoMe.containsKey(userIdentification)) {

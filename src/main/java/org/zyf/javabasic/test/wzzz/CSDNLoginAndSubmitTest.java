@@ -1,5 +1,6 @@
 package org.zyf.javabasic.test.wzzz;
 
+import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonObject;
 import org.apache.commons.collections4.CollectionUtils;
@@ -98,7 +99,11 @@ public class CSDNLoginAndSubmitTest {
     public static void commitDealNew() {
         // 记录程序开始时间
         long startTime = System.currentTimeMillis();
-        Map<String, String> userInfo = CSDNUserInfos.getAllUserInfo();
+    //    Map<String, String> userInfo = CSDNUserInfos.getAllUserInfo();
+
+        Map<String, String> userInfo = Maps.newHashMap();
+        userInfo.put("17678001703","csdn20142014");
+
         // 将 Map 的条目转换为 List
         List<Map.Entry<String, String>> entryList = new ArrayList<>(userInfo.entrySet());
         // 打乱 List 中的条目顺序
@@ -261,6 +266,20 @@ public class CSDNLoginAndSubmitTest {
             HttpPost post = new HttpPost(url);
 
             // 设置请求头
+            post.setHeader("accept", "application/json, text/plain, */*");
+            post.setHeader("accept-encoding", "gzip, deflate, br, zstd");
+            post.setHeader("accept-language", "zh-CN,zh;q=0.9");
+            post.setHeader("connection", "keep-alive");
+            post.setHeader("content-length", "146");
+            post.setHeader("host", "passport.csdn.net");
+            post.setHeader("origin", "https://passport.csdn.net");
+            post.setHeader("referer", "https://passport.csdn.net/login?code=applets");
+            post.setHeader("sec-ch-ua", "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"");
+            post.setHeader("sec-ch-ua-platform", "\"macOS\"");
+            post.setHeader("sec-fetch-dest", "empty");
+            post.setHeader("sec-fetch-mode", "cors");
+            post.setHeader("sec-ch-ua-mobile", "?0");
+            post.setHeader("sec-fetch-site", "same-origin");
             post.setHeader("Content-Type", "application/json;charset=UTF-8");
             post.setHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36");
 

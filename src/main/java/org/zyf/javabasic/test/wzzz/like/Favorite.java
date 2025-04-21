@@ -151,7 +151,7 @@ public class Favorite {
 
 
     @Data
-    static class FavoriteRes{
+    public static class FavoriteRes{
         private Integer total;
         private List<FavoriteDetail> result;
     }
@@ -167,7 +167,7 @@ public class Favorite {
     }
 
     @Data
-    static class Result {
+    public static class Result {
         private int code;
         private String msg;
         private FavoriteRes data;

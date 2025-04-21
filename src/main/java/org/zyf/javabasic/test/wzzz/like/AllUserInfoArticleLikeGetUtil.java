@@ -51,6 +51,10 @@ public class AllUserInfoArticleLikeGetUtil {
         return likeList;
     }
 
+    public static Map<String, List<String>> getUserAndArticlesLikesMap(){
+        return userAndArticlesLikesMap;
+    }
+
     public static void main(String[] args) {
         System.out.println(userAndArticlesLikeInfos.size());
         System.out.println(JSON.toJSONString(userAndArticlesLikeInfos));

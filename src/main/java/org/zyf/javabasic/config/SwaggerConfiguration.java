@@ -26,7 +26,7 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.zyf.javabasic"))
+                .apis(RequestHandlerSelectors.basePackage("org.zyf.javabasic.controller.csdn"))
                 .paths(PathSelectors.any())
                 .build();
     }
