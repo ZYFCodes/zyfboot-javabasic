@@ -12,6 +12,8 @@ import org.zyf.javabasic.test.wzzz.newdeal.CommentSubmitService;
 import org.zyf.javabasic.test.wzzz.newdeal.CsdnFavoriteService;
 import org.zyf.javabasic.test.wzzz.newdeal.CsdnLikeService;
 import org.zyf.javabasic.test.wzzz.newdeal.CsdnSubscribeService;
+import org.zyf.javabasic.test.wzzz.queue.QueueBatchManager;
+import org.zyf.javabasic.test.wzzz.queue.QueueManager;
 
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
@@ -38,6 +40,8 @@ public class CSDNComtroller {
     private CsdnFavoriteService csdnFavoriteService;
     @Resource
     private CsdnSubscribeService cdnSubscribeService;
+    @Resource
+    private QueueBatchManager queueBatchManager;
 
     @PostMapping("/doLikesAndFavoritesAndComments")
     @ApiOperation(value = "操作对张彦峰在线CSDN所有文章进行点赞、收藏、评论等行为")
@@ -58,6 +62,9 @@ public class CSDNComtroller {
 
             //评论操作执行
             commentSubmitService.doSubmit(userIdentification, pwdOrVerifyCode);
+
+            //专栏收藏
+            cdnSubscribeService.doSubscribes(userIdentification, pwdOrVerifyCode);
             long end = System.currentTimeMillis();
             String currentDate = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS").format(new Date());
             log.info("处理用户：{}在{}操作对张彦峰在线CSDN所有文章进行点赞、收藏、评论等行为已完成DoneDoneDoneDoneDoneDoneDoneDone, {}！！！！！！！！！",
@@ -128,6 +135,19 @@ public class CSDNComtroller {
         });
 
         return userIdentification + " 任务已提交, 后台异步执行中！！！！！！！！！！！！！";
+    }
+
+    @PostMapping("/doNewComments")
+    @ApiOperation(value = "操作对张彦峰在线CSDN所有文章进行评论行为 === 启用新方式")
+    public String doNewComments(@RequestBody CsdnUserInfo csdnUserInfo) throws Exception {
+        String userIdentification = csdnUserInfo.getUserIdentification();
+        try {
+            queueBatchManager.add(csdnUserInfo);
+            return "UserInfo added: " + userIdentification;
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return "Failed to add userInfo:" + userIdentification;
+        }
     }
 
     @PostMapping("/doSubscribes")

@@ -6257,5 +6257,594 @@
       "ZYF JVM知识储备分享"
     ],
     "hasInsCode": false
+  },
+  {
+    "articleId": 146286223,
+    "title": "从检索到生成：RAG 如何重构大模型的知识边界？",
+    "description": "大模型强大却易幻觉，RAG（Retrieval-Augmented Generation）应运而生，成为连接知识与语言的桥梁。本文系统梳理了 RAG 技术从 Naive 到 Advanced 再到 Modular 架构的演进路径，结合架构图与核心模块对比，揭示其背后的设计动因与能力边界。通过对不同阶段的优劣剖析，帮助读者全面理解 RAG 的技术发展、适用场景及未来趋势，为构建高质量、可信任的智能问答系统提供实践启示。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146286223",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146286223",
+    "postTime": "2025-04-23 08:59:21",
+    "diggCount": 0,
+    "formatTime": "23 秒前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/3d77a84f535f4163a53097f3ee049817.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "ai",
+      "AIGC",
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146115473,
+    "title": "CMS GC优化实战：降低请求高峰期GC Remark阶段停顿时间",
+    "description": "本文通过分析CMS GC的Remark阶段在高并发环境中的影响，探讨了如何通过优化CMS GC配置来减少停顿时间。具体包括启用并发预清理机制、强制执行Minor GC等策略，优化后系统的GC停顿时间和吞吐量得到了明显改善，尤其在高峰期，系统的响应能力得到了显著提升。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146115473",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146115473",
+    "postTime": "2025-04-23 08:58:49",
+    "diggCount": 0,
+    "formatTime": "55 秒前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/blog_migrate/cbb71a55381b82d3d2ec0266be620ebb.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "java",
+      "算法",
+      "开发语言",
+      "ZYF JVM知识储备分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147641418,
+    "title": "面试中系统化地解答系统设计题：通用方法论",
+    "description": "本文系统性讲解了应对系统设计面试题的高效方法论，强调从需求澄清出发，逐步构建清晰、结构化的设计思路。文章详尽分析了功能性与非功能性需求的分类、识别技巧，并通过 URL 缩短服务等示例帮助读者理解如何落地分析。接着，介绍了高层架构设计原则，包括模块划分、缓存、异步队列、数据库等关键组件。最后深入探讨详细设计阶段的数据库建模、API 设计和技术选型，为构建高性能、可扩展系统提供全面参考。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147641418",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 3,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147641418",
+    "postTime": "2025-05-01 12:54:59",
+    "diggCount": 0,
+    "formatTime": "2 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/cbfd2fff45164b0fbfa4bdc0f77d35c4.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "面试",
+      "职场和发展",
+      "分布式",
+      "后端",
+      "架构"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147672833,
+    "title": "机器能做科学家吗？一场关于开放式科研的 AI 革命",
+    "description": "本文基于《The AI Scientist》相关论文，探讨了完全自动化的科研流程，展示了 AI 如何在没有人工干预的情况下，生成研究想法、执行实验、撰写论文并进行评审。核心模块包括大语言模型（LLM）作为“思维核心”、Agent 框架作为执行工具，以及 Aider 编程助手。通过 Diffusion 建模、语言建模和 Grokking 分析等任务的实验，文章评估了 AI 生成的研究论文与人工评审的差异。尽管 AI 在某些任务上表现出潜力，但仍面临创新性不足和实现细节缺失的问题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147672833",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 151,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147672833",
+    "postTime": "2025-05-03 13:50:49",
+    "diggCount": 1,
+    "formatTime": "8 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e94271810ff64e5584f8969886fa3d70.png"
+    ],
+    "collectCount": 8,
+    "tags": [
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147672346,
+    "title": "如何封装一个线程安全、可复用的 HBase 查询模板",
+    "description": "本文探讨了如何封装一个线程安全、可复用的 HBase 查询模板。通过引入基于 AtomicReference 的连接懒加载机制和函数式接口封装查询执行逻辑，本文提供了一种高效的 HBase 查询解决方案。文章详细阐述了 HBase 连接池的实现、查询模板的设计与优化，以及如何在实际业务中应用这些技术。通过完整的案例演示，本文帮助开发者解决 HBase 查询中的常见问题，提高系统性能和可维护性。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147672346",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 693,
+    "commentCount": 3,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147672346",
+    "postTime": "2025-05-02 21:59:37",
+    "diggCount": 14,
+    "formatTime": "15 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e981b34cb1b0498db689b6cd1290f9c1.png"
+    ],
+    "collectCount": 13,
+    "tags": [
+      "安全",
+      "hbase",
+      "数据库"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147670817,
+    "title": "使用 Java 实现一个简单且高效的任务调度框架",
+    "description": "本文系统地介绍了如何使用 Java 设计与实现一个高吞吐、高可用、轻量级的任务调度框架。内容涵盖任务状态管理、线程池并发执行、阻塞队列解耦、失败重试机制及分布式扩展方案（如分片与 Redis 中心化调度）。通过逐步深入的架构演进与代码示例，帮助读者理解调度系统的核心设计原则与工程实现，为构建可扩展的任务处理平台提供实用参考。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147670817",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 635,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147670817",
+    "postTime": "2025-05-02 18:45:22",
+    "diggCount": 6,
+    "formatTime": "19 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/883548c2d34b4bc2809481f14d75d885.png"
+    ],
+    "collectCount": 10,
+    "tags": [
+      "后端",
+      "分布式",
+      "java"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147685605,
+    "title": "重塑数学边界：人工智能如何引领数学研究的新纪元",
+    "description": "本文探讨了人工智能如何深刻改变数学研究的边界，特别是在数学理论、推理和证明方式上的创新。随着生成式AI的快速发展，AI不仅帮助数学家加速推理过程，还能在新理论的构建中发挥重要作用。文章还深入分析了人机共证的数学证明探索，展现了AI与数学研究之间日益密切的双向关系。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147685605",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 3,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147685605",
+    "postTime": "2025-05-03 20:53:28",
+    "diggCount": 0,
+    "formatTime": "6 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/2946b917b2b54599bb775bc89c7b0303.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "人工智能",
+      "AIGC"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147684141,
+    "title": "突破认知边界：神经符号AI的未来与元认知挑战",
+    "description": "这篇文章探讨了神经符号AI的发展前景，特别是其在理解和推理能力上的突破。作者分析了神经符号AI在结合深度学习与符号推理方面的潜力，并提出了元认知挑战，即AI如何自我评估和调整其推理过程。文章指出，尽管这一领域的研究进展迅速，但要实现全面的智能系统，还面临着许多尚未解决的难题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147684141",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 387,
+    "commentCount": 1,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147684141",
+    "postTime": "2025-05-03 20:51:19",
+    "diggCount": 7,
+    "formatTime": "8 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/2259f15248c7407388b9c417d1cc2cfc.png"
+    ],
+    "collectCount": 10,
+    "tags": [
+      "人工智能",
+      "AIGC"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147693739,
+    "title": "新建模范式Mamba——“Selectivity is All You Need？”",
+    "description": "Mamba 是一种新颖的序列建模架构，基于选择性状态空间模型（Selective SSM），以线性复杂度实现强大的建模能力，成为挑战 Transformer 的有力候选。本篇文章将深入解读 Mamba 的结构设计与理论基础，涵盖其核心组件（输入关联、选择性滤波器、Scan 运算等）、与 RNN/Attention 的异同、推理与训练效率，以及其在语言建模中的出色表现。通过图示、对比分析与作者实践理解，本文旨在全面揭示 Mamba 如何在准确率与效率之间实现平衡，并探讨其对未来序列建模范式的潜在影响。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147693739",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 0,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147693739",
+    "postTime": "2025-05-04 14:59:27",
+    "diggCount": 0,
+    "formatTime": "6 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/3d285e2879bb45709c50b20d20d96a16.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147720387,
+    "title": "走出 Demo，走向现实：DeepSeek-VL 的多模态工程路线图",
+    "description": "本文聚焦 DeepSeek 团队最新发布的大语言模型 DeepSeek-VL，深入探讨其以任务驱动为核心的多模态设计理念。文章从真实世界中复杂且高阶的任务出发，梳理了 DeepSeek-VL 在视觉问答、图像字幕、表格理解、地图导航等方面的能力突破，并指出该模型不再仅追求“看图说话”，而是强调在多模态输入下的任务对齐、信息提取与推理能力。通过剖析其工程思路与模型范式，本文认为 DeepSeek-VL 是多模态模型迈向“实用主义智能”的重要里程碑。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147720387",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 139,
+    "commentCount": 1,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147720387",
+    "postTime": "2025-05-05 19:24:22",
+    "diggCount": 3,
+    "formatTime": "22 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/906b8c56349f431f889ab62b9b2a3369.png"
+    ],
+    "collectCount": 3,
+    "tags": [
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147699944,
+    "title": "文学与社会学是否只是在做解释的工作？",
+    "description": "回到那句话：“文学和社会学最后只是在做解释的工作。”是的，它们确实在解释，但那只是最低层的职责。真正的文学与社会学，它们要做的是有温度的解释，有行动的解释，有愿景的解释。解释不是终点，而是通往行动、理解与共情的桥梁。如果它们只是解释，而不试图改变世界、修复痛苦、重建意义，那么文学与社会学的存在就将沦为空壳。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147699944",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 870,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147699944",
+    "postTime": "2025-05-04 15:36:40",
+    "diggCount": 15,
+    "formatTime": "昨天 15:36",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/fa728a403741413aae19d1226a635c11.png"
+    ],
+    "collectCount": 12,
+    "tags": [
+      "文学",
+      "社会学"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146123051,
+    "title": "Java 继承复用避坑指南：五个血泪案例揭示高频陷阱",
+    "description": "本文系统剖析了继承滥用在实际系统中的五类典型陷阱，包括逻辑被绕过、构造失控、行为不一致、初始化混乱等问题，并通过真实业务案例与测试验证，逐一展示问题根源与演进优化方案。文章强调：继承是一把双刃剑，设计不慎将带来系统性隐患。最终，我们总结出继承的适用边界，倡导以组合、接口、策略等手段替代非必要的继承，实现更健壮、可演进的业务架构。希望本文能为你在系统设计与代码演进中提供深度启发。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146123051",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 61,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146123051",
+    "postTime": "2025-05-11 15:58:03",
+    "diggCount": 1,
+    "formatTime": "11 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/8a02f41f132845e1a6a580b16e65519e.png"
+    ],
+    "collectCount": 1,
+    "tags": [
+      "java",
+      "互联网实用编程指南分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146165656,
+    "title": "连作者都弃用的 LinkedList，你还在用吗？",
+    "description": "本文通过源码分析、性能对比和实战案例，揭示了 Java 中 LinkedList 的诸多问题，呼应 Josh Bloch “我从不用 LinkedList”的观点，建议开发者谨慎使用，并优先考虑 ArrayList 或 ArrayDeque 等更高效的替代方案。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146165656",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 51,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146165656",
+    "postTime": "2025-05-11 15:57:45",
+    "diggCount": 2,
+    "formatTime": "11 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/dabba20d931946328057548b5c9bc97e.png"
+    ],
+    "collectCount": 1,
+    "tags": [
+      "java",
+      "后端",
+      "互联网实用编程指南"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146184380,
+    "title": "浮点数的陷阱：你以为的 0.1 + 0.2其实不是 0.3，BigDecimal你真的用对了吗？",
+    "description": "在金融和交易系统中，哪怕是一分钱的误差都可能造成巨大损失。然而，很多开发者仍在不经意间落入浮点数的陷阱：看似简单的 0.1 + 0.2，为什么在 Java 中不等于 0.3？本篇文章从底层的 IEEE 754 浮点数标准讲起，剖析误差来源，逐层构建 BigDecimal 使用、格式化控制、精度舍入、判等策略等防线，并结合真实案例总结出一套浮点数处理的实战规范，助你规避金额计算中的隐性风险。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146184380",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 912,
+    "commentCount": 3,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146184380",
+    "postTime": "2025-05-09 09:13:04",
+    "diggCount": 28,
+    "formatTime": "前天 09:13",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/00608678ad1144e484675209d628de2b.png"
+    ],
+    "collectCount": 9,
+    "tags": [
+      "开发语言",
+      "互联网实用指南分享"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 146137269,
+    "title": "如何正确使用 @PostConstruct 和 @PreDestroy 进行资源管理",
+    "description": "本文系统介绍了 Spring 中 @PostConstruct 和 @PreDestroy 注解的原理、用法及注意事项，深入分析了其在 Bean 生命周期管理中的作用。通过典型案例解析生命周期注解在继承、作用域、异常处理等场景中的表现，帮助开发者避免常见误区，实现资源的安全初始化与优雅释放。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/146137269",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 869,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/146137269",
+    "postTime": "2025-05-09 09:12:41",
+    "diggCount": 17,
+    "formatTime": "前天 09:12",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/92f84abf85684880aa556131646f0d33.png"
+    ],
+    "collectCount": 15,
+    "tags": [
+      "java",
+      "互联网实用编程指南分享",
+      "开发语言"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 148029187,
+    "title": "一键启动多个 Chrome 实例并自动清理的 Bash 脚本分享！",
+    "description": "本文介绍了一个Bash脚本，用于快速启动多个独立的Chrome浏览器实例，每个实例使用独立的用户数据目录，支持批量启动、自动等待用户关闭以及自动清理临时数据。脚本功能包括：接收数字参数启动指定数量的Chrome实例，每个实例可打开指定网页，使用临时用户目录避免配置冲突，并在所有实例关闭后自动清理临时目录。推荐通过设置alias别名的方式，将脚本集成到终端中，方便随时调用。使用案例包括打开默认页面、访问指定网址以及打开本地服务等。该脚本适用于Web自动化测试、多页面展示等场景，操作简便且不留痕迹。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/148029187",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 414,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/148029187",
+    "postTime": "2025-05-19 09:27:44",
+    "diggCount": 13,
+    "formatTime": "23 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/cd27cd261aa34a478d422c474489b3c1.png"
+    ],
+    "collectCount": 12,
+    "tags": [
+      "chrome",
+      "bash",
+      "前端"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147756054,
+    "title": "从一个 ASIN 看透亚马逊：商品模型背后的增长飞轮",
+    "description": "在亚马逊电商体系中，每件商品背后都有一套严密的商品建模逻辑。本篇文章以“ASIN 的一生”为线索，系统拆解了亚马逊的商品模型：从飞轮战略出发，剖析 SDP（Single Detail Page）机制如何实现标准化展示；再到 ASIN 编码、父子变体结构与 Offer 分离模型，逐层解析商品信息如何被建构、聚合与呈现。通过图解与案例，文章帮助读者理解商品建品流程、同款聚合原则、价格控制机制等核心逻辑，避免常见运营误区，是一份面向运营、产品、技术人员的实用参考指南。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147756054",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 143,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147756054",
+    "postTime": "2025-05-19 09:28:14",
+    "diggCount": 5,
+    "formatTime": "23 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/c0a0533a73464884bd356e5e405261fc.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "架构",
+      "产品经理"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 148034033,
+    "title": "跨平台商品模型大解析：亚马逊 vs 阿里 vs 拼多多",
+    "description": "本文深入探讨了亚马逊、阿里巴巴和拼多多三大电商平台的商品模型设计，分析了它们在变体关系、商品抽象层级和SKU定义等方面的异同。亚马逊模型以物流和变体为中心，强调全球仓配体系下的标准化管理；阿里模型采用多视角的弹性结构，适用于多类目、多品牌、多卖家环境；拼多多模型则结合平台标准化与商家个性化，适合短期促销和快速上新场景。文章还提供了实践建议，帮助自研电商平台或商品中台的开发者选择合适的商品结构，并强调了商品模型在电商系统中的核心作用。通过对比分析，本文旨在为读者提供商品建模的启发和参考。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/148034033",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 99,
+    "commentCount": 29,
+    "editUrl": "https://mp.csdn.net/console/editor/html/148034033",
+    "postTime": "2025-05-17 23:07:45",
+    "diggCount": 11,
+    "formatTime": "2025.05.17",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/aded5e926f8745c6b0e18f84a7d2c796.png"
+    ],
+    "collectCount": 11,
+    "tags": [
+      "架构",
+      "后端",
+      "分布式",
+      "大数据"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 148399563,
+    "title": "业态即战场：零售平台的生意模型与系统设计解构",
+    "description": "在这篇文章中，我们从“控货、自营、联营”三种典型零售业态出发，拆解了亚马逊、阿里、京东和本地闪购平台在商品模型设计上的差异与博弈。看似简单的卖货方式背后，其实是平台在“控货权”“商品归属权”上的深层策略博弈：谁掌控商品，谁就掌控数据、流量与利润分配权。本文尝试用一套通俗但不失专业的方式，帮助产品经理和技术伙伴读懂零售平台商品模型的底层逻辑与系统设计演化路径。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/148399563",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 2,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/148399563",
+    "postTime": "2025-06-03 13:16:34",
+    "diggCount": 0,
+    "formatTime": "1 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/38bf61951949491b86284b6c2688323d.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "零售",
+      "架构",
+      "产品经理",
+      "大数据",
+      "后端"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 148191102,
+    "title": "跨个体预训练与轻量化Transformer在手势识别中的应用：Bioformer",
+    "description": "这篇文章介绍了一种轻量级的Transformer架构——Bioformer，用于基于肌电信号（sEMG）的手势识别。Bioformer通过减少模型参数和运算量，解决了大模型在边缘设备部署中的高能耗和内存占用问题，同时提高了识别精度。研究采用了跨个体预训练方法，进一步提升了模型的泛化能力，推理延迟仅为2.72毫秒，能耗降低至0.14毫焦耳。文章还探讨了手势识别技术的挑战及边缘计算在医疗领域的应用潜力。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/148191102",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 637,
+    "commentCount": 30,
+    "editUrl": "https://mp.csdn.net/console/editor/html/148191102",
+    "postTime": "2025-06-17 08:52:48",
+    "diggCount": 39,
+    "formatTime": "14 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/b7e74d62f0dd4cab9ef352735fe85e96.png"
+    ],
+    "collectCount": 39,
+    "tags": [
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 130673900,
+    "title": "手把手教你用 Shell + osascript + Google Chrome 实现自动化批量页面访问（附完整代码）",
+    "description": "本文介绍了一个基于Shell和osascript的自动化网页访问方案，适用于macOS环境下的Google Chrome浏览器。该方案可实现批量访问指定网页、定时清空标签页、设置随机访问间隔等功能，适用于页面测试、数据采集和SEO优化等场景。文章详细解析了代码实现，包括URL读取、标签页管理、循环访问等核心功能，并提供了完整的操作指南和实践建议。该方案无需依赖大型测试框架，轻量灵活，可有效提升工作效率，但需注意合规使用以避免服务器负担。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/130673900",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/130673900",
+    "postTime": "2023-05-14 22:54:20",
+    "diggCount": 0,
+    "formatTime": "2023.05.14",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/4f88692305ca45b2af22daf4ab0e72a5.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "linux",
+      "后端",
+      "前端"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 147003970,
+    "title": "快速掌握Python编程基础",
+    "description": "本文是一篇Python编程入门指南",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/147003970",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 3650,
+    "commentCount": 70,
+    "editUrl": "https://mp.csdn.net/console/editor/html/147003970",
+    "postTime": "2025-07-07 08:52:42",
+    "diggCount": 209,
+    "formatTime": "2025.07.07",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/7386fea5842044e0afa9b497802f3a97.png"
+    ],
+    "collectCount": 148,
+    "tags": [
+      "python"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 149470385,
+    "title": "联合索引全解析：一棵树，撑起查询的半边天",
+    "description": "联合索引并非简单的字段拼接，而是 MySQL 中强大且高效的查询利器。本文从 B+ 树结构讲起，深入剖析联合索引的组织方式、最左前缀原则及其在执行计划中的优化效果。结合真实案例，展示它如何提升查询效率、减少回表、支持覆盖查询与索引下推。文章还指出常见设计误区，帮助读者构建系统的索引优化思维。掌握联合索引，让你在面对复杂查询时更从容。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/149470385",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1980,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/149470385",
+    "postTime": "2025-08-03 18:00:20",
+    "diggCount": 40,
+    "formatTime": "13 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/62a455a1b4e546f1aa549279c8fcf846.png"
+    ],
+    "collectCount": 6,
+    "tags": [
+      "数据库",
+      "mysql"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 149880480,
+    "title": "别慌，按图处理！互联网线上故障SOP实战指南",
+    "description": "本文围绕一套标准化的互联网线上故障处理SOP展开，结合核心流程图，详细阐述了其适用范围、处理原则、响应机制、角色职责划分与实际执行流程。旨在帮助技术团队在面对突发故障时快速响应、高效协同、精准止损，最终实现稳定性保障的系统化、流程化和可复制化。适合作为企业级故障处理制度的参考范式，也可用于内部培训或知识沉淀。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/149880480",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 138,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/149880480",
+    "postTime": "2025-08-03 18:00:33",
+    "diggCount": 2,
+    "formatTime": "13 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/1ccbc1933ef54fc69f17f2796aa0d091.png"
+    ],
+    "collectCount": 1,
+    "tags": [
+      "软件工程",
+      "架构",
+      "后端"
+    ],
+    "hasInsCode": false
   }
 ]

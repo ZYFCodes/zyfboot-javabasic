@@ -50,7 +50,7 @@ public class CsdnFavoriteService {
             String[] getIds = zyArticlefUrl.split("/");
             String sourceId = getIds[getIds.length - 1];
             if (operateFavorites.contains(sourceId)) {
-                log.info("用户【{}】对文章：{} 已经进行收藏过了，可以直接跳过！！！", userIdentification, sourceId);
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行收藏过了，可以直接跳过！！！", userIdentification, num.get(), sourceId);
                 return;
             }
             // 获取当前日期的文件名
@@ -58,20 +58,20 @@ public class CsdnFavoriteService {
             log.info("用户【{}】在{}对文章（当前序号：{}）：{} 开始进行收藏操作！！！", userIdentification, currentDate, num.get(), sourceId);
             String res = doFavorite(userIdentification, zyArticlefUrl, cookieString);
             if (StringUtils.containsAny(res, "请求异常")) {
-                log.info("用户【{}】对文章：{} 已经进行收藏存在异常，可以直接跳过！！！异常类型为：", userIdentification, sourceId, res);
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行收藏存在异常，可以直接跳过！！！异常类型为：", userIdentification, num.get(), sourceId, res);
                 return;
             }
             if (StringUtils.containsAny(res, "返回数据并不合法")) {
-                log.info("用户【{}】对文章：{} 已经进行收藏请求异常，可以直接跳过！！！{}", userIdentification, sourceId, res);
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行收藏请求异常，可以直接跳过！！！{}", userIdentification, num.get(), sourceId, res);
                 return;
             }
             if (StringUtils.containsAny(res, "收藏过了")) {
-                log.info("用户【{}】对文章：{} 已经进行收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了！！！", userIdentification, sourceId);
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了收藏过了！！！", userIdentification, num.get(), sourceId);
                 operateFavorites.add(sourceId);
                 return;
             }
             if (StringUtils.containsAny(res, "收藏完成")) {
-                log.info("用户【{}】对文章：{} 已经进行收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成！！！", userIdentification, sourceId);
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成收藏完成！！！", userIdentification, num.get(), sourceId);
                 operateFavorites.add(sourceId);
                 return;
             }

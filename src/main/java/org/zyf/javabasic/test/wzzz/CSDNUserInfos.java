@@ -107,7 +107,7 @@ public class CSDNUserInfos {
         if (userNewInfoMe.containsKey(userIdentification)) {
             // 生成1到10之间的随机数
             // nextInt(10)返回[0, 9]之间的值，加上1使得范围变成[1, 10]
-            return random.nextInt(10) + 1;
+            return random.nextInt(45) + 1;
         }
 
         // 默认返回5到25之间的随机数

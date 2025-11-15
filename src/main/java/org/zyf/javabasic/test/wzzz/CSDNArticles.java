@@ -252,6 +252,21 @@ public class CSDNArticles {
         return new HashSet<>(articleList.subList(0, randomNums));
     }
 
+    private static void getNeedReadArticleList() {
+        List<String> needReadArticleList = new ArrayList<>();
+        int limitRead = 1500;
+        ARTICLES.forEach(article -> {
+            Integer viewCount = article.getViewCount();
+            String url = article.getUrl();
+            if(viewCount<limitRead){
+                needReadArticleList.add(url);
+            }
+        });
+
+        System.out.println(String.format("阅读数小于%s的文章链接如下：\n", limitRead));
+        needReadArticleList.forEach(content-> System.out.println(content));
+    }
+
 
     public static void main(String[] args) {
 
@@ -262,7 +277,7 @@ public class CSDNArticles {
         System.out.println(articleIds().contains("140538842"));
         System.out.println(articleIds().size());
         System.out.println(getRandomArticleIds(30));
-        System.out.println(getRandomArticleLinks(30, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
+        System.out.println(getRandomArticleLinks(258, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println(getIndex(139611703));
 
 
@@ -271,6 +286,8 @@ public class CSDNArticles {
 
 
         System.out.println();
+
+        getNeedReadArticleList();
     }
 
     public static void soutDiff(Set<String> articleIdsForComments, Set<String> articleIdsForArticles) {

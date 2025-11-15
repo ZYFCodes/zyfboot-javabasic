@@ -51,7 +51,7 @@ public class CSDNComments {
         }
 
         //非特殊的，随机增加十条共有的返回
-        List<String> randomCommonComents = getRandomComments(COMMENTS.get("commentComments"), 55);
+        List<String> randomCommonComents = getRandomComments(COMMENTS.get("commentComments"), 20);
         comments.addAll(randomCommonComents);
 
         return comments;

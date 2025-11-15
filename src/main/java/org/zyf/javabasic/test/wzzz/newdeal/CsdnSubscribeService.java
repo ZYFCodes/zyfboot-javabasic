@@ -49,7 +49,7 @@ public class CsdnSubscribeService {
             num.getAndIncrement();
             String columnId = columnIds.get(i);
             if (subscribes.contains(columnId)) {
-                log.info("用户【{}】对专栏：{} 已经进行订阅过了，可以直接跳过！！！", userIdentification, columnId);
+                log.info("用户【{}】对专栏（当前序号：{}）：{} 已经进行订阅过了，可以直接跳过！！！", userIdentification, num.get(), columnId);
                 continue;
             }
             // 获取当前日期的文件名

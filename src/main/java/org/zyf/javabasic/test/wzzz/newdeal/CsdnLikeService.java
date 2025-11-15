@@ -49,7 +49,7 @@ public class CsdnLikeService {
             num.getAndIncrement();
             Integer articleId = articleIds.get(i);
             if (likes.contains(articleId.toString())) {
-                log.info("用户【{}】对文章：{} 已经进行点赞过了，可以直接跳过！！！", userIdentification, articleId.toString());
+                log.info("用户【{}】对文章（当前序号：{}）：{} 已经进行点赞过了，可以直接跳过！！！", userIdentification, num.get(), articleId.toString());
                 continue;
             }
             // 获取当前日期的文件名

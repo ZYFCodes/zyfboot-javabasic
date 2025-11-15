@@ -99,10 +99,8 @@ public class CSDNLoginAndSubmitTest {
     public static void commitDealNew() {
         // 记录程序开始时间
         long startTime = System.currentTimeMillis();
-    //    Map<String, String> userInfo = CSDNUserInfos.getAllUserInfo();
+        Map<String, String> userInfo = CSDNUserInfos.getAllUserInfo();
 
-        Map<String, String> userInfo = Maps.newHashMap();
-        userInfo.put("17678001703","csdn20142014");
 
         // 将 Map 的条目转换为 List
         List<Map.Entry<String, String>> entryList = new ArrayList<>(userInfo.entrySet());
