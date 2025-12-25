@@ -2,6 +2,7 @@ package org.zyf.javabasic.test.wzzz;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.collections.CollectionUtils;
+import org.assertj.core.util.Sets;
 import org.zyf.javabasic.common.Article;
 import org.zyf.javabasic.test.wzzz.fetcher.AllUserInfoArticleGetUtil;
 
@@ -99,42 +100,72 @@ public class CSDNArticles {
      * @return 随机选取的文章 ID 集合
      * @throws IllegalArgumentException 如果 randomNums 大于 articleIds 的数量
      */
-    public static Set<Integer> getRandomArticleIds(int randomNums) {
+    public static Set<Integer> getRandomArticleIds(int randomNums, Set<Integer> mandatoryIds) {
         Set<Integer> articleIds = articleIds();
-        // 检查边界条件
+
+        // -------- 1. 参数校验 --------
+        if (mandatoryIds == null) {
+            mandatoryIds = Collections.emptySet();
+        }
+
+        if (!articleIds.containsAll(mandatoryIds)) {
+            throw new IllegalArgumentException("mandatoryIds 中包含不存在的 articleId");
+        }
+
+//        if (mandatoryIds.size() > randomNums) {
+//            throw new IllegalArgumentException("mandatoryIds 数量不能大于 randomNums");
+//        }
+
         if (randomNums > articleIds.size()) {
             throw new IllegalArgumentException("randomNums 不能大于 articleIds 的数量");
         }
 
-        // 初始化计数器
+        // -------- 2. 初始化计数器 --------
         for (Integer id : articleIds) {
             articleSelectionCount.putIfAbsent(id, 0);
         }
 
-        // 创建权重列表，权重越小，优先级越高
+        // -------- 3. 先放入必选文章 --------
+        Set<Integer> selectedArticles = new HashSet<>(mandatoryIds);
+
+        // -------- 4. 构建剩余候选集 --------
+        Set<Integer> remainingArticles = new HashSet<>(articleIds);
+        remainingArticles.removeAll(mandatoryIds);
+
+        int remainingCount = randomNums - selectedArticles.size();
+        if (remainingCount <= 0) {
+            // 只需要必选文章
+            updateSelectionCount(selectedArticles);
+            return selectedArticles;
+        }
+
+        // -------- 5. 构建权重池（仅针对剩余文章） --------
         List<Integer> weightedArticles = new ArrayList<>();
-        for (Integer id : articleIds) {
-            int weight = 10 - articleSelectionCount.get(id); // 权重公式
-            weight = Math.max(weight, 1); // 确保权重最小为 1
+        for (Integer id : remainingArticles) {
+            int weight = 10 - articleSelectionCount.get(id);
+            weight = Math.max(weight, 1);
             for (int i = 0; i < weight; i++) {
                 weightedArticles.add(id);
             }
         }
 
-        // 随机打乱并选取文章
+        // -------- 6. 随机补足 --------
         Collections.shuffle(weightedArticles);
-        Set<Integer> selectedArticles = new HashSet<>();
         Iterator<Integer> iterator = weightedArticles.iterator();
         while (selectedArticles.size() < randomNums && iterator.hasNext()) {
             selectedArticles.add(iterator.next());
         }
 
-        // 更新选次数
+        // -------- 7. 更新选中次数 --------
+        updateSelectionCount(selectedArticles);
+
+        return selectedArticles;
+    }
+
+    private static void updateSelectionCount(Set<Integer> selectedArticles) {
         for (Integer article : selectedArticles) {
             articleSelectionCount.put(article, articleSelectionCount.get(article) + 1);
         }
-
-        return selectedArticles;
     }
 
     public static Set<Integer> getRandomArticleIdsForZhidingUser(String userIdentificationFlag, int randomNums) {
@@ -276,7 +307,8 @@ public class CSDNArticles {
         System.out.println(articleIds());
         System.out.println(articleIds().contains("140538842"));
         System.out.println(articleIds().size());
-        System.out.println(getRandomArticleIds(30));
+        Set<Integer> mandatoryIds = new HashSet<>(Arrays.asList(140538842));
+        System.out.println(getRandomArticleIds(30, mandatoryIds));
         System.out.println(getRandomArticleLinks(258, "https://blog.csdn.net/xiaofeng10330111/article/details/"));
         System.out.println(getIndex(139611703));
 

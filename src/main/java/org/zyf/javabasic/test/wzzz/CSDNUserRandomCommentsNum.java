@@ -4,6 +4,8 @@ import com.google.common.collect.Sets;
 import org.apache.commons.lang.StringUtils;
 import org.zyf.javabasic.test.wzzz.fetcher.AllUserInfoArticleGetUtil;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -29,7 +31,10 @@ public class CSDNUserRandomCommentsNum {
            return  articleIds;
         }
 
-        articleIds = CSDNArticles.getRandomArticleIds(randomNums);
+        Set<Integer> mandatoryIds = new HashSet<>(Arrays.asList(
+                155890223, 155428600,155428277,155396879,155390688,155389840,155389288,155387130,155386369,155385046,155137557,155133515,155131957,155077449,154913998,
+                154911199,154345126,149880480,156132379));
+        articleIds = CSDNArticles.getRandomArticleIds(randomNums, mandatoryIds);
         //增加几篇其他分账号的文章
         //articleIds.addAll(AllUserInfoArticleGetUtil.getRandomArticleIds(userIdentification));
         return articleIds;
@@ -53,7 +58,7 @@ public class CSDNUserRandomCommentsNum {
         //需要关心指定的文章
         articleIds = AllUserInfoArticleGetUtil.getRandomZhiDingArticleIds(zhiDingNum, zhiDingNum, randomNums);
         //增加几篇评论主账号的文章
-        articleIds.addAll(CSDNArticles.getRandomArticleIds(3));
+        articleIds.addAll(CSDNArticles.getRandomArticleIds(3, null));
         return articleIds;
     }
 }

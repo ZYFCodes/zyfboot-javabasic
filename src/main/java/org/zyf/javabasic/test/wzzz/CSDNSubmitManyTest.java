@@ -34,7 +34,7 @@ public class CSDNSubmitManyTest {
     public static void main(String[] args) {
         // 记录开始时间
         long startTime = System.currentTimeMillis();
-        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30);
+        Set<Integer> articleIds = CSDNArticles.getRandomArticleIds(30, null);
 
         String cookie = "";
         cookie = "";

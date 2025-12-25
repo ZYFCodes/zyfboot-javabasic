@@ -6846,5 +6846,458 @@
       "后端"
     ],
     "hasInsCode": false
+  },
+  {
+    "articleId": 154345126,
+    "title": "从组合爆炸到优雅分派：复杂策略系统的工程化实现",
+    "description": "在复杂业务系统中，不同用户类型、渠道来源、运行环境和触发场景的组合会导致策略逻辑快速膨胀。本文分享了一种“组合 + 注解 + 分派器”的策略设计方案，通过枚举定义、注解注册、策略自动分派，实现策略的动态匹配与最优选择。该方法不仅让新增策略变得简单可扩展，还支持冲突检测与默认兜底，彻底避免了多维 if-else 的混乱，实现了可维护、可复用且稳健的策略组合系统。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/154345126",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 3391,
+    "commentCount": 3,
+    "editUrl": "https://mp.csdn.net/console/editor/html/154345126",
+    "postTime": "2025-11-11 19:53:23",
+    "diggCount": 59,
+    "formatTime": "2025.11.11",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/716df7b045b94b3592b23bfd2b499b99.png"
+    ],
+    "collectCount": 30,
+    "tags": [
+      "设计模式",
+      "后端",
+      "架构"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 154911199,
+    "title": "高并发优惠权益聚合接口的优雅实现（含超时控制 + 来源标识 + Fallback 降级）",
+    "description": "本文围绕电商与金融系统中常见的「多三方接口并发聚合」场景，构建了一套 200ms 限时聚合服务。方案支持同时调用多个 Provider、在统一时限内收敛已返回结果，并对超时与异常自动执行降级。文章从架构设计、接口规范、实际代码实现到测试验证，全流程展示如何实现可扩展、可维护、具备工程价值的聚合能力，并给出性能优化方向，为复杂业务下的聚合系统提供一套可直接落地的范式。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/154911199",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/154911199",
+    "postTime": "2025-11-16 16:09:57",
+    "diggCount": 0,
+    "formatTime": "4 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/e6ed9bfc0f784a0f8d36174d7915e839.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "java",
+      "后端",
+      "面试"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 154913998,
+    "title": "用Coze打造智能文档整理助手：从创建到发布的完整指南",
+    "description": "本文介绍了如何在 Coze 平台 创建、配置和发布一款文档整理智能体。文章首先说明了智能体开发的背景与需求，包括内容提取、结构化整理、语言风格分析和数据提取等功能；随后详细讲解了设计方案、技术选型、大模型和插件配置流程；最后介绍了智能体的搭建、预览调试及发布到扣子商店的完整操作步骤。通过本文，用户可以快速掌握智能体开发流程，实现高效文档管理与内容分析。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/154913998",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 545,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/154913998",
+    "postTime": "2025-11-16 17:03:26",
+    "diggCount": 13,
+    "formatTime": "4 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/9fbdfcda52424e83a5624147c4bd6403.png"
+    ],
+    "collectCount": 9,
+    "tags": [
+      "ai",
+      "人工智能",
+      "Agent",
+      "Coze"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155077449,
+    "title": "工程化路径：当我们信任并拥抱 AI，超级潜力才真正被点燃",
+    "description": "AI 的潜力不取决于模型规模，而取决于组织是否愿意真正把任务交给 AI。多数企业看见 AI 却吃不到红利，是因为仍以“工具思维”使用它，缺乏授权、不敢信任、不愿调整结构。解决之道是“工程化信任”——可审计 Agent、分级权限、人类转向监护角色，并让 AI 在持续任务中自我增强。AI 的真正力量来自人与 AI 的协作方式，而非智能本身。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155077449",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 4205,
+    "commentCount": 22,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155077449",
+    "postTime": "2025-11-25 08:14:44",
+    "diggCount": 30,
+    "formatTime": "昨天 08:14",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/10053279f51141f29c82eb9290410eba.png"
+    ],
+    "collectCount": 20,
+    "tags": [
+      "人工智能"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155131957,
+    "title": "AI赋能原则1解读思考：超级能动性-AI巨变时代重建个人掌控力的关键能力",
+    "description": "AI 带来的焦虑不是技术变强，而是人失去了掌控感。《AI赋能》提出的“超级能动性”让人从工具使用者跃升为智能系统的设计者与调度者。通过清晰表达意图、构建工作流、用 AI 构建 AI，并打造个人智能体系，我们从被动适应技术转向主动塑造技术。未来真正的竞争，不在技能多寡，而在能否 orchestrate 一套为你持续产能的智能系统。能动性，而非技能，将成为 AI 时代的核心优势。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155131957",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 2610,
+    "commentCount": 18,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155131957",
+    "postTime": "2025-11-25 08:14:57",
+    "diggCount": 29,
+    "formatTime": "昨天 08:14",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/0f37946638664e4eaf78a89b9e4d84e9.png"
+    ],
+    "collectCount": 18,
+    "tags": [
+      "人工智能",
+      "ai",
+      "AIGC",
+      "AI-native"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155133515,
+    "title": "AI赋能原则2解读思考：从权威到机制-AI 时代的分层式信任体系",
+    "description": "本文从 AI 可能“撒谎”的本质出发，阐述了未来的信任将从权威转向机制，并通过技术、治理与人类超级能动性共同构建可验证、可约束、可治理的分层式 AI 信任体系，使人类得以在真假交织的时代保持判断力与认知主权。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155133515",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 8531,
+    "commentCount": 2,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155133515",
+    "postTime": "2025-12-07 20:15:08",
+    "diggCount": 44,
+    "formatTime": "39 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/374fbe851b6d429a9ab0412a01c4b1f7.png"
+    ],
+    "collectCount": 17,
+    "tags": [
+      "人工智能",
+      "ai",
+      "AIGC"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155137557,
+    "title": "AI赋能原则3解读思考：可得性时代-AI 正在重写人类能力结构的未来",
+    "description": "AI 并非“更强的人类”，而是一种结构性不同的能力：可复制、可并发、零边际成本、随时可得。原则三揭示的核心在于，AI 的可得性正在成为影响个人竞争力、组织效率与社会结构的关键变量。文章深入分析 AI 能力与人类能力的根本差异，以及这种差异如何重塑分工与制度演化。同时，从个人协作能力、组织响应体系到社会治理结构三个层面提出应对路径，强调提示工程、模型协同、AI 作为第一响应层、治理与透明度等关键方向。AI 的未来不是强弱之争，而是能力如何被组织、分配与使用的问题。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155137557",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 8414,
+    "commentCount": 4,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155137557",
+    "postTime": "2025-12-07 20:15:26",
+    "diggCount": 50,
+    "formatTime": "39 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/1da612ced0ce475e937a699125891bea.png"
+    ],
+    "collectCount": 13,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155385046,
+    "title": "AI赋能原则4解读思考：AI 不是“可选的加分项”，而是重构生存方式的基础设施",
+    "description": "本文阐述了里德·霍夫曼提出的“AI 不是选择题，而是生存题”的本质含义：AI 正在重塑能力门槛、竞争速度与价值分配，个人与组织若不能有效协同 AI，将在未来经济中失去位置。文章从挑战与机遇两端分析 AI 对个人、企业与社会的深刻影响，并提出可落地的行动策略，强调在新时代中唯有主动学习、拥抱工具、重构价值，才能把“生存题”转化为“创造题”。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155385046",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 242,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155385046",
+    "postTime": "2025-12-07 20:12:40",
+    "diggCount": 5,
+    "formatTime": "41 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/9fbd37d6d2d349c7b9f086bcad47577c.png"
+    ],
+    "collectCount": 4,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155386369,
+    "title": "AI赋能原则5解读思考：AI时代必须面对的现实与应对策略-当“最聪明的大脑”犯低级错误",
+    "description": "“即使是最强大的模型，也会犯最低级的错误”，指出 AI 的错误具有结构性、概率性和不可完全消除的特征，并在企业、个人和社会层面形成系统性风险。文章强调，AI 永远依赖人类监督，其能力增长速度快于可靠性提升，完全托管 AI 不现实。为应对错误常态化，需要建立个人判断力、组织安全流程和社会动态监管三层机制。核心结论是：AI 负责生成可能性，人类负责做最终决策，驾驭错误成为 AI 时代生存与发展的关键能力。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155386369",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 206,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155386369",
+    "postTime": "2025-12-07 20:12:52",
+    "diggCount": 3,
+    "formatTime": "41 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/7d4f12d062a24d7199b4995a082fd672.png"
+    ],
+    "collectCount": 11,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155387130,
+    "title": "AI赋能原则6解读思考：深度专业、跨界能力与工具协同的复合竞争力-AI时代的人才新逻辑",
+    "description": "在AI时代，单一专业深度已不足以支撑竞争力。霍夫曼第六条原则强调，专业知识需与跨界能力、AI工具协同和系统性思维结合。本文解析该原则，提出从深度+广度构建复合能力、跨界协作及快速实验迭代的实践路径，帮助个人与组织在复杂环境中生存与创造价值。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155387130",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 175,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155387130",
+    "postTime": "2025-12-07 20:13:02",
+    "diggCount": 9,
+    "formatTime": "41 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/c5a757b527514bc1ab3923871aa17052.png"
+    ],
+    "collectCount": 2,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能和落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155389288,
+    "title": "AI赋能原则7解读思考：AI时代构建可组合的能力比单点专业更重要",
+    "description": "在AI浪潮下，单点技能像沙滩上的细沙，轻易被风吹散；而可组合能力则如坚固的沙堡，由多块技能模块和AI能力搭建而成，灵活、坚韧、能抵御变化。掌握它的人和组织，才能在未来复杂世界中稳稳立足，创造不可复制的价值。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155389288",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 328,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155389288",
+    "postTime": "2025-12-07 20:13:13",
+    "diggCount": 9,
+    "formatTime": "41 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/0e030dc44bb547e299fda003c1895eb6.png"
+    ],
+    "collectCount": 9,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155389840,
+    "title": "AI赋能原则8解读思考：当 AI 能“完美决策”-为什么动态契约才是安全之钥",
+    "description": "当 AI 拥有高度决策能力时，固定规则无法确保安全与有效。必须通过“动态契约”——持续调整、实时监督、责任共担——才能让 AI 在复杂环境中真正成为可靠的决策伙伴，而不是潜在的风险源。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155389840",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 100,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155389840",
+    "postTime": "2025-12-07 20:13:22",
+    "diggCount": 2,
+    "formatTime": "41 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/cbed1a1fadec4fb68f0677a7ab425b56.png"
+    ],
+    "collectCount": 2,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155390688,
+    "title": "AI赋能原则9解读思考：高智能 AI 时代的人类生存与发展之道-协同进化",
+    "description": "文章围绕霍夫曼《AI赋能》中“与高智能 AI 目标一致、协同进化”的原则，分析了 AI 对人类能力和角色的挑战，强调通过理解 AI、目标对齐与双向协作，实现能力放大与长期生存。文章提出能力重构与行动指南，呼吁个人、组织和社会主动构建人机协作生态，以协同进化实现安全、创新与可持续发展。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155390688",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 407,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155390688",
+    "postTime": "2025-12-07 20:14:42",
+    "diggCount": 4,
+    "formatTime": "39 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/3ffefa6b42eb49a48c095f956462e458.png"
+    ],
+    "collectCount": 5,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155396879,
+    "title": "AI赋能原则10解读思考：当人人都能从 AI 获益，人类整体将跨入新的生产力时代",
+    "description": "本文基于霍夫曼《AI赋能》的第十条原则，系统解析了“政府 2.0”在 AI 时代的核心意义：政府的价值不再在于管理与监管，而在于通过建设国家级 AI 基础设施，让每个普通人都能获得智能化能力提升，从而推动社会整体跃升。文章从治理模式升级、AI 的普惠效应、数据治理体系、智能公共服务、产业协同智能等维度展开，揭示 AI 将重塑全球不平等结构、加速创新爆发并提升社会稳定性。政府 2.0 不仅是国家现代化，更是文明结构的历史性跃迁。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155396879",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 259,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155396879",
+    "postTime": "2025-12-07 20:14:55",
+    "diggCount": 5,
+    "formatTime": "39 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/538514923b424ef8bf07dd2f5a3a7ddb.png"
+    ],
+    "collectCount": 5,
+    "tags": [
+      "人工智能",
+      "AI",
+      "AI赋能与落地"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155428277,
+    "title": "Coze文章仿写：智能体 + 工作流实现内容自动生成与插图输出",
+    "description": "通过本教程，我们完成了一个从 0 到 1 的完整智能体搭建过程。从需求分析、模型选择、插件添加，到工作流绘制、插图生成、意图识别、变量聚合，再到人设与开场白的细致调整，每一步都清晰可见且可独立复用。能读：读取网页、文档、文本等各种资料能写：总结、提炼、结构化、仿写文章能画：根据文章主题自动生成插图，并可智能切换模型风格当你把这个智能体发布到扣子商店，它不仅是一个工具，更是你专属的内容助手，可以为自己服务，也能帮助更多用户提高效率。到这里，一个真正“专业、可用、可复用”的文档整理智能体就彻底搭建完成了。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155428277",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 8055,
+    "commentCount": 8,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155428277",
+    "postTime": "2025-12-07 20:14:14",
+    "diggCount": 29,
+    "formatTime": "40 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/c0dc35f953a74e17803f6c59802f2728.png"
+    ],
+    "collectCount": 34,
+    "tags": [
+      "人工智能",
+      "AI",
+      "Coze Dify"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155428600,
+    "title": "借助DeepSeek思考产业落地：蒸馏、小模型微调",
+    "description": "本文指出行业真正的难题不是大模型能力，而是数据不足、成本过高与部署受限。DeepSeek-R1 无法直接微调，因此蒸馏成为最现实的落地方案：让 R1 的深度推理能力迁移到更小的 7B–70B 模型。文章对比了 R1（推理专家）与 V3（通用模型）的差异，并给出构建“小而强”行业模型的路径：R1 蒸馏 → 行业 SFT → 私有化部署。核心观点是：DeepSeek 的价值不在参数，而在让小模型也能拥有深度思考能力，从而真正走入行业。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155428600",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 563,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155428600",
+    "postTime": "2025-12-07 20:15:39",
+    "diggCount": 26,
+    "formatTime": "38 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/120613de254c4f9eb9ae1620169ffcf2.png"
+    ],
+    "collectCount": 5,
+    "tags": [
+      "人工智能",
+      "AI",
+      "DeepSeek-R1",
+      "DeepSeek-V3",
+      "蒸馏-小模型微调"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 155890223,
+    "title": "巨大 JSON / 图结构数据架构层面选型：该放 Redis 还是 MongoDB？",
+    "description": "本文从数据特征出发，围绕架构定位、性能延迟、存储成本、可维护性与扩展性等多个维度，对 Redis 与 MongoDB 在“大 JSON / 图结构数据”场景下的表现进行了系统对比。通过分析内存成本、序列化开销、一致性风险以及长期演进能力，给出以 MongoDB 作为主存储、Redis 作为热点缓存的分层架构建议，帮助在高并发、数据规模持续增长的系统中做出更稳健的存储决策。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/155890223",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/155890223",
+    "postTime": "2025-12-13 18:29:59",
+    "diggCount": 0,
+    "formatTime": "1 分钟前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/b001ef6fb7524f439353cfc0b73874b0.png"
+    ],
+    "collectCount": 0,
+    "tags": [
+      "json",
+      "架构",
+      "redis",
+      "巨大JSON/图结构架构选型",
+      "Redis-MongoDB"
+    ],
+    "hasInsCode": false
+  },
+  {
+    "articleId": 156114817,
+    "title": "Python 模式匹配与高效正则表达式：从语言特性到工程级简单实践",
+    "description": "本文系统讲解 Python 中的模式匹配与高效正则表达式实践，从计算模型与形式语言基础出发，深入解析 re 模块的工作原理与性能特性，系统总结正则设计原则与工程级优化方法，并引入 Python 3.10+ 的结构化模式匹配（match-case）。通过大量实战案例与反模式分析，逐步引导读者从“会写正则”进阶为“设计匹配系统”，最终构建高性能、可维护、可扩展的规则与解析引擎。",
+    "url": "https://zyfcodes.blog.csdn.net/article/details/156114817",
+    "type": 1,
+    "top": false,
+    "forcePlan": false,
+    "viewCount": 1179,
+    "commentCount": 0,
+    "editUrl": "https://mp.csdn.net/console/editor/html/156114817",
+    "postTime": "2025-12-21 11:16:08",
+    "diggCount": 8,
+    "formatTime": "2 小时前",
+    "picList": [
+      "https://i-blog.csdnimg.cn/direct/d5f63f60f88a48b69dd7aedf68f2a261.png"
+    ],
+    "collectCount": 18,
+    "tags": [
+      "正则表达式",
+      "python"
+    ],
+    "hasInsCode": false
   }
 ]
